@@ -13,6 +13,38 @@ const preview: Preview = {
     a11y: {
       manual: false,
     },
+    viewport: {
+      options: {
+        mobile: {
+          name: "Mobile",
+          styles: {
+            width: "393px",
+            height: "852px",
+          },
+        },
+        tablet: {
+          name: "Tablet",
+          styles: {
+            width: "768px",
+            height: "1024px",
+          },
+        },
+        desktop: {
+          name: "Desktop",
+          styles: {
+            width: "1024px",
+            height: "768px",
+          },
+        },
+        large: {
+          name: "Large Desktop",
+          styles: {
+            width: "1440px",
+            height: "900px",
+          },
+        },
+      },
+    },
   },
   decorators: [
     // Theme decorator
