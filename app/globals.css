@@ -1,26 +1,196 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Typography */
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-28: 1.75rem;
+  --font-size-32: 2rem;
+  --font-size-40: 2.5rem;
+  --font-size-48: 3rem;
+  --font-size-56: 3.5rem;
+  --font-size-64: 4rem;
+  --font-size-80: 5rem;
+  --font-family-sans: Geist, system-ui, sans-serif;
+  --font-family-mono: "Geist Mono", "Courier New", monospace;
+
+  /* Black Colors */
+  --color-black-5: rgba(17, 17, 17, 0.05);
+  --color-black-10: rgba(17, 17, 17, 0.1);
+  --color-black-20: rgba(17, 17, 17, 0.2);
+  --color-black-30: rgba(17, 17, 17, 0.3);
+  --color-black-40: rgba(17, 17, 17, 0.4);
+  --color-black-50: rgba(17, 17, 17, 0.5);
+  --color-black-60: rgba(17, 17, 17, 0.6);
+  --color-black-70: rgba(17, 17, 17, 0.7);
+  --color-black-80: rgba(17, 17, 17, 0.8);
+  --color-black-90: rgba(17, 17, 17, 0.9);
+  --color-black: rgba(17, 17, 17, 1);
+
+  /* White Colors */
+  --color-white-0: rgba(252, 252, 251, 0);
+  --color-white-5: rgba(252, 252, 251, 0.05);
+  --color-white-10: rgba(252, 252, 251, 0.1);
+  --color-white-20: rgba(252, 252, 251, 0.2);
+  --color-white-30: rgba(252, 252, 251, 0.3);
+  --color-white-40: rgba(252, 252, 251, 0.4);
+  --color-white-50: rgba(252, 252, 251, 0.5);
+  --color-white-60: rgba(252, 252, 251, 0.6);
+  --color-white-70: rgba(252, 252, 251, 0.7);
+  --color-white-80: rgba(252, 252, 251, 0.8);
+  --color-white-90: rgba(252, 252, 251, 0.9);
+  --color-white: rgba(252, 252, 251, 1);
+
+  /* Deep Green Colors */
+  --color-deep-green-0: rgba(0, 32, 36, 0);
+  --color-deep-green-10: rgba(0, 32, 36, 0.1);
+  --color-deep-green-20: rgba(0, 32, 36, 0.2);
+  --color-deep-green-30: rgba(0, 32, 36, 0.3);
+  --color-deep-green-40: rgba(0, 32, 36, 0.4);
+  --color-deep-green-50: rgba(0, 32, 36, 0.5);
+  --color-deep-green-60: rgba(0, 32, 36, 0.6);
+  --color-deep-green-70: rgba(0, 32, 36, 0.7);
+  --color-deep-green-80: rgba(0, 32, 36, 0.8);
+  --color-deep-green-90: rgba(0, 32, 36, 0.9);
+  --color-deep-green: rgba(0, 32, 36, 1);
+
+  /* Brand Colors */
+  --color-brand-aqua: rgba(45, 184, 207, 1);
+  --color-brand-blue: rgba(0, 122, 156, 1);
+  --color-brand-light-blue: rgba(114, 216, 232, 1);
+  --color-brand-sea-foam: rgba(184, 255, 227, 1);
+  --color-brand-sky-blue: rgba(167, 236, 255, 1);
+
+  /* Semantic Colors - Light Theme (Default) */
+  --color-border-light: var(--color-black-10);
+  --color-border-light-inverse: var(--color-white-10);
+  --color-border-normal: var(--color-black-20);
+  --color-border-strong: var(--color-black-20);
+  --color-button-default-bg: var(--color-black);
+  --color-button-default-bg-hover: var(--color-brand-light-blue);
+  --color-button-default-bg-hover-text: var(--color-deep-green);
+  --color-button-default-outline: var(--color-black);
+  --color-button-default-outline-text: var(--color-black);
+  --color-button-default-text: var(--color-white);
+  --color-button-special-bg: var(--color-brand-light-blue);
+  --color-button-special-bg-hover: var(--color-deep-green);
+  --color-button-special-bg-hover-text: var(--color-brand-light-blue);
+  --color-button-special-text: var(--color-deep-green);
+  --color-icon-dark: var(--color-black);
+  --color-icon-default: var(--color-deep-green);
+  --color-icon-hover: var(--color-brand-aqua);
+  --color-icon-inactive: var(--color-black-50);
+  --color-icon-light: var(--color-white);
+  --color-page-default: var(--color-white);
+  --color-surface-input: var(--color-black-5);
+  --color-surface-input-inverse: var(--color-white-10);
+  --color-surface-light: var(--color-black-5);
+  --color-surface-tint-sky: rgba(167, 236, 255, 0.1);
+  --color-surface-transparent: var(--color-white-0);
+  --color-text-default-base: var(--color-black-90);
+  --color-text-default-heading: var(--color-deep-green);
+  --color-text-default-highlight: var(--color-brand-blue);
+  --color-text-default-inverse: var(--color-white-80);
+  --color-text-default-light: var(--color-black-60);
+  --color-text-default-strong: var(--color-black);
+  --color-text-default-strong-inverse: var(--color-white);
+  --color-text-interactive-default: var(--color-black-50);
+  --color-text-interactive-enabled: var(--color-brand-aqua);
+  --color-text-interactive-hover: var(--color-brand-aqua);
+  --color-text-interactive-nav: var(--color-deep-green);
+  --logo: "Solid Dark";
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark Theme via data attribute (next-themes) */
+[data-theme="dark"] {
+  --color-border-light: var(--color-white-10);
+  --color-border-light-inverse: var(--color-black-10);
+  --color-border-normal: var(--color-white-10);
+  --color-border-strong: var(--color-white-20);
+  --color-button-default-bg: var(--color-white);
+  --color-button-default-bg-hover: var(--color-brand-light-blue);
+  --color-button-default-bg-hover-text: var(--color-deep-green);
+  --color-button-default-outline: var(--color-white);
+  --color-button-default-outline-text: var(--color-white);
+  --color-button-default-text: var(--color-black);
+  --color-button-special-bg: var(--color-brand-light-blue);
+  --color-button-special-bg-hover: var(--color-deep-green);
+  --color-button-special-bg-hover-text: var(--color-brand-light-blue);
+  --color-button-special-text: var(--color-deep-green);
+  --color-icon-dark: var(--color-white);
+  --color-icon-default: var(--color-white);
+  --color-icon-hover: var(--color-brand-aqua);
+  --color-icon-inactive: var(--color-white-50);
+  --color-icon-light: var(--color-black);
+  --color-page-default: var(--color-deep-green);
+  --color-surface-input: var(--color-white-0);
+  --color-surface-input-inverse: var(--color-black-10);
+  --color-surface-light: var(--color-white-0);
+  --color-surface-tint-sky: var(--color-black-20);
+  --color-surface-transparent: var(--color-deep-green-0);
+  --color-text-default-base: var(--color-white-80);
+  --color-text-default-heading: var(--color-white);
+  --color-text-default-highlight: var(--color-brand-sky-blue);
+  --color-text-default-inverse: var(--color-black-80);
+  --color-text-default-light: var(--color-white-60);
+  --color-text-default-strong: var(--color-white);
+  --color-text-default-strong-inverse: var(--color-black);
+  --color-text-interactive-default: var(--color-white-50);
+  --color-text-interactive-enabled: var(--color-brand-light-blue);
+  --color-text-interactive-hover: var(--color-brand-light-blue);
+  --color-text-interactive-nav: var(--color-white);
+  --logo: "Solid Light";
 }
 
+/* Fallback Dark Theme for system preference */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  :root:not([data-theme]) {
+    --color-border-light: var(--color-white-10);
+    --color-border-light-inverse: var(--color-black-10);
+    --color-border-normal: var(--color-white-10);
+    --color-border-strong: var(--color-white-20);
+    --color-button-default-bg: var(--color-white);
+    --color-button-default-bg-hover: var(--color-brand-light-blue);
+    --color-button-default-bg-hover-text: var(--color-deep-green);
+    --color-button-default-outline: var(--color-white);
+    --color-button-default-outline-text: var(--color-white);
+    --color-button-default-text: var(--color-black);
+    --color-button-special-bg: var(--color-brand-light-blue);
+    --color-button-special-bg-hover: var(--color-deep-green);
+    --color-button-special-bg-hover-text: var(--color-brand-light-blue);
+    --color-button-special-text: var(--color-deep-green);
+    --color-icon-dark: var(--color-white);
+    --color-icon-default: var(--color-white);
+    --color-icon-hover: var(--color-brand-aqua);
+    --color-icon-inactive: var(--color-white-50);
+    --color-icon-light: var(--color-black);
+    --color-page-default: var(--color-deep-green);
+    --color-surface-input: var(--color-white-0);
+    --color-surface-input-inverse: var(--color-black-10);
+    --color-surface-light: var(--color-white-0);
+    --color-surface-tint-sky: var(--color-black-20);
+    --color-surface-transparent: var(--color-deep-green-0);
+    --color-text-default-base: var(--color-white-80);
+    --color-text-default-heading: var(--color-white);
+    --color-text-default-highlight: var(--color-brand-sky-blue);
+    --color-text-default-inverse: var(--color-black-80);
+    --color-text-default-light: var(--color-white-60);
+    --color-text-default-strong: var(--color-white);
+    --color-text-default-strong-inverse: var(--color-black);
+    --color-text-interactive-default: var(--color-white-50);
+    --color-text-interactive-enabled: var(--color-brand-light-blue);
+    --color-text-interactive-hover: var(--color-brand-light-blue);
+    --color-text-interactive-nav: var(--color-white);
+    --logo: "Solid Light";
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-page-default);
+  color: var(--color-text-default-base);
+  font-family: var(--font-family-sans);
 }
