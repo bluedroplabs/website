@@ -1,0 +1,40 @@
+"use client";
+
+import { tv } from "tailwind-variants";
+import { cn } from "../../utils/classes";
+import { Container } from "../Container";
+import { Heading } from "../Heading";
+import type { I{{pascalCase name}} } from "./{{pascalCase name}}.types";
+
+const variants = tv({
+  base: "text-brand-white font-medium px-2.5 py-0.5 uppercase p-5",
+  variants: {
+    variant: {
+      primary: "bg-surface",
+      secondary: "bg-subtler",
+    },
+  },
+  defaultVariants: { variant: "primary" },
+});
+
+const styles = {
+  description: "text-brand-subtle",
+  title: "mb-3",
+};
+
+export const {{pascalCase name}} = ({
+  className,
+  description,
+  title,
+  variant,
+  ...props
+}: I{{pascalCase name}}) => {
+  return (
+    <Container className={cn(variants({ variant }), className)} {...props}>
+      <Heading className={styles.title} level={2} size="4xl">
+        {title}
+      </Heading>
+      <p className={styles.description}>{description}</p>
+    </Container>
+  );
+};
