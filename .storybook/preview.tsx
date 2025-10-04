@@ -1,6 +1,7 @@
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/nextjs-vite";
 import "../app/globals.css";
+import { cn, geist, geistMono } from "../utils";
 
 const preview: Preview = {
   parameters: {
@@ -47,6 +48,12 @@ const preview: Preview = {
     },
   },
   decorators: [
+    // Font decorator
+    (Story) => (
+      <div className={cn(geist.variable, geistMono.variable)}>
+        <Story />
+      </div>
+    ),
     // Theme decorator
     withThemeByDataAttribute({
       themes: {
