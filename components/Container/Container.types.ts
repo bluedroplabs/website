@@ -1,5 +1,5 @@
 import type { TBreakpointSize } from "@/types/global.types";
-import type { ReactNode } from "react";
+import type { HTMLAttributes, ReactNode } from "react";
 
 /**
  * Possible display types for the container at a given breakpoint.
@@ -25,7 +25,12 @@ export type TContainerDisplays = Partial<
 /**
  * Props for the Container component.
  */
-export interface IContainer {
+export interface IContainer extends HTMLAttributes<HTMLDivElement> {
+  /**
+   * If true, uses a Slot component to allow rendering as a different HTML element or custom component.
+   */
+  asChild?: boolean;
+
   /**
    * Optional additional CSS classes for the container element.
    * Merged with the default responsive layout classes.

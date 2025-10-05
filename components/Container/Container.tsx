@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/classes";
+import { Slot } from "@radix-ui/react-slot";
 import type { IContainer, TContainerDisplays } from "./Container.types";
 
 const styles = {
@@ -34,11 +35,14 @@ const defaultDisplays: TContainerDisplays = {
 };
 
 export const Container = ({
-  children,
+  asChild,
   className,
   displays = defaultDisplays,
   noPadding = false,
+  ...props
 }: IContainer) => {
+  const Comp = asChild ? Slot : "div";
+
   const classNames = cn(
     "relative w-full",
     !noPadding && "px-5 md:px-8 lg:px-10 xl:px-20",
@@ -49,5 +53,5 @@ export const Container = ({
     className,
   );
 
-  return <div className={classNames}>{children}</div>;
+  return <Comp className={classNames} {...props} />;
 };
