@@ -1,0 +1,17 @@
+import type { I{{pascalCase name}} } from "./{{pascalCase name}}.types";
+
+const {{constantCase name}}_DEFAULT_PROPS: I{{pascalCase name}} = {
+  title: "Lorem Ipsum",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  variant: "primary",
+};
+
+const {{constantCase name}}_SECONDARY_PROPS: I{{pascalCase name}} = {
+  ...{{constantCase name}}_DEFAULT_PROPS,
+  variant: "secondary",
+};
+
+export const {{constantCase name}}_EXAMPLE_PROPS = {
+  default: {{constantCase name}}_DEFAULT_PROPS,
+  secondary: {{constantCase name}}_SECONDARY_PROPS,
+};

@@ -1,0 +1,42 @@
+"use client";
+
+import { cva } from "class-variance-authority";
+import { Container } from "@/components/Container/Container";
+import { cn } from "@/utils/classes";
+import type { I{{pascalCase name}} } from "./{{pascalCase name}}.types";
+
+const variants = cva(
+  "text-brand-white font-medium px-2.5 py-0.5 uppercase p-5",
+  {
+    variants: {
+      variant: {
+        primary: "bg-page-default",
+        secondary: "bg-brand-aqua",
+      },
+    },
+    defaultVariants: { variant: "primary" },
+  }
+);
+
+const styles = {
+  container: "py-10 text-center",
+  description: "text-brand-subtle",
+  title: "mb-3",
+};
+
+export const {{pascalCase name}} = ({
+  className,
+  description,
+  title,
+  variant,
+  ...props
+}: I{{pascalCase name}}) => {
+  return (
+    <Container className={cn(styles.container, variants({ variant }), className)} {...props}>
+      <h2 className={styles.title}>
+        {title}
+      </h2>
+      <p className={styles.description}>{description}</p>
+    </Container>
+  );
+};

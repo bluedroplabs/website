@@ -1,0 +1,24 @@
+import type { HTMLAttributes } from "react";
+
+/**
+ * Variants that define the visual style of the {{pascalCase name}} component.
+ * - `primary`: The main style, usually used for emphasis.
+ * - `secondary`: A subtle style, used for less prominent display.
+ */
+export type T{{pascalCase name}}Variant = "primary" | "secondary";
+
+/**
+ * Props for the {{pascalCase name}} component.
+ */
+export interface I{{pascalCase name}} extends HTMLAttributes<HTMLElement> {
+  /**
+   * Short description text displayed within or alongside the component.
+   */
+  description?: string;
+
+  /**
+   * Determines the visual variant of the component.
+   * Defaults to `primary` if not specified.
+   */
+  variant?: T{{pascalCase name}}Variant;
+}
