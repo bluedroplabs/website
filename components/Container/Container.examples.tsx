@@ -2,7 +2,7 @@ import type { IContainer } from "./Container.types";
 
 const CONTAINER_BLOCK_PROPS: IContainer = {
   children: Array.from({ length: 12 }).map((_, index) => (
-    <div className="mb-5 bg-text-default-base h-10" key={index} />
+    <div className="mb-5 bg-default-base h-10" key={index} />
   )),
   displays: {
     sm: "block",
@@ -15,10 +15,7 @@ const CONTAINER_BLOCK_PROPS: IContainer = {
 const CONTAINER_FLEX_PROPS: IContainer = {
   className: "flex-wrap gap-x-5",
   children: Array.from({ length: 12 }).map((_, index) => (
-    <div
-      className="mb-5 bg-text-default-base w-[calc(50%-10px)] h-10"
-      key={index}
-    />
+    <div className="mb-5 bg-default-base w-[calc(50%-10px)] h-10" key={index} />
   )),
   displays: {
     sm: "flex",
@@ -30,7 +27,7 @@ const CONTAINER_FLEX_PROPS: IContainer = {
 
 const CONTAINER_GRID_PROPS: IContainer = {
   children: Array.from({ length: 12 }).map((_, index) => (
-    <div className="bg-text-default-base col-span-1 h-64" key={index} />
+    <div className="bg-default-base col-span-1 h-64" key={index} />
   )),
   displays: {
     sm: "grid",

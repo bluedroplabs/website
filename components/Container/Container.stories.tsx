@@ -5,7 +5,7 @@ import { CONTAINER_EXAMPLE_PROPS } from "./Container.examples";
 const meta: Meta<typeof Container> = {
   title: "Foundations/Container",
   component: Container,
-  parameters: { layout: "full-centered" },
+  parameters: { layout: "fullscreen" },
 };
 
 export default meta;
