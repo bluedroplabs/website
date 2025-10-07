@@ -5,6 +5,7 @@ import { BUTTON_EXAMPLE_PROPS } from "./Button.examples";
 const meta: Meta<typeof Button> = {
   title: "Atoms/Button",
   component: Button,
+  tags: ["autodocs"],
 };
 
 export default meta;
