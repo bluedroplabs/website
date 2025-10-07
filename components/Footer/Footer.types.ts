@@ -23,6 +23,11 @@ export interface IFooter extends HTMLAttributes<HTMLElement> {
   description: string;
 
   /**
+   * Form action URL.
+   */
+  formAction: string;
+
+  /**
    * Form description text.
    */
   formDescription: string;

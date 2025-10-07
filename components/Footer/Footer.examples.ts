@@ -10,6 +10,7 @@ const FOOTER_DEFAULT_PROPS: IFooter = {
   },
   description:
     "High-performance hosting, expert development, and ongoing support.",
+  formAction: "#",
   formDescription:
     "Lorem ipsum dolor sit amet consectetur. Integer viverra pellentesque posuere lorem.",
   formHeading: "Join our community",
