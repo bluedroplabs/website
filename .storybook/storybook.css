@@ -1,0 +1,9 @@
+/* Storybook Docs Theme Support */
+#storybook-docs {
+  background-color: var(--color-page-default);
+  color: var(--color-default-base);
+}
+
+.docs-story {
+  background-color: var(--color-page-default);
+}
