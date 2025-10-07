@@ -52,13 +52,22 @@ function Button({
     const isExternal = isExternalLink(href);
     const hasTarget = linkProps.target === "_blank";
 
-    // Automatically add rel for external links witzh target="_blank"
-    const rel =
-      isExternal && hasTarget && !linkProps.rel
-        ? "noopener noreferrer"
-        : linkProps.rel;
+    // Automatically add rel for external links with target="_blank"
+    // Ensure we always have a consistent value (never undefined)
+    let rel: string | undefined = linkProps.rel;
 
-    return <Link {...linkProps} className={classes} href={href} rel={rel} />;
+    if (isExternal && hasTarget && !rel) {
+      rel = "noopener noreferrer";
+    }
+
+    return (
+      <Link
+        {...linkProps}
+        className={classes}
+        href={href}
+        {...(rel && { rel })}
+      />
+    );
   }
 
   // Default: render as button
