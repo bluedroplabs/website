@@ -1,0 +1,10 @@
+# CTA Block Configuration
+# This file defines the Call-to-Action block content
+# Update this file to modify the CTA section across your application
+
+title: "Let's create something great together."
+description: "Unlock your true potential. Start by telling us about your project—we'll get back to you within 24 hours."
+cta:
+  children: "Schedule a demo"
+  href: "/"
+  target: "_self"
