@@ -28,8 +28,11 @@ const styles = {
   submitButton: "uppercase font-medium lg:max-xl:text-sm",
   title: "leading-none text-default-light uppercase",
   themeButton: "size-6 text-default-light uppercase",
+  themeButtons: "flex gap-2 items-center",
+  themeGroup: "flex justify-between gap-x-8 max-lg:mt-8",
   themeIcon: (isActive: boolean) =>
     cn("size-4.5", isActive ? "text-icon-default" : "text-icon-inactive"),
+  themeItem: "flex items-center",
 };
 
 export const Footer = ({
@@ -135,16 +138,16 @@ export const Footer = ({
             </ul>
           </nav>
 
-          <div className="flex justify-between gap-x-8 max-lg:mt-8">
+          <div className={styles.themeGroup}>
             <p className={cn("lg:hidden", styles.copyright)}>{copyright}</p>
             <nav>
-              <ul className="flex gap-2">
+              <ul className={styles.themeButtons}>
                 {themes.map((t) => {
                   const Icon = themeIconMap[t];
                   const isActive = isMounted && t === theme;
 
                   return (
-                    <li key={t}>
+                    <li className={styles.themeItem} key={t}>
                       <Button
                         className={styles.themeButton}
                         onClick={() => setTheme(t)}
