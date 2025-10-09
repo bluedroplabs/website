@@ -12,9 +12,9 @@ import { ArrowRightDownIcon } from "../Icon";
 import type { IFooter } from "./Footer.types";
 
 const styles = {
-  container: "py-16 space-y-12",
+  container: "lg:py-12 xl:py-16 space-y-12",
   content:
-    "max-lg:space-y-12 lg:col-span-8 lg:flex lg:justify-between lg:gap-x-20",
+    "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 xl:col-span-8 xl:justify-between",
   copyright: "text-default-light uppercase",
   description: "font-light leading-6 text-default-strong",
   input:
@@ -22,14 +22,14 @@ const styles = {
   inputGroup:
     "bg-surface-input border-b border-border-strong flex gap-2.5 mt-6 px-5 py-4.5 lg:max-xl:px-3",
   logo: "max-h-8.75 mb-6",
-  nav: "flex gap-x-5 gap-y-8 max-lg:flex-wrap max-lg:pr-6 lg:gap-x-20 lg:w-[49.52%] lg:justify-between",
+  nav: "flex gap-x-5 gap-y-8 max-lg:flex-wrap max-lg:pr-6 lg:gap-x-20 xl:w-[49.52%] xl:justify-between",
   links: "mt-6 space-y-3.5",
   secondaryText: "font-mono font-medium uppercase mt-6",
   submitButton: "uppercase font-medium lg:max-xl:text-sm",
   title: "leading-none text-default-light uppercase",
   themeButton: "size-6 text-default-light uppercase",
   themeButtons: "flex gap-2 items-center",
-  themeGroup: "flex justify-between gap-x-8 max-lg:mt-8",
+  themeGroup: "flex justify-between gap-x-8 max-lg:mt-8 lg:max-xl:w-full",
   themeIcon: (isActive: boolean) =>
     cn("size-4.5", isActive ? "text-icon-default" : "text-icon-inactive"),
   themeItem: "flex items-center",
@@ -60,7 +60,7 @@ export const Footer = ({
       {...props}
     >
       <footer>
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-full xl:col-span-4">
           {isDarkMode
             ? darkLogo?.src && <Image {...darkLogo} className={styles.logo} />
             : logo?.src && <Image {...logo} className={styles.logo} />}
@@ -87,7 +87,7 @@ export const Footer = ({
               </div>
             ))}
           </nav>
-          <form action={formAction} className="lg:w-[50.47%]">
+          <form action={formAction} className="lg:w-full xl:w-[50.47%]">
             <h2 className={styles.title}>{formHeading}</h2>
             <p
               className={cn(
@@ -116,12 +116,14 @@ export const Footer = ({
             </div>
           </form>
         </div>
-        <div className="col-span-full lg:flex lg:justify-between lg:items-center lg:mt-5">
-          <p className={cn("max-lg:hidden", styles.copyright)}>{copyright}</p>
-          <nav className={cn("lg:ml-auto lg:mr-10", styles.nav)}>
+        <div className="col-span-full lg:flex lg:gap-5 lg:justify-between lg:items-end lg:mt-5 lg:max-xl:flex-wrap xl:items-center">
+          <p className={cn("max-xl:hidden", styles.copyright)}>{copyright}</p>
+          <nav
+            className={cn("lg:max-xl:w-full xl:ml-auto xl:mr-10", styles.nav)}
+          >
             <ul
               aria-label="Legal and company information"
-              className="max-lg:space-y-6 lg:flex lg:gap-x-10 lg:justify-end lg:w-full"
+              className="max-lg:space-y-6 lg:flex lg:gap-x-6 lg:w-full xl:gap-x-10  xl:justify-end"
             >
               {utilityLinks?.map((link) => (
                 <li key={link.href}>
@@ -139,7 +141,7 @@ export const Footer = ({
           </nav>
 
           <div className={styles.themeGroup}>
-            <p className={cn("lg:hidden", styles.copyright)}>{copyright}</p>
+            <p className={cn("xl:hidden", styles.copyright)}>{copyright}</p>
             <nav>
               <ul className={styles.themeButtons}>
                 {themes.map((t) => {
