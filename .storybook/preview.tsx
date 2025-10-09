@@ -1,7 +1,10 @@
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
 import type { Preview } from "@storybook/nextjs-vite";
+import { ThemeProvider, useTheme } from "next-themes";
+import { useEffect } from "react";
 import "../app/globals.css";
 import { cn, geist, geistMono } from "../utils";
+import "./storybook.css";
 
 const preview: Preview = {
   parameters: {
@@ -48,13 +51,34 @@ const preview: Preview = {
     },
   },
   decorators: [
-    // Font decorator
-    (Story) => (
-      <div className={cn(geist.variable, geistMono.variable)}>
-        <Story />
-      </div>
-    ),
-    // Theme decorator
+    // Combined Theme, Font, and Docs Background decorator
+    (Story, context) => {
+      const { setTheme } = useTheme();
+
+      useEffect(() => {
+        setTheme(context.globals.theme);
+      }, [context.globals.theme, setTheme]);
+
+      const content = (
+        <div className={cn(geist.variable, geistMono.variable)}>
+          <ThemeProvider
+            attribute="data-theme"
+            defaultTheme="system"
+            enableSystem
+          >
+            <Story />
+          </ThemeProvider>
+        </div>
+      );
+
+      // Apply background for docs pages
+      if (context.viewMode === "docs") {
+        return <div className="bg-page-default">{content}</div>;
+      }
+
+      return content;
+    },
+    // Theme decorator for Storybook toolbar
     withThemeByDataAttribute({
       themes: {
         light: "light",
@@ -62,30 +86,29 @@ const preview: Preview = {
       },
       defaultTheme: "light",
       attributeName: "data-theme",
+      parentSelector: "html",
     }),
     // Layout decorator
     (Story, { parameters }) => {
       const { layout } = parameters;
 
-      switch (layout) {
-        case "full-centered":
-          return (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                height: "100vh",
-                width: "100vw",
-              }}
-            >
-              <Story />
-            </div>
-          );
-
-        default:
-          return <Story />;
+      if (layout === "full-centered") {
+        return (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+              width: "100vw",
+            }}
+          >
+            <Story />
+          </div>
+        );
       }
+
+      return <Story />;
     },
   ],
 };

@@ -1,7 +1,9 @@
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
+import Link from "next/link";
 
 import { cn } from "@/utils/classes";
+import { isExternalLink } from "@/utils/validation";
 import type { IButton } from "./Button.types";
 
 const buttonVariants = cva(
@@ -11,6 +13,7 @@ const buttonVariants = cva(
       variant: {
         default:
           "border bg-button-default-bg border-transparent font-mono font-medium uppercase text-button-default-text hover:bg-button-default-bg-hover hover:text-button-default-bg-hover-text",
+        ghost: "font-light text-default-strong",
         outline:
           "border bg-transparent border-button-default-bg font-mono font-medium uppercase text-button-outline-text hover:bg-button-default-bg-hover hover:text-button-default-bg-hover-text",
         special:
@@ -18,6 +21,7 @@ const buttonVariants = cva(
       },
       size: {
         default: "px-7.75 py-4.75 has-[>svg]:px-3",
+        none: "",
       },
     },
     defaultVariants: {
@@ -30,19 +34,44 @@ const buttonVariants = cva(
 function Button({
   asChild = false,
   className,
+  href,
   size,
   variant,
   ...props
 }: IButton) {
-  const Comp = asChild ? Slot : "button";
+  const classes = cn(buttonVariants({ variant, size, className }));
 
-  return (
-    <Comp
-      className={cn(buttonVariants({ variant, size, className }))}
-      data-slot="button"
-      {...props}
-    />
-  );
+  // If asChild is true, use Slot
+  if (asChild) {
+    return <Slot {...props} className={classes} data-slot="button" />;
+  }
+
+  // If href is provided, render as Next.js Link
+  if (href) {
+    const { type: _type, ...linkProps } = props;
+    const isExternal = isExternalLink(href);
+    const hasTarget = linkProps.target === "_blank";
+
+    // Automatically add rel for external links with target="_blank"
+    // Ensure we always have a consistent value (never undefined)
+    let rel: string | undefined = linkProps.rel;
+
+    if (isExternal && hasTarget && !rel) {
+      rel = "noopener noreferrer";
+    }
+
+    return (
+      <Link
+        {...linkProps}
+        className={classes}
+        href={href}
+        {...(rel && { rel })}
+      />
+    );
+  }
+
+  // Default: render as button
+  return <button {...props} className={classes} />;
 }
 
 export { Button, buttonVariants };

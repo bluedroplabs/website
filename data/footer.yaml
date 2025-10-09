@@ -1,0 +1,69 @@
+# Footer Configuration
+# This file defines the footer content
+# Update this file to modify the footer section across your application
+
+# Main branding and description
+logo:
+  src: "/assets/logo.svg"
+  alt: "Company Logo"
+  width: 150
+  height: 50
+  priority: false
+
+darkLogo:
+  src: "/assets/logo-dark.svg"
+  alt: "Company Dark Logo"
+  width: 150
+  height: 50
+  priority: false
+
+description: "High-performance hosting, expert development, and ongoing support."
+secondaryText: "We ♥️ Open Source"
+
+# Newsletter/Contact Form Section
+formHeading: "Join our community"
+formDescription: "Lorem ipsum dolor sit amet consectetur. Integer viverra pellentesque posuere lorem."
+
+# Navigation Links
+primaryLinks:
+  - title: "Company"
+    links:
+      - children: "About"
+        href: "/about"
+        target: "_self"
+      - children: "Contact"
+        href: "/contact"
+        target: "_self"
+      - children: "Resources"
+        href: "/resources"
+        target: "_self"
+
+  - title: "Connect with us"
+    links:
+      - children: "hello@bluedroplabs.com"
+        href: "mailto:hello@bluedroplabs.com"
+        target: "_self"
+      - children: "+1800 2329495453"
+        href: "tel:+18002329495453"
+        target: "_self"
+      - children: "Linkedin"
+        href: "https://www.linkedin.com/company/bluedroplabs"
+        target: "_blank"
+      - children: "Github"
+        href: "https://github.com/bluedroplabs"
+        target: "_blank"
+
+# Utility/Legal Links
+utilityLinks:
+  - children: "Terms of Use"
+    href: "/terms-of-use"
+    target: "_self"
+  - children: "Privacy Policy"
+    href: "/privacy-policy"
+    target: "_self"
+  - children: "Sitemap"
+    href: "/sitemap"
+    target: "_self"
+
+# Copyright Information
+copyright: "© Blue Drop Labs 2025. All rights reserved."

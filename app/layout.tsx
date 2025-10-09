@@ -1,4 +1,11 @@
-import { cn, geist, geistMono } from "@/utils";
+import { PageFooter } from "@/components/PageFooter/PageFooter";
+import {
+  cn,
+  geist,
+  geistMono,
+  loadCtaBlockData,
+  loadFooterData,
+} from "@/utils";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -13,16 +20,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const ctaBlockDData = loadCtaBlockData();
+  const footerData = loadFooterData();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn(geist.variable, geistMono.variable, "antialiased")}>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="light"
-          enableSystem={true}
+          enableSystem
           themes={["light", "dark"]}
         >
           {children}
+          {ctaBlockDData && footerData && (
+            <PageFooter
+              ctaBlockProps={ctaBlockDData}
+              footerProps={footerData}
+            />
+          )}
         </ThemeProvider>
       </body>
     </html>

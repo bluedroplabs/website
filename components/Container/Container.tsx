@@ -8,22 +8,22 @@ const styles = {
   sm: {
     block: "block",
     flex: "flex",
-    grid: "grid grid-cols-4 gap-5",
+    grid: "grid grid-cols-4 gap-x-5",
   },
   md: {
     block: "md:block",
     flex: "md:flex",
-    grid: "md:grid md:grid-cols-12 md:gap-10",
+    grid: "md:grid md:grid-cols-12 md:gap-x-10",
   },
   lg: {
     block: "lg:block",
     flex: "lg:flex",
-    grid: "lg:grid lg:grid-cols-12 lg:gap-10",
+    grid: "lg:grid lg:grid-cols-12 lg:gap-x-10",
   },
   xl: {
     block: "xl:block",
     flex: "xl:flex",
-    grid: "xl:grid xl:grid-cols-12 xl:gap-10",
+    grid: "xl:grid xl:grid-cols-12 xl:gap-x-10",
   },
 };
 
