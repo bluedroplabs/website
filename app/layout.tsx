@@ -1,11 +1,6 @@
 import { PageFooter } from "@/components/PageFooter/PageFooter";
-import {
-  cn,
-  geist,
-  geistMono,
-  loadCtaBlockData,
-  loadFooterData,
-} from "@/utils";
+import { cn, geist, geistMono } from "@/utils";
+import { loadCtaBlockData, loadFooterData } from "@/utils/data";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";

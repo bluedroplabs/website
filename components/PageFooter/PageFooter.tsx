@@ -1,4 +1,4 @@
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import { CtaBlock } from "../CtaBlock/CtaBlock";
 import { DottedBackground } from "../DottedBackground/DottedBackground";
 import { Footer } from "../Footer/Footer";
