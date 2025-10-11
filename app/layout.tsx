@@ -1,13 +1,11 @@
 import { Navigation } from "@/components/Navigation/Navigation";
 import { PageFooter } from "@/components/PageFooter/PageFooter";
+import { cn, geist, geistMono } from "@/utils";
 import {
-  cn,
-  geist,
-  geistMono,
   loadCtaBlockData,
   loadFooterData,
-} from "@/utils";
-import { loadNavigationData } from "@/utils/data";
+  loadNavigationData,
+} from "@/utils/data";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
