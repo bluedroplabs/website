@@ -13,7 +13,7 @@ const buttonVariants = cva(
       variant: {
         default:
           "border bg-button-default-bg border-transparent font-mono font-medium uppercase text-button-default-text hover:bg-button-default-bg-hover hover:text-button-default-bg-hover-text",
-        ghost: "font-light text-default-strong",
+        ghost: "font-light text-default-strong hover:text-interactive-hover",
         outline:
           "border bg-transparent border-button-default-bg font-mono font-medium uppercase text-button-outline-text hover:bg-button-default-bg-hover hover:text-button-default-bg-hover-text",
         special:
@@ -21,6 +21,7 @@ const buttonVariants = cva(
       },
       size: {
         default: "px-7.75 py-4.75 has-[>svg]:px-3",
+        lg: "px-7.75 py-3.75 has-[>svg]:px-3",
         none: "",
       },
     },
