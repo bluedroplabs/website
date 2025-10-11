@@ -12,34 +12,34 @@ import { ArrowRightDownIcon } from "../Icon";
 import type { IFooter } from "./Footer.types";
 
 const styles = {
-  container: "lg:py-12 xl:py-16 space-y-12",
+  container: "lg:py-12 2xl:py-16 space-y-12",
   content:
-    "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 xl:col-span-8 xl:justify-between",
+    "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 2xl:col-span-8 2xl:justify-between",
   copyright: "text-default-light uppercase",
-  description: "font-light leading-6 text-default-strong",
-  form: "lg:w-full xl:w-[50.47%]",
+  description: "font-light leading-6 text-default-strong text-lg",
+  form: "lg:w-full 2xl:w-[50.47%]",
   input:
-    "text-default-light leading-none h-5 w-full placeholder:text-default-light focus:outline-none bg-transparent lg:max-xl:text-sm",
+    "text-default-light leading-none h-5 w-full placeholder:text-default-light focus:outline-none bg-transparent lg:max-2xl:text-sm",
   inputGroup:
-    "bg-surface-input border-b border-border-strong flex gap-2.5 mt-6 px-5 py-4.5 lg:max-xl:px-3",
+    "bg-surface-input border-b border-border-strong flex gap-2.5 mt-6 px-5 py-4.5 lg:max-2xl:px-3",
   links: "mt-6 space-y-3.5",
   logo: "max-h-8.75 mb-6",
-  logoWrapper: "lg:col-span-full xl:col-span-4",
+  logoWrapper: "lg:col-span-full 2xl:col-span-4",
   lowerContent:
-    "col-span-full lg:flex lg:gap-5 lg:justify-between lg:items-end lg:mt-5 lg:max-xl:flex-wrap xl:items-center",
-  nav: "flex gap-x-5 gap-y-8 max-lg:flex-wrap max-lg:pr-6 lg:gap-x-20 xl:w-[49.52%] xl:justify-between",
+    "col-span-full lg:flex lg:gap-5 lg:justify-between lg:items-end lg:mt-5 lg:max-2xl:flex-wrap 2xl:items-center",
+  nav: "flex gap-x-5 gap-y-8 max-lg:flex-wrap max-lg:pr-6 lg:gap-x-20 2xl:w-[49.52%] 2xl:justify-between",
   secondaryText: "font-mono font-medium uppercase mt-6",
-  submitButton: "uppercase font-medium lg:max-xl:text-sm",
+  submitButton: "uppercase font-medium lg:max-2xl:text-sm",
   title: "leading-none text-default-light uppercase",
   themeButton: "size-6 text-default-light uppercase",
   themeButtons: "flex gap-2 items-center",
-  themeGroup: "flex justify-between gap-x-8 max-lg:mt-8 lg:max-xl:w-full",
+  themeGroup: "flex justify-between gap-x-8 max-lg:mt-8 lg:max-2xl:w-full",
   themeIcon: (isActive: boolean) =>
     cn("size-4.5", isActive ? "text-icon-default" : "text-icon-inactive"),
   themeItem: "flex items-center",
   utilityLink: "text-default-light uppercase",
   utilityLinks:
-    "max-lg:space-y-6 lg:flex lg:gap-x-6 lg:w-full xl:gap-x-10  xl:justify-end",
+    "max-lg:space-y-6 lg:flex lg:gap-x-6 lg:w-full 2xl:gap-x-10  2xl:justify-end",
 };
 
 export const Footer = ({
@@ -84,7 +84,7 @@ export const Footer = ({
                     <li key={link.href}>
                       <Button
                         {...link}
-                        className="lg:max-xl:text-sm"
+                        className="lg:max-2xl:text-sm"
                         size="none"
                         variant="ghost"
                       />
@@ -98,7 +98,7 @@ export const Footer = ({
             <h2 className={styles.title}>{formHeading}</h2>
             <p
               className={cn(
-                "mt-4 lg:mt-5.5 lg:max-xl:text-sm",
+                "mt-4 lg:mt-5.5 lg:max-2xl:text-sm",
                 styles.description,
               )}
             >
@@ -124,9 +124,12 @@ export const Footer = ({
           </form>
         </div>
         <div className={styles.lowerContent}>
-          <p className={cn("max-xl:hidden", styles.copyright)}>{copyright}</p>
+          <p className={cn("max-2xl:hidden", styles.copyright)}>{copyright}</p>
           <nav
-            className={cn("lg:max-xl:w-full xl:ml-auto xl:mr-10", styles.nav)}
+            className={cn(
+              "lg:max-2xl:w-full 2xl:ml-auto 2xl:mr-10",
+              styles.nav,
+            )}
           >
             <ul
               aria-label="Legal and company information"
@@ -148,7 +151,7 @@ export const Footer = ({
           </nav>
 
           <div className={styles.themeGroup}>
-            <p className={cn("xl:hidden", styles.copyright)}>{copyright}</p>
+            <p className={cn("2xl:hidden", styles.copyright)}>{copyright}</p>
             <nav>
               <ul className={styles.themeButtons}>
                 {themes.map((t) => {
