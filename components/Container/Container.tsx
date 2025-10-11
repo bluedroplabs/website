@@ -25,6 +25,11 @@ const styles = {
     flex: "xl:flex",
     grid: "xl:grid xl:grid-cols-12 xl:gap-x-10",
   },
+  "2xl": {
+    block: "2xl:block",
+    flex: "2xl:flex",
+    grid: "2xl:grid 2xl:grid-cols-12 2xl:gap-x-10",
+  },
 };
 
 const defaultDisplays: TContainerDisplays = {
@@ -32,6 +37,7 @@ const defaultDisplays: TContainerDisplays = {
   md: "block",
   lg: "block",
   xl: "block",
+  "2xl": "block",
 };
 
 export const Container = ({
