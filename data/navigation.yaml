@@ -1,0 +1,28 @@
+# Navigation Configuration
+# This file defines the navigation structure for the application
+# Update this file to modify the main navigation links and their structure
+
+cta:
+  children: "Get Started"
+  href: "/"
+logo:
+  src: "/assets/logo.svg"
+  alt: "Company Logo"
+  width: 158
+  height: 36
+darkLogo:
+  src: "/assets/logo-dark.svg"
+  alt: "Company Dark Logo"
+  width: 158
+  height: 36
+links:
+  - href: "/about"
+    children: "Why Blue Drop Labs?"
+  - href: "/platform"
+    children: "Platform"
+  - href: "/services"
+    children: "Services"
+  - href: "/resources"
+    children: "Resources"
+  - href: "/partners"
+    children: "Partners"

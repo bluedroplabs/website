@@ -1,3 +1,4 @@
+import { Navigation } from "@/components/Navigation/Navigation";
 import { PageFooter } from "@/components/PageFooter/PageFooter";
 import {
   cn,
@@ -6,6 +7,7 @@ import {
   loadCtaBlockData,
   loadFooterData,
 } from "@/utils";
+import { loadNavigationData } from "@/utils/data";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
@@ -22,6 +24,7 @@ export default function RootLayout({
 }>) {
   const ctaBlockDData = loadCtaBlockData();
   const footerData = loadFooterData();
+  const navigationData = loadNavigationData();
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -32,6 +35,7 @@ export default function RootLayout({
           enableSystem
           themes={["light", "dark"]}
         >
+          {navigationData && <Navigation {...navigationData} />}
           {children}
           {ctaBlockDData && footerData && (
             <PageFooter
