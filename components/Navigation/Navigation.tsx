@@ -25,11 +25,13 @@ export const Navigation = ({
 }: INavigation) => {
   const { isDarkMode } = useAppTheme();
 
+  const logoProps = { className: styles.logo, priority: true };
+
   return (
     <header className={cn(styles.container, className)} {...props}>
       {isDarkMode
-        ? darkLogo?.src && <Image {...darkLogo} className={styles.logo} />
-        : logo?.src && <Image {...logo} className={styles.logo} />}
+        ? darkLogo?.src && <Image {...darkLogo} {...logoProps} />
+        : logo?.src && <Image {...logo} {...logoProps} />}
 
       <nav className="hidden lg:block">
         <ul className={styles.list}>
