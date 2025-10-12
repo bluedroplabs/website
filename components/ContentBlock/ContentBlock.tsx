@@ -65,12 +65,14 @@ export const ContentBlock = ({
   eyebrowClassName,
   eyebrowVariant = "default",
   Icon,
+  iconClassName,
   primaryCTA,
   primaryCTAClassName,
   secondaryCTA,
   secondaryCTAClassName,
   title,
   titleClassName,
+  titleTag = "h2",
   titleVariant = "default",
   variant = "left",
   ...props
@@ -87,51 +89,40 @@ export const ContentBlock = ({
     return null;
   }
 
+  const Heading = titleTag || "h2";
+
+  const classes = {
+    blockquote: cn(styles.blockquote, blockquoteClassName),
+    container: cn(containerVariants({ variant }), className),
+    ctaGroup: cn(styles.ctaGroup, ctaGroupClassName),
+    date: cn(styles.date, dateClassName),
+    description: cn(styles.description, descriptionClassName),
+    eyebrow: cn(eyebrowVariants({ variant: eyebrowVariant }), eyebrowClassName),
+    icon: cn(styles.icon, iconClassName),
+    title: cn(titleVariants({ variant: titleVariant }), titleClassName),
+  };
+
   return (
-    <div className={cn(containerVariants({ variant }), className)} {...props}>
+    <div className={classes.container} {...props}>
       <div className={styles.header}>
-        {Icon && <Icon className={cn(styles.icon)} />}
-        {eyebrow && (
+        {Icon && <Icon className={classes.icon} />}
+        {(date || eyebrow) && (
           <div className={styles.eyebrowContainer}>
-            {eyebrow && (
-              <p
-                className={cn(
-                  eyebrowVariants({ variant: eyebrowVariant }),
-                  eyebrowClassName,
-                )}
-              >
-                {eyebrow}
-              </p>
-            )}
-            {date && (
-              <time className={cn(styles.date, dateClassName)}>{date}</time>
-            )}
+            {eyebrow && <p className={classes.eyebrow}>{eyebrow}</p>}
+            {date && <time className={classes.date}>{date}</time>}
           </div>
         )}
-        {title && (
-          <h2
-            className={cn(
-              titleVariants({ variant: titleVariant }),
-              titleClassName,
-            )}
-          >
-            {parse(title)}
-          </h2>
-        )}
+        {title && <Heading className={classes.title}>{parse(title)}</Heading>}
       </div>
       <div className={styles.content}>
         {description && (
-          <p className={cn(styles.description, descriptionClassName)}>
-            {parse(description)}
-          </p>
+          <p className={classes.description}>{parse(description)}</p>
         )}
         {blockquote && (
-          <blockquote className={cn(styles.blockquote, blockquoteClassName)}>
-            {blockquote}
-          </blockquote>
+          <blockquote className={classes.blockquote}>{blockquote}</blockquote>
         )}
         {(primaryCTA || secondaryCTA) && (
-          <div className={cn(styles.ctaGroup, ctaGroupClassName)}>
+          <div className={classes.ctaGroup}>
             {primaryCTA && (
               <Button {...primaryCTA} className={primaryCTAClassName} />
             )}
