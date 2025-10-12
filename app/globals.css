@@ -157,3 +157,11 @@ body {
   background-image: radial-gradient(circle, var(--color-brand-aqua) 0.0225rem, transparent 0.0625rem);
   background-size: 0.90625rem 0.90625rem;
 }
+
+.bg-grid-lines {
+  background-image: repeating-linear-gradient(to right,
+      var(--color-black-10) 0,
+      var(--color-black-10) 1px,
+      transparent 1px,
+      transparent 80px);
+}
