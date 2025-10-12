@@ -22,23 +22,27 @@ const containerVariants = cva(containerClass, {
 const eyebrowVariants = cva("font-mono leading-[1] uppercase w-fit", {
   variants: {
     variant: {
-      default: "text-default-base",
+      default: "text-size-14 lg:text-size-16",
       highlight: "bg-brand-sky-blue px-2.5 py-0.5 text-deep-green",
     },
   },
   defaultVariants: { variant: "default" },
 });
 
-const titleVariants = cva("font-medium leading-[110%] text-default-heading", {
-  variants: {
-    variant: {
-      default: "text-size-32 lg:text-size-40 2xl:text-size-48",
-      sm: "text-lg lg:text-xl",
-      md: "text-xl lg:text-2xl",
+const titleVariants = cva(
+  "font-medium leading-[110%] !text-default-heading [&_strong]:pl-2 [&_strong]:pr-1 [&_strong]:font-medium [&_strong]:bg-brand-light-blue",
+  {
+    variants: {
+      variant: {
+        default: "text-size-32 lg:text-size-40 2xl:text-size-48",
+        sm: "text-size-18 lg:text-size-20",
+        md: "text-size-20 lg:text-size-24",
+        lg: "text-size-24 lg:text-size-32",
+      },
     },
+    defaultVariants: { variant: "default" },
   },
-  defaultVariants: { variant: "default" },
-});
+);
 
 const styles = {
   blockquote:
