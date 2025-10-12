@@ -31,6 +31,7 @@ export const IconCard = ({
       Icon={Icon}
       title={title}
       titleClassName="font-semibold mt-4 lg:mt-6"
+      titleTag="h3"
       titleVariant="sm"
     />
   );
