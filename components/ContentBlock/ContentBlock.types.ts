@@ -12,6 +12,11 @@ export type TContentBlockVariant = "left" | "center" | "inline";
 export type TContentBlockEyebrowVariant = "default" | "highlight";
 
 /**
+ * HTML tag options for the title element.
+ */
+export type TContentBlockTitleTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+/**
  * Variant options for the title text.
  */
 export type TContentBlockTitleVariant = "default" | "sm" | "md";
@@ -110,6 +115,11 @@ export interface IContentBlock
    * Custom class name for the title text.
    */
   titleClassName?: string;
+
+  /**
+   * HTML tag to be used for the title element
+   */
+  titleTag?: TContentBlockTitleTag;
 
   /**
    * Variant of the title text.
