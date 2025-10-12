@@ -6,7 +6,7 @@ import parse from "html-react-parser";
 import { Button } from "../Button/Button";
 import type { IContentBlock } from "./ContentBlock.types";
 
-const containerClass = "flex flex-col flex-1";
+const containerClass = "flex flex-col";
 
 const containerVariants = cva(containerClass, {
   variants: {
@@ -19,7 +19,7 @@ const containerVariants = cva(containerClass, {
   defaultVariants: { variant: "left" },
 });
 
-const eyebrowVariants = cva("font-mono uppercase w-fit", {
+const eyebrowVariants = cva("font-mono leading-[1] uppercase w-fit", {
   variants: {
     variant: {
       default: "text-default-base",
@@ -90,6 +90,7 @@ export const ContentBlock = ({
   }
 
   const Heading = titleTag || "h2";
+  const isInline = variant === "inline";
 
   const classes = {
     blockquote: cn(styles.blockquote, blockquoteClassName),
@@ -102,9 +103,11 @@ export const ContentBlock = ({
     title: cn(titleVariants({ variant: titleVariant }), titleClassName),
   };
 
+  const getColumnClass = (classes: string) => cn(isInline && "flex-1", classes);
+
   return (
     <div className={classes.container} {...props}>
-      <div className={styles.header}>
+      <div className={getColumnClass(styles.header)}>
         {Icon && <Icon className={classes.icon} />}
         {(date || eyebrow) && (
           <div className={styles.eyebrowContainer}>
@@ -114,7 +117,7 @@ export const ContentBlock = ({
         )}
         {title && <Heading className={classes.title}>{parse(title)}</Heading>}
       </div>
-      <div className={styles.content}>
+      <div className={getColumnClass(styles.content)}>
         {description && (
           <p className={classes.description}>{parse(description)}</p>
         )}
