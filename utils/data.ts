@@ -1,5 +1,6 @@
 import type { ICtaBlock } from "@/components/CtaBlock/CtaBlock.types";
 import type { IFooter } from "@/components/Footer/Footer.types";
+import type { INavigation } from "@/components/Navigation/Navigation.types";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { parse } from "yaml";
@@ -30,6 +31,21 @@ export function loadFooterData(): IFooter | null {
     return parse(footerContents);
   } catch (error) {
     console.error("Error loading Footer data:", error);
+    return null;
+  }
+}
+
+/**
+ * Loads and parses the Navigation configuration from YAML file
+ * @returns Parsed Navigation configuration data
+ */
+export function loadNavigationData(): INavigation | null {
+  try {
+    const navigationPath = join(process.cwd(), "data", "navigation.yaml");
+    const navigationContents = readFileSync(navigationPath, "utf8");
+    return parse(navigationContents);
+  } catch (error) {
+    console.error("Error loading Navigation data:", error);
     return null;
   }
 }
