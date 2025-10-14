@@ -20,7 +20,8 @@ const buttonVariants = cva(
           "bg-button-default-bg-hover text-button-default-bg-hover-text font-mono font-medium uppercase text-button-special-text hover:bg-button-special-bg-hover hover:text-button-special-bg-hover-text",
       },
       size: {
-        default: "px-7.75 py-4.75 has-[>svg]:px-3",
+        default:
+          "px-7.75 py-4.75 has-[>svg]:px-3 max-xs:px-3.5 max-xs:py-2 max-xs:text-xs",
         lg: "px-7.75 py-3.75 has-[>svg]:px-3",
         none: "",
       },
