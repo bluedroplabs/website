@@ -2,7 +2,7 @@
 
 import { cn } from "@/utils/classes";
 import { Slot } from "@radix-ui/react-slot";
-import type { IContainer, TContainerDisplays } from "./Container.types";
+import type { IContainer } from "./Container.types";
 
 const styles = {
   sm: {
@@ -32,18 +32,10 @@ const styles = {
   },
 };
 
-const defaultDisplays: TContainerDisplays = {
-  sm: "block",
-  md: "block",
-  lg: "block",
-  xl: "block",
-  "2xl": "block",
-};
-
 export const Container = ({
   asChild,
   className,
-  displays = defaultDisplays,
+  displays = { sm: "block" },
   noPadding = false,
   ...props
 }: IContainer) => {

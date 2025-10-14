@@ -3,11 +3,14 @@
 @theme {
   /* Breakpoints*/
   --breakpoint-xs: 0px;
+  --breakpoint-xs: 393px;
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1440px;
+  --breakpoint-3xl: 1600px;
+  --breakpoint-4xl: 1920px;
 
   /* Typography */
   --text-size-12: 0.75rem;
@@ -20,7 +23,9 @@
   --text-size-32: 2rem;
   --text-size-40: 2.5rem;
   --text-size-48: 3rem;
+  --text-size-52: 3.25rem;
   --text-size-56: 3.5rem;
+  --text-size-66: 4.125rem;
   --text-size-64: 4rem;
   --text-size-80: 5rem;
   --font-family-sans: Geist, system-ui, sans-serif;
@@ -160,10 +165,20 @@ body {
   font-family: var(--font-family-sans);
   font-weight: 300;
   line-height: 1.5;
+  max-width: var(--breakpoint-4xl);
+  margin: 0 auto;
 }
 
 /* Dotted Background Utilities */
 .bg-dotted {
   background-image: radial-gradient(circle, var(--color-brand-aqua) 0.0225rem, transparent 0.0625rem);
   background-size: 0.90625rem 0.90625rem;
+}
+
+.bg-grid-lines {
+  background-image: repeating-linear-gradient(to right,
+      var(--color-black-10) 0,
+      var(--color-black-10) 1px,
+      transparent 1px,
+      transparent 80px);
 }
