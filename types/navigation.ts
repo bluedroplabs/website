@@ -1,6 +1,6 @@
 import type { ICTA } from "./cta.types";
 
-export interface INavigation {
+export interface INavigationItem {
   /**
    * The title of the navigation item.
    */

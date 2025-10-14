@@ -25,6 +25,11 @@ const styles = {
     flex: "xl:flex",
     grid: "xl:grid xl:grid-cols-12 xl:gap-x-10",
   },
+  "2xl": {
+    block: "2xl:block",
+    flex: "2xl:flex",
+    grid: "2xl:grid 2xl:grid-cols-12 2xl:gap-x-10",
+  },
 };
 
 export const Container = ({
@@ -37,7 +42,7 @@ export const Container = ({
   const Comp = asChild ? Slot : "div";
 
   const classNames = cn(
-    "relative w-full",
+    "relative w-full max-w-480 mx-auto",
     !noPadding && "px-5 md:px-8 lg:px-10 xl:px-20",
     displays.sm && styles.sm[displays.sm],
     displays.md && styles.md[displays.md],

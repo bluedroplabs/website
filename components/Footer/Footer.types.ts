@@ -1,6 +1,6 @@
 import type { ICTA } from "@/types/cta.types";
 import type { IImage } from "@/types/image.types";
-import type { INavigation } from "@/types/navigation";
+import type { INavigationItem } from "@/types/navigation";
 import type { HTMLAttributes } from "react";
 
 /**
@@ -45,7 +45,7 @@ export interface IFooter extends HTMLAttributes<HTMLElement> {
   /**
    * Primary navigation links.
    */
-  primaryLinks: INavigation[];
+  primaryLinks: INavigationItem[];
 
   /**
    * Secondary text line (e.g., tagline, motto, etc.).
