@@ -35,7 +35,6 @@ components:
         src: "https://picsum.photos/200/100?random=5"
         width: 200
         height: 60
-      - alt: "Logo 6"
 
   - type: FeaturedIconGrid
     eyebrow: "Problems we solve"
@@ -124,9 +123,6 @@ components:
         image:
           alt: "SEO + Marketing"
           src: "https://picsum.photos/600/600?random=6"
-        src: "https://picsum.photos/200/100?random=6"
-        width: 200
-        height: 60
 
   - type: GridSeparator
         
