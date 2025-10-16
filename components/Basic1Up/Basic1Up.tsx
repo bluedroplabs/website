@@ -9,7 +9,7 @@ import { DottedBackground } from "../DottedBackground/DottedBackground";
 import type { IBasic1Up } from "./Basic1Up.types";
 
 const dottedBgClasses = [
-  "px-6 pt-21 size-full relative max-md:-left-5 max-md:w-screen md:col-span-6 md:w-[calc(100%+1.25rem)] lg:pt-16.5 2xl:p-20 2xl:pb-0",
+  "px-6 pt-21 size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+1.25rem)] lg:pt-16.5 2xl:p-20 2xl:pb-0",
   "before:bg-deep-green-5 before:content-[''] before:absolute before:inset-0 before:-z-10 before:size-full",
 ];
 
@@ -57,9 +57,10 @@ export const Basic1Up = ({
         blockquote={blockquote}
         blockquoteClassName="my-6 lg:my-8"
         className={cn(
-          "md:col-span-6 py-12 lg:p-10 2xl:px-16 2xl:py-25",
+          "md:col-span-6 px-6 py-12 md:px-8 lg:p-10 2xl:px-16 2xl:py-25",
           isLeft ? "md:-mr-5" : "md:-ml-5",
         )}
+        ctaGroupClassName="max-lg:flex-col"
         description={description}
         descriptionClassName="lg:max-xl:text-base"
         eyebrow={eyebrow}
