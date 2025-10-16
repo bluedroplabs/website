@@ -17,6 +17,13 @@ export const LogoMarquee = ({
   const contentRef = useRef<HTMLDivElement>(null);
   const [shouldScroll, setShouldScroll] = useState(false);
 
+  const updateScroll = () => {
+    if (!marqueeRef.current || !contentRef.current) return;
+    const { offsetWidth } = marqueeRef.current;
+    const { scrollWidth } = contentRef.current;
+    setShouldScroll(offsetWidth < scrollWidth);
+  };
+
   useLayoutEffect(() => {
     updateScroll();
     window.addEventListener("resize", updateScroll);
@@ -28,13 +35,6 @@ export const LogoMarquee = ({
 
   const validLogos = logos.filter((logo) => logo.src);
   if (validLogos.length === 0) return null;
-
-  const updateScroll = () => {
-    if (!marqueeRef.current || !contentRef.current) return;
-    const { offsetWidth } = marqueeRef.current;
-    const { scrollWidth } = contentRef.current;
-    setShouldScroll(offsetWidth < scrollWidth);
-  };
 
   const renderLogos = (extraClass = "") => (
     <div
