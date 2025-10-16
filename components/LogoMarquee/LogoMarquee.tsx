@@ -18,25 +18,30 @@ export const LogoMarquee = ({
   const [shouldScroll, setShouldScroll] = useState(false);
 
   useLayoutEffect(() => {
-    if (!marqueeRef.current || !contentRef.current) return;
-    const container = marqueeRef.current;
-    const content = contentRef.current;
-    if (container.offsetWidth < content.scrollWidth) {
-      setShouldScroll(true);
-    } else {
-      setShouldScroll(false);
-    }
+    updateScroll();
+    window.addEventListener("resize", updateScroll);
+
+    return () => {
+      window.removeEventListener("resize", updateScroll);
+    };
   }, [logos]);
+
+  const validLogos = logos.filter((logo) => logo.src);
+  if (validLogos.length === 0) return null;
+
+  const updateScroll = () => {
+    if (!marqueeRef.current || !contentRef.current) return;
+    const { offsetWidth } = marqueeRef.current;
+    const { scrollWidth } = contentRef.current;
+    setShouldScroll(offsetWidth < scrollWidth);
+  };
 
   const renderLogos = (extraClass = "") => (
     <div
-      className={cn(
-        "logo-marquee-inner flex gap-x-12 items-center",
-        extraClass,
-      )}
+      className={cn("flex gap-x-12 items-center", extraClass)}
       ref={contentRef}
     >
-      {logos.map((logo, idx) => (
+      {validLogos.map((logo, idx) => (
         <div className="flex items-center" key={logo.alt || idx}>
           <Image
             alt={logo.alt || "Logo"}
@@ -60,16 +65,17 @@ export const LogoMarquee = ({
       {description && (
         <p className="mb-8.5 font-mono text-sm uppercase">{description}</p>
       )}
-      <div className="overflow-x-hidden w-full" ref={marqueeRef}>
-        {logos &&
-          logos.length > 0 &&
-          (shouldScroll ? (
-            <Marquee gradient={false} pauseOnHover speed={40}>
-              {renderLogos()}
-            </Marquee>
-          ) : (
-            renderLogos("justify-center")
-          ))}
+      <div
+        className="overflow-x-hidden w-full [&>div.rfm-marquee-container]:gap-x-12"
+        ref={marqueeRef}
+      >
+        {shouldScroll ? (
+          <Marquee gradient={false} pauseOnHover speed={40}>
+            {renderLogos()}
+          </Marquee>
+        ) : (
+          renderLogos("justify-center")
+        )}
       </div>
     </Container>
   );
