@@ -1,4 +1,3 @@
-import { BillsIcon, BugIcon, ClockIcon, WarningIcon } from "../Icon";
 import type { IFeaturedIconGrid } from "./FeaturedIconGrid.types";
 
 const FEATURED_ICON_GRID_DEFAULT_PROPS: IFeaturedIconGrid = {
@@ -9,25 +8,25 @@ const FEATURED_ICON_GRID_DEFAULT_PROPS: IFeaturedIconGrid = {
     {
       description:
         "Traffic grows, performance suffers, costs skyrocket. Legacy hosts like Pantheon and Acquia charge more as you succeed, while throttling resources when you need them most.",
-      Icon: BillsIcon,
+      icon: "BillsIcon",
       title: "Hosting bills that punish your success",
     },
     {
       description:
         "Waiting weeks for simple changes. Getting charged premium rates for basic work. Communicating through project managers who don't understand your technical needs.",
-      Icon: ClockIcon,
+      icon: "ClockIcon",
       title: "Development teams that move at a snail's pace",
     },
     {
       description:
         "Managing separate companies for hosting, development, SEO, and support. Each pointing fingers when something breaks. None taking ownership of your overall success.",
-      Icon: WarningIcon,
+      icon: "WarningIcon",
       title: "Vendor coordination nightmares",
     },
     {
       description:
         "Patches on patches. Performance that degrades with every update. Technical debt that makes simple changes impossibly expensive.",
-      Icon: BugIcon,
+      icon: "BugIcon",
       title: "Code quality issues that compound over time",
     },
   ],
