@@ -63,10 +63,9 @@ export const HomepageHero = ({
       <HomepageHeroLargeRadial
         className={cn(styles.visibility.desktop, styles.radial)}
       />
-      {/* <LargeBackground className="absolute top-0 text-page-default" /> */}
       <Container className={styles.container} {...props}>
         <div className={styles.inner} style={{ containerType: "inline-size" }}>
-          <h2 className={styles.title}>{title}</h2>
+          <h1 className={styles.title}>{title}</h1>
           <p className={styles.description}>{description}</p>
           <Button {...cta} />
         </div>
