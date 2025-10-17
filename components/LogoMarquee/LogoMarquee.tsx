@@ -58,7 +58,10 @@ export const LogoMarquee = ({
 
   return (
     <Container
-      className={cn("py-16 text-center", className)}
+      className={cn(
+        "border-b border-border-normal py-16 text-center",
+        className,
+      )}
       noPadding
       {...props}
     >
