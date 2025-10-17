@@ -19,7 +19,12 @@ export type TContentBlockTitleTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 /**
  * Variant options for the title text.
  */
-export type TContentBlockTitleVariant = "default" | "sm" | "md" | "lg";
+export type TContentBlockTitleVariant =
+  | "default"
+  | "sm"
+  | "md"
+  | "lg"
+  | "gradient-hero";
 
 /**
  * Props for the ContentBlock component.
