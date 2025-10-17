@@ -42,7 +42,7 @@ export const Container = ({
   const Comp = asChild ? Slot : "div";
 
   const classNames = cn(
-    "relative w-full max-w-480 mx-auto",
+    "relative w-full max-w-540 mx-auto",
     !noPadding && "px-5 md:px-8 lg:px-10 xl:px-20",
     displays.sm && styles.sm[displays.sm],
     displays.md && styles.md[displays.md],

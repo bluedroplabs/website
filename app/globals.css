@@ -11,6 +11,7 @@
   --breakpoint-2xl: 1440px;
   --breakpoint-3xl: 1600px;
   --breakpoint-4xl: 1920px;
+  --breakpoint-5xl: 2160px;
 
   /* Typography */
   --text-size-12: 0.75rem;
@@ -166,7 +167,7 @@ body {
   font-family: var(--font-family-sans);
   font-weight: 300;
   line-height: 1.5;
-  max-width: var(--breakpoint-4xl);
+  max-width: var(--breakpoint-5xl);
   margin: 0 auto;
 }
 
