@@ -1,10 +1,9 @@
-import { BillsIcon } from "../Icon/BillsIcon";
 import type { IIconCard } from "./IconCard.types";
 
 const ICON_CARD_DEFAULT_PROPS: IIconCard = {
   description:
     "Traffic grows, performance suffers, costs skyrocket. Legacy hosts like Pantheon and Acquia charge more as you succeed, while throttling resources when you need them most.",
-  Icon: BillsIcon,
+  icon: "BillsIcon",
   title: "Hosting bills that punish your success",
   variant: "default",
 };

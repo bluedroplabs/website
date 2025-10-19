@@ -1,4 +1,4 @@
-import type { ComponentType, HTMLAttributes, SVGProps } from "react";
+import type { HTMLAttributes } from "react";
 
 /**
  * Defines the available visual variants for the IconCard component.
@@ -17,7 +17,7 @@ export interface IIconCard extends HTMLAttributes<HTMLElement> {
   /**
    * Icon component to be rendered within the IconCard.
    */
-  Icon: ComponentType<SVGProps<SVGSVGElement>>;
+  icon: string;
 
   /**
    * Determines the visual variant of the component.

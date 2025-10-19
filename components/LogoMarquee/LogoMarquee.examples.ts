@@ -25,6 +25,41 @@ const LOGO_MARQUEE_DEFAULT_PROPS: ILogoMarquee = {
       height: 60,
       priority: true,
     },
+    {
+      alt: "Client Logo 4",
+      src: "https://picsum.photos/120/60",
+      width: 120,
+      height: 60,
+      priority: true,
+    },
+    {
+      alt: "Client Logo 5",
+      src: "https://picsum.photos/130/60",
+      width: 130,
+      height: 60,
+      priority: true,
+    },
+    {
+      alt: "Client Logo 6",
+      src: "https://picsum.photos/140/60",
+      width: 140,
+      height: 60,
+      priority: true,
+    },
+    {
+      alt: "Client Logo 7",
+      src: "https://picsum.photos/150/60",
+      width: 150,
+      height: 60,
+      priority: true,
+    },
+    {
+      alt: "Client Logo 8",
+      src: "https://picsum.photos/160/60",
+      width: 160,
+      height: 60,
+      priority: true,
+    },
   ],
 };
 

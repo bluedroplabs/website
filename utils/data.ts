@@ -1,6 +1,7 @@
 import type { ICtaBlock } from "@/components/CtaBlock/CtaBlock.types";
 import type { IFooter } from "@/components/Footer/Footer.types";
 import type { INavigation } from "@/components/Navigation/Navigation.types";
+import type { IPage } from "@/types/page.types";
 import { readFileSync } from "fs";
 import { join } from "path";
 import { parse } from "yaml";
@@ -46,6 +47,21 @@ export function loadNavigationData(): INavigation | null {
     return parse(navigationContents);
   } catch (error) {
     console.error("Error loading Navigation data:", error);
+    return null;
+  }
+}
+
+/**
+ * Loads and parses the Page configuration from YAML file
+ * @returns Parsed Page configuration data
+ */
+export function loadPageData(page: string): IPage | null {
+  try {
+    const pagePath = join(process.cwd(), "data", `${page}.yaml`);
+    const pageContents = readFileSync(pagePath, "utf8");
+    return parse(pageContents);
+  } catch (error) {
+    console.error("Error loading Page data:", error);
     return null;
   }
 }
