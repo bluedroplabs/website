@@ -2,6 +2,7 @@ export { ArrowRightDownIcon } from "./ArrowRightDownIcon";
 export { BillsIcon } from "./BillsIcon";
 export { BugIcon } from "./BugIcon";
 export { ClockIcon } from "./ClockIcon";
+export { CrossIcon } from "./CrossIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
 export { SunIcon } from "./SunIcon";
