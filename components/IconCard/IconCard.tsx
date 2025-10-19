@@ -10,6 +10,9 @@ const iconMap = {
     import("../Icon").then((m) => ({ default: m.BillsIcon })),
   ),
   BugIcon: lazy(() => import("../Icon").then((m) => ({ default: m.BugIcon }))),
+  CheckBadgeIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.CheckBadgeIcon })),
+  ),
   ClockIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ClockIcon })),
   ),
@@ -18,6 +21,12 @@ const iconMap = {
   ),
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
+  ),
+  ShakeHandsIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ShakeHandsIcon })),
+  ),
+  StackedIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.StackedIcon })),
   ),
   SunIcon: lazy(() => import("../Icon").then((m) => ({ default: m.SunIcon }))),
   WarningIcon: lazy(() =>
@@ -35,7 +44,7 @@ export const IconCard = (props: IIconCard) => {
     return (
       <div className="flex gap-6">
         <Suspense fallback={null}>
-          <Icon className="size-8 text-icon-default lg:size-12" />
+          <Icon className="size-8 min-w-8 text-icon-default lg:size-12 lg:min-w-12" />
         </Suspense>
         <div className="space-y-2">
           <h3 className="font-semibold text-xl text-default-heading lg:text-size-24">
