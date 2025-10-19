@@ -38,6 +38,7 @@ const titleVariants = cva(
         sm: "text-size-18 lg:text-size-20",
         md: "text-size-20 lg:text-size-24",
         lg: "text-size-24 lg:text-size-32",
+        "gradient-hero": "text-[12.25cqw] lg:text-[5cqw]",
       },
     },
     defaultVariants: { variant: "default" },

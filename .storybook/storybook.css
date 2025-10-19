@@ -7,3 +7,7 @@
 .docs-story {
   background-color: var(--color-page-default);
 }
+
+.sb-show-main.sb-main-fullscreen {
+  margin: 0 auto !important;
+}
