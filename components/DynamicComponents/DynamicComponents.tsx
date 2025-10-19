@@ -5,7 +5,6 @@ import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
-import { Fragment } from "react";
 import { FeaturedIconGrid } from "../FeaturedIconGrid/FeaturedIconGrid";
 import { FeaturedSolutionsGrid } from "../FeaturedSolutionsGrid/FeaturedSolutionsGrid";
 import { GridSeparator } from "../GridSeparator/GridSeparator";
@@ -32,10 +31,6 @@ export const DynamicComponents = ({ components }: IDynamicComponents) => {
       return null;
     }
 
-    return (
-      <Fragment key={index}>
-        <Component {...props} />
-      </Fragment>
-    );
+    return <Component {...props} key={index} />;
   });
 };
