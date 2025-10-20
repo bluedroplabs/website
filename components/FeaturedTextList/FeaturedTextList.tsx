@@ -3,6 +3,7 @@
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils/classes";
 import parse from "html-react-parser";
+import { CONTAINER_PADDING } from "../Container/Container.constants";
 import type { IFeaturedTextList } from "./FeaturedTextList.types";
 
 export const FeaturedTextList = ({
@@ -15,7 +16,12 @@ export const FeaturedTextList = ({
 
   return (
     <Container className={cn(className)} noPadding {...props}>
-      <div className="px-5 flex py-14 max-lg:flex-col max-lg:gap-8 md:px-8 lg:px-10 lg:py-20 xl:px-20">
+      <div
+        className={cn(
+          "flex py-14 max-lg:flex-col max-lg:gap-8 lg:py-20",
+          CONTAINER_PADDING,
+        )}
+      >
         {title && (
           <h2 className="leading-[1.25] font-medium text-size-24 lg:pl-16 lg:text-size-32 lg:w-[31.148%]">
             {title}

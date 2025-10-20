@@ -2,6 +2,7 @@
 
 import { cn } from "@/utils/classes";
 import { Slot } from "@radix-ui/react-slot";
+import { CONTAINER_PADDING } from "./Container.constants";
 import type { IContainer } from "./Container.types";
 
 const styles = {
@@ -43,7 +44,7 @@ export const Container = ({
 
   const classNames = cn(
     "relative w-full max-w-540 mx-auto",
-    !noPadding && "px-5 md:px-8 lg:px-10 xl:px-20",
+    !noPadding && CONTAINER_PADDING,
     displays.sm && styles.sm[displays.sm],
     displays.md && styles.md[displays.md],
     displays.lg && styles.lg[displays.lg],
