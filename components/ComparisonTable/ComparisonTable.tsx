@@ -5,10 +5,29 @@ import { cn } from "@/utils";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { CrossIcon } from "../Icon";
 import { CheckIcon } from "../Icon/CheckIcon";
+import { ScrollArea, ScrollBar } from "../ScrollArea/ScrollArea";
 import type { IComparisonTable } from "./ComparisonTable.types";
 import { ComparisonTableHighlightBg } from "./components/ComparisonTableHighlightBg";
+import { ComparisonTableHighlightsSmallBg } from "./components/ComparisonTableHighlightsSmallBg";
 
-// const styles = {};
+const styles = {
+  cell: "relative border-l border-border-normal",
+  checkIcon: "size-8 mx-auto text-icon-hover",
+  contentBlock:
+    "border-x border-border-normal mx-6 pb-8 px-6 pt-14  lg:pb-12 lg:pt-25",
+  contentBlockWrapper: "border-b border-border-normal",
+  contentDescription: "mt-5",
+  contentTitle: "mt-5",
+  crossIcon: "size-8 mx-auto text-border-light",
+  highlightBg: "absolute h-auto w-full bottom-0 left-0 pointer-events-none",
+  row: "font-semibold text-lg",
+  rowHeader: "px-6 py-4 max-lg:text-base lg:px-8 lg:py-7",
+  table: "min-w-120 w-full table-fixed overflow-hidden",
+  tableWrapper: "mx-6 border-x border-border-normal",
+  th: "font-medium px-6 py-5.25 relative text-center text-xl max-lg:px-6.25 max-lg:text-base",
+  thBorderLeft: "border-l border-border-normal",
+  thHeaderWrapper: "flex justify-center",
+};
 
 export const ComparisonTable = ({
   caption,
@@ -24,83 +43,91 @@ export const ComparisonTable = ({
   const columnWidth = `${100 / totalColumns}%`;
 
   return (
-    <Container className={className} {...props}>
-      <ContentBlock
-        className="pb-8 pt-14 lg:pb-12 lg:pt-25 lg:border-x lg:border-border-normal"
-        description={description}
-        descriptionClassName="mt-5"
-        eyebrow={eyebrow}
-        eyebrowVariant="highlight"
-        title={title}
-        titleClassName="mt-5"
-        variant="center"
-      />
-      <table className="w-full border-x border-t border-border-normal table-fixed overflow-hidden max-md:hidden">
-        <colgroup>
-          {Array.from({ length: totalColumns }).map((_, i) => (
-            <col key={i} style={{ width: columnWidth }} />
-          ))}
-        </colgroup>
+    <Container className={className} noPadding {...props}>
+      <div className={styles.contentBlockWrapper}>
+        <ContentBlock
+          className={styles.contentBlock}
+          description={description}
+          descriptionClassName={styles.contentDescription}
+          eyebrow={eyebrow}
+          eyebrowVariant="highlight"
+          title={title}
+          titleClassName={styles.contentTitle}
+          variant="center"
+        />
+      </div>
+      <div className={styles.tableWrapper}>
+        <ScrollArea className="w-full">
+          <table className={styles.table}>
+            <colgroup>
+              {Array.from({ length: totalColumns }).map((_, i) => (
+                <col key={i} style={{ width: columnWidth }} />
+              ))}
+            </colgroup>
 
-        {caption && <caption className="sr-only">{caption}</caption>}
-        <thead>
-          <tr>
-            {columns.map(({ header }, index) => (
-              <th
-                className={cn(
-                  "font-medium px-6 py-5.25 relative text-center text-xl max-lg:px-10 max-lg:text-base",
-                  index !== 0 && "border-l border-border-normal",
-                )}
-                key={index}
-                scope="col"
-              >
-                <div className="flex justify-center">{header}</div>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map(({ label, values }, index) => (
-            <tr className="font-semibold text-lg" key={index}>
-              <td
-                className="px-5 py-4 max-lg:text-base lg:px-8 lg:py-7"
-                scope="row"
-              >
-                {label}
-              </td>
-              {values.map((value, colIndex) => {
-                const { isHighlighted, name } = columns[colIndex + 1] || {};
-                const ariaLabel = `${value ? "Included in" : "Not included in"} ${name}`;
-
-                return (
-                  <td
-                    aria-label={ariaLabel}
-                    className="relative border-l border-border-normal"
-                    key={colIndex}
-                    scope="row"
+            {caption && <caption className="sr-only">{caption}</caption>}
+            <thead>
+              <tr>
+                {columns.map(({ header }, index) => (
+                  <th
+                    className={cn(
+                      styles.th,
+                      index !== 0 && styles.thBorderLeft,
+                    )}
+                    key={index}
+                    scope="col"
                   >
-                    {value ? (
-                      <CheckIcon
-                        aria-hidden="true"
-                        className="size-8 mx-auto text-icon-hover"
-                      />
-                    ) : (
-                      <CrossIcon
-                        aria-hidden="true"
-                        className="size-8 mx-auto text-border-light"
-                      />
-                    )}
-
-                    {index === rows.length - 1 && isHighlighted && (
-                      <ComparisonTableHighlightBg className="absolute h-auto w-full bottom-0 left-0 pointer-events-none" />
-                    )}
+                    <div className={styles.thHeaderWrapper}>{header}</div>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map(({ label, values }, index) => (
+                <tr className={styles.row} key={index}>
+                  <td className={styles.rowHeader} scope="row">
+                    {label}
                   </td>
-                );
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+                  {values.map((value, colIndex) => {
+                    const { isHighlighted, name } = columns[colIndex + 1] || {};
+                    const ariaLabel = `${value ? "Included in" : "Not included in"} ${name}`;
+
+                    return (
+                      <td
+                        aria-label={ariaLabel}
+                        className={styles.cell}
+                        key={colIndex}
+                        scope="row"
+                      >
+                        {value ? (
+                          <CheckIcon aria-hidden className={styles.checkIcon} />
+                        ) : (
+                          <CrossIcon aria-hidden className={styles.crossIcon} />
+                        )}
+
+                        {index === rows.length - 1 && isHighlighted && (
+                          <>
+                            <ComparisonTableHighlightsSmallBg
+                              className={cn("lg:hidden", styles.highlightBg)}
+                            />
+                            <ComparisonTableHighlightBg
+                              className={cn(
+                                "max-lg:hidden",
+                                styles.highlightBg,
+                              )}
+                            />
+                          </>
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
+      </div>
     </Container>
   );
 };
