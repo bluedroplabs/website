@@ -15,7 +15,7 @@ import type { IScrollArea } from "./ScrollArea.types";
 const styles = {
   root: "relative",
   scrollbarBase: "flex touch-none p-px transition-colors select-none",
-  scrollbarHorizontal: "h-2.5 flex-col border-t border-t-transparent",
+  scrollbarHorizontal: "h-1.5 flex-col border-t border-t-transparent",
   scrollbarVertical: "h-full w-1.5 border-l border-l-transparent",
   shadow: "pointer-none absolute bottom-0 top-0 z-10 w-3.25",
   thumb: "bg-border-light relative flex-1 rounded-full",
