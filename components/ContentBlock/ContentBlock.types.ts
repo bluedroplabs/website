@@ -24,7 +24,9 @@ export type TContentBlockTitleVariant =
   | "sm"
   | "md"
   | "lg"
-  | "gradient-hero";
+  | "gradient-hero"
+  | "resource-card-default"
+  | "resource-card-featured";
 
 /**
  * Props for the ContentBlock component.

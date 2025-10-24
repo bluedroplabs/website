@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/classes";
+import { formatDateTimeAttribute } from "@/utils/date";
 import { cva } from "class-variance-authority";
 import parse from "html-react-parser";
 import { Button } from "../Button/Button";
@@ -39,6 +40,8 @@ const titleVariants = cva(
         md: "text-size-20 lg:text-size-24",
         lg: "text-size-24 lg:text-size-32",
         "gradient-hero": "text-[12.25cqw] lg:text-[5cqw]",
+        "resource-card-default": "text-size-18 md:text-size-32",
+        "resource-card-featured": "text-size-24 md:text-size-48",
       },
     },
     defaultVariants: { variant: "default" },
@@ -117,7 +120,14 @@ export const ContentBlock = ({
         {(date || eyebrow) && (
           <div className={styles.eyebrowContainer}>
             {eyebrow && <p className={classes.eyebrow}>{eyebrow}</p>}
-            {date && <time className={classes.date}>{date}</time>}
+            {date && (
+              <time
+                className={classes.date}
+                dateTime={formatDateTimeAttribute(date)}
+              >
+                {date}
+              </time>
+            )}
           </div>
         )}
         {title && <Heading className={classes.title}>{parse(title)}</Heading>}
