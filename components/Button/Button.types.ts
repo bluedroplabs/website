@@ -4,7 +4,7 @@ import type { ComponentProps } from "react";
 /**
  * Type representing the size properties of the Button component.
  */
-export type TButtonSize = "default" | "none" | "lg";
+export type TButtonSize = "default" | "icon" | "none" | "lg";
 
 /**
  * Type representing the variant properties of the Button component.
