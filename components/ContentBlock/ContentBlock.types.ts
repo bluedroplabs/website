@@ -24,6 +24,8 @@ export type TContentBlockTitleVariant =
   | "sm"
   | "md"
   | "lg"
+  | "xl"
+  | "2xl"
   | "gradient-hero"
   | "resource-card-default"
   | "resource-card-featured";
@@ -33,6 +35,16 @@ export type TContentBlockTitleVariant =
  */
 export interface IContentBlock
   extends Omit<HTMLAttributes<HTMLElement>, "title"> {
+  /**
+   * Author name displayed within the component.
+   */
+  author?: string;
+
+  /**
+   * Custom class name for the author text.
+   */
+  authorClassName?: string;
+
   /**
    * Blockquote text displayed within the component.
    */
