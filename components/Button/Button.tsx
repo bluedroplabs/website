@@ -23,6 +23,7 @@ const buttonVariants = cva(
         default:
           "px-7.75 py-4.75 has-[>svg]:px-3 max-xs:px-3.5 max-xs:py-2 max-xs:text-xs",
         lg: "px-7.75 py-3.75 has-[>svg]:px-3",
+        icon: "p-1",
         none: "",
       },
     },
