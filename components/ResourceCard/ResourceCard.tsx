@@ -17,7 +17,7 @@ const titleVariantMap: Record<TResourceCardVariant, TContentBlockTitleVariant> =
 const contentBlockVariants = cva("", {
   variants: {
     variant: {
-      default: "pt-10",
+      default: "md:pt-10",
       featured: "pb-8 pt-6 md:pl-8",
     },
   },
@@ -27,9 +27,9 @@ const contentBlockVariants = cva("", {
 const imageVariants = cva("overflow-hidden relative rounded-lg", {
   variants: {
     variant: {
-      default: "aspect-[120/118] w-30 md:aspect-[362/268] md:w-full",
+      default: "aspect-[120/118] min-w-30 md:aspect-[362/268] md:w-full",
       featured:
-        "aspect-[392/290] basis-1/2 w-full md:aspect-[576/416] md:w-1/2 md:mr-8 md:rounded-none",
+        "aspect-[392/290] basis-1/2 size-full md:aspect-[576/416] md:w-1/2 md:mr-8 md:rounded-none",
     },
   },
   defaultVariants: { variant: "default" },
