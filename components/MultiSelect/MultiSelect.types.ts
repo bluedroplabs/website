@@ -14,7 +14,10 @@ export interface IMultiSelectSelection {
 /**
  * Props for the MultiSelect component.
  */
-export interface IMultiSelect extends HTMLAttributes<HTMLButtonElement> {
+export interface IMultiSelect
+  extends Omit<HTMLAttributes<HTMLButtonElement>, "onChange"> {
   label: string;
+  name: string;
   selections: IMultiSelectSelection[];
+  onChange?: (selectedValues: string[]) => void;
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/utils";
 import { useState } from "react";
 import {
   DropdownMenu,
@@ -10,23 +11,35 @@ import {
 } from "../DropdownMenu/DropdownMenu";
 import type { IMultiSelect } from "./MultiSelect.types";
 
-export const MultiSelect = ({ label, selections, ...props }: IMultiSelect) => {
+export const MultiSelect = ({
+  className,
+  label,
+  onChange,
+  selections,
+  ...props
+}: IMultiSelect) => {
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
+
+  if (!selections || selections.length === 0) return null;
 
   const handleSelect = (e: Event, value: string) => {
     e.preventDefault();
 
-    setSelectedItems((prevSelected) =>
-      prevSelected.includes(value)
-        ? prevSelected.filter((item) => item !== value)
-        : [...prevSelected, value],
-    );
+    const newSelectedItems = selectedItems.includes(value)
+      ? selectedItems.filter((item) => item !== value)
+      : [...selectedItems, value];
+
+    setSelectedItems(newSelectedItems);
+    onChange?.(newSelectedItems);
   };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="border border-button-default-bg font-medium font-mono px-8 py-5 uppercase hover:bg-button-default-bg-hover hover:text-button-default-bg-hover-text"
+        className={cn(
+          "border border-button-default-bg font-medium font-mono leading-[1] px-8 py-4.75 uppercase hover:bg-button-default-bg-hover hover:text-button-default-bg-hover-text",
+          className,
+        )}
         {...props}
       >
         {label}
