@@ -51,28 +51,6 @@ const preview: Preview = {
     },
   },
   decorators: [
-    // Layout decorator
-    (Story, { parameters }) => {
-      const { layout } = parameters;
-
-      if (layout === "full-centered") {
-        return (
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "100vh",
-              width: "100vw",
-            }}
-          >
-            <Story />
-          </div>
-        );
-      }
-
-      return <Story />;
-    },
     // Combined Theme, Font, and Docs Background decorator
     (Story, context) => {
       const { setTheme } = useTheme();
