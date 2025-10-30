@@ -5,7 +5,7 @@ import { DETAILS_ASIDE_EXAMPLE_PROPS } from "./DetailsAside.examples";
 const meta: Meta<typeof DetailsAside> = {
   title: "Molecules/Details Aside",
   component: DetailsAside,
-  parameters: { layout: "full-centered" },
+  parameters: { layout: "centered" },
   tags: ["autodocs"],
 };
 

@@ -1,13 +1,13 @@
 "use client";
 
 import { Basic1Up } from "@/components/Basic1Up/Basic1Up";
+import { FeaturedIconGrid } from "@/components/FeaturedIconGrid/FeaturedIconGrid";
+import { FeaturedSolutionsGrid } from "@/components/FeaturedSolutionsGrid/FeaturedSolutionsGrid";
+import { GridSeparator } from "@/components/GridSeparator/GridSeparator";
 import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
-import { FeaturedIconGrid } from "../FeaturedIconGrid/FeaturedIconGrid";
-import { FeaturedSolutionsGrid } from "../FeaturedSolutionsGrid/FeaturedSolutionsGrid";
-import { GridSeparator } from "../GridSeparator/GridSeparator";
 import type { IDynamicComponents } from "./DynamicComponents.types";
 
 const componentMap = {
