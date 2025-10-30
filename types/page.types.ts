@@ -3,7 +3,6 @@ import type { IFeaturedIconGrid } from "@/components/FeaturedIconGrid/FeaturedIc
 import type { IFeaturedSolutionsGrid } from "@/components/FeaturedSolutionsGrid/FeaturedSolutionsGrid.types";
 import type { IHomepageHero } from "@/components/HomepageHero/HomepageHero.types";
 import type { ILogoMarquee } from "@/components/LogoMarquee/LogoMarquee.types";
-import type { WithType } from "./global.types";
 
 export interface IBasic1UpData extends IBasic1Up {
   type: "Basic1Up";
@@ -20,6 +19,9 @@ export interface IHomepageHeroData extends IHomepageHero {
 export interface ILogoMarqueeData extends ILogoMarquee {
   type: "LogoMarquee";
 }
+export type TPageWithType<A> = A extends { type?: TPageComponentType }
+  ? A
+  : never;
 
 export type TPageComponentData =
   | IBasic1UpData
@@ -30,7 +32,7 @@ export type TPageComponentData =
 
 export type TPageComponentType = TPageComponentData["type"];
 
-export type TPageComponent = WithType<TPageComponentData>;
+export type TPageComponent = TPageWithType<TPageComponentData>;
 
 export interface IPage {
   title: string;
