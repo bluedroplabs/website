@@ -10,14 +10,29 @@ const iconMap = {
     import("../Icon").then((m) => ({ default: m.BillsIcon })),
   ),
   BugIcon: lazy(() => import("../Icon").then((m) => ({ default: m.BugIcon }))),
+  ChartIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ChartIcon })),
+  ),
+  CheckBadgeIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.CheckBadgeIcon })),
+  ),
   ClockIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ClockIcon })),
+  ),
+  DataIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.DataIcon })),
+  ),
+  ExpenseIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ExpenseIcon })),
   ),
   LaptopIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.LaptopIcon })),
   ),
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
+  ),
+  SpeedIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SpeedIcon })),
   ),
   SunIcon: lazy(() => import("../Icon").then((m) => ({ default: m.SunIcon }))),
   WarningIcon: lazy(() =>

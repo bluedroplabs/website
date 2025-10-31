@@ -1,9 +1,14 @@
 export { ArrowRightDownIcon } from "./ArrowRightDownIcon";
 export { BillsIcon } from "./BillsIcon";
 export { BugIcon } from "./BugIcon";
+export { ChartIcon } from "./ChartIcon";
+export { CheckBadgeIcon } from "./CheckBadgeIcon";
 export { ClockIcon } from "./ClockIcon";
 export { CrossIcon } from "./CrossIcon";
+export { DataIcon } from "./DataIcon";
+export { ExpenseIcon } from "./ExpenseIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
+export { SpeedIcon } from "./SpeedIcon";
 export { SunIcon } from "./SunIcon";
 export { WarningIcon } from "./WarningIcon";
