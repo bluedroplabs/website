@@ -1,0 +1,133 @@
+# Homepage Configuration
+# This file defines the Homepage components section
+# Update this file to modify the Homepage section in your application
+
+title: "Let's create something great together."
+description: "Unlock your true potential. Start by telling us about your project—we'll get back to you within 24 hours."
+components:
+  - type: GradientHero
+    description: "From infrastructure to code, we handle it all so you can focus on growth."
+    eyebrow: "More Than Developers. True Partners."
+    title: "We build your entire digital stack"
+
+  - type: FeaturedIconList
+    eyebrow: "Problems we solve"
+    title: "As your trusted partner, we adapt to your needs and manage your entire digital stack—keeping your systems stable, scalable, and always improving."
+    description: "If you're facing any of these frustrating situations, you're not alone:"
+    items:
+      - title: "Affordable Expertise"
+        description: "Enterprise-grade quality without enterprise costs."
+        icon: "CheckBadgeIcon"
+      - title: "Partnership Driven"
+        description: "We adapt to your needs, not the other way around."
+        icon: "ShakeHandsIcon"
+      - title: "Full-Stack Management"
+        description: "Every layer of your digital infrastructure, handled."
+        icon: "StackedIcon"
+
+  - type: GridSeparator
+
+  - type: Basic1Up
+    alignment: left
+    eyebrow: "Innovative & Bold"
+    title: "Premium service at a fraction of the cost"
+    description: "We're the experts who intentionally stay lean, use AI-enabled processes, and maintain a globally distributed team to deliver exceptional work without the enterprise overhead. <br /><br/> We’ve solved complex challenges that make others say, “That’s not possible.”"
+    image:
+      alt: "Placeholder image"
+      src: "https://picsum.photos/562/568?random=1"
+
+  - type: GridSeparator
+
+  - type: Basic1Up
+    alignment: right
+    eyebrow: "Collaborative Growth"
+    title: "Partnerships over transactions"
+    description: "We don't believe in artificial limitations or forcing clients into rigid packages. Every engagement is tailored to your specific needs, budget, and timeline. We adapt to your requirements. We proactively improve your digital tools. We give you the freedom to focus more on growing your business. <br/><br/><strong>Most of our clients retain us for years</strong> because we become their trusted technical partner, not just another vendor.”"
+    image:
+      alt: "Placeholder image"
+      src: "https://picsum.photos/562/568?random=2"
+
+  - type: GridSeparator
+        
+  - type: Basic1Up
+    alignment: left
+    eyebrow: "Proven Ingenuity"
+    title: "Expertise across the whole technical stack"
+    description: "We can handle every layer of your digital infrastructure. When you work with Blue Drop Labs, you get a complete technical team that owns the entire stack. Your web and application hosting is engineered for you—while saving you money. Your websites remain stable while always improving. <br/><br/>With one team, you get complete confidence and peace of mind."
+    image:
+      alt: "Placeholder image"
+      src: "https://picsum.photos/562/568?random=3"
+
+  - type: GridSeparator
+
+  - type: ComparisonTable
+    caption: "Feature comparison between Blue Drop and Legacy Drupal Consultancies"
+    columns:
+      - header: null
+        isHighlighted: false
+        name: ""
+      - header: "LOGO"
+        isHighlighted: true
+        name: "Blue Drop"
+      - header: "Legacy Drupal Consultancies"
+        isHighlighted: false
+        name: "Legacy Drupal Consultancies"
+    description: "Our goal is to change this dynamic — to become true partners who are accountable, available, and authentic."
+    eyebrow: "What sets us apart"
+    rows: 
+      - label: "Charges < $150/hour"
+        values: [true, false]
+      - label: "Provides fully managed hosting solutions cheaper than Acquia and Pantheon"
+        values: [true, false]
+      - label: "Available to answer questions 24/7"
+        values: [true, false]
+      - label: "Purposefully lean to be flexible and adaptable"
+        values: [true, false]
+      - label: "Has no minimum required cost"
+        values: [true, false]
+    title: "The Blue Drop Difference"
+        
+  - type: GridSeparator
+
+  - type: FeaturedTextList
+    items:
+    - "<strong>Exorbitant vendor costs</strong> for simple changes or questions."
+    - "<strong>Delayed response times</strong> from your current Drupal/WordPress team."
+    - "<strong>Resource limits and throttling</strong> from your hosting provider."
+    - "<strong>Unpredictable hosting bills</strong> that spike with your success."
+    - "<strong>Code quality issues</strong> that don't scale with your business."
+    - "<strong>Frustrating support experiences</strong> with ticketing systems and bureaucracy."
+    title: "Overcome common problems with other agencies"
+
+  - type: FeaturedIconListGrid
+    eyebrow: "What you get"
+    title: "We keep your digital systems stable, scalable, and always improving."
+    items:
+      - icon: "ExpenseIcon"
+        title: "Cost Efficiency"
+        description: "Our clients typically save 30-50% compared to other agencies while receiving better performance and support."
+      - icon: "SpeedIcon"
+        title: "Performance"
+        description: "We optimize every aspect of your Drupal or WordPress site to ensure fast load times and a smooth user experience."
+      - icon: "ChartIcon"
+        title: "Expert Support"
+        description: "Get direct access to senior developers and architects who understand your code and business needs."
+      - icon: "DataIcon"
+        title: "Scalability"
+        description: "Our solutions are designed to grow with your business, ensuring your website can handle increased traffic and functionality."
+      - icon: "CheckBadgeIcon"
+        title: "Reliability"
+        description: "We ensure your website is always up-to-date and running smoothly with proactive maintenance and support."
+
+  - type: FeaturedText
+    description: "Our senior developers and architects are just a Slack message away. Cut through the bureaucracy. <strong>Stop paying enterprise rates to talk to people who can't even read your code.</strong>"
+    eyebrow: "A personal touch"
+
+  - type: GridSeparator
+
+  - type: InlineTextBlock
+    description: "Blue Drop Labs is a U.S.-based full service digital agency founded by Nathan Dentzau, a Triple Certified Drupal expert with over 20 years of experience.  Our mission is simple: <strong>prove that premium technical services don't require premium prices or premium headaches.</strong> Every team member has over a decade of development experience. We don't waste your money training junior developers. We're specialists who come in, solve the problem, and deliver results quickly. We can confidently say that there has not been one technical challenge we've had to turn down."
+    eyebrow: "Our team"
+    title: "Proven Experts. <br/>Practical Solutions."
+
+
