@@ -9,6 +9,8 @@ export { DataIcon } from "./DataIcon";
 export { ExpenseIcon } from "./ExpenseIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
+export { ShakeHandsIcon } from "./ShakeHandsIcon";
 export { SpeedIcon } from "./SpeedIcon";
+export { StackedIcon } from "./StackedIcon";
 export { SunIcon } from "./SunIcon";
 export { WarningIcon } from "./WarningIcon";

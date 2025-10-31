@@ -34,6 +34,12 @@ const iconMap = {
   SpeedIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.SpeedIcon })),
   ),
+  ShakeHandsIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ShakeHandsIcon })),
+  ),
+  StackedIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.StackedIcon })),
+  ),
   SunIcon: lazy(() => import("../Icon").then((m) => ({ default: m.SunIcon }))),
   WarningIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.WarningIcon })),
@@ -50,7 +56,7 @@ export const IconCard = (props: IIconCard) => {
     return (
       <div className="flex gap-6">
         <Suspense fallback={null}>
-          <Icon className="size-8 text-icon-default lg:size-12" />
+          <Icon className="size-8 min-w-8 text-icon-default lg:size-12 lg:min-w-12" />
         </Suspense>
         <div className="space-y-2">
           <h3 className="font-semibold text-xl text-default-heading lg:text-size-24">
