@@ -2,6 +2,6 @@ import { DynamicComponents } from "@/components/DynamicComponents/DynamicCompone
 import { loadPageData } from "@/utils/data";
 
 export default async function Home() {
-  const { components = [] } = (await loadPageData("homepage")) || {};
+  const { components = [] } = (await loadPageData(["homepage"])) || {};
   return <DynamicComponents components={components} />;
 }

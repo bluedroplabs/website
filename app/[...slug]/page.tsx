@@ -3,15 +3,12 @@ import { loadPageData } from "@/utils/data";
 import { notFound } from "next/navigation";
 
 export interface IPage {
-  params: { slug: string };
+  params: { slug: string[] };
 }
 
 export default async function Page({ params }: IPage) {
-  const {
-    slug: [route],
-  } = await params;
-
-  if (!route) return notFound();
-  const { components = [] } = (await loadPageData(route)) || {};
+  const { slug } = await params;
+  if (!slug || slug.length === 0) return notFound();
+  const { components = [] } = (await loadPageData(slug)) || {};
   return <DynamicComponents components={components} />;
 }

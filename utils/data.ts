@@ -55,9 +55,11 @@ export function loadNavigationData(): INavigation | null {
  * Loads and parses the Page configuration from YAML file
  * @returns Parsed Page configuration data
  */
-export function loadPageData(page: string): IPage | null {
+export function loadPageData(paths: string[]): IPage | null {
   try {
-    const pagePath = join(process.cwd(), "data", `${page}.yaml`);
+    const fileName = paths[paths.length - 1];
+    const route = [...paths].splice(0, paths.length - 1);
+    const pagePath = join(process.cwd(), "data", ...route, `${fileName}.yaml`);
     const pageContents = readFileSync(pagePath, "utf8");
     return parse(pageContents);
   } catch (error) {
