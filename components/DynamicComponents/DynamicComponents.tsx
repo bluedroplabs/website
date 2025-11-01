@@ -10,6 +10,7 @@ import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
+import { Wysiwyg } from "../Wysiwyg/Wysiwyg";
 import type { IDynamicComponents } from "./DynamicComponents.types";
 
 const componentMap = {
@@ -21,6 +22,7 @@ const componentMap = {
   GridSeparator,
   HomepageHero,
   LogoMarquee,
+  Wysiwyg,
 };
 
 type ComponentType = FC<Omit<TPageComponent, "type">>;
