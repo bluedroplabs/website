@@ -10,12 +10,14 @@ import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
+import { DetailPageHero } from "../DetailPageHero/DetailPageHero";
 import { Wysiwyg } from "../Wysiwyg/Wysiwyg";
 import type { IDynamicComponents } from "./DynamicComponents.types";
 
 const componentMap = {
   Basic1Up,
   CardGrid,
+  DetailPageHero,
   FeaturedIconGrid,
   FeaturedSolutionsGrid,
   GradientHero,

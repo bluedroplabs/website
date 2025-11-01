@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/Container/Container";
 import { DetailsAside } from "@/components/DetailsAside/DetailsAside";
+import { cn } from "@/utils";
 import type { FC } from "react";
 import { InlineImage } from "../Image/InlineImage";
 import { Metrics } from "../Metrics/Metrics";
@@ -23,7 +24,10 @@ export const Wysiwyg = ({
   ...props
 }: IWysiwyg) => {
   return (
-    <Container className={className} {...props}>
+    <Container
+      className={cn("border-t border-border-normal", className)}
+      {...props}
+    >
       <Container
         className="py-14 max-lg:!px-0 lg:border-x lg:border-border-normal lg:items-start lg:gap-x-30 lg:py-20"
         displays={{ sm: "flex" }}

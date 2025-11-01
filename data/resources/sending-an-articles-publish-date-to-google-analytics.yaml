@@ -1,0 +1,53 @@
+# Resources Configuration
+# This file defines the Resources components section
+# Update this file to modify the Resources section in your application
+
+title: "Building a powerful portal for Stacker’s digital presence"
+description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+components:
+  - type: DetailPageHero
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    author: "Matt Robison"
+    date: "September 26, 2025"
+    eyebrow: "Article"
+    title: "Building a powerful portal for Stacker’s digital presence"
+    image:
+      src: "https://picsum.photos/1000/1000?random=1"
+      alt: "Detail Page Hero Example Image"
+
+  - type: Wysiwyg
+    components:
+      - type: "RichText"
+        content: "<h2>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h2> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>"
+      - type: "Metrics"
+        metrics:
+          - value: "200%"
+            description: "growth"
+          - value: "$700k"
+            description: "in revenue"
+          - value: "500+"
+            description: "clients globally"
+      - type: "InlineImage"
+        image:
+          src: "https://picsum.photos/1200/600"
+          alt: "Resource Detail Hero Image"
+          width: 1200
+          height: 600
+      - type: "RichText"
+        content: '<h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</h2> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> <h2>This is an example of the Wysiwyg component rendering rich text content. It supports various HTML elements such as:</h2> <ul> <li><strong>Headings</strong> (h1 to h6)</li> <li><em>Paragraphs</em> with <a href="https://example.com">links</a></li> <li>Lists (ordered and unordered)</li> <li>Blockquotes</li></ul><blockquote>This is a blockquote example to showcase styling.</blockquote><p>The Wysiwyg component is designed to display rich text content seamlessly alongside other components.</p><p>This is an example of the Wysiwyg component rendering rich text content. It supports various HTML elements such as:</p><ul><li><strong>Headings</strong> (h1 to h6)</li><li><em>Paragraphs</em> with <a href="https://example.com">links</a></li><li>Lists (ordered and unordered)</li><li>Blockquotes</li></ul><blockquote>This is a blockquote example to showcase styling.</blockquote><p>The Wysiwyg component is designed to display rich text content seamlessly alongside other components.</p><p>This is an example of the Wysiwyg component rendering rich text content. It supports various HTML elements such as:</p><ul><li><strong>Headings</strong> (h1 to h6)</li><li><em>Paragraphs</em> with <a href="https://example.com">links</a></li><li>Lists (ordered and unordered)</li><li>Blockquotes</li></ul><blockquote>This is a blockquote example to showcase styling.</blockquote><p>The Wysiwyg component is designed to display rich text content seamlessly alongside other components.</p><p>This is an example of the Wysiwyg component rendering rich text content. It supports various HTML elements such as:</p><ul><li><strong>Headings</strong> (h1 to h6)</li><li><em>Paragraphs</em> with <a href="https://example.com">links</a></li><li>Lists (ordered and unordered)</li><li>Blockquotes</li></ul><blockquote>This is a blockquote example to showcase styling.</blockquote><p>The Wysiwyg component is designed to display rich text content seamlessly alongside other components.</p>'
+    details:
+      cta:
+        children: "View Live Website"
+        href: "https://www.example.com"
+      details:
+        - label: "Services"
+          items:
+            - "UI/UX Design"
+            - "Drupal"
+            - "A/B Testing"
+        - label: "Industry"
+          items:
+            - "Publishing"
+    
+
+  - type: GridSeparator
