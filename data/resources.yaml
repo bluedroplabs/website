@@ -1,0 +1,52 @@
+# Resources Configuration
+# This file defines the Resources components section
+# Update this file to modify the Resources section in your application
+
+title: "Sending an Article's Publish Date to Google Analytics"
+description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+components:
+  - type: GradientHero
+    description: "Learn expert insights, guides, and reports to elevate your digital strategy."
+    title: "Resource Hub"
+  - type: CardGrid
+    filters:
+      - label: "Resource Type"
+        name: "type"
+        selections:
+          - label: "Resource Type"
+            options:
+              - label: "Blog"
+                value: "blog"
+              - label: "Whitepaper"
+                value: "whitepaper"
+              - label: "Article"
+                value: "article"
+              - label: "Report"
+                value: "report"
+      - label: "Topic"
+        name: "topic"
+        selections:
+          - label: "Topic"
+            options:
+              - label: "UX/UI"
+                value: "ui-ux"
+              - label: "Drupal"
+                value: "drupal"
+              - label: "WordPress"
+                value: "wordpress"
+              - label: "CMS"
+                value: "cms"
+    items:
+      - date: "September 26, 2025"
+        description:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        eyebrow: "Blog"
+        image: 
+          src: "https://picsum.photos/800/600"
+          alt: "Resource Card Example Image"
+        title: "Sending an Article's Publish Date to Google Analytics"
+        variant: "default"
+    limit: 10,
+    total: 80,
+
+  - type: GridSeparator
