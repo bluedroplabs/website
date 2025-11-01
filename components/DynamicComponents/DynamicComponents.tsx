@@ -5,15 +5,19 @@ import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
+import { CardGrid } from "../CardGrid/CardGrid";
 import { FeaturedIconGrid } from "../FeaturedIconGrid/FeaturedIconGrid";
 import { FeaturedSolutionsGrid } from "../FeaturedSolutionsGrid/FeaturedSolutionsGrid";
+import { GradientHero } from "../GradientHero/GradientHero";
 import { GridSeparator } from "../GridSeparator/GridSeparator";
 import type { IDynamicComponents } from "./DynamicComponents.types";
 
 const componentMap = {
   Basic1Up,
+  CardGrid,
   FeaturedIconGrid,
   FeaturedSolutionsGrid,
+  GradientHero,
   GridSeparator,
   HomepageHero,
   LogoMarquee,
