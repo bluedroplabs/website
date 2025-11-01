@@ -51,3 +51,34 @@ components:
     
 
   - type: GridSeparator
+
+  - type: RelatedPosts
+    title: "Related Posts"
+    items:
+      - date: "September 26, 2025"
+        description:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        eyebrow: "Blog"
+        image: 
+          src: "https://picsum.photos/800/600?random=1"
+          alt: "Resource Card Example Image"
+        title: "Sending an Article's Publish Date to Google Analytics"
+        variant: "default"
+      - date: "September 26, 2025"
+        description:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        eyebrow: "Blog"
+        image: 
+          src: "https://picsum.photos/800/600?random=2"
+          alt: "Resource Card Example Image"
+        title: "Sending an Article's Publish Date to Google Analytics"
+        variant: "default"
+      - date: "September 26, 2025"
+        description:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        eyebrow: "Blog"
+        image: 
+          src: "https://picsum.photos/800/600?random=3"
+          alt: "Resource Card Example Image"
+        title: "Sending an Article's Publish Date to Google Analytics"
+        variant: "default"

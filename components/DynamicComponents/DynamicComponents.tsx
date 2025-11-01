@@ -11,6 +11,7 @@ import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
 import { DetailPageHero } from "../DetailPageHero/DetailPageHero";
+import { RelatedPosts } from "../RelatedPosts/RelatedPosts";
 import { Wysiwyg } from "../Wysiwyg/Wysiwyg";
 import type { IDynamicComponents } from "./DynamicComponents.types";
 
@@ -24,6 +25,7 @@ const componentMap = {
   GridSeparator,
   HomepageHero,
   LogoMarquee,
+  RelatedPosts,
   Wysiwyg,
 };
 
