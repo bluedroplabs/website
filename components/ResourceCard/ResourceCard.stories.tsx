@@ -6,7 +6,7 @@ import { RESOURCE_CARD_EXAMPLE_PROPS } from "./ResourceCard.examples";
 const meta: Meta<typeof ResourceCard> = {
   title: "Molecules/Resource Card",
   component: ResourceCard,
-  parameters: { layout: "full-centered" },
+  parameters: { layout: "centered" },
   tags: ["autodocs"],
   render: (args) => (
     <div

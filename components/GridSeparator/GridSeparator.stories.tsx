@@ -4,7 +4,7 @@ import { GridSeparator } from "./GridSeparator";
 const meta: Meta<typeof GridSeparator> = {
   title: "Organisms/Grid Separator",
   component: GridSeparator,
-  parameters: { layout: "full-centered" },
+  parameters: { layout: "centered" },
   tags: ["autodocs"],
 };
 

@@ -1,26 +1,32 @@
 "use client";
 
 import { Basic1Up } from "@/components/Basic1Up/Basic1Up";
+import { CardGrid } from "@/components/CardGrid/CardGrid";
+import { FeaturedIconGrid } from "@/components/FeaturedIconGrid/FeaturedIconGrid";
+import { FeaturedSolutionsGrid } from "@/components/FeaturedSolutionsGrid/FeaturedSolutionsGrid";
+import { GradientHero } from "@/components/GradientHero/GradientHero";
+import { GridSeparator } from "@/components/GridSeparator/GridSeparator";
 import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
-import { CardGrid } from "../CardGrid/CardGrid";
-import { FeaturedIconGrid } from "../FeaturedIconGrid/FeaturedIconGrid";
-import { FeaturedSolutionsGrid } from "../FeaturedSolutionsGrid/FeaturedSolutionsGrid";
-import { GradientHero } from "../GradientHero/GradientHero";
-import { GridSeparator } from "../GridSeparator/GridSeparator";
+import { DetailPageHero } from "../DetailPageHero/DetailPageHero";
+import { RelatedPosts } from "../RelatedPosts/RelatedPosts";
+import { Wysiwyg } from "../Wysiwyg/Wysiwyg";
 import type { IDynamicComponents } from "./DynamicComponents.types";
 
 const componentMap = {
   Basic1Up,
   CardGrid,
+  DetailPageHero,
   FeaturedIconGrid,
   FeaturedSolutionsGrid,
   GradientHero,
   GridSeparator,
   HomepageHero,
   LogoMarquee,
+  RelatedPosts,
+  Wysiwyg,
 };
 
 type ComponentType = FC<Omit<TPageComponent, "type">>;
