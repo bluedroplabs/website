@@ -10,7 +10,13 @@ import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
 import type { TPageComponent } from "@/types/page.types";
 import type { FC } from "react";
+import { ComparisonTable } from "../ComparisonTable/ComparisonTable";
 import { DetailPageHero } from "../DetailPageHero/DetailPageHero";
+import { FeaturedIconList } from "../FeaturedIconList/FeaturedIconList";
+import { FeaturedIconListGrid } from "../FeaturedIconListGrid/FeaturedIconListGrid";
+import { FeaturedText } from "../FeaturedText/FeaturedText";
+import { FeaturedTextList } from "../FeaturedTextList/FeaturedTextList";
+import { InlineTextBlock } from "../InlineTextBlock/InlineTextBlock";
 import { RelatedPosts } from "../RelatedPosts/RelatedPosts";
 import { Wysiwyg } from "../Wysiwyg/Wysiwyg";
 import type { IDynamicComponents } from "./DynamicComponents.types";
@@ -19,11 +25,17 @@ const componentMap = {
   Basic1Up,
   CardGrid,
   DetailPageHero,
+  ComparisonTable,
   FeaturedIconGrid,
+  FeaturedIconList,
+  FeaturedIconListGrid,
   FeaturedSolutionsGrid,
+  FeaturedText,
+  FeaturedTextList,
   GradientHero,
   GridSeparator,
   HomepageHero,
+  InlineTextBlock,
   LogoMarquee,
   RelatedPosts,
   Wysiwyg,
