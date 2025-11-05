@@ -39,6 +39,8 @@ const titleVariants = cva(
         sm: "text-size-18 lg:text-size-20",
         md: "text-size-20 lg:text-size-24",
         lg: "text-size-24 lg:text-size-32",
+        xl: "text-size-32 lg:text-size-48",
+        "2xl": "text-size-48 lg:text-size-64",
         "gradient-hero": "text-[12.25cqw] lg:text-[5cqw]",
         "resource-card-default": "text-size-18 md:text-size-32",
         "resource-card-featured": "text-size-24 md:text-size-48",
@@ -49,6 +51,7 @@ const titleVariants = cva(
 );
 
 const styles = {
+  author: "font-mono not-italic uppercase",
   blockquote:
     "border-l-4 border-l-brand-aqua font-medium leading-[1.25] pl-5 text-default-heading w-fit lg:leading-[1.5] 2xl:text-lg",
   content: containerClass,
@@ -61,6 +64,8 @@ const styles = {
 };
 
 export const ContentBlock = ({
+  author,
+  authorClassName,
   blockquote,
   blockquoteClassName,
   className,
@@ -86,6 +91,7 @@ export const ContentBlock = ({
   ...props
 }: IContentBlock) => {
   if (
+    !author &&
     !description &&
     !title &&
     !Icon &&
@@ -101,6 +107,7 @@ export const ContentBlock = ({
   const isInline = variant === "inline";
 
   const classes = {
+    author: cn(styles.author, authorClassName),
     blockquote: cn(styles.blockquote, blockquoteClassName),
     container: cn(containerVariants({ variant }), className),
     ctaGroup: cn(styles.ctaGroup, ctaGroupClassName),
@@ -131,6 +138,7 @@ export const ContentBlock = ({
           </div>
         )}
         {title && <Heading className={classes.title}>{parse(title)}</Heading>}
+        {author && <cite className={classes.author}>{author}</cite>}
       </div>
       <div className={getColumnClass(styles.content)}>
         {description && (
