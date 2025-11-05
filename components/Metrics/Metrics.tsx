@@ -9,10 +9,7 @@ export const Metrics = ({ className, metrics, ...props }: IMetrics) => {
 
   return (
     <div
-      className={cn(
-        "flex gap-x-6 gap-y-8 justify-between w-full max-md:flex-wrap",
-        className,
-      )}
+      className={cn("flex gap-x-6 gap-y-8 w-full max-md:flex-wrap", className)}
       {...props}
     >
       {metrics.map((metric, index) => (
