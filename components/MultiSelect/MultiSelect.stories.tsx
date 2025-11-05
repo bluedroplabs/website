@@ -3,9 +3,9 @@ import { MultiSelect } from "./MultiSelect";
 import { MULTI_SELECT_EXAMPLE_PROPS } from "./MultiSelect.examples";
 
 const meta: Meta<typeof MultiSelect> = {
-  title: "Molecules/MultiSelect",
+  title: "Molecules/Multi-Select",
   component: MultiSelect,
-  parameters: { layout: "full-centered" },
+  parameters: { layout: "centered" },
   tags: ["autodocs"],
 };
 

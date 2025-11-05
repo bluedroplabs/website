@@ -17,20 +17,19 @@ const titleVariantMap: Record<TResourceCardVariant, TContentBlockTitleVariant> =
 const contentBlockVariants = cva("", {
   variants: {
     variant: {
-      default: "pt-10",
+      default: "md:pt-10",
       featured: "pb-8 pt-6 md:pl-8",
     },
   },
   defaultVariants: { variant: "default" },
 });
 
-const imageVariants = cva("basis-1/2 overflow-hidden relative rounded-lg", {
+const imageVariants = cva("overflow-hidden relative rounded-lg", {
   variants: {
     variant: {
-      default:
-        "aspect-[120/118] min-w-[30.77%] md:aspect-[392/290] md:min-w-[27.27%]",
+      default: "aspect-[120/118] min-w-30 md:aspect-[362/268] md:w-full",
       featured:
-        "aspect-[392/290] w-full md:aspect-[576/416] md:w-1/2 md:mr-8 md:rounded-none",
+        "aspect-[392/290] basis-1/2 size-full md:aspect-[576/416] md:w-1/2 md:mr-8 md:rounded-none",
     },
   },
   defaultVariants: { variant: "default" },
@@ -47,7 +46,7 @@ const variants = cva("px-6 md:p-8 items-center", {
 });
 
 const styles = {
-  contentWrapper: "basis-1/2 md:min-w-1/2",
+  contentWrapper: (isFeatured: boolean) => cn(isFeatured && "basis-1/2"),
   dateMobile:
     "block mt-3 font-mono leading-[1.25] text-default-light text-sm uppercase md:hidden",
   date: {
@@ -78,12 +77,18 @@ export const ResourceCard = ({
 }: IResourceCard) => {
   const isFeatured = variant === "featured";
 
+  const sizes = isFeatured
+    ? "100vw, (min-width: 768px) 50vw"
+    : "40vw, (min-width: 768px) 27vw";
+
   return (
     <article className={cn(variants({ variant }), className)} {...props}>
       <figure className={imageVariants({ variant })}>
-        {image && <Image {...image} className={styles.image} fill />}
+        {image && (
+          <Image {...image} className={styles.image} fill sizes={sizes} />
+        )}
       </figure>
-      <div className={styles.contentWrapper}>
+      <div className={styles.contentWrapper(isFeatured)}>
         <ContentBlock
           className={contentBlockVariants({ variant })}
           date={date}

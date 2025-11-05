@@ -1,10 +1,11 @@
 import type { IMultiSelect } from "./MultiSelect.types";
 
 const MULTI_SELECT_DEFAULT_PROPS: IMultiSelect = {
-  label: "Resource Type",
+  label: "Topic: All",
+  name: "topic",
   selections: [
     {
-      label: "Topics",
+      label: "Topic",
       options: [
         { label: "UX/UI", value: "ui-ux" },
         { label: "Drupal", value: "drupal" },
