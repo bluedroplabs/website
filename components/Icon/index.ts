@@ -1,9 +1,12 @@
 export { ArrowRightDownIcon } from "./ArrowRightDownIcon";
 export { BillsIcon } from "./BillsIcon";
 export { BugIcon } from "./BugIcon";
+export { CheckBadgeIcon } from "./CheckBadgeIcon";
 export { ClockIcon } from "./ClockIcon";
 export { CrossIcon } from "./CrossIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
+export { ShakeHandsIcon } from "./ShakeHandsIcon";
+export { StackedIcon } from "./StackedIcon";
 export { SunIcon } from "./SunIcon";
 export { WarningIcon } from "./WarningIcon";
