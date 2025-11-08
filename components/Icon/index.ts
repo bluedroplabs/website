@@ -6,6 +6,7 @@ export { ClockIcon } from "./ClockIcon";
 export { CrossIcon } from "./CrossIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
+export { PlusIcon } from "./PlusIcon";
 export { ShakeHandsIcon } from "./ShakeHandsIcon";
 export { StackedIcon } from "./StackedIcon";
 export { SunIcon } from "./SunIcon";
