@@ -12,6 +12,7 @@ export { EmergencyIcon } from "./EmergencyIcon";
 export { ExpenseIcon } from "./ExpenseIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
+export { PlusIcon } from "./PlusIcon";
 export { ShakeHandsIcon } from "./ShakeHandsIcon";
 export { SpeedIcon } from "./SpeedIcon";
 export { StackedIcon } from "./StackedIcon";

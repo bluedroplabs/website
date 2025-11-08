@@ -40,6 +40,9 @@ const iconMap = {
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
   ),
+  PlusIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.PlusIcon })),
+  ),
   SpeedIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.SpeedIcon })),
   ),
