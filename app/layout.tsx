@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={cn(geist.variable, geistMono.variable, "antialiased")}>
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="light"
+          defaultTheme="system"
           enableSystem
           themes={["light", "dark"]}
         >
