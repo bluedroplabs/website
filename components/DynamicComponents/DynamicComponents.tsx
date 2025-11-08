@@ -49,7 +49,10 @@ export const DynamicComponents = ({ components }: IDynamicComponents) => {
     const Component = componentMap[type] as ComponentType;
 
     if (!Component) {
-      console.warn(`Component for type "${type}" not found.`);
+      if (process.env.NODE_ENV === "development") {
+        console.warn(`Component for type "${type}" not found.`);
+      }
+
       return null;
     }
 
