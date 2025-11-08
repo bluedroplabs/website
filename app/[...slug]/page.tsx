@@ -1,14 +1,29 @@
 import { DynamicComponents } from "@/components/DynamicComponents/DynamicComponents";
 import { loadPageData } from "@/utils/data";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export interface IPage {
+export interface IPageProps {
   params: { slug: string[] };
 }
 
-export default async function Page({ params }: IPage) {
+export async function generateMetadata({
+  params,
+}: IPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  if (!slug || slug.length === 0) return {};
+  const pageData = loadPageData(slug);
+  if (!pageData) return {};
+
+  return {
+    title: pageData.title,
+    description: pageData.description,
+  };
+}
+
+export default async function Page({ params }: IPageProps) {
   const { slug } = await params;
   if (!slug || slug.length === 0) return notFound();
-  const { components = [] } = (await loadPageData(slug)) || {};
+  const { components = [] } = loadPageData(slug) || {};
   return <DynamicComponents components={components} />;
 }
