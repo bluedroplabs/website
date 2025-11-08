@@ -11,8 +11,11 @@ export const DetailPageHero = ({
   author,
   className,
   date,
+  description,
   eyebrow,
   image,
+  primaryCTA,
+  secondaryCTA,
   title,
   ...props
 }: IDetailPageHero) => {
@@ -27,14 +30,18 @@ export const DetailPageHero = ({
         {...props}
       >
         <ContentBlock
-          author={`By ${author}`}
+          author={author ? `By ${author}` : ""}
           authorClassName="mt-6 lg:mt-8"
           className="lg:flex-1 lg:justify-end lg:max-w-1/2 lg:pb-10 lg:pr-10 2xl:pb-20 2xl:pr-20"
           date={date}
+          description={description}
+          descriptionClassName="mb-6 lg:mb-8"
           eyebrow={eyebrow}
           eyebrowVariant="highlight"
+          primaryCTA={primaryCTA}
+          secondaryCTA={secondaryCTA}
           title={title}
-          titleClassName="mt-6 lg:mt-8"
+          titleClassName="font-normal mb-4 mt-6 lg:mt-8"
           titleVariant="2xl"
         />
 
@@ -44,6 +51,7 @@ export const DetailPageHero = ({
               {...image}
               className="object-cover"
               fill
+              priority
               sizes="100vw, (min-width: 768px) 50vw"
             />
           )}
