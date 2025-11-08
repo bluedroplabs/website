@@ -13,7 +13,7 @@ const styles = {
     "flex items-center justify-between max-w-540 mx-auto px-5 py-3 sticky top-0 bg-page-default w-full z-30 before:absolute before:border-b before:border-border-normal before:w-screen before:bottom-0 before:left-1/2 before:-translate-x-1/2",
   link: "text-interactive-nav",
   list: "flex gap-x-4 xl:gap-x-8",
-  logo: "max-w-39.5",
+  logo: "h-8 max-w-39.5 relative w-full lg:h-9",
 };
 
 export const Navigation = ({
@@ -26,11 +26,11 @@ export const Navigation = ({
 }: INavigation) => {
   const { isDarkMode } = useAppTheme();
 
-  const logoProps = { className: styles.logo, priority: true };
+  const logoProps = { fill: true, priority: true };
 
   return (
     <header className={cn(styles.container, className)} {...props}>
-      <Link href="/">
+      <Link className={styles.logo} href="/">
         {isDarkMode
           ? darkLogo?.src && <Image {...darkLogo} {...logoProps} />
           : logo?.src && <Image {...logo} {...logoProps} />}
