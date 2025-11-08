@@ -43,13 +43,13 @@ export const SolutionCard = ({
           descriptionClassName="mt-4 line-clamp-6"
           eyebrow={eyebrow}
           title={title}
-          titleClassName="mt-4 line-clamp-3"
+          titleClassName="mt-4 line-clamp-3 first:mt-0"
           titleVariant="lg"
         />
         <div
           className={cn(
             "flex items-end px-11",
-            isFull ? "lg:px-16.5 lg:max-2xl:pb-6.5 2xl:pt-16" : "lg:px-11.5",
+            isFull ? "lg:px-16.5 lg:max-2xl:pb-6.5 lg:pt-16" : "lg:px-11.5",
           )}
         >
           <figure
