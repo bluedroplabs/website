@@ -3,6 +3,7 @@
 import { useAppTheme } from "@/hooks/useAppTheme";
 import { cn } from "@/utils/classes";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "../Button/Button";
 import { MenuIcon } from "../Icon/MenuIcon";
 import type { INavigation } from "./Navigation.types";
@@ -29,9 +30,11 @@ export const Navigation = ({
 
   return (
     <header className={cn(styles.container, className)} {...props}>
-      {isDarkMode
-        ? darkLogo?.src && <Image {...darkLogo} {...logoProps} />
-        : logo?.src && <Image {...logo} {...logoProps} />}
+      <Link href="/">
+        {isDarkMode
+          ? darkLogo?.src && <Image {...darkLogo} {...logoProps} />
+          : logo?.src && <Image {...logo} {...logoProps} />}
+      </Link>
 
       <nav className="hidden lg:block">
         <ul className={styles.list}>
