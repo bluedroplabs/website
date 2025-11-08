@@ -1,6 +1,6 @@
-# Resources Configuration
-# This file defines the Resources components section
-# Update this file to modify the Resources section in your application
+# Services Configuration
+# This file defines the Services components section
+# Update this file to modify the Services section in your application
 
 title: "Complete Design, Development, & Support"
 description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
