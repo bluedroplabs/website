@@ -41,17 +41,17 @@ export const PackageCard = ({
           />
         </>
       )}
-      <div className="relative z-10">
+      <div className="grid h-full relative z-10">
         <h3 className="font-medium mb-6 text-size-32 tracking-[0.02em]">
           {title}
         </h3>
         <div className="mb-6 lg:mb-10">
           <p className="mb-3 text-size-16 lg:text-size-18">{description}</p>
-          <List items={features} />
+          <List className="font-medium" items={features} />
         </div>
         <Button
           {...cta}
-          className="w-full"
+          className="mt-auto w-full"
           variant={isHighlighted ? "default" : "outline"}
         />
       </div>
