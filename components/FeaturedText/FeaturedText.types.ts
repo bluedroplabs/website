@@ -1,16 +1,19 @@
 import type { HTMLAttributes } from "react";
+import type { IContentBlock } from "../ContentBlock/ContentBlock.types";
+
+/**
+ * Variants for the FeaturedText component.
+ */
+export type TFeaturedTextVariant = "default" | "small";
 
 /**
  * Props for the FeaturedText component.
  */
-export interface IFeaturedText extends HTMLAttributes<HTMLElement> {
+export interface IFeaturedText
+  extends HTMLAttributes<HTMLElement>,
+    Omit<IContentBlock, "variant"> {
   /**
-   * Short description text displayed within or alongside the component.
+   * The main title text.
    */
-  description?: string;
-
-  /**
-   * Eyebrow text displayed above the title, often used for categorization or emphasis.
-   */
-  eyebrow?: string;
+  variant?: TFeaturedTextVariant;
 }
