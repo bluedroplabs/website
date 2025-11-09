@@ -31,7 +31,7 @@ const eyebrowVariants = cva("font-mono leading-[1] uppercase w-fit", {
 });
 
 const titleVariants = cva(
-  "font-medium leading-[110%] !text-default-heading tracking-tight [&_strong]:pl-2 [&_strong]:pr-1 [&_strong]:font-medium [&_strong]:bg-brand-light-blue",
+  "font-medium leading-[110%] !text-default-heading tracking-tight [&_em]:not-italic [&_em]:text-default-highlight [&_strong]:pl-2 [&_strong]:pr-1 [&_strong]:font-medium [&_strong]:bg-brand-light-blue",
   {
     variants: {
       variant: {
