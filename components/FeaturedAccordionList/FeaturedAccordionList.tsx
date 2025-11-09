@@ -27,7 +27,10 @@ export const FeaturedAccordionList = ({
 
   return (
     <Container
-      className={cn("py-14 lg:gap-x-10 lg:py-20", className)}
+      className={cn(
+        "border-t border-border-normal py-14 lg:gap-x-10 lg:py-20",
+        className,
+      )}
       displays={{ lg: "flex" }}
       {...props}
     >
