@@ -23,7 +23,6 @@ export async function generateStaticParams() {
     });
   }
 
-  // Add other static pages here if needed
   return slugs;
 }
 
