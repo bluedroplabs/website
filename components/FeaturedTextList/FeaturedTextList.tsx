@@ -9,17 +9,18 @@ import type { IFeaturedTextList } from "./FeaturedTextList.types";
 export const FeaturedTextList = ({
   className,
   items,
+  noPadding,
   title,
   ...props
 }: IFeaturedTextList) => {
   if (!items || items.length === 0) return null;
 
   return (
-    <Container className={cn(className)} noPadding {...props}>
+    <Container className={className} noPadding {...props}>
       <div
         className={cn(
           "flex py-14 max-lg:flex-col max-lg:gap-8 lg:py-20",
-          CONTAINER_PADDING,
+          !noPadding && CONTAINER_PADDING,
         )}
       >
         {title && (
@@ -27,7 +28,12 @@ export const FeaturedTextList = ({
             {title}
           </h2>
         )}
-        <ul className="grid grid-cols-2 gap-x-6 gap-y-8 lg:gap-x-10 lg:gap-y-6 lg:px-10 lg:w-[68.852%] lg:text-lg">
+        <ul
+          className={cn(
+            "grid gap-x-6 gap-y-8 lg:gap-x-10 lg:gap-y-6 lg:px-10 lg:w-[68.852%] lg:text-lg",
+            items.length === 1 ? "grid-cols-1" : "grid-cols-2",
+          )}
+        >
           {items.map((item, index) => (
             <li
               className="font-light text-default-base [&_strong]:font-semibold"
