@@ -20,6 +20,11 @@ export const FeaturedAccordionList = ({
   ...props
 }: IFeaturedAccordionList) => {
   if (!items || items.length === 0) return;
+
+  const filteredItems = items.filter(
+    (item) => typeof item.content === "string" && item.content.trim() !== "",
+  );
+
   return (
     <Container
       className={cn("py-14 lg:gap-x-10 lg:py-20", className)}
@@ -32,8 +37,12 @@ export const FeaturedAccordionList = ({
         descriptionClassName="mt-5"
         title={title}
       />
-      <Accordion className="max-lg:mt-10 lg:basis-1/2" type="multiple">
-        {items.map((item, index) => (
+      <Accordion
+        className="max-lg:mt-10 lg:basis-1/2"
+        collapsible
+        type="single"
+      >
+        {filteredItems.map((item, index) => (
           <AccordionItem
             className="border-t border-border-normal leading-[1.25] text-size-20"
             key={index}

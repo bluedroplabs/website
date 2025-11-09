@@ -29,8 +29,6 @@ const FEATURED_ACCORDION_LIST_DEFAULT_PROPS: IFeaturedAccordionList = {
     },
   ],
   title: "We Fix What's Broken.<br/><em>We Build What Works.</em>",
-  description:
-    "Our team specializes in identifying and resolving complex technical challenges.",
 };
 
 export const FEATURED_ACCORDION_LIST_EXAMPLE_PROPS = {
