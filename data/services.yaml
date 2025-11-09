@@ -19,13 +19,14 @@ components:
       url: "/about-us"
     
   - type: FeaturedAccordionList
+    title: "We Fix What's Broken.<br/><em>We Build What Works.</em>"
     items:
       - title: "We're available when you need us"
-        description: "<ul><li>Direct Slack access to our technical team</li><li>Quick response times, not days or weeks</li><li>No barriers between you and the people working on your solutions</li></ul>"
+        content: '<ul className="pt-3 space-y-4"><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Direct Slack access to our technical team</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Quick response times, not days or weeks</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">No barriers between you and the people working on your solutions</li></ul>'
       - title: "Legacy System Maintenance"
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
       - title: "We actually solve problems"
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
     
   - type: GridSeparator
 
