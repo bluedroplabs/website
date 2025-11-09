@@ -33,6 +33,11 @@ export interface IResourceCard extends HTMLAttributes<HTMLElement> {
   image: IImage;
 
   /**
+   * Link URL for the ResourceCard.
+   */
+  href: string;
+
+  /**
    * Determines the visual variant of the component.
    * Defaults to `default` if not specified.
    */

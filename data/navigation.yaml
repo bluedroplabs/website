@@ -12,7 +12,7 @@ darkLogo:
   src: "/assets/logo-dark.svg"
   alt: "Company Dark Logo"
 links:
-  - href: "/about"
+  - href: "/about-us"
     children: "Why Blue Drop Labs?"
   - href: "/platform"
     children: "Platform"

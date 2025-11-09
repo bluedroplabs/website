@@ -5,6 +5,7 @@ import { MultiSelect } from "@/components/MultiSelect/MultiSelect";
 import { ResourceCard } from "@/components/ResourceCard/ResourceCard";
 import { SearchBar } from "@/components/SearchBar/SearchBar";
 import { cn } from "@/utils/classes";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { ICardGrid } from "./CardGrid.types";
 import { Pagination } from "./components/Pagination";
@@ -114,15 +115,19 @@ export const CardGrid = ({
                   groupIndex === 0 ? 0 : (groupIndex - 1) * 3 + itemIndex + 1;
 
                 return (
-                  <ResourceCard
-                    {...item}
-                    className={cn(
-                      "border-border-normal max-md:border-t [&:nth-child(3n+2)]:lg:border-x",
-                      isFirst && "lg:col-span-3",
-                    )}
+                  <Link
+                    className={cn("w-full", isFirst && "lg:col-span-3")}
+                    href={item.href}
                     key={globalIndex}
-                    variant={isFirst ? "featured" : "default"}
-                  />
+                  >
+                    <ResourceCard
+                      {...item}
+                      className={cn(
+                        "border-border-normal max-md:border-t [&:nth-child(3n+2)]:lg:border-x",
+                      )}
+                      variant={isFirst ? "featured" : "default"}
+                    />
+                  </Link>
                 );
               })}
             </div>

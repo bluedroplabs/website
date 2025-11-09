@@ -1,0 +1,96 @@
+# Services Configuration
+# This file defines the Services components section
+# Update this file to modify the Services section in your application
+
+title: "Complete Design, Development, & Support"
+description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
+components:
+  - type: DetailPageHero
+    description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
+    title: "Complete Design, Development, & Support"
+    image:
+      src: "/assets/services-hero-asset.png"
+      alt: "Full Stack Development Hero Image"
+    primaryCTA:
+      children: "Schedule a demo"
+      url: "/contact-us"
+    secondaryCTA:
+      children: "Why Blue Drop?"
+      url: "/about-us"
+    
+  - type: FeaturedAccordionList
+    title: "We Fix What's Broken.<br/><em>We Build What Works.</em>"
+    items:
+      - title: "We're available when you need us"
+        content: '<ul className="pt-3 space-y-4"><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Direct Slack access to our technical team</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Quick response times, not days or weeks</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">No barriers between you and the people working on your solutions</li></ul>'
+      - title: "Legacy System Maintenance"
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      - title: "We actually solve problems"
+        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    
+  - type: GridSeparator
+
+  - type: FeaturedIconListGrid
+    title: "The Problems We Solve"
+    variant: "center"
+    items:
+      - icon: "StressIcon"
+        title: "Your current team is overwhelmed or lacks expertise"
+        description: "We integrate seamlessly as staff augmentation or take full ownership of projects, bringing a decade of platform expertise to every engagement."
+      - icon: "ExpenseIcon"
+        title: "Legacy agencies charge premium prices for basic work "
+        description: "We deliver the same quality at a fraction of the cost by staying lean and using modern workflows."
+      - icon: "BrainIcon"
+        title: "You need real technical expertise, not generic web development"
+        description: "We're specialists who understand the deep technical requirements of Drupal, WordPress, and modern web applications."
+      - icon: "DomainDisabledIcon"
+        title: "You're stuck with expensive, underperforming hosting"
+        description: "Our platform delivers better performance at 30-50% less cost than Pantheon or Acquia, without traffic penalties or bureaucratic support."
+      - icon: "EmergencyIcon"
+        title: "When you need help with the final 10%"
+        description: "Your project is almost done, but it's still plagued by bugs and performance issues, and some features don’t work exactly the way you want them to."
+
+  - type: GridSeparator
+
+  - type: FeaturedSolutionsGrid
+    title: "Our solutions"
+    description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
+    solutions:
+      - title: "Drupal + WordPress Managed Hosting"
+        description: "We build powerful, maintainable, and secure digital experiences with custom functionality, seamless integrations, and professional craftsmanship."
+        href: "/"
+        image:
+          alt: "Drupal + WordPress Managed Hosting"
+          src: "https://picsum.photos/600/600?random=1"
+      - title: "Drupal & WordPress Support"
+        description: "Ongoing maintenance and expert support to keep your Drupal or WordPress site secure, fast, and performing at its best."
+        href: "/"
+        image:
+          alt: "Drupal 7 support"
+          src: "https://picsum.photos/600/600?random=2"
+      - title: "Drupal 7 Extended Support"
+        description: "Keep your Drupal 7 platform secure and stable with enterprise-level maintenance and updates—no costly migrations required."
+        href: "/"
+        image:
+          alt: "Drupal + WordPress Support"
+          src: "https://picsum.photos/600/600?random=3"
+      - title: "API + Custom Development"
+        description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
+        href: "/"
+        image:
+          alt: "API + Custom Development"
+          src: "https://picsum.photos/600/600?random=4"
+      - title: "Design + Experience"
+        description: "Transform your brand into a high-performing digital experience with accessible, responsive, and conversion-focused design."
+        href: "/"
+        image:
+          alt: "Design + Experience"
+          src: "https://picsum.photos/600/600?random=5"
+      - title: "SEO + Marketing"
+        description: "Turn your website into a high-performing growth engine with technical SEO, performance optimization, and data-driven marketing strategies."
+        href: "/"
+        image:
+          alt: "SEO + Marketing"
+          src: "https://picsum.photos/600/600?random=6"
+
+  - type: GridSeparator

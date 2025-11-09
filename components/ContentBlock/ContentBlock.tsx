@@ -31,7 +31,7 @@ const eyebrowVariants = cva("font-mono leading-[1] uppercase w-fit", {
 });
 
 const titleVariants = cva(
-  "font-medium leading-[110%] !text-default-heading tracking-tight [&_strong]:pl-2 [&_strong]:pr-1 [&_strong]:font-medium [&_strong]:bg-brand-light-blue",
+  "font-medium leading-[110%] !text-default-heading tracking-tight [&_em]:not-italic [&_em]:text-default-highlight [&_strong]:pl-2 [&_strong]:pr-1 [&_strong]:font-medium [&_strong]:bg-brand-light-blue",
   {
     variants: {
       variant: {
@@ -57,7 +57,7 @@ const styles = {
   content: containerClass,
   ctaGroup: "grid gap-y-3 md:flex md:gap-x-4",
   date: "font-mono text-default-light uppercase max-lg:text-sm",
-  description: "font-light text-default-base lg:text-lg",
+  description: "font-light text-default-base lg:text-lg [&_strong]:font-bold",
   eyebrowContainer: "flex items-center gap-x-4.5",
   icon: "size-8 text-icon-default lg:size-12",
   header: containerClass,

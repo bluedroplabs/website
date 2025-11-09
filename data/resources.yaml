@@ -44,6 +44,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
       - date: "September 26, 2025"
@@ -53,6 +54,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600?random=1"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
       - date: "September 26, 2025"
@@ -62,6 +64,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600?random=2"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
       - date: "September 26, 2025"
@@ -71,6 +74,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600?random=3"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
       - date: "September 26, 2025"
@@ -80,6 +84,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600?random=4"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
       - date: "September 26, 2025"
@@ -89,6 +94,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600?random=5"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
       - date: "September 26, 2025"
@@ -98,6 +104,7 @@ components:
         image: 
           src: "https://picsum.photos/800/600?random=6"
           alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Sending an Article's Publish Date to Google Analytics"
         variant: "default"
     limit: 10,
