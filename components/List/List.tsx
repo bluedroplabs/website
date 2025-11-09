@@ -13,7 +13,7 @@ export const List = ({ className, items, ...props }: IList) => {
     >
       {items.map((item, index) => (
         <li
-          className="flex items-center pl-6.25 relative before:absolute before:size-2.25 before:bg-brand-aqua before:left-0"
+          className="flex pl-6.25 relative before:absolute before:top-2 before:size-2.25 before:bg-brand-aqua before:left-0"
           key={index}
         >
           {item}
