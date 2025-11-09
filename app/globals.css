@@ -118,6 +118,10 @@
   --color-surface-tint-sky: rgba(167, 236, 255, 0.1);
   --color-surface-transparent: var(--color-white-0);
   --logo: "Solid Dark";
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
 /* Dark Theme via data attribute (next-themes) */
@@ -183,4 +187,25 @@ body {
       var(--color-black-10) 1px,
       transparent 1px,
       transparent 80px);
+}
+
+/* Accordion Animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+
+  to {
+    height: 0;
+  }
 }

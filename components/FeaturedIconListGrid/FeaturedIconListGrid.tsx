@@ -14,7 +14,7 @@ const styles = {
   ),
   description: "mt-5 [&_strong]:font-medium",
   eyebrow: "mb-5 lg:mb-4",
-  list: cn("grid grid-cols-2 mb-10 lg:grid-cols-3 lg:mb-16", CONTAINER_PADDING),
+  list: cn("grid grid-cols-2 lg:grid-cols-3", CONTAINER_PADDING),
   listItem: cn(
     "border-l border-border-normal px-5 py-8 relative lg:p-10",
     "max-lg:[&:nth-child(even)]:border-r lg:[&:nth-child(3n+3)]:border-r",
@@ -37,6 +37,7 @@ export const FeaturedIconListGrid = ({
   eyebrow,
   items,
   title,
+  variant = "inline",
   ...props
 }: IFeaturedIconListGrid) => {
   if (!items || items.length === 0) return null;
@@ -61,7 +62,7 @@ export const FeaturedIconListGrid = ({
         eyebrowClassName={styles.eyebrow}
         eyebrowVariant="highlight"
         title={title}
-        variant="inline"
+        variant={variant}
       />
       <ul className={styles.list}>
         {formattedItems.map((item, index) => (

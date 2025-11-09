@@ -17,6 +17,11 @@ export interface IDetailPageHero extends HTMLAttributes<HTMLElement> {
   date: IContentBlock["date"];
 
   /**
+   * Description text providing additional details.
+   */
+  description?: IContentBlock["description"];
+
+  /**
    * Eyebrow text displayed above the title.
    */
   eyebrow: IContentBlock["eyebrow"];
@@ -25,6 +30,16 @@ export interface IDetailPageHero extends HTMLAttributes<HTMLElement> {
    * Image object for displaying an image within the component.
    */
   image: IImage;
+
+  /**
+   * Primary call-to-action button configuration.
+   */
+  primaryCTA?: IContentBlock["primaryCTA"];
+
+  /**
+   * Secondary call-to-action button configuration.
+   */
+  secondaryCTA?: IContentBlock["secondaryCTA"];
 
   /**
    * Main title text displayed within the component.

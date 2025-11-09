@@ -6,6 +6,9 @@ const iconMap = {
   ArrowRightDownIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ArrowRightDownIcon })),
   ),
+  BrainIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.BrainIcon })),
+  ),
   BillsIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.BillsIcon })),
   ),
@@ -22,6 +25,12 @@ const iconMap = {
   DataIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.DataIcon })),
   ),
+  DomainDisabledIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.DomainDisabledIcon })),
+  ),
+  EmergencyIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.EmergencyIcon })),
+  ),
   ExpenseIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ExpenseIcon })),
   ),
@@ -31,6 +40,9 @@ const iconMap = {
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
   ),
+  PlusIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.PlusIcon })),
+  ),
   SpeedIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.SpeedIcon })),
   ),
@@ -39,6 +51,9 @@ const iconMap = {
   ),
   StackedIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.StackedIcon })),
+  ),
+  StressIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.StressIcon })),
   ),
   SunIcon: lazy(() => import("../Icon").then((m) => ({ default: m.SunIcon }))),
   WarningIcon: lazy(() =>

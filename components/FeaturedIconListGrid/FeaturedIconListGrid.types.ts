@@ -7,6 +7,6 @@ import type { IIconCard } from "../IconCard/IconCard.types";
  */
 export interface IFeaturedIconListGrid
   extends HTMLAttributes<HTMLElement>,
-    Pick<IContentBlock, "description" | "eyebrow"> {
+    Pick<IContentBlock, "description" | "eyebrow" | "variant"> {
   items: IIconCard[];
 }

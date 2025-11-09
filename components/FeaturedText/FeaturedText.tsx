@@ -14,7 +14,7 @@ export const FeaturedText = ({
 }: IFeaturedText) => {
   return (
     <Container
-      className={cn("border-t border-border-normal", className)}
+      className={cn("border-t border-border-normal mt-10 lg:mt-16", className)}
       {...props}
     >
       <DottedBackground className="border-x border-border-normal py-16 lg:py-30 w-full">
