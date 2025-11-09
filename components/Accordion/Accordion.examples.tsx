@@ -1,7 +1,7 @@
 import { AccordionContent, AccordionItem, AccordionTrigger } from "./Accordion";
-import type { IAccordionProps } from "./Accordion.types";
+import type { IAccordion } from "./Accordion.types";
 
-const ACCORDION_DEFAULT_PROPS: IAccordionProps = {
+const ACCORDION_DEFAULT_PROPS: IAccordion = {
   type: "single",
   collapsible: true,
   children: (
