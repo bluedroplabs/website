@@ -57,7 +57,7 @@ const styles = {
   content: containerClass,
   ctaGroup: "grid gap-y-3 md:flex md:gap-x-4",
   date: "font-mono text-default-light uppercase max-lg:text-sm",
-  description: "font-light text-default-base lg:text-lg",
+  description: "font-light text-default-base lg:text-lg [&_strong]:font-bold",
   eyebrowContainer: "flex items-center gap-x-4.5",
   icon: "size-8 text-icon-default lg:size-12",
   header: containerClass,

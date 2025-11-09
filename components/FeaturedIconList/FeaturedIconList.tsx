@@ -21,14 +21,14 @@ export const FeaturedIconList = ({
   return (
     <section className="border-t border-t-border-normal">
       <Container className={cn(styles.container, className)} {...props}>
-        <div className="grid gap-y-8 md:border-x md:border-border-normal md:flex pt-12 lg:pt-20">
+        <div className="grid gap-y-8 py-12 md:border-x md:border-border-normal lg:flex lg:py-20">
           <ContentBlock
-            className="md:pl-8 lg:pl-16"
+            className="md:pl-8 lg:basis-1/2 lg:pl-16"
             title={title}
             titleClassName="font-light leading-[1.25] tracking-tighter"
             titleVariant="lg"
           />
-          <ul className="grid gap-y-6 md:px-8 lg:gap-y-8 lg:px-10">
+          <ul className="grid gap-y-6 md:px-8 lg:basis-1/2 lg:gap-y-8 lg:px-10">
             {items.map((item, index) => (
               <li key={index}>
                 <IconCard {...item} variant="inline" />

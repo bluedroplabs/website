@@ -9,7 +9,7 @@ import { DottedBackground } from "../DottedBackground/DottedBackground";
 import type { IBasic1Up } from "./Basic1Up.types";
 
 const dottedBgClasses = [
-  "px-6 pt-21 size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+1.25rem)] lg:pt-16.5 2xl:p-20 2xl:pb-0",
+  "px-6 pt-21 size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+1.25rem)] md:px-10 md:pt-10 lg:px-16.5 lg:pt-16.5 2xl:p-20 2xl:pb-0",
   "before:bg-deep-green-5 before:content-[''] before:absolute before:inset-0 before:-z-10 before:size-full",
 ];
 

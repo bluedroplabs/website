@@ -2,6 +2,8 @@
 
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils";
+import Image from "next/image";
+import type { ReactNode } from "react";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { CrossIcon } from "../Icon";
 import { CheckIcon } from "../Icon/CheckIcon";
@@ -27,6 +29,24 @@ const styles = {
   th: "font-medium px-6 py-5.25 relative text-center text-xl max-lg:px-6.25 max-lg:text-base",
   thBorderLeft: "border-l border-border-normal",
   thHeaderWrapper: "flex justify-center",
+};
+
+/**
+ * Renders header content based on the header value
+ * Handles special cases like "LOGO" to render React components
+ */
+const renderHeaderContent = (header: ReactNode): ReactNode => {
+  if (header === "LOGO") {
+    return (
+      <Image
+        alt="Blue Drop Labs Logo"
+        height={51}
+        src="/assets/logo.svg"
+        width={225}
+      />
+    );
+  }
+  return header;
 };
 
 export const ComparisonTable = ({
@@ -77,7 +97,9 @@ export const ComparisonTable = ({
                     key={index}
                     scope="col"
                   >
-                    <div className={styles.thHeaderWrapper}>{header}</div>
+                    <div className={styles.thHeaderWrapper}>
+                      {renderHeaderContent(header)}
+                    </div>
                   </th>
                 ))}
               </tr>
