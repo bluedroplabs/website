@@ -37,6 +37,9 @@ const iconMap = {
   LaptopIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.LaptopIcon })),
   ),
+  HostIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.HostIcon })),
+  ),
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
   ),
