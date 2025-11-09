@@ -10,6 +10,7 @@ const RESOURCE_CARD_DEFAULT_PROPS: IResourceCard = {
     src: "https://picsum.photos/800/600",
     alt: "Resource Card Example Image",
   },
+  href: "/",
   title: "Sending an Article's Publish Date to Google Analytics",
   variant: "default",
 };

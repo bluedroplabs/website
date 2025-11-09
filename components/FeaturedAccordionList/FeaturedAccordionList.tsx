@@ -20,9 +20,17 @@ export const FeaturedAccordionList = ({
   ...props
 }: IFeaturedAccordionList) => {
   if (!items || items.length === 0) return;
+
+  const filteredItems = items.filter(
+    (item) => typeof item.content === "string" && item.content.trim() !== "",
+  );
+
   return (
     <Container
-      className={cn("py-14 lg:gap-x-10 lg:py-20", className)}
+      className={cn(
+        "border-t border-border-normal py-14 lg:gap-x-10 lg:py-20",
+        className,
+      )}
       displays={{ lg: "flex" }}
       {...props}
     >
@@ -37,7 +45,7 @@ export const FeaturedAccordionList = ({
         collapsible
         type="single"
       >
-        {items.map((item, index) => (
+        {filteredItems.map((item, index) => (
           <AccordionItem
             className="border-t border-border-normal leading-[1.25] text-size-20"
             key={index}
