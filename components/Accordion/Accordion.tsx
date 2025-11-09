@@ -5,17 +5,17 @@ import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { cn } from "@/utils/classes";
 import { PlusIcon } from "../Icon";
 import type {
-  IAccordionContentProps,
-  IAccordionItemProps,
-  IAccordionProps,
-  IAccordionTriggerProps,
+  IAccordion,
+  IAccordionContent,
+  IAccordionItem,
+  IAccordionTrigger,
 } from "./Accordion.types";
 
-function Accordion({ ...props }: IAccordionProps) {
+function Accordion({ ...props }: IAccordion) {
   return <AccordionPrimitive.Root data-slot="accordion" {...props} />;
 }
 
-function AccordionItem({ className, ...props }: IAccordionItemProps) {
+function AccordionItem({ className, ...props }: IAccordionItem) {
   return (
     <AccordionPrimitive.Item
       className={className}
@@ -29,7 +29,7 @@ function AccordionTrigger({
   className,
   children,
   ...props
-}: IAccordionTriggerProps) {
+}: IAccordionTrigger) {
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
@@ -51,7 +51,7 @@ function AccordionContent({
   className,
   children,
   ...props
-}: IAccordionContentProps) {
+}: IAccordionContent) {
   return (
     <AccordionPrimitive.Content
       className="data-[state=closed]:animate-accordion-up data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-hidden transition-all"
