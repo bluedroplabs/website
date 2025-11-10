@@ -63,7 +63,10 @@ export function loadPageData(paths: string[]): IPage | null {
     const pageContents = readFileSync(pagePath, "utf8");
     return parse(pageContents);
   } catch (error) {
-    console.error("Error loading Page data:", error);
+    if (process.env.NODE_ENV === "development") {
+      console.error("Error loading Page data:", error);
+    }
+
     return null;
   }
 }
