@@ -1,28 +1,26 @@
 import type * as AccordionPrimitive from "@radix-ui/react-accordion";
-import type * as React from "react";
+import type { ComponentProps } from "react";
 
 /**
  * Props for the Accordion root component.
  */
-export type IAccordion = React.ComponentProps<typeof AccordionPrimitive.Root>;
+export type IAccordion = ComponentProps<typeof AccordionPrimitive.Root>;
 
 /**
  * Props for the AccordionItem component.
  */
-export type IAccordionItem = React.ComponentProps<
-  typeof AccordionPrimitive.Item
->;
+export type IAccordionItem = ComponentProps<typeof AccordionPrimitive.Item>;
 
 /**
  * Props for the AccordionTrigger component.
  */
-export type IAccordionTrigger = React.ComponentProps<
+export type IAccordionTrigger = ComponentProps<
   typeof AccordionPrimitive.Trigger
 >;
 
 /**
  * Props for the AccordionContent component.
  */
-export type IAccordionContent = React.ComponentProps<
+export type IAccordionContent = ComponentProps<
   typeof AccordionPrimitive.Content
 >;
