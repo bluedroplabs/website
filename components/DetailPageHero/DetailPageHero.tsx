@@ -23,29 +23,43 @@ export const DetailPageHero = ({
     <DottedBackground>
       <Container
         className={cn(
-          "bg-gradient-to-b from-transparent via-page-default via-60% to-page-default w-full max-lg:pt-16",
+          "bg-gradient-to-b from-transparent via-page-default via-60% to-page-default w-full",
           className,
         )}
         displays={{ lg: "flex" }}
         {...props}
       >
-        <ContentBlock
-          author={author ? `By ${author}` : ""}
-          authorClassName="mt-6 lg:mt-8"
-          className="lg:flex-1 lg:justify-end lg:max-w-1/2 lg:pb-10 lg:pr-10 2xl:pb-20 2xl:pr-20"
-          date={date}
-          description={description}
-          descriptionClassName="mb-6 lg:mb-8"
-          eyebrow={eyebrow}
-          eyebrowVariant="highlight"
-          primaryCTA={primaryCTA}
-          secondaryCTA={secondaryCTA}
-          title={title}
-          titleClassName="font-normal mb-4 mt-6 lg:mt-8"
-          titleVariant="2xl"
-        />
+        <figure className="aspect-[416/346] border-b border-border-normal relative w-screen -mx-5 md:-mx-8 lg:hidden">
+          {image && (
+            <Image
+              {...image}
+              className="object-cover"
+              fill
+              priority
+              sizes="100vw, (min-width: 768px) 50vw"
+            />
+          )}
+        </figure>
 
-        <figure className="aspect-[416/346] relative w-[calc(100%+1.25rem)] md:w-[calc(100%+2rem)] max-lg:mt-8 lg:aspect-[6/5] lg:flex-1 lg:-mr-20 lg:w-[calc(100%+5rem)]">
+        <DottedBackground className="max-lg:pt-16 lg:!bg-none lg:flex-1 lg:max-w-1/2 lg:pb-16 lg:pr-10 2xl:pb-20 2xl:pr-20">
+          <ContentBlock
+            author={author ? `By ${author}` : ""}
+            authorClassName="mt-6 lg:mt-8"
+            className="h-full lg:justify-end"
+            date={date}
+            description={description}
+            descriptionClassName="mb-6 lg:mb-8"
+            eyebrow={eyebrow}
+            eyebrowVariant="highlight"
+            primaryCTA={primaryCTA}
+            secondaryCTA={secondaryCTA}
+            title={title}
+            titleClassName="font-normal mb-4 mt-6 lg:mt-8"
+            titleVariant="2xl"
+          />
+        </DottedBackground>
+
+        <figure className="aspect-[416/346] bg-page-default border-l border-border-normal relative w-[calc(100%+1.25rem)] md:w-[calc(100%+2rem)] max-lg:mt-8 max-lg:hidden lg:aspect-[6/5] lg:flex-1 lg:-mr-20 lg:w-[calc(100%+5rem)]">
           {image && (
             <Image
               {...image}
