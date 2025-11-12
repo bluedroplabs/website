@@ -7,11 +7,21 @@ import type { IContentBlock } from "../ContentBlock/ContentBlock.types";
 export type TFeaturedTextVariant = "default" | "small";
 
 /**
+ * Background variants for the FeaturedText component.
+ */
+export type TFeaturedTextBgVariant = "sky" | "none";
+
+/**
  * Props for the FeaturedText component.
  */
 export interface IFeaturedText
   extends HTMLAttributes<HTMLElement>,
     Omit<IContentBlock, "variant"> {
+  /**
+   * Background variant for the FeaturedText component.
+   */
+  bgVariant?: TFeaturedTextBgVariant;
+
   /**
    * The main title text.
    */
