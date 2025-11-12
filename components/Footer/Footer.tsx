@@ -23,7 +23,7 @@ const styles = {
   inputGroup:
     "bg-surface-input border-b border-border-strong flex gap-2.5 mt-6 px-5 py-4.5 lg:max-2xl:px-3",
   links: "mt-6 space-y-3.5",
-  logo: "max-h-8.75 mb-6",
+  logo: "h-10 max-w-44 mb-6 relative",
   logoWrapper: "lg:col-span-full 2xl:col-span-4",
   lowerContent:
     "col-span-full lg:flex lg:gap-5 lg:justify-between lg:items-end lg:mt-5 lg:max-2xl:flex-wrap 2xl:items-center",
@@ -68,9 +68,11 @@ export const Footer = ({
     >
       <footer>
         <div className={styles.logoWrapper}>
-          {isDarkMode
-            ? darkLogo?.src && <Image {...darkLogo} className={styles.logo} />
-            : logo?.src && <Image {...logo} className={styles.logo} />}
+          <figure className={styles.logo}>
+            {isDarkMode
+              ? darkLogo?.src && <Image {...darkLogo} fill />
+              : logo?.src && <Image {...logo} fill />}
+          </figure>
           <p className={styles.description}>{description}</p>
           <p className={styles.secondaryText}>{secondaryText}</p>
         </div>

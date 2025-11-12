@@ -8,8 +8,6 @@ const NAVIGATION_DEFAULT_PROPS: INavigation = {
   darkLogo: {
     src: "/assets/logo-dark.svg",
     alt: "Company Dark Logo",
-    width: 158,
-    height: 36,
   },
   links: [
     { href: "/about", children: "Why Blue Drop Labs?" },
@@ -21,8 +19,6 @@ const NAVIGATION_DEFAULT_PROPS: INavigation = {
   logo: {
     src: "/assets/logo.svg",
     alt: "Company Logo",
-    width: 158,
-    height: 36,
   },
 };
 

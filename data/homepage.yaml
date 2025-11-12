@@ -2,7 +2,7 @@
 # This file defines the Homepage components section
 # Update this file to modify the Homepage section in your application
 
-title: "Let's create something great together."
+title: "Blue Drop Labs - Experts in Digital Strategy"
 description: "Unlock your true potential. Start by telling us about your project—we'll get back to you within 24 hours."
 components:
   - type: HomepageHero

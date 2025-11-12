@@ -5,8 +5,6 @@ const FOOTER_DEFAULT_PROPS: IFooter = {
   darkLogo: {
     src: "/assets/logo-dark.svg",
     alt: "Company Dark Logo",
-    width: 150,
-    height: 50,
   },
   description:
     "High-performance hosting, expert development, and ongoing support.",
@@ -17,8 +15,6 @@ const FOOTER_DEFAULT_PROPS: IFooter = {
   logo: {
     src: "/assets/logo.svg",
     alt: "Company Logo",
-    width: 150,
-    height: 50,
   },
   primaryLinks: [
     {
