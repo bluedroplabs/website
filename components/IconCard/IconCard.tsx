@@ -22,8 +22,17 @@ const iconMap = {
   ClockIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ClockIcon })),
   ),
+  CodeBlockIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.CodeBlockIcon })),
+  ),
   DataIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.DataIcon })),
+  ),
+  DevUpdateIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.DevUpdateIcon })),
+  ),
+  DomainIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.DomainIcon })),
   ),
   DomainDisabledIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.DomainDisabledIcon })),
@@ -34,11 +43,17 @@ const iconMap = {
   ExpenseIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ExpenseIcon })),
   ),
-  LaptopIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.LaptopIcon })),
+  FlowChartIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.FlowChartIcon })),
   ),
   HostIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.HostIcon })),
+  ),
+  LaptopIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.LaptopIcon })),
+  ),
+  LinkIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.LinkIcon })),
   ),
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
@@ -46,11 +61,14 @@ const iconMap = {
   PlusIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.PlusIcon })),
   ),
-  SpeedIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.SpeedIcon })),
-  ),
   ShakeHandsIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ShakeHandsIcon })),
+  ),
+  ShieldLockIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ShieldLockIcon })),
+  ),
+  SpeedIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SpeedIcon })),
   ),
   StackedIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.StackedIcon })),

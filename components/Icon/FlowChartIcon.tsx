@@ -1,0 +1,13 @@
+export const FlowChartIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    fill="none"
+    viewBox="0 0 48 48"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M30.2695 39V35.1345H22.5V25.5H17.7115V29.346H5V18.6345H17.7115V22.5H22.5V12.846H30.2695V8.98096H43V19.7115H30.2695V15.846H25.5V32.1345H30.2695V28.2885H43V39H30.2695ZM33.269 36H40V31.2885H33.269V36ZM8 26.346H14.7115V21.6345H8V26.346ZM33.269 16.7115H40V11.981H33.269V16.7115Z"
+      fill="currentColor"
+    />
+  </svg>
+);
