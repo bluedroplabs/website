@@ -57,7 +57,12 @@ const styles = {
   content: containerClass,
   ctaGroup: "grid gap-y-3 md:flex md:gap-x-4",
   date: "font-mono text-default-light uppercase max-lg:text-sm",
-  description: "font-light text-default-base lg:text-lg [&_strong]:font-bold",
+  description: [
+    "font-light text-default-base lg:text-lg [&_strong]:font-bold",
+    "[&>p]:mt-8",
+    "[&_ul]:mt-3 [&_ul]:space-y-3 [&_ul]:text-size-16 [&_ul]:lg:text-size-18",
+    "[&_li]:flex [&_li]:pl-6.25 [&_li]:relative [&_li]:before:absolute [&_li]:before:top-2 [&_li]:before:size-2.25 [&_li]:before:bg-brand-aqua [&_li]:before:left-0",
+  ],
   eyebrowContainer: "flex items-center gap-x-4.5",
   icon: "size-8 text-icon-default lg:size-12",
   header: containerClass,
@@ -138,13 +143,17 @@ export const ContentBlock = ({
           </div>
         )}
         {title && <Heading className={classes.title}>{parse(title)}</Heading>}
+
+        {blockquote && isInline && (
+          <blockquote className={classes.blockquote}>{blockquote}</blockquote>
+        )}
         {author && <cite className={classes.author}>{author}</cite>}
       </div>
       <div className={getColumnClass(styles.content)}>
         {description && (
-          <p className={classes.description}>{parse(description)}</p>
+          <div className={classes.description}>{parse(description)}</div>
         )}
-        {blockquote && (
+        {blockquote && !isInline && (
           <blockquote className={classes.blockquote}>{blockquote}</blockquote>
         )}
         {(primaryCTA || secondaryCTA) && (
