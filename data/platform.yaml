@@ -1,0 +1,152 @@
+# Platform Configuration
+# This file defines the Platform components section
+# Update this file to modify the Platform section in your application
+
+title: "High-Performance Hosting — Without the Premium Price"
+description: "Built for Drupal and WordPress—no hidden fees, no limits, just expert support that scales with you."
+components:
+  - type: DetailPageHero
+    description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
+    title: "Complete Design, Development, & Support"
+    image:
+      src: "/assets/platform-hero-asset.png"
+      alt: "The Platform"
+    primaryCTA:
+      children: "Schedule a demo"
+      url: "/contact-us"
+    secondaryCTA:
+      children: "Why Blue Drop?"
+      url: "/about-us"
+
+  - type: FeaturedIconList
+    title: "Why the Blue Drop Labs Platform?"
+    variant: "center"
+    items:
+      - icon: "ExpenseIcon"
+        title: "Fixed, Predictable Pricing"
+        description: "No more paying extra as your traffic grows. Our hosting includes unlimited bandwidth and visitors. Your success shouldn't come with a higher bill."
+      - icon: "ShakeHandsIcon"
+        title: "Direct Support Access"
+        description: "Get a dedicated Slack channel with direct access to our technical team. No more writing support tickets and wondering if anyone reads them."
+      - icon: "HostIcon"
+        title: "Deep Technical Knowledge"
+        description: "Our platform is built specifically for modern web applications, with optimizations that generic hosts simply can't match."
+
+  - type: GridSeparator
+
+  - type: FeaturedIconListGrid
+    eyebrow: "Features"
+    title: "Built for Speed. Engineered for Scale."
+    description: "From white-glove migration to Git-based deployments and autoscaling infrastructure, we deliver unmatched performance and control—simplified for your team."
+    items:
+      - icon: "ExpenseIcon"
+        description: "<strong>Advanced infrastructure</strong> at a fraction of the cost."
+      - icon: "SpeedIcon"
+        description: "<strong>White-glove migration</strong> from any existing host."
+      - icon: "ChartIcon"
+        description: "<strong>Built-in CI/CD pipeline to deploy directly from GitHub, GitLab, or any Git repository."
+      - icon: "DataIcon"
+        description: "<strong>Dedicated resources</strong>, less virtualization for superior performance"
+      - icon: "CheckBadgeIcon"
+        description: "<strong>MySQL optimizations are purpose-built</strong> for database-heavy applications"
+      - icon: "EmergencyIcon"
+        description: "<strong>Autoscaling</strong> capabilities based on demand"
+      - icon: "DataIcon"
+        description: "<strong>Framework-specific optimizations</strong> tailored for each supported platform."
+      - icon: "CheckBadgeIcon"
+        description: "<strong>CDN integration</strong> for lightning-fast content delivery."
+      - icon: "EmergencyIcon"
+        description: "<strong>Almost-Instant rollbacks</strong> of deployments"
+
+  - type: FeaturedText
+    className: "border-t-0 !mt-0"
+    variant: "small"
+    bgVariant: "sky"
+    title: "Blue Drop Labs helped us reduce costs by 60% and <b>boost performance by 200%.</b>"
+    author: "Casey Scherer, Director of Integrated Marketing — POWDR Corp."
+    eyebrow: "Proven results"
+
+  - type: GridSeparator
+
+  - type: Basic1Up
+    image:
+      src: "https://picsum.photos/562/568"
+      alt: "Platform Architecture Diagram"
+    title: "A Sensible Alternative for Drupal Web Hosting"
+    description: "Blue Drop's platform is a purpose-built infrastructure for Drupal sites of all sizes. Pantheon and Acquia have dominated the market, but they've become overpriced and bogged down with bureaucracy. Every Drupal website deserves a good home that doesn't break the budget. <br /><br />Our platform is built and maintained with the benefit of deep Drupal expertise. Every member of our team has 10+ years of Drupal experience. We know how it works, how it runs, and how to keep it optimized. "
+    eyebrow: "Trusted Platform"
+
+  - type: GridSeparator
+
+  - type: FeaturedTextList
+    items:
+      - "<strong>Database optimization</strong> tuned explicitly for Drupal's query patterns."
+      - "<strong>Drush support</strong> for all management tasks"
+      - "<strong>Caching strategies</strong> designed for Drupal's architecture"
+      - "<strong>Safe deployment pipelines</strong> that prevent merge conflicts"
+      - "<strong>Composer integration</strong> with automated dependency management"
+      - "<strong>Dedicated virtual machines</strong> for superior performance and no containerization"
+      - "<strong>Search integration</strong> with Solr and Elasticsearch support"
+    title: "Web hosting optimized for Drupal performance"
+
+  - type: GridSeparator
+
+  - type: SolutionsPackage
+    eyebrow: "Our Packages"
+    title: "We keep your digital systems stable,<br /> scalable, and always improving."
+    footer:
+      title: "White-glove migration"
+      items:
+        - "<strong>No downtime. No hassle.</strong> We'll move your website from Pantheon, Acquia, or any other hosting platform for a one-time setup fee."
+    packages:
+      - title: "Standard"
+        features:
+          - "Fixed monthly cost"
+          - "Unlimited bandwidth and visitors"
+          - "CDN integration"
+          - "Dedicated Slack support channel"
+          - "SSL certificate management"
+          - "Built-in CI/CD pipeline"
+        cta:
+          children: "Start with Standard"
+          href: "#"
+      - title: "Enhanced"
+        variant: "highlight"
+        description: "Everything in Standard, plus:"
+        features:
+          - "Development, staging, and production environments"
+          - "Automated backups"
+          - "Advanced monitoring"
+          - "Priority support SLA"
+        cta:
+          children: "Start with Enhanced"
+          href: "/"
+
+  - type: GridSeparator
+
+  - type: InlineTextBlock
+    blockquote: "Most clients save 30-50% compared to equivalent plans from legacy providers while receiving more direct support and better performance."
+    description: "Are you experiencing:<ul><li>Increasing hosting bills as your traffic grows?</li><li>Poor performance despite paying premium prices?</li><li>Slow response times from hosting support?</li><li>Limited access to server configuration?</li><li>Being locked into outdated technology?</li></ul><p>Ready to see how much you can save? <strong>Schedule a free hosting assessment.</strong></p>"
+    eyebrow: "No Bloat. Just Performance."
+    primaryCTA:
+      children: "Book an Assessment"
+      href: "/contact-us"
+    title: "Stop Overpaying for Underperforming Hosting"
+
+  - type: GridSeparator
+
+  - type: FeaturedAccordionList
+    title: "Frequently Asked Questions"
+    items:
+      - title: "What if I need additional support beyond hosting?"
+        content: "Our professional services pair perfectly with hosting. Clients who bundle hosting with development support receive preferred pricing on both services."
+      - title: "How difficult is migrating to Blue Drop Labs?"
+        content: "We handle the entire migration process for you with our white-glove migration service. Most migrations are completed with zero downtime."
+      - title: "How does your pricing compare to Pantheon or Acquia?"
+        content: "Most clients save 30-50% compared to equivalent plans from legacy providers, while receiving more direct support and better performance."
+      - title: "Do you support both Drupal 7 and modern Drupal?"
+        content: "Yes, we provide specialized hosting environments for Drupal 7 (with extended support), Drupal 10/11, and WordPress."
+      - title: "Do you throttle resources during traffic spikes?"
+        content: "Never. Your site receives the resources it needs, when it needs them—even during unexpected traffic surges."
+      - title: "What about vendor lock-in?"
+        content: "We believe in freedom of choice. Your code remains yours, and we use standard deployment methods that work with any hosting provider."
