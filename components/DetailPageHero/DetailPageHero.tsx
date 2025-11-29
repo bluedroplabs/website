@@ -45,7 +45,7 @@ export const DetailPageHero = ({
           titleVariant="2xl"
         />
 
-        <figure className="aspect-[416/346] relative w-[calc(100%+1.25rem)] md:w-[calc(100%+2rem)] max-lg:mt-8 lg:aspect-[6/5] lg:flex-1 lg:-mr-20 lg:w-[calc(100%+5rem)]">
+        <figure className="aspect-[416/346] border-l border-l-border-light bg-page-default bg-gradient-to-t from-deep-green-5 to-deep-green-5 relative w-[calc(100%+1.25rem)] md:w-[calc(100%+2rem)] max-lg:mt-8 lg:aspect-[6/5] lg:flex-1 lg:-mr-20 lg:w-[calc(100%+5rem)]">
           {image && (
             <Image
               {...image}
