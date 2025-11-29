@@ -23,6 +23,7 @@ components:
     eyebrow: "Custom Development, Done Right"
     title: "Building Systems That Scale and Connect"
     description: "We partner with you to create custom solutions that fit your workflows, grow with your business, and deliver lasting performance."
+    variant: "inline"
     items:
       - title: "Targeted, Complex Business Logic"
         description: "You need custom workflows, specialized data processing, or unique business rules that require a tailored solution."
