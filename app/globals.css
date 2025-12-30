@@ -183,8 +183,8 @@ body {
 
 .bg-grid-lines {
   background-image: repeating-linear-gradient(to right,
-      var(--color-black-10) 0,
-      var(--color-black-10) 1px,
+      var(--color-border-normal) 0,
+      var(--color-border-normal) 1px,
       transparent 1px,
       transparent 80px);
 }

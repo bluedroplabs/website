@@ -10,6 +10,7 @@ export { DataIcon } from "./DataIcon";
 export { DomainDisabledIcon } from "./DomainDisabledIcon";
 export { EmergencyIcon } from "./EmergencyIcon";
 export { ExpenseIcon } from "./ExpenseIcon";
+export { HostIcon } from "./HostIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { MoonIcon } from "./MoonIcon";
 export { PlusIcon } from "./PlusIcon";

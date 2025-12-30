@@ -9,7 +9,10 @@ const styles = {
 
 export const DottedBackground = ({
   className,
+  children,
   ...props
 }: HTMLAttributes<HTMLElement>) => (
-  <div className={cn(styles.container, className)} {...props} />
+  <div className={cn(styles.container, className)} {...props}>
+    {children}
+  </div>
 );

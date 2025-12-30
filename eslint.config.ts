@@ -14,6 +14,7 @@ export default defineConfig([
       ".next",
       "build",
       "storybook-static",
+      ".vscode",
       "*.d.ts",
     ],
   },

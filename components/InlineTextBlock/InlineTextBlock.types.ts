@@ -6,4 +6,4 @@ import type { IContentBlock } from "../ContentBlock/ContentBlock.types";
  */
 export interface IInlineTextBlock
   extends HTMLAttributes<HTMLElement>,
-    Pick<IContentBlock, "description" | "eyebrow"> {}
+    IContentBlock {}

@@ -17,7 +17,7 @@ export const SolutionsPackage = ({
   ...props
 }: ISolutionsPackage) => {
   return (
-    <Container className={cn("", className)} {...props} noPadding>
+    <Container className={cn("pt-14 lg:pt-25", className)} {...props} noPadding>
       <Container className="border-b border-border-normal">
         <ContentBlock
           className="mb-8 lg:mb-12"
