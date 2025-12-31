@@ -16,8 +16,9 @@
 # next.js
 /.next/
 /out/
+/dist/
 
-# .vscode
+# production IDEs
 .vscode/
 
 # production

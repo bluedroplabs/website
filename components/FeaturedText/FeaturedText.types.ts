@@ -1,16 +1,29 @@
 import type { HTMLAttributes } from "react";
+import type { IContentBlock } from "../ContentBlock/ContentBlock.types";
+
+/**
+ * Variants for the FeaturedText component.
+ */
+export type TFeaturedTextVariant = "default" | "small";
+
+/**
+ * Background variants for the FeaturedText component.
+ */
+export type TFeaturedTextBgVariant = "sky" | "none";
 
 /**
  * Props for the FeaturedText component.
  */
-export interface IFeaturedText extends HTMLAttributes<HTMLElement> {
+export interface IFeaturedText
+  extends HTMLAttributes<HTMLElement>,
+    Omit<IContentBlock, "variant"> {
   /**
-   * Short description text displayed within or alongside the component.
+   * Background variant for the FeaturedText component.
    */
-  description?: string;
+  bgVariant?: TFeaturedTextBgVariant;
 
   /**
-   * Eyebrow text displayed above the title, often used for categorization or emphasis.
+   * The main title text.
    */
-  eyebrow?: string;
+  variant?: TFeaturedTextVariant;
 }

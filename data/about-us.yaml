@@ -120,7 +120,7 @@ components:
         description: "We ensure your website is always up-to-date and running smoothly with proactive maintenance and support."
 
   - type: FeaturedText
-    description: "Our senior developers and architects are just a Slack message away. Cut through the bureaucracy. <strong>Stop paying enterprise rates to talk to people who can't even read your code.</strong>"
+    title: "Our senior developers and architects are just a Slack message away. Cut through the bureaucracy. <b>Stop paying enterprise rates to talk to people who can't even read your code.</b>"
     eyebrow: "A personal touch"
 
   - type: GridSeparator

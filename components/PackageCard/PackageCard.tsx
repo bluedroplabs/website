@@ -32,12 +32,12 @@ export const PackageCard = ({
           <Image
             {...bgCommonProps}
             className={cn(bgStyles, "max-lg:hidden")}
-            src="./assets/package-card-large-bg.png"
+            src="/assets/package-card-large-bg.png"
           />
           <Image
             {...bgCommonProps}
             className={cn(bgStyles, "lg:hidden")}
-            src="./assets/package-card-small-bg.png"
+            src="/assets/package-card-small-bg.png"
           />
         </>
       )}
