@@ -1,3 +1,4 @@
+import type { TContentBlockVariant } from "@/components/ContentBlock/ContentBlock.types";
 import type { HTMLAttributes } from "react";
 import type { IIconCard } from "../IconCard/IconCard.types";
 
@@ -19,4 +20,9 @@ export interface IFeaturedIconGrid extends HTMLAttributes<HTMLElement> {
    * Array of items to be displayed in the icon grid.
    */
   items: IIconCard[];
+
+  /**
+   * Visual style variant of the icon grid.
+   */
+  variant?: TContentBlockVariant;
 }

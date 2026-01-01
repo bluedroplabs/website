@@ -9,13 +9,22 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const resourcesDir = path.join(process.cwd(), "data", "resources");
+  const dataDir = path.join(process.cwd(), "data");
   const slugs: { slug: string[] }[] = [];
+  const dataFiles = fs.readdirSync(dataDir);
+  const resourcesDir = path.join(dataDir, "resources");
+
+  dataFiles.forEach((file) => {
+    if (file.endsWith(".yaml")) {
+      const slug = file.replace(/\.yaml$/, "");
+      slugs.push({ slug: [slug] });
+    }
+  });
 
   if (fs.existsSync(resourcesDir)) {
-    const files = fs.readdirSync(resourcesDir);
+    const resourceFiles = fs.readdirSync(resourcesDir);
 
-    files.forEach((file) => {
+    resourceFiles.forEach((file) => {
       if (file.endsWith(".yaml")) {
         const slug = file.replace(/\.yaml$/, "");
         slugs.push({ slug: ["resources", slug] });
@@ -29,11 +38,10 @@ export async function generateStaticParams() {
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
 
-  if (!slug?.length) {
-    notFound();
-  }
+  if (!slug?.length) notFound();
 
   let pageData;
+
   try {
     pageData = await loadPageData(slug);
   } catch (error) {
@@ -41,9 +49,7 @@ export default async function Page({ params }: PageProps) {
     notFound();
   }
 
-  if (!pageData) {
-    notFound();
-  }
+  if (!pageData) notFound();
 
   const { components = [] } = pageData;
   return <DynamicComponents components={components} />;

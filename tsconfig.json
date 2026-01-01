@@ -33,14 +33,15 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/**/*",
-    "utils/**/*",
+    "hooks/**/*",
+    "next-env.d.ts",
     "types/**/*",
-    "hooks/**/*"
+    "utils/**/*",
+    "dist/types/**/*.ts"
   ],
   "exclude": ["node_modules", ".next", "out"]
 }

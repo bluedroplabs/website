@@ -14,24 +14,29 @@ export const FeaturedIconGrid = ({
   eyebrow,
   items,
   title,
+  variant = "left",
   ...props
 }: IFeaturedIconGrid) => {
   if (!items || items.length === 0) return null;
 
   return (
     <Container
-      className={cn("py-12 space-y-8 lg:py-20 lg:space-y-12", className)}
+      className={cn(
+        "border-t border-border-normal py-12 space-y-8 lg:py-20 lg:space-y-12",
+        className,
+      )}
       displays={{ lg: "grid" }}
       {...props}
     >
       <ContentBlock
-        className="lg:col-span-8"
+        className={variant === "inline" ? "lg:col-span-12" : "lg:col-span-8"}
         description={description}
         descriptionClassName={contentMargin}
         eyebrow={eyebrow}
         eyebrowVariant="highlight"
         title={title}
         titleClassName={contentMargin}
+        variant={variant}
       />
       <Container
         asChild
