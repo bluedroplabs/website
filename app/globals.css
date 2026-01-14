@@ -29,8 +29,8 @@
   --text-size-66: 4.125rem;
   --text-size-64: 4rem;
   --text-size-80: 5rem;
-  --font-family-sans: Geist, system-ui, sans-serif;
-  --font-family-mono: "Geist Mono", "Courier New", monospace;
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 
   /* Black Colors */
   --color-black-5: rgba(17, 17, 17, 0.05);
@@ -168,7 +168,7 @@
 body {
   background-color: var(--color-page-default);
   color: var(--color-default-base);
-  font-family: var(--font-family-sans);
+  font-family: var(--font-geist-mono);
   font-weight: 300;
   line-height: 1.5;
   max-width: var(--breakpoint-5xl);
