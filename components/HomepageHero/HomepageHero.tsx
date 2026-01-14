@@ -31,7 +31,7 @@ const styles = {
     desktop: "max-2xl:hidden",
   },
   title:
-    "leading-[90%] text-[14.75cqw] md:text-[10cqw] lg:text-[11cqw] 2xl:text-[13cqw]",
+    "font-normal leading-[90%] text-[14.75cqw] tracking-[-1.6px] md:text-[10cqw] lg:text-[11cqw] 2xl:text-[13cqw]",
   wrapper:
     "py-22.5 relative flex items-center justify-center overflow-hidden max-xs:py-20 md:py-16 lg:py-29 2xl:pb-33.25 2xl:pt-34.75",
 };

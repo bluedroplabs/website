@@ -5,10 +5,12 @@ export const HomepageHeroSmallBg = (props: SVGProps<SVGSVGElement>) => {
   const { isDarkMode } = useAppTheme();
 
   const strokeColor = isDarkMode ? "rgba(252, 252, 251)" : "rgba(17, 17, 17)";
+  const mixBlendMode = isDarkMode ? "color-dodge" : "normal";
 
   return (
     <svg
       fill="none"
+      style={{ mixBlendMode }}
       viewBox="0 0 393 550"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
