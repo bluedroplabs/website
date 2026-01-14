@@ -83,48 +83,45 @@ components:
     solutions:
       - eyebrow: "Drupal + WordPress Managed Hosting"
         title: "Keep your Drupal 7 platform safe and running smoothly"
-        description: "Tempus leo eu aenean sed diam urna tempor."
+        description: "Launch fast, secure, and scalable digital experiences built by experts who know your CMS inside and out."
         href: "/"
         image:
           alt: "Drupal + WordPress Managed Hosting"
-          src: "https://picsum.photos/600/600?random=1"
+          src: "/assets/drupal-and-wordpress-development.png"
       - eyebrow: "Drupal 7 support"
         title: "Keep your Drupal 7 platform safe and running smoothly"
-        description: "Tempus leo eu aenean sed diam urna tempor."
+        description: "Extend the life of your Drupal 7 site with expert updates and support—no migration pressure, no downtime."
         href: "/"
         image:
           alt: "Drupal 7 support"
-          src: "https://picsum.photos/600/600?random=2"
+          src: "/assets/drupal-7-support.png"
       - eyebrow: "Drupal + WordPress Support"
         title: "Ongoing support and maintenance from experienced developers"
-        description: "Tempus leo eu aenean sed diam urna tempor."
+        description: "Stay confident and secure with proactive maintenance, performance tuning, and hands-on technical support."
         href: "/"
         image:
           alt: "Drupal + WordPress Support"
-          src: "https://picsum.photos/600/600?random=3"
+          src: "/assets/drupal-and-wordpress-support.png"
       - eyebrow: "API + Custom Development"
         title: "Build scalable web applications and APIs that power your business growth"
-        description: "Tempus leo eu aenean sed diam urna tempor."
+        description: "Power your business with custom APIs and web applications built for flexibility, scalability, and long-term growth."
         href: "/"
         image:
           alt: "API + Custom Development"
-          src: "https://picsum.photos/600/600?random=4"
+          src: "/assets/api-and-custom-development.png"
       - eyebrow: "Design + Experience"
         title: "Turn your brand into a digital experience that converts"
-        description: "Tempus leo eu aenean sed diam urna tempor."
+        description: "Polished, accessible interfaces with high-fidelity visuals and brand consistency, built to meet modern web standards and performance goals."
         href: "/"
         image:
           alt: "Design + Experience"
-          src: "https://picsum.photos/600/600?random=5"
+          src: "/assets/design-and-experience.png"
       - eyebrow: "SEO + Marketing"
         title: "Optimize your website into a high-performing business asset"
-        description: "Tempus leo eu aenean sed diam urna tempor."
+        description: "Boost visibility and conversions with technical SEO, performance optimization, and smart marketing strategy."
         href: "/"
         image:
           alt: "SEO + Marketing"
-          src: "https://picsum.photos/600/600?random=6"
+          src: "/assets/seo-and-marketing.png"
 
   - type: GridSeparator
-        
-
-
