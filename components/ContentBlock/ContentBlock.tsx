@@ -20,15 +20,18 @@ const containerVariants = cva(containerClass, {
   defaultVariants: { variant: "left" },
 });
 
-const eyebrowVariants = cva("font-mono leading-[1] uppercase w-fit", {
-  variants: {
-    variant: {
-      default: "text-size-14 lg:text-size-16",
-      highlight: "bg-brand-sky-blue px-2.5 py-0.5 text-deep-green",
+const eyebrowVariants = cva(
+  "font-mono font-normal leading-[1] uppercase w-fit",
+  {
+    variants: {
+      variant: {
+        default: "text-size-14 lg:text-size-16",
+        highlight: "bg-brand-sky-blue px-1.5 py-0.5 text-deep-green",
+      },
     },
+    defaultVariants: { variant: "default" },
   },
-  defaultVariants: { variant: "default" },
-});
+);
 
 const titleVariants = cva(
   "font-medium leading-[110%] !text-default-heading tracking-tight [&_em]:not-italic [&_em]:text-default-highlight [&_b]:font-semibold [&_strong]:pl-2 [&_strong]:pr-1 [&_strong]:font-medium [&_strong]:bg-brand-light-blue",
