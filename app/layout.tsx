@@ -24,8 +24,12 @@ export default function RootLayout({
   const navigationData = loadNavigationData();
 
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn(geist.variable, geistMono.variable, "antialiased")}>
+    <html
+      className={cn(geist.variable, geistMono.variable, "antialiased")}
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="system"
