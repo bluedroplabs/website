@@ -178,16 +178,22 @@ body {
 
 /* Dotted Background Utilities */
 .bg-dotted {
-  background-image: radial-gradient(circle, var(--color-brand-aqua) 0.0225rem, transparent 0.0625rem);
+  background-image: radial-gradient(
+    circle,
+    var(--color-brand-aqua) 0.0225rem,
+    transparent 0.0625rem
+  );
   background-size: 0.90625rem 0.90625rem;
 }
 
 .bg-grid-lines {
-  background-image: repeating-linear-gradient(to right,
-      var(--color-border-normal) 0,
-      var(--color-border-normal) 1px,
-      transparent 1px,
-      transparent 80px);
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--color-border-normal) 0,
+    var(--color-border-normal) 1px,
+    transparent 1px,
+    transparent 80px
+  );
 }
 
 @keyframes grid-marquee {
@@ -218,4 +224,26 @@ body {
   to {
     height: 0;
   }
+}
+
+/* Typewriter cursor animation */
+@keyframes typewriter-cursor {
+  from {
+    border-color: currentColor;
+  }
+
+  to {
+    border-color: transparent;
+  }
+}
+
+.typewriter {
+  padding-right: 0.625rem;
+  display: none;
+}
+
+strong.typewriter:empty {
+  background-color: transparent;
+  padding-right: 0;
+  padding-left: 0;
 }

@@ -79,7 +79,7 @@ components:
   - type: GridSeparator
 
   - type: FeaturedSolutionsGrid
-    title: "We're <strong>Drupal</strong> experts who set you up to scale"
+    title: "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Wordpress</strong><strong class='typewriter'>React</strong> experts who set you up to scale"
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     primaryCTA:
       children: "View all solutions"
