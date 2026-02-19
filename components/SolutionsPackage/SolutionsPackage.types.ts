@@ -7,8 +7,7 @@ import type { IPackageCard } from "../PackageCard/PackageCard.types";
  * Props for the SolutionsPackage component.
  */
 export interface ISolutionsPackage
-  extends
-    HTMLAttributes<HTMLElement>,
+  extends HTMLAttributes<HTMLElement>,
     Pick<IContentBlock, "title" | "eyebrow" | "description"> {
   /**
    * Footer content for the solutions package.

@@ -33,10 +33,8 @@ export type TContentBlockTitleVariant =
 /**
  * Props for the ContentBlock component.
  */
-export interface IContentBlock extends Omit<
-  HTMLAttributes<HTMLElement>,
-  "title"
-> {
+export interface IContentBlock
+  extends Omit<HTMLAttributes<HTMLElement>, "title"> {
   /**
    * Author name displayed within the component.
    */

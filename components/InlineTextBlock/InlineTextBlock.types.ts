@@ -5,4 +5,5 @@ import type { IContentBlock } from "../ContentBlock/ContentBlock.types";
  * Props for the InlineTextBlock component.
  */
 export interface IInlineTextBlock
-  extends HTMLAttributes<HTMLElement>, IContentBlock {}
+  extends HTMLAttributes<HTMLElement>,
+    IContentBlock {}

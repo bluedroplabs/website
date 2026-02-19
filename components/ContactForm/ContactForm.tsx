@@ -4,6 +4,12 @@ import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { ArrowRightDownIcon } from "@/components/Icon";
 import { cn } from "@/utils/classes";
+import {
+  submitContactForm,
+  type ContactFormState,
+} from "@/app/actions/contact";
+import { Toast } from "@/components/Toast/Toast";
+import { useActionState, useEffect, useRef, useState } from "react";
 import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
 const styles = {
@@ -67,11 +73,24 @@ export const ContactForm = ({
   contactEmail,
   contactEmailHref,
   bookCallLink,
-  formAction = "/api/contact",
   fields = defaultFields,
   submitButtonText = "SEND MESSAGE",
   ...props
 }: IContactForm) => {
+  const [state, formAction, isPending] = useActionState<ContactFormState, FormData>(
+    submitContactForm,
+    null,
+  );
+  const [showToast, setShowToast] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state?.success) {
+      formRef.current?.reset();
+      setShowToast(true);
+    }
+  }, [state]);
+
   return (
     <Container className={cn(styles.container, className)} {...props} noPadding>
       <Container className={styles.wrapper} displays={{ lg: "flex" }}>
@@ -115,7 +134,7 @@ export const ContactForm = ({
 
         {/* Right Column - Contact Form */}
         <div className={styles.rightColumn}>
-          <form action={formAction} className={styles.form}>
+          <form action={formAction} className={styles.form} ref={formRef}>
             {fields.map((field) => (
               <div className={styles.fieldGroup} key={field.name}>
                 <label className={styles.label} htmlFor={field.name}>
@@ -143,11 +162,22 @@ export const ContactForm = ({
               </div>
             ))}
 
-            <Button className={styles.submitButton} type="submit">
-              {submitButtonText}
+            <Button
+              className={styles.submitButton}
+              disabled={isPending}
+              type="submit"
+            >
+              {isPending ? "SENDING..." : submitButtonText}
             </Button>
           </form>
         </div>
+
+        {showToast && state?.message && (
+          <Toast
+            message={state.message}
+            onDismiss={() => setShowToast(false)}
+          />
+        )}
       </Container>
     </Container>
   );

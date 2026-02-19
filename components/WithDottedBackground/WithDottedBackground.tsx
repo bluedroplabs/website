@@ -22,9 +22,8 @@ export const dottedVariants = cva("", {
   },
 });
 
-interface WithDottedBackgroundProps extends VariantProps<
-  typeof dottedVariants
-> {
+interface WithDottedBackgroundProps
+  extends VariantProps<typeof dottedVariants> {
   children: ReactNode;
   className?: string;
   as?: ElementType;

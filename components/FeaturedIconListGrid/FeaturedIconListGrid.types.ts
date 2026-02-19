@@ -6,8 +6,7 @@ import type { IIconCard } from "../IconCard/IconCard.types";
  * Props for the FeaturedIconListGrid component.
  */
 export interface IFeaturedIconListGrid
-  extends
-    HTMLAttributes<HTMLElement>,
+  extends HTMLAttributes<HTMLElement>,
     Pick<IContentBlock, "description" | "eyebrow" | "variant"> {
   items: IIconCard[];
 }
