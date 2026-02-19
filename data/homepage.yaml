@@ -17,26 +17,32 @@ components:
     logos:
       - alt: "Logo 1"
         src: "/assets/client-stacker.png"
+        srcLight: "/assets/client-stacker-light.png"
         width: 200
         height: 60
       - alt: "Logo 2"
         src: "/assets/client-powdr.png"
+        srcLight: "/assets/client-powdr-light.png"
         width: 200
         height: 60
       - alt: "Logo 3"
         src: "/assets/client-mtm360.png"
+        srcLight: "/assets/client-mtm360-light.png"
         width: 200
         height: 60
       - alt: "Logo 4"
         src: "/assets/client-rothliving.png"
+        srcLight: "/assets/client-rothliving-light.png"
         width: 200
         height: 60
       - alt: "Logo 5"
         src: "/assets/client-zion.png"
+        srcLight: "/assets/client-zion-light.png"
         width: 200
         height: 60
       - alt: "Logo 6"
         src: "/assets/client-zula.png"
+        srcLight: "/assets/client-zula-light.png"
         width: 200
         height: 60
 
