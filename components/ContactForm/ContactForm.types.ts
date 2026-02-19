@@ -39,7 +39,10 @@ export interface IContactFormField {
 /**
  * Props for the ContactForm component.
  */
-export interface IContactForm extends Omit<HTMLAttributes<HTMLDivElement>, "title"> {
+export interface IContactForm extends Omit<
+  HTMLAttributes<HTMLDivElement>,
+  "title"
+> {
   /**
    * Title displayed in the left column.
    */
