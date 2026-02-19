@@ -20,8 +20,7 @@ export interface IFeaturedAccordionListItem {
  * Props for the FeaturedAccordionList component.
  */
 export interface IFeaturedAccordionList
-  extends HTMLAttributes<HTMLElement>,
-    IContentBlock {
+  extends HTMLAttributes<HTMLElement>, IContentBlock {
   /**
    * Items to be displayed in the accordion list.
    */

@@ -1,0 +1,22 @@
+# Contact Page Configuration
+# This file defines the Contact page components section
+
+title: "Contact Us - Blue Drop Labs"
+description: "Get in touch with our team to discuss your project needs."
+components:
+  - type: GradientHero
+    eyebrow: "LET'S BUILD SOMETHING GREAT TOGETHER"
+    title: "Ready to start your next project?"
+    description: "Tell us about your goals, and we'll help you find the right way forward."
+
+  # - type: ContactForm
+  #   contactTitle: "Talk to our team"
+  #   contactDescription: "We're a small, senior team that responds quickly and works directly with you — no layers, no handoffs."
+  #   contactEmail: "hello@bluedroplabs.com"
+  #   contactEmailHref: "mailto:hello@bluedroplabs.com"
+  #   formAction: "/api/contact"
+  #   bookCallLink:
+  #     href: "#"
+  #     label: "Book a call"
+
+  - type: GridSeparator

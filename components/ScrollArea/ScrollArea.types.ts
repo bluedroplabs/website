@@ -4,7 +4,8 @@ import type { ComponentProps } from "react";
 /**
  * Props for the ScrollArea component.
  */
-export interface IScrollArea
-  extends ComponentProps<typeof ScrollAreaPrimitive.Root> {
+export interface IScrollArea extends ComponentProps<
+  typeof ScrollAreaPrimitive.Root
+> {
   showEdgeShadows?: boolean;
 }
