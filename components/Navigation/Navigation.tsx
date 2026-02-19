@@ -33,10 +33,7 @@ export const Navigation = ({
 
   return (
     <>
-      <header
-        className={cn(styles.container, className)}
-        {...props}
-      >
+      <header className={cn(styles.container, className)} {...props}>
         <Link className={styles.logo} href="/">
           {isDarkMode
             ? darkLogo?.src && <Image {...darkLogo} {...logoProps} />
@@ -67,10 +64,7 @@ export const Navigation = ({
             variant="ghost"
           >
             <HamburgerIcon
-              className={cn(
-                "size-6",
-                isMenuOpen && "text-white"
-              )}
+              className={cn("size-6", isMenuOpen && "text-white")}
               isActive={isMenuOpen}
             />
           </Button>

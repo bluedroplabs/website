@@ -250,7 +250,10 @@ body {
   border-radius: 0.1875rem;
   position: absolute;
   left: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    top 0.25s ease;
   will-change: transform, opacity;
 }
 

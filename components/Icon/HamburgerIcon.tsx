@@ -14,7 +14,7 @@ export const HamburgerIcon = ({
       className={cn(
         "hamburger hamburger--collapse",
         isActive && "is-active",
-        className
+        className,
       )}
     >
       <span className="hamburger-box">
