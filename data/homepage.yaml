@@ -16,23 +16,27 @@ components:
     description: "Invest in your growth and success ——— Trusted by our beloved clients"
     logos:
       - alt: "Logo 1"
-        src: "https://picsum.photos/200/100?random=1"
+        src: "/assets/client-stacker.png"
         width: 200
         height: 60
       - alt: "Logo 2"
-        src: "https://picsum.photos/200/100?random=2"
+        src: "/assets/client-powdr.png"
         width: 200
         height: 60
       - alt: "Logo 3"
-        src: "https://picsum.photos/200/100?random=3"
+        src: "/assets/client-mtm360.png"
         width: 200
         height: 60
       - alt: "Logo 4"
-        src: "https://picsum.photos/200/100?random=4"
+        src: "/assets/client-rothliving.png"
         width: 200
         height: 60
       - alt: "Logo 5"
-        src: "https://picsum.photos/200/100?random=5"
+        src: "/assets/client-zion.png"
+        width: 200
+        height: 60
+      - alt: "Logo 6"
+        src: "/assets/client-zula.png"
         width: 200
         height: 60
 
@@ -64,7 +68,7 @@ components:
     blockquote: "Most clients save 30-50% compared to Pantheon or Acquia while receiving better performance."
     image:
       alt: "Placeholder image"
-      src: "https://picsum.photos/562/568"
+      src: "/assets/web-deployment-dashboard.png"
     primaryCTA:
       children: "Schedule a demo"
       href: "/"
