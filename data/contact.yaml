@@ -9,14 +9,34 @@ components:
     title: "Ready to start your next project?"
     description: "Tell us about your goals, and we'll help you find the right way forward."
 
-  # - type: ContactForm
-  #   contactTitle: "Talk to our team"
-  #   contactDescription: "We're a small, senior team that responds quickly and works directly with you — no layers, no handoffs."
-  #   contactEmail: "hello@bluedroplabs.com"
-  #   contactEmailHref: "mailto:hello@bluedroplabs.com"
-  #   formAction: "/api/contact"
-  #   bookCallLink:
-  #     href: "#"
-  #     label: "Book a call"
+  - type: ContactForm
+    contactTitle: "Talk to our team"
+    contactDescription: "We're a small, senior team that responds quickly and works directly with you — no layers, no handoffs."
+    contactEmail: "hello@bluedroplabs.com"
+    contactEmailHref: "mailto:hello@bluedroplabs.com"
+    formAction: "/api/contact"
+    bookCallLink:
+      children: "Book a call"
+      href: "#"
+    fields:
+      - name: fullName
+        label: "Full Name"
+        type: text
+        required: true
+      - name: email
+        label: "Email address"
+        type: email
+        placeholder: "example@email.com"
+        required: true
+      - name: company
+        label: "Company"
+        type: text
+        labelSuffix: "(optional)"
+      - name: message
+        label: "How can we help?"
+        type: textarea
+        placeholder: "Write your message here"
+        required: true
+    submitButtonText: "SEND MESSAGE"
 
   - type: GridSeparator
