@@ -77,10 +77,10 @@ components:
       src: "/assets/platform.png"
     primaryCTA:
       children: "Schedule a demo"
-      href: "/"
+      href: "/contact"
     secondaryCTA:
       children: "Learn more"
-      href: "/"
+      href: "/about-us"
 
   - type: GridSeparator
 
