@@ -64,7 +64,7 @@ export const Navigation = ({
             variant="ghost"
           >
             <HamburgerIcon
-              className={cn("size-6", isMenuOpen && "text-white")}
+              className={cn("size-6", isMenuOpen && "text-default-strong")}
               isActive={isMenuOpen}
             />
           </Button>
