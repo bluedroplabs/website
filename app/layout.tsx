@@ -1,3 +1,4 @@
+import { MarkerWidget } from "@/components/MarkerWidget/MarkerWidget";
 import { Navigation } from "@/components/Navigation/Navigation";
 import { PageFooter } from "@/components/PageFooter/PageFooter";
 import { cn, geist, geistMono } from "@/utils";
@@ -44,6 +45,7 @@ export default function RootLayout({
               footerProps={footerData}
             />
           )}
+          <MarkerWidget />
         </ThemeProvider>
       </body>
     </html>
