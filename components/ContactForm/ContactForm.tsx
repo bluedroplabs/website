@@ -77,10 +77,10 @@ export const ContactForm = ({
   submitButtonText = "SEND MESSAGE",
   ...props
 }: IContactForm) => {
-  const [state, formAction, isPending] = useActionState<ContactFormState, FormData>(
-    submitContactForm,
-    null,
-  );
+  const [state, formAction, isPending] = useActionState<
+    ContactFormState,
+    FormData
+  >(submitContactForm, null);
   const [showToast, setShowToast] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
