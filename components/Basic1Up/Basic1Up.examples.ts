@@ -13,7 +13,7 @@ const BASIC_1_UP_DEFAULT_PROPS: IBasic1Up = {
   },
   primaryCTA: {
     children: "Schedule a demo",
-    href: "/",
+    href: "/contact",
   },
   secondaryCTA: {
     children: "Learn more",

@@ -3,6 +3,7 @@
 import { Basic1Up } from "@/components/Basic1Up/Basic1Up";
 import { CardGrid } from "@/components/CardGrid/CardGrid";
 import { ComparisonTable } from "@/components/ComparisonTable/ComparisonTable";
+import { ContactForm } from "@/components/ContactForm/ContactForm";
 import { DetailPageHero } from "@/components/DetailPageHero/DetailPageHero";
 import { FeaturedAccordionList } from "@/components/FeaturedAccordionList/FeaturedAccordionList";
 import { FeaturedIconGrid } from "@/components/FeaturedIconGrid/FeaturedIconGrid";
@@ -26,6 +27,7 @@ import type { IDynamicComponents } from "./DynamicComponents.types";
 const componentMap = {
   Basic1Up,
   CardGrid,
+  ContactForm,
   DetailPageHero,
   ComparisonTable,
   FeaturedAccordionList,

@@ -20,4 +20,10 @@ export interface IImage extends React.ComponentProps<typeof Image> {
    * Optional height of the image in pixels.
    */
   height?: number;
+
+  /**
+   * Optional source URL for the light/dark mode variant.
+   * If not provided, will auto-generate by appending "-light" before the file extension.
+   */
+  srcLight?: string;
 }

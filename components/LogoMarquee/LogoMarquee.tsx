@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils/classes";
+import { useAppTheme } from "@/hooks/useAppTheme";
 import Image from "next/image";
 import { useLayoutEffect, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -13,6 +14,7 @@ export const LogoMarquee = ({
   logos,
   ...props
 }: ILogoMarquee) => {
+  const { isDarkMode } = useAppTheme();
   const marqueeRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const [shouldScroll, setShouldScroll] = useState(false);
@@ -45,10 +47,10 @@ export const LogoMarquee = ({
         <div className="flex items-center" key={logo.alt || idx}>
           <Image
             alt={logo.alt || "Logo"}
-            className="object-contain h-12 w-auto min-w-fit"
+            className="object-contain h-12 w-auto min-w-fit opacity-75"
             height={logo.height || 60}
             priority={logo.priority}
-            src={logo.src}
+            src={isDarkMode && logo.srcLight ? logo.srcLight : logo.src}
             width={logo.width || 120}
           />
         </div>

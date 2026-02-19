@@ -13,7 +13,7 @@ components:
       alt: "Full Stack Development Hero Image"
     primaryCTA:
       children: "Schedule a demo"
-      url: "/contact-us"
+      url: "/contact"
     secondaryCTA:
       children: "Why Blue Drop?"
       url: "/about-us"

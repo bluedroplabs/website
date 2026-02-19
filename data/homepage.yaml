@@ -16,23 +16,33 @@ components:
     description: "Invest in your growth and success ——— Trusted by our beloved clients"
     logos:
       - alt: "Logo 1"
-        src: "https://picsum.photos/200/100?random=1"
+        src: "/assets/client-stacker.png"
+        srcLight: "/assets/client-stacker-light.png"
         width: 200
         height: 60
       - alt: "Logo 2"
-        src: "https://picsum.photos/200/100?random=2"
+        src: "/assets/client-powdr.png"
+        srcLight: "/assets/client-powdr-light.png"
         width: 200
         height: 60
       - alt: "Logo 3"
-        src: "https://picsum.photos/200/100?random=3"
+        src: "/assets/client-mtm360.png"
+        srcLight: "/assets/client-mtm360-light.png"
         width: 200
         height: 60
       - alt: "Logo 4"
-        src: "https://picsum.photos/200/100?random=4"
+        src: "/assets/client-rothliving.png"
+        srcLight: "/assets/client-rothliving-light.png"
         width: 200
         height: 60
       - alt: "Logo 5"
-        src: "https://picsum.photos/200/100?random=5"
+        src: "/assets/client-zion.png"
+        srcLight: "/assets/client-zion-light.png"
+        width: 200
+        height: 60
+      - alt: "Logo 6"
+        src: "/assets/client-zula.png"
+        srcLight: "/assets/client-zula-light.png"
         width: 200
         height: 60
 
@@ -64,18 +74,18 @@ components:
     blockquote: "Most clients save 30-50% compared to Pantheon or Acquia while receiving better performance."
     image:
       alt: "Placeholder image"
-      src: "https://picsum.photos/562/568"
+      src: "/assets/platform.png"
     primaryCTA:
       children: "Schedule a demo"
-      href: "/"
+      href: "/contact"
     secondaryCTA:
       children: "Learn more"
-      href: "/"
+      href: "/about-us"
 
   - type: GridSeparator
 
   - type: FeaturedSolutionsGrid
-    title: "We're <strong>Drupal</strong> experts who set you up to scale"
+    title: "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Wordpress</strong><strong class='typewriter'>React</strong> experts who set you up to scale"
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     primaryCTA:
       children: "View all solutions"

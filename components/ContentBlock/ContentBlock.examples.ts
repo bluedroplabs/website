@@ -13,11 +13,11 @@ const TEXT_BLOCK_DEFAULT_PROPS: IContentBlock = {
   Icon: LaptopIcon,
   primaryCTA: {
     children: "Schedule a demo",
-    href: "#",
+    href: "/contact",
   },
   secondaryCTA: {
     children: "Learn more",
-    href: "#",
+    href: "/about-us",
   },
   title: "Enterprise Performance Without Enterprise Pricing",
   titleClassName: "mb-4 lg:mb-5",
