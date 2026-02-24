@@ -1,4 +1,3 @@
-import { MarkerWidget } from "@/components/MarkerWidget/MarkerWidget";
 import { Navigation } from "@/components/Navigation/Navigation";
 import { PageFooter } from "@/components/PageFooter/PageFooter";
 import { cn, geist, geistMono } from "@/utils";
@@ -10,6 +9,7 @@ import {
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import { Marker } from "@/components/Marker/Marker";
 
 export const metadata: Metadata = {
   title: "Blue Drop Labs - Experts in Digital Strategy",
@@ -45,7 +45,7 @@ export default function RootLayout({
               footerProps={footerData}
             />
           )}
-          <MarkerWidget />
+          <Marker />
         </ThemeProvider>
       </body>
     </html>
