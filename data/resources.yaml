@@ -122,7 +122,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=7"
           alt: "Resource Card Example Image"
-        href: "/resources/accessible-forms-best-practices"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Accessible Forms and Validation Best Practices"
         variant: "default"
       - date: "October 5, 2025"
@@ -133,7 +133,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=8"
           alt: "Resource Card Example Image"
-        href: "/resources/drupal-10-migration-guide"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Drupal 10 Migration Guide for Enterprise"
         variant: "default"
       - date: "October 8, 2025"
@@ -144,7 +144,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=9"
           alt: "Resource Card Example Image"
-        href: "/resources/wordpress-multisite-at-scale"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "WordPress Multisite at Scale"
         variant: "default"
       - date: "October 12, 2025"
@@ -155,7 +155,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=10"
           alt: "Resource Card Example Image"
-        href: "/resources/dxp-adoption-report-q4-2025"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Digital Experience Platform Adoption Report Q4 2025"
         variant: "default"
       - date: "October 15, 2025"
@@ -166,7 +166,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=11"
           alt: "Resource Card Example Image"
-        href: "/resources/design-systems-at-scale"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Design Systems That Scale"
         variant: "default"
       - date: "October 18, 2025"
@@ -177,7 +177,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=12"
           alt: "Resource Card Example Image"
-        href: "/resources/drupal-front-end-apis"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Drupal Front-End APIs and Decoupled Architecture"
         variant: "default"
       - date: "October 22, 2025"
@@ -188,7 +188,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=13"
           alt: "Resource Card Example Image"
-        href: "/resources/wordpress-performance-optimization"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "WordPress Performance and Core Web Vitals"
         variant: "default"
       - date: "October 25, 2025"
@@ -199,7 +199,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=14"
           alt: "Resource Card Example Image"
-        href: "/resources/cms-selection-guide"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "The Complete CMS Selection and Implementation Guide"
         variant: "default"
       - date: "October 28, 2025"
@@ -210,7 +210,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=15"
           alt: "Resource Card Example Image"
-        href: "/resources/user-research-methods"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "User Research Methods for Product Teams"
         variant: "default"
       - date: "November 2, 2025"
@@ -221,29 +221,29 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=16"
           alt: "Resource Card Example Image"
-        href: "/resources/security-hardening-cms"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Security Hardening for CMS Platforms"
         variant: "default"
       - date: "November 5, 2025"
         description: "Building inclusive interfaces that work for everyone."
         eyebrow: "Blog"
         type: "blog"
-        topic: ["ui-ux"]
+        topic: ["ui-ux", "cms"]
         image:
           src: "https://picsum.photos/800/600?random=17"
           alt: "Resource Card Example Image"
-        href: "/resources/inclusive-design-patterns"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Inclusive Design Patterns for the Web"
         variant: "default"
       - date: "November 8, 2025"
         description: "Headless CMS comparison and when to choose API-first content."
         eyebrow: "Report"
         type: "report"
-        topic: ["cms"]
+        topic: ["cms", "ui-ux", "drupal"]
         image:
           src: "https://picsum.photos/800/600?random=18"
           alt: "Resource Card Example Image"
-        href: "/resources/headless-cms-comparison"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Headless CMS Comparison 2025"
         variant: "default"
       - date: "November 12, 2025"
@@ -254,7 +254,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=19"
           alt: "Resource Card Example Image"
-        href: "/resources/drupal-editorial-workflows"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Drupal Editorial Workflows and Customization"
         variant: "default"
       - date: "November 15, 2025"
@@ -265,7 +265,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=20"
           alt: "Resource Card Example Image"
-        href: "/resources/wordpress-architecture-enterprise"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "WordPress Architecture for Enterprise"
         variant: "default"
       - date: "November 18, 2025"
@@ -276,7 +276,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=21"
           alt: "Resource Card Example Image"
-        href: "/resources/design-tokens-theming"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "Design Tokens and Theming Systems"
         variant: "default"
       - date: "November 22, 2025"
@@ -287,7 +287,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=22"
           alt: "Resource Card Example Image"
-        href: "/resources/open-source-cms-report-2025"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
         title: "State of Open-Source CMS 2025"
         variant: "default"
     limit: 10

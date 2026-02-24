@@ -1,9 +1,25 @@
 "use client";
 
+import { useMemo } from "react";
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils";
 import { ResourceCard } from "../ResourceCard/ResourceCard";
 import type { IRelatedPosts } from "./RelatedPosts.types";
+
+function deterministicSample<T extends { href?: string }>(
+  items: T[],
+  count: number
+): T[] {
+  if (items.length <= count) return items;
+
+  const sorted = [...items].sort((a, b) => {
+    const hrefA = a.href ?? "";
+    const hrefB = b.href ?? "";
+    return hrefA.localeCompare(hrefB);
+  });
+
+  return sorted.slice(0, count);
+}
 
 export const RelatedPosts = ({
   className,
@@ -11,6 +27,11 @@ export const RelatedPosts = ({
   title,
   ...props
 }: IRelatedPosts) => {
+  const displayItems = useMemo(
+    () => deterministicSample(items, 3),
+    [items]
+  );
+
   return (
     <Container {...props} className={cn("mb-10", className)} noPadding>
       <Container className="border-b border-border-normal">
@@ -22,10 +43,10 @@ export const RelatedPosts = ({
         className="border-b border-border-normal"
         displays={{ lg: "flex" }}
       >
-        {items.map((item, index) => (
+        {displayItems.map((item, index) => (
           <Container
             className="border-border-normal last:border-b-0 max-lg:border-b lg:first:border-l lg:last:border-r"
-            key={index}
+            key={item.href ?? index}
             noPadding
           >
             <ResourceCard
