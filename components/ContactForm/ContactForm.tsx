@@ -4,12 +4,9 @@ import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { ArrowRightDownIcon } from "@/components/Icon";
 import { cn } from "@/utils/classes";
-import {
-  submitContactForm,
-  type ContactFormState,
-} from "@/app/actions/contact";
+
 import { Toast } from "@/components/Toast/Toast";
-import { useActionState, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
 const styles = {
@@ -77,19 +74,20 @@ export const ContactForm = ({
   submitButtonText = "SEND MESSAGE",
   ...props
 }: IContactForm) => {
-  const [state, formAction, isPending] = useActionState<
-    ContactFormState,
-    FormData
-  >(submitContactForm, null);
   const [showToast, setShowToast] = useState(false);
+  const [isPending, setIsPending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
-  useEffect(() => {
-    if (state?.success) {
-      formRef.current?.reset();
-      setShowToast(true);
-    }
-  }, [state]);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // TODO - Integrate with actual API
+    setIsPending(true);
+    
+    // Reset form and show toast
+    formRef.current?.reset();
+    setShowToast(true);
+    setIsPending(false);
+  };
 
   return (
     <Container className={cn(styles.container, className)} {...props} noPadding>
@@ -134,7 +132,7 @@ export const ContactForm = ({
 
         {/* Right Column - Contact Form */}
         <div className={styles.rightColumn}>
-          <form action={formAction} className={styles.form} ref={formRef}>
+          <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
             {fields.map((field) => (
               <div className={styles.fieldGroup} key={field.name}>
                 <label className={styles.label} htmlFor={field.name}>
@@ -172,9 +170,9 @@ export const ContactForm = ({
           </form>
         </div>
 
-        {showToast && state?.message && (
+        {showToast && (
           <Toast
-            message={state.message}
+            message="Message sent successfully!"
             onDismiss={() => setShowToast(false)}
           />
         )}
