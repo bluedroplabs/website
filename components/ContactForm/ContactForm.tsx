@@ -132,7 +132,7 @@ export const ContactForm = ({
 
         {/* Right Column - Contact Form */}
         <div className={styles.rightColumn}>
-          <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
             {fields.map((field) => (
               <div className={styles.fieldGroup} key={field.name}>
                 <label className={styles.label} htmlFor={field.name}>
