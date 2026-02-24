@@ -196,15 +196,6 @@ body {
   );
 }
 
-@keyframes grid-marquee {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 5rem 0;
-  }
-}
-
 /* Accordion Animations */
 @keyframes accordion-down {
   from {
