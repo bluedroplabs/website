@@ -4,7 +4,9 @@ import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { ArrowRightDownIcon } from "@/components/Icon";
 import { cn } from "@/utils/classes";
-import { useRef } from "react";
+
+import { Toast } from "@/components/Toast/Toast";
+import { useRef, useState } from "react";
 import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
 const styles = {
@@ -72,7 +74,20 @@ export const ContactForm = ({
   submitButtonText = "SEND MESSAGE",
   ...props
 }: IContactForm) => {
+  const [showToast, setShowToast] = useState(false);
+  const [isPending, setIsPending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // TODO - Integrate with actual API
+    setIsPending(true);
+    
+    // Reset form and show toast
+    formRef.current?.reset();
+    setShowToast(true);
+    setIsPending(false);
+  };
 
   return (
     <Container className={cn(styles.container, className)} {...props} noPadding>
@@ -117,7 +132,7 @@ export const ContactForm = ({
 
         {/* Right Column - Contact Form */}
         <div className={styles.rightColumn}>
-          <form className={styles.form} ref={formRef}>
+          <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
             {fields.map((field) => (
               <div className={styles.fieldGroup} key={field.name}>
                 <label className={styles.label} htmlFor={field.name}>
@@ -147,12 +162,20 @@ export const ContactForm = ({
 
             <Button
               className={styles.submitButton}
+              disabled={isPending}
               type="submit"
             >
-              {submitButtonText}
+              {isPending ? "SENDING..." : submitButtonText}
             </Button>
           </form>
         </div>
+
+        {showToast && (
+          <Toast
+            message="Message sent successfully!"
+            onDismiss={() => setShowToast(false)}
+          />
+        )}
       </Container>
     </Container>
   );
