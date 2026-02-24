@@ -8,7 +8,7 @@ import type { IRelatedPosts } from "./RelatedPosts.types";
 
 function deterministicSample<T extends { href?: string }>(
   items: T[],
-  count: number
+  count: number,
 ): T[] {
   if (items.length <= count) return items;
 
@@ -27,10 +27,7 @@ export const RelatedPosts = ({
   title,
   ...props
 }: IRelatedPosts) => {
-  const displayItems = useMemo(
-    () => deterministicSample(items, 3),
-    [items]
-  );
+  const displayItems = useMemo(() => deterministicSample(items, 3), [items]);
 
   return (
     <Container {...props} className={cn("mb-10", className)} noPadding>

@@ -176,6 +176,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Metric description: text-base/loose/font-light */
+.metric-description {
+  color: var(--color-default-base);
+  font-family: var(--font-geist-sans);
+  font-size: var(--text-size-16);
+  font-weight: 300;
+  line-height: 150%;
+}
+
 /* Dotted Background Utilities */
 .bg-dotted {
   background-image: radial-gradient(
