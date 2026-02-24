@@ -2,8 +2,10 @@
 
 import { cn } from "@/utils/classes";
 import { formatDateTimeAttribute } from "@/utils/date";
+import { useTypewriter } from "@/hooks/useTypewriter";
 import { cva } from "class-variance-authority";
 import parse from "html-react-parser";
+import { useRef } from "react";
 import { Button } from "../Button/Button";
 import type { IContentBlock } from "./ContentBlock.types";
 
@@ -113,6 +115,16 @@ export const ContentBlock = ({
 
   const Heading = titleTag || "h2";
   const isInline = variant === "inline";
+  const titleRef = useRef<HTMLHeadingElement>(null);
+
+  const hasTypewriter =
+    title?.includes("class='typewriter'") ||
+    title?.includes('class="typewriter"');
+
+  useTypewriter(
+    titleRef as React.RefObject<HTMLElement>,
+    hasTypewriter ? {} : undefined,
+  );
 
   const classes = {
     author: cn(styles.author, authorClassName),
@@ -145,7 +157,14 @@ export const ContentBlock = ({
             )}
           </div>
         )}
-        {title && <Heading className={classes.title}>{parse(title)}</Heading>}
+        {title &&
+          (hasTypewriter ? (
+            <Heading className={classes.title} ref={titleRef}>
+              {parse(title)}
+            </Heading>
+          ) : (
+            <Heading className={classes.title}>{parse(title)}</Heading>
+          ))}
 
         {blockquote && isInline && (
           <blockquote className={classes.blockquote}>{blockquote}</blockquote>
