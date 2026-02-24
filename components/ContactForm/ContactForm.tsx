@@ -82,7 +82,7 @@ export const ContactForm = ({
     e.preventDefault();
     // TODO - Integrate with actual API
     setIsPending(true);
-    
+
     // Reset form and show toast
     formRef.current?.reset();
     setShowToast(true);
