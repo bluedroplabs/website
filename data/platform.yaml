@@ -7,7 +7,7 @@ description: "Built for Drupal and WordPress—no hidden fees, no limits, just e
 components:
   - type: DetailPageHero
     description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
-    title: "Complete Design, Development, & Support"
+    title: "High-Performance Hosting — Without the Premium Price"
     image:
       src: "/assets/platform-hero-asset.png"
       alt: "The Platform"
