@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils";
 import { ResourceCard } from "../ResourceCard/ResourceCard";
@@ -43,13 +44,15 @@ export const RelatedPosts = ({
         {displayItems.map((item, index) => (
           <Container
             className="border-border-normal last:border-b-0 max-lg:border-b lg:first:border-l lg:last:border-r"
-            key={item.href ?? index}
+            key={`${item.href}-${index}`}
             noPadding
           >
-            <ResourceCard
-              {...item}
-              className="w-full max-lg:border-b max-lg:border-border-normal max-lg:last:border-b-0 md:max-lg:border-x"
-            />
+            <Link className="block w-full" href={item.href}>
+              <ResourceCard
+                {...item}
+                className="w-full max-lg:border-b max-lg:border-border-normal max-lg:last:border-b-0 md:max-lg:border-x"
+              />
+            </Link>
           </Container>
         ))}
       </Container>

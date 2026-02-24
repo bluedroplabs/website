@@ -23,6 +23,8 @@ components:
                 value: "article"
               - label: "Report"
                 value: "report"
+              - label: "Case Study"
+                value: "case-study"
       - label: "Topic"
         name: "topic"
         selections:
@@ -36,8 +38,7 @@ components:
                 value: "wordpress"
               - label: "CMS"
                 value: "cms"
-              - label: "Case Study"
-                value: "case-study"
+
     items:
       - date: "September 26, 2025"
         description: "Blue Drop Labs developed a modern static website architecture that enables sub-10 millisecond response times globally."
@@ -58,40 +59,40 @@ components:
         image:
           src: "/assets/unified-dor-platform.png"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
         title: "Helping a Recreation Company Cut Software Costs by 70%"
         variant: "default"
       - date: "September 26, 2025"
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description: "Managed Drupal hosting with flat-rate pricing and direct access to senior engineers—turning traffic spikes into revenue, not risk."
         eyebrow: "Case Study"
         type: "case-study"
         topic: ["wordpress", "cms"]
         image:
           src: "/assets/powdr-hosting-revolution.png"
-          alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+          alt: "Turning Traffic Spikes Into Revenue — Not Risk"
+        href: "/resources/turning-traffic-spikes-into-revenue"
         title: "Turning Traffic Spikes Into Revenue — Not Risk"
         variant: "default"
       - date: "September 26, 2025"
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description: "When Stacker's managed hosting provider failed, Blue Drop Labs built a custom hosting solution that reduced costs by 77% while improving performance and eliminating daily outages."
         eyebrow: "Case Study"
         type: "case-study"
         topic: ["ui-ux"]
         image:
           src: "/assets/engineered-foundation.png"
-          alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+          alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        href: "/resources/building-enterprise-grade-infrastructure"
         title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
         variant: "default"
       - date: "September 26, 2025"
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        description: "Blue Drop Labs helped Stacker evolve its platform with automated workflows, advanced analytics, and a modern customer portal that transformed how brands track and optimize their content distribution."
         eyebrow: "Case Study"
         type: "case-study"
-        topic: ["drupal", "cms"]
+        topic: ["ui-ux", "drupal", "cms"]
         image:
           src: "/assets/platform-reliability.png"
-          alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+          alt: "Automating a Media Platform into an AI-Powered Engine"
+        href: "/resources/automating-a-media-platform-into-an-ai-powered-engine"
         title: "Automating a Media Platform into an AI-Powered Engine"
         variant: "default"
       - date: "September 26, 2025"
