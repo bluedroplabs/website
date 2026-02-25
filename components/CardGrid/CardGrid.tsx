@@ -130,7 +130,7 @@ export const CardGrid = ({
   return (
     <Container className={className} noPadding {...props}>
       <section>
-        <Container className="border-y border-border-normal max-md:px-0">
+        <Container className="border-t border-border-normal max-md:px-0">
           <div className="border-x border-border-normal flex gap-x-8 items-center justify-between px-5 py-4 lg:px-8 lg:py-6">
             <SearchBar
               className="w-full"
@@ -152,12 +152,12 @@ export const CardGrid = ({
         {hasFilteredResults ? (
           groupedItems.map((group, groupIndex) => (
             <Container
-              className="max-md:px-0 md:border-y md:border-border-normal"
+              className="max-md:px-0 md:border-t md:border-border-normal"
               key={groupIndex}
             >
               <div
                 className={cn(
-                  "border-x border-border-normal lg:grid lg:grid-cols-3",
+                  "border-x border-border-normal lg:grid lg:grid-cols-3 lg:items-stretch",
                 )}
               >
                 {group.map((item, itemIndex) => {
@@ -165,16 +165,26 @@ export const CardGrid = ({
                   const globalIndex =
                     groupIndex === 0 ? 0 : (groupIndex - 1) * 3 + itemIndex + 1;
 
+                  const showVerticalBorder =
+                    !isFirst && itemIndex < group.length - 1;
+
                   return (
                     <Link
-                      className={cn("w-full", isFirst && "lg:col-span-3")}
+                      className={cn(
+                        "w-full",
+                        isFirst && "lg:col-span-3",
+                        !isFirst && "lg:h-full",
+                      )}
                       href={item.href}
                       key={globalIndex}
                     >
                       <ResourceCard
                         {...item}
                         className={cn(
-                          "border-border-normal max-md:border-t [&:nth-child(3n+2)]:lg:border-x",
+                          "border-border-normal max-md:border-t",
+                          !isFirst && "lg:h-full",
+                          showVerticalBorder &&
+                            "lg:border-r lg:border-border-normal",
                         )}
                         variant={isFirst ? "featured" : "default"}
                       />
@@ -185,7 +195,7 @@ export const CardGrid = ({
             </Container>
           ))
         ) : (
-          <Container className="max-md:px-0 md:border-y md:border-border-normal">
+          <Container className="max-md:px-0 md:border-t md:border-border-normal">
             <div className="border-x border-border-normal px-5 py-12 text-center text-fg-muted md:px-8">
               No resources match your filters. Try adjusting your search or
               filter selections.
@@ -193,7 +203,7 @@ export const CardGrid = ({
           </Container>
         )}
 
-        <Container className="border-border-normal max-md:border-t">
+        <Container className="md:border-t border-border-normal">
           <Pagination
             className="py-6 md:border-x md:border-border-normal"
             currentPage={page}
