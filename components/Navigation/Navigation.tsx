@@ -6,13 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "../Button/Button";
-import { HamburgerIcon } from "../Icon/HamburgerIcon";
+import { CloseIcon } from "../Icon/CloseIcon";
+import { MenuIcon } from "../Icon/MenuIcon";
 import { MobileMenu } from "./MobileMenu/MobileMenu";
 import type { INavigation } from "./Navigation.types";
 
 const styles = {
   container:
-    "flex items-center justify-between max-w-540 mx-auto px-5 py-3 max-sm:py-0 max-sm:pr-0 sticky top-0 bg-page-default w-full z-50 before:absolute before:border-b before:border-border-normal before:w-screen before:bottom-0 before:left-1/2 before:-translate-x-1/2",
+    "flex min-h-16 items-center justify-between max-w-540 mx-auto px-5 py-3 max-sm:py-0 max-sm:pr-0 sticky top-0 bg-page-default w-full z-50 before:absolute before:border-b before:border-border-normal before:w-screen before:bottom-0 before:left-1/2 before:-translate-x-1/2",
   link: "text-interactive-nav font-normal",
   list: "flex gap-x-4 xl:gap-x-8",
   logo: "h-8 max-w-39.5 relative w-full lg:h-9",
@@ -63,10 +64,11 @@ export const Navigation = ({
             size="none"
             variant="ghost"
           >
-            <HamburgerIcon
-              className={cn("size-6", isMenuOpen && "text-default-strong")}
-              isActive={isMenuOpen}
-            />
+            {isMenuOpen ? (
+              <CloseIcon className="size-6 text-default-strong [&_path]:fill-current" />
+            ) : (
+              <MenuIcon className="size-6 [&_path]:fill-current" />
+            )}
           </Button>
 
           <Button
