@@ -48,7 +48,7 @@ export const LogoMarquee = ({
           <Image
             alt={logo.alt || "Logo"}
             className="object-contain h-12 w-auto min-w-fit opacity-75"
-            height={logo.height || 60}
+            height={logo.height || 50}
             priority={logo.priority}
             src={isDarkMode && logo.srcLight ? logo.srcLight : logo.src}
             width={logo.width || 120}
