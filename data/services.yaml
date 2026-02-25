@@ -13,10 +13,10 @@ components:
       alt: "Full Stack Development Hero Image"
     primaryCTA:
       children: "Schedule a demo"
-      url: "/contact"
+      href: "/contact"
     secondaryCTA:
       children: "Why Blue Drop?"
-      url: "/about-us"
+      href: "/about-us"
 
   - type: FeaturedAccordionList
     title: "We Fix What's Broken.<br/><em>We Build What Works.</em>"

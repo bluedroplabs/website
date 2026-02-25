@@ -13,10 +13,10 @@ components:
       alt: "The Platform"
     primaryCTA:
       children: "Schedule a demo"
-      url: "/contact"
+      href: "/contact"
     secondaryCTA:
       children: "Why Blue Drop?"
-      url: "/about-us"
+      href: "/about-us"
 
   - type: FeaturedIconList
     title: "Why the Blue Drop Labs Platform?"
