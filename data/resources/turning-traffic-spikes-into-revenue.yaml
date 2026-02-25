@@ -1,0 +1,115 @@
+# Resource: Turning Traffic Spikes Into Revenue — Not Risk
+# Based on Figma design: Blue Drop Labs v2 – Case Study POWDR Hosting and Support (node 1136-20601)
+
+title: "Turning Traffic Spikes Into Revenue — Not Risk"
+description: "Blue Drop Labs provided managed Drupal hosting with flat-rate pricing, unlimited bandwidth, and direct access to senior engineers for POWDR's high-traffic portfolio—turning traffic spikes into revenue, not risk."
+components:
+  - type: DetailPageHero
+    author: "Matt Robison"
+    date: "September 26, 2025"
+    eyebrow: "Case Study"
+    title: "Turning Traffic Spikes Into Revenue — Not Risk"
+    image:
+      src: "/assets/powdr-hosting-revolution.png"
+      alt: "POWDR hosting and support – Turning traffic spikes into revenue"
+
+  - type: Wysiwyg
+    components:
+      - type: "RichText"
+        content: |
+          <p>POWDR operates 15+ high-traffic marketing websites for their outdoor recreation portfolio, serving millions of visitors annually with massive seasonal traffic spikes. Guests purchase lift tickets, book lodging, and buy season passes, making website performance directly tied to revenue.</p>
+          <p>They were facing escalating hosting costs, and despite the "enterprise" price tag, they experienced frequent timeout issues during traffic spikes, slow support through bureaucratic ticket systems, and technical problems that directly impacted revenue. The platform was expensive, unreliable, and unable to handle their actual needs.</p>
+          <p>Blue Drop Labs provided managed Drupal hosting with flat-rate pricing, unlimited bandwidth, and direct access to senior engineers for premium support. We became an extension of POWDR's team rather than just another vendor, resulting in lower costs and increased stability.</p>
+      - type: "InlineImage"
+        image:
+          src: "/assets/powdr-platform-today.png"
+          alt: "POWDR high-traffic hosting infrastructure"
+          width: 720
+          height: 320
+      - type: "Metrics"
+        title: "HIGHLIGHTS"
+        metrics:
+          - value: "Unlimited Scale Without Penalties"
+            description: "Handles 2M sessions monthly and 7,000 concurrent connected devices with no overage fees at 1500% RAW/CPU/RAM limits."
+          - value: "87% Faster Build Times"
+            description: "Blue Drop reduced build cycles by 40 seconds, accelerating the team's cycle to deliver on developer initiatives."
+          - value: "80% Cost Reduction"
+            description: "Achieved 100-day ROI and dramatically improved performance and reliability."
+          - value: "White-Glove Migration"
+            description: "Migrated from previous providers with zero downtime, providing the team a stress-free transition from manual work and unpredictable outcomes."
+      - type: "RichText"
+        content: |
+          <h2>Revenue protection</h2>
+          <p>When POWDR's sites experience timeouts or slow loading during peak booking periods, they lose sales. The new hosting infrastructure ensures that high-traffic moments translate to revenue rather than frustrated customers and abandoned carts. Annual Drupal version upgrades happen strategically during the summer months to reduce risk during the peak season.</p>
+      - type: "InlineImage"
+        image:
+          src: "/assets/build-speed-acceleration.png"
+          alt: "Build time comparison – Old way 30 seconds vs Blue Drop 3 seconds"
+          width: 720
+          height: 500
+      - type: "RichText"
+        content: |
+          <h2>Faster response to business needs</h2>
+          <p>Development teams no longer dread deployments. With build times reduced from 5 minutes to 40 seconds and zero timeout failures, they can push updates, fixes, and new features confidently. This means faster response to business needs and reduced developer stress during critical launch windows.</p>
+      - type: "RichText"
+        content: |
+          <h2>A true, proactive partnership</h2>
+          <p>Blue Drop doesn't wait for requests. Regular platform improvements include Drupal admin UI updates, security patches, and infrastructure optimizations. We also proactively identified several platform health and maintenance projects that will help ensure POWDR's long-term sustainability.</p>
+          <p>We also aim to pass on technical knowledge, giving POWDR and its development teams more agency. Our educational approach ensures non-technical stakeholders can make informed decisions without feeling intimidated by technical complexity.</p>
+      - type: "RichText"
+        content: |
+          <h2>Tired of enterprise pricing without enterprise service?</h2>
+          <p>Blue Drop Labs delivers high-performance Drupal hosting with the responsiveness and customization you won't get from large providers. Learn how we can reduce your hosting costs while improving reliability, performance, and support.</p>
+          <p>Ready to turn traffic spikes into revenue? Contact us to discuss how we can transform your hosting challenges into competitive advantages.</p>
+    details:
+      cta:
+        children: "Schedule a Demo"
+        href: "/contact"
+      details:
+        - label: "Services"
+          items:
+            - "UI/UX Design"
+            - "Drupal"
+            - "A/B Testing"
+        - label: "Industry"
+          items:
+            - "Publishing"
+
+  - type: GridSeparator
+
+  - type: RelatedPosts
+    title: "Related Posts"
+    items:
+      - date: "September 26, 2025"
+        description: "Blue Drop Labs helped POWDR migrate the DOR system, achieving 70% cost reduction."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["drupal", "cms"]
+        image:
+          src: "/assets/unified-dor-platform.png"
+          alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
+        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
+        title: "Helping a Lifestyle Company Cut Software Costs by 70%"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Modern static website architecture enabling sub-10ms response times globally."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["cms", "performance"]
+        image:
+          src: "/assets/10ms-global-delivery.png"
+          alt: "How We Achieved 10ms Response Times Globally"
+        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Building enterprise-grade infrastructure on a bootstrap budget."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["ui-ux"]
+        image:
+          src: "/assets/engineered-foundation.png"
+          alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        href: "/resources/building-enterprise-grade-infrastructure"
+        title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        variant: "default"

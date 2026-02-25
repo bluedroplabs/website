@@ -3,12 +3,47 @@
 import { Container } from "@/components/Container/Container";
 import { MultiSelect } from "@/components/MultiSelect/MultiSelect";
 import { ResourceCard } from "@/components/ResourceCard/ResourceCard";
+import type { IResourceCard } from "@/components/ResourceCard/ResourceCard.types";
 import { SearchBar } from "@/components/SearchBar/SearchBar";
 import { cn } from "@/utils/classes";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ICardGrid } from "./CardGrid.types";
 import { Pagination } from "./components/Pagination";
+
+function filterItems(
+  items: IResourceCard[],
+  searchTerm: string,
+  selectedFilters: Record<string, string[]>,
+): IResourceCard[] {
+  const term = searchTerm.trim().toLowerCase();
+  const typeFilter = selectedFilters.type ?? [];
+  const topicFilter = selectedFilters.topic ?? [];
+
+  return items.filter((item) => {
+    if (term) {
+      const title = (item.title ?? "").toLowerCase();
+      const description = (item.description ?? "").toLowerCase();
+      const eyebrow = (item.eyebrow ?? "").toLowerCase();
+      if (
+        !title.includes(term) &&
+        !description.includes(term) &&
+        !eyebrow.includes(term)
+      ) {
+        return false;
+      }
+    }
+    if (typeFilter.length > 0 && item.type) {
+      if (!typeFilter.includes(item.type)) return false;
+    }
+    if (topicFilter.length > 0 && item.topic?.length) {
+      const itemTopics = Array.isArray(item.topic) ? item.topic : [item.topic];
+      const hasTopic = topicFilter.some((t) => itemTopics.includes(t));
+      if (!hasTopic) return false;
+    }
+    return true;
+  });
+}
 
 export const CardGrid = ({
   className,
@@ -25,20 +60,37 @@ export const CardGrid = ({
     Record<string, string[]>
   >({});
 
-  const totalPages = Math.ceil(total / limit);
+  const useClientFiltering = !updateCards;
+
+  const filteredItems = useMemo(
+    () =>
+      useClientFiltering
+        ? filterItems(items ?? [], searchTerm, selectedFilters)
+        : (items ?? []),
+    [useClientFiltering, items, searchTerm, selectedFilters],
+  );
+
+  const effectiveTotal = useClientFiltering ? filteredItems.length : total;
+  const totalPages = Math.ceil(effectiveTotal / limit) || 1;
+
+  const displayedItems = useClientFiltering
+    ? filteredItems.slice((page - 1) * limit, page * limit)
+    : filteredItems;
 
   useEffect(() => {
-    updateCards?.({
-      page: 1,
-      searchTerm,
-      topic: selectedFilters.topic,
-      type: selectedFilters.type,
-    });
+    setPage(1);
+    if (updateCards) {
+      updateCards({
+        page: 1,
+        searchTerm,
+        topic: selectedFilters.topic,
+        type: selectedFilters.type,
+      });
+    }
   }, [searchTerm, selectedFilters, updateCards]);
 
   const handlePageChange = (newPage: number) => {
     setPage(newPage);
-
     updateCards?.({
       page: newPage,
       searchTerm,
@@ -57,20 +109,18 @@ export const CardGrid = ({
 
   if (!items || items.length === 0) return null;
 
-  // Group items: [[featured], [basic, basic, basic], [basic, basic, basic], ...]
-  const groupedItems: (typeof items)[] = [];
+  const hasFilteredResults = displayedItems.length > 0;
 
-  if (items.length > 0) {
-    // First group: featured item
-    groupedItems.push([items[0]]);
+  const groupedItems: (typeof displayedItems)[] = [];
 
-    // Group remaining items in chunks of 3
-    let currentGroup: typeof items = [];
-    for (let i = 1; i < items.length; i++) {
-      currentGroup.push(items[i]);
+  if (displayedItems.length > 0) {
+    groupedItems.push([displayedItems[0]]);
 
-      // When we have 3 items or reached the end, push the group
-      if (currentGroup.length === 3 || i === items.length - 1) {
+    let currentGroup: typeof displayedItems = [];
+    for (let i = 1; i < displayedItems.length; i++) {
+      currentGroup.push(displayedItems[i]);
+
+      if (currentGroup.length === 3 || i === displayedItems.length - 1) {
         groupedItems.push(currentGroup);
         currentGroup = [];
       }
@@ -99,40 +149,49 @@ export const CardGrid = ({
             ))}
           </div>
         </Container>
-        {groupedItems.map((group, groupIndex) => (
-          <Container
-            className="max-md:px-0 md:border-y md:border-border-normal"
-            key={groupIndex}
-          >
-            <div
-              className={cn(
-                "border-x border-border-normal lg:grid lg:grid-cols-3",
-              )}
+        {hasFilteredResults ? (
+          groupedItems.map((group, groupIndex) => (
+            <Container
+              className="max-md:px-0 md:border-y md:border-border-normal"
+              key={groupIndex}
             >
-              {group.map((item, itemIndex) => {
-                const isFirst = groupIndex === 0;
-                const globalIndex =
-                  groupIndex === 0 ? 0 : (groupIndex - 1) * 3 + itemIndex + 1;
+              <div
+                className={cn(
+                  "border-x border-border-normal lg:grid lg:grid-cols-3",
+                )}
+              >
+                {group.map((item, itemIndex) => {
+                  const isFirst = groupIndex === 0;
+                  const globalIndex =
+                    groupIndex === 0 ? 0 : (groupIndex - 1) * 3 + itemIndex + 1;
 
-                return (
-                  <Link
-                    className={cn("w-full", isFirst && "lg:col-span-3")}
-                    href={item.href}
-                    key={globalIndex}
-                  >
-                    <ResourceCard
-                      {...item}
-                      className={cn(
-                        "border-border-normal max-md:border-t [&:nth-child(3n+2)]:lg:border-x",
-                      )}
-                      variant={isFirst ? "featured" : "default"}
-                    />
-                  </Link>
-                );
-              })}
+                  return (
+                    <Link
+                      className={cn("w-full", isFirst && "lg:col-span-3")}
+                      href={item.href}
+                      key={globalIndex}
+                    >
+                      <ResourceCard
+                        {...item}
+                        className={cn(
+                          "border-border-normal max-md:border-t [&:nth-child(3n+2)]:lg:border-x",
+                        )}
+                        variant={isFirst ? "featured" : "default"}
+                      />
+                    </Link>
+                  );
+                })}
+              </div>
+            </Container>
+          ))
+        ) : (
+          <Container className="max-md:px-0 md:border-y md:border-border-normal">
+            <div className="border-x border-border-normal px-5 py-12 text-center text-fg-muted md:px-8">
+              No resources match your filters. Try adjusting your search or
+              filter selections.
             </div>
           </Container>
-        ))}
+        )}
 
         <Container className="border-border-normal max-md:border-t">
           <Pagination

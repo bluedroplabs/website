@@ -45,7 +45,7 @@ const titleVariants = cva(
         md: "text-size-20 lg:text-size-24",
         lg: "text-size-24 lg:text-size-32",
         xl: "text-size-32 lg:text-size-48",
-        "2xl": "text-size-48 lg:text-size-64",
+        "2xl": "text-size-48 2xl:text-size-64",
         "gradient-hero": "text-[12.25cqw] lg:text-[5cqw]",
         "resource-card-default": "text-size-18 md:text-size-32",
         "resource-card-featured": "text-size-24 md:text-size-48",

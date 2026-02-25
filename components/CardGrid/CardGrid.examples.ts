@@ -14,6 +14,7 @@ const CARD_GRID_DEFAULT_PROPS: ICardGrid = {
             { label: "Whitepaper", value: "whitepaper" },
             { label: "Article", value: "article" },
             { label: "Report", value: "report" },
+            { label: "Case Study", value: "case-study" },
           ],
         },
       ],

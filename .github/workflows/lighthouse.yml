@@ -3,7 +3,7 @@ name: Lighthouse CI
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   lighthouse:
@@ -32,5 +32,5 @@ jobs:
           configPath: .lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
-          startServerCommand: npm start
-          startServerReadyPattern: "Local:"
+          startServerCommand: npx serve dist -l 3000
+          startServerReadyPattern: "Serving!"

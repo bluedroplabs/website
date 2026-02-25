@@ -48,37 +48,75 @@ components:
         - label: "Industry"
           items:
             - "Publishing"
-    
 
   - type: GridSeparator
 
   - type: RelatedPosts
     title: "Related Posts"
     items:
-      - date: "September 26, 2025"
-        description:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        eyebrow: "Blog"
-        image: 
-          src: "https://picsum.photos/800/600?random=1"
+      - date: "October 12, 2025"
+        description: "Quarterly benchmarks and trends in digital experience platform adoption."
+        eyebrow: "Report"
+        type: "report"
+        topic: ["cms", "ui-ux"]
+        image:
+          src: "https://picsum.photos/800/600?random=10"
           alt: "Resource Card Example Image"
-        title: "Sending an Article's Publish Date to Google Analytics"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        title: "Digital Experience Platform Adoption Report Q4 2025"
         variant: "default"
-      - date: "September 26, 2025"
-        description:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      - date: "October 8, 2025"
+        description: "How to structure and scale your WordPress multisite for teams and agencies."
         eyebrow: "Blog"
-        image: 
-          src: "https://picsum.photos/800/600?random=2"
+        type: "blog"
+        topic: ["wordpress"]
+        image:
+          src: "https://picsum.photos/800/600?random=9"
           alt: "Resource Card Example Image"
-        title: "Sending an Article's Publish Date to Google Analytics"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        title: "WordPress Multisite at Scale"
         variant: "default"
-      - date: "September 26, 2025"
-        description:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        eyebrow: "Blog"
-        image: 
-          src: "https://picsum.photos/800/600?random=3"
+      - date: "October 18, 2025"
+        description: "Deep dive into Drupal's new front-end APIs and decoupled options."
+        eyebrow: "Whitepaper"
+        type: "whitepaper"
+        topic: ["drupal"]
+        image:
+          src: "https://picsum.photos/800/600?random=12"
           alt: "Resource Card Example Image"
-        title: "Sending an Article's Publish Date to Google Analytics"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        title: "Drupal Front-End APIs and Decoupled Architecture"
+        variant: "default"
+      - date: "October 1, 2025"
+        description: "Best practices for building accessible forms and validation patterns in modern web apps."
+        eyebrow: "Article"
+        type: "article"
+        topic: ["ui-ux"]
+        image:
+          src: "https://picsum.photos/800/600?random=7"
+          alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        title: "Accessible Forms and Validation Best Practices"
+        variant: "default"
+      - date: "October 15, 2025"
+        description: "Design systems that scale across products and improve consistency."
+        eyebrow: "Article"
+        type: "article"
+        topic: ["ui-ux"]
+        image:
+          src: "https://picsum.photos/800/600?random=11"
+          alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        title: "Design Systems That Scale"
+        variant: "default"
+      - date: "October 5, 2025"
+        description: "A comprehensive guide to migrating your content from legacy systems into Drupal 10."
+        eyebrow: "Whitepaper"
+        type: "whitepaper"
+        topic: ["drupal", "cms"]
+        image:
+          src: "https://picsum.photos/800/600?random=8"
+          alt: "Resource Card Example Image"
+        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        title: "Drupal 10 Migration Guide for Enterprise"
         variant: "default"

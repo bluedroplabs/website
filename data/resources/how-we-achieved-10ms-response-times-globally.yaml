@@ -1,0 +1,125 @@
+# Resource: How We Achieved 10ms Response Times Globally (And You Can Too)
+# Based on Figma design: Blue Drop Labs v2 – Case Study 10ms Global Delivery (node 1136-20464)
+
+title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
+description: "Blue Drop Labs developed a modern static website architecture that enables sub-10 millisecond response times globally. Powered by Next.js, it decouples the website's presentation from content management."
+components:
+  - type: DetailPageHero
+    author: "Matt Robison"
+    date: "September 26, 2025"
+    eyebrow: "Case Study"
+    title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
+    image:
+      src: "/assets/10ms-global-delivery.png"
+      alt: "10ms Global Delivery – sub-10ms response times globally"
+
+  - type: Wysiwyg
+    components:
+      - type: "RichText"
+        content: |
+          <p>Blue Drop Labs developed a modern static website architecture that enables sub-10 millisecond response times globally. Powered by Next.js, it decouples the website's presentation from content management. Any CMS can be used to provide content. This architecture serves as both the foundation for Blue Drop Labs' website and a scalable solution for any client seeking greater security, faster load times, and lower hosting costs.</p>
+      - type: "InlineImage"
+        image:
+          src: "/assets/decoupled-static-system.png"
+          alt: "Architecture diagram – Content Library, DXS, Content Hub, Page Renderer, SEO"
+          width: 720
+          height: 500
+      - type: "Metrics"
+        title: "KEY HIGHLIGHTS"
+        metrics:
+          - value: "Lightning-Fast Performance"
+            description: "Achieved sub-10 millisecond response times worldwide by serving static HTML, CSS, and JavaScript files through Cloudflare's edge network."
+          - value: "Enhanced Security"
+            description: "By serving only static files, there is no publicly-accessible backend to exploit."
+          - value: "Flexible Content Management"
+            description: "Content can be sourced from YAML files, Drupal, Strapi, WordPress, or other CMS platforms without rebuilding the frontend."
+          - value: "Cost Reduction"
+            description: "By leveraging Cloudflare, we eliminate the need for complex server infrastructure and urgent security updates."
+      - type: "RichText"
+        content: |
+          <h2>Content management and swappable data sources</h2>
+          <p>The architecture uses Next.js's native static generation capabilities to create all pages at build time. A page loader is configured to ingest content from a source. The website you are on right now reads from YAML files, but we can swap in other data sources without changing the frontend code. The order of the components in the file determines their order on the page.</p>
+          <p>With this configuration, GitHub becomes a basic CMS. YAML files are easy to edit, and all changes are tracked and version-controlled. A change can trigger the build process automatically, deploying to CloudFlare, which provides global CDN distribution and a free tier suitable for most basic marketing websites.</p>
+      - type: "RichText"
+        content: |
+          <h2>Marketing websites that Google and AI love</h2>
+          <p>Google increasingly expects marketing websites to serve static assets immediately. The Lighthouse scoring algorithm reflects this expectation—dynamically generated pages are penalized because they introduce unnecessary latency. By serving raw HTML files, this architecture aligns with search engine preferences, provides optimal SEO performance, and delivers content that AI is more likely to reference for citations.</p>
+      - type: "RichText"
+        content: |
+          <h2>Increased performance and security</h2>
+          <p>There's no dynamic page rendering, no database queries, and no server-side processing. The page exists as a file and is served immediately, providing consistent performance regardless of cache status.</p>
+          <p>Next.js also includes built-in optimizations like lazy loading for images. Using the Next.js Image component ensures images load progressively as users scroll, preventing them from blocking initial page render. These optimizations work automatically without developer intervention.</p>
+          <p>Additionally, static HTML files cannot be hacked in the way traditional CMS installations can be compromised. There's no database to inject malicious code into, no admin panel to breach, and no server-side code to exploit.</p>
+          <p>If paired with a decoupled CMS, the content management system can be placed behind a firewall or VPN, never exposed to the public internet. Only authorized editors access it, and only during content updates. This dramatically reduces the attack surface compared to traditional CMS architectures.</p>
+          <p>For projects using commercial headless CMS platforms, security updates are handled by the vendor as part of their subscription service, removing the urgency and risk associated with manual CMS maintenance.</p>
+      - type: "RichText"
+        content: |
+          <h2>Scalability and multi-tenancy</h2>
+          <p>A single Next.js application could power hundreds of websites at a fraction of the cost of similar tools. Content could be separated by domain mapping, taxonomy tags, or through a feature in whatever backend CMS is used. This approach opens opportunities for agencies managing multiple client sites or organizations with multiple web properties.</p>
+      - type: "RichText"
+        content: |
+          <h2>Ideal use cases</h2>
+          <p>This architecture is particularly well-suited for:</p>
+          <ul>
+            <li><strong>Monitoring Websites:</strong> Sites that are fast mean SEO and conversions go up dramatically.</li>
+            <li><strong>Rapid Deployment Projects:</strong> Teams can react to market quickly and can add DXS applications.</li>
+            <li><strong>High-Traffic Sites:</strong> Provide a lively performance at a scalability, stress proof and hosting costs that can be controlled.</li>
+            <li><strong>Drupal, Without the Hosting Overhead:</strong> Implement an ongoing virtual disaster recovery management for Drupal specific hosting teams.</li>
+          </ul>
+      - type: "RichText"
+        content: |
+          <h2>Finally, decoupled websites that make sense</h2>
+          <p>We've created a system that delivers exceptional user experiences while reducing costs and complexity. A modern approach that prioritizes performance, security, and flexibility. With the right technology stack and implementation, you can realize the benefits of a decoupled architecture.</p>
+          <p>If you'd like to explore this solution for your business, contact us.</p>
+    details:
+      cta:
+        children: "Schedule a Demo"
+        href: "/contact"
+      details:
+        - label: "Services"
+          items:
+            - "UI/UX Design"
+            - "Drupal"
+            - "A/B Testing"
+        - label: "Industry"
+          items:
+            - "Publishing"
+
+  - type: GridSeparator
+
+  - type: RelatedPosts
+    title: "Related Posts"
+    items:
+      - date: "September 26, 2025"
+        description: "Turning traffic spikes into revenue with scalable infrastructure and stress-proof hosting."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["wordpress", "cms"]
+        image:
+          src: "/assets/powdr-hosting-revolution.png"
+          alt: "Turning Traffic Spikes Into Revenue – Not Risk"
+        href: "/resources/turning-traffic-spikes-into-revenue"
+        title: "Turning Traffic Spikes Into Revenue – Not Risk"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Helping a recreation company cut software costs by 70% with a unified platform."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["drupal"]
+        image:
+          src: "/assets/unified-dor-platform.png"
+          alt: "Helping a Recreation Company Cut Software Costs by 70%"
+        href: "/resources/helping-recreation-company-cut-software-costs"
+        title: "Helping a Recreation Company Cut Software Costs by 70%"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Building enterprise-grade infrastructure on a bootstrap budget."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["ui-ux"]
+        image:
+          src: "/assets/engineered-foundation.png"
+          alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        href: "/resources/building-enterprise-grade-infrastructure"
+        title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        variant: "default"

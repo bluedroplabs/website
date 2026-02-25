@@ -12,10 +12,13 @@ export const Metric = ({
   return (
     <div
       {...props}
-      className={cn("leading-[1.1] min-w-53.25 space-y-2.5", className)}
+      className={cn(
+        "leading-[1.1] min-w-53.25 space-y-2.5 flex flex-row justify-center border-b border-border-normal pb-6",
+        className,
+      )}
     >
-      <p className="text-size-32 lg:text-size-40">{value}</p>
-      <p className="font-mono uppercase">{description}</p>
+      <div className="text-size-20 flex-1 font-medium">{value}</div>
+      <div className="metric-description flex-1">{description}</div>
     </div>
   );
 };

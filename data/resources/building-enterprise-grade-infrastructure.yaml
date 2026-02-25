@@ -1,0 +1,116 @@
+# Resource: Building Enterprise-Grade Infrastructure on a Bootstrap Budget
+# Based on Figma design: Blue Drop Labs v2 – Case Study Stacker Hosting & Infrastructure (node 1136-20666)
+
+title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+description: "When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs by 77% while improving performance and eliminating daily outages."
+components:
+  - type: DetailPageHero
+    author: "Matt Robison"
+    date: "September 26, 2025"
+    eyebrow: "Case Study"
+    title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+    image:
+      src: "/assets/engineered-foundation.png"
+      alt: "Platform reliability – from collapse to control"
+
+  - type: Wysiwyg
+    components:
+      - type: "RichText"
+        content: |
+          <p>When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs while improving performance.</p>
+          <p>Stacker is a digital media company building a next-generation content distribution platform. This platform is the critical hub of their business, serving thousands of brands and publishers, distributing stories to partner websites and media outlets worldwide. If it goes down, revenue generation stops.</p>
+          <p>Stacker faced critical infrastructure challenges that threatened core business operations. Storage limits, terrible performance, and daily site outages during peak traffic periods prevented stable growth. The platform's reliability was always an open question.</p>
+          <p>Blue Drop Labs architected and implemented a custom hosting solution that transformed Stacker's infrastructure from a liability into a competitive advantage. The solution reduced costs, eliminated regular downtimes, and has scaled to meet growing demands. This stability has allowed Stacker to iterate and improve their offerings with confidence.</p>
+      - type: "InlineImage"
+        image:
+          src: "/assets/infrastructure-rebuild.png"
+          alt: "Infrastructure goals – old vs new platform performance"
+          width: 720
+          height: 500
+      - type: "Metrics"
+        title: "HIGHLIGHTS"
+        metrics:
+          - value: "77% Cost Reduction"
+            description: "Monthly fees dropped from €35,000 to €8,000 monthly."
+          - value: "400% Performance Improvement"
+            description: "Reduced load times for critical administration systems from 3s+ (unreliable) to under 1s (reliable)."
+          - value: "99.9% Uptime"
+            description: "The platform went from experiencing disastrous, unmanageable outages regularly to reliable, predictable uptime."
+          - value: "Proactive Incident Management"
+            description: "Integrated projects don't merely stop and troubleshoot—we monitor and prevent issues before they impact the business."
+      - type: "RichText"
+        content: |
+          <h2>A new foundation for a growing platform</h2>
+          <p>Stacker faced cascading infrastructure problems. Their file system exceeded their managed hosting provider's maximum storage limits. Their next hosting provider proved even worse, with daily outages and subpar performance despite being on the largest enterprise plan available. This track record was followed by a catastrophic three-day total outage.</p>
+          <p>Blue Drop Labs created a custom infrastructure that solved all of Stacker's technical problems, delivering a solution that improved performance while reducing costs.</p>
+          <ul>
+            <li>All images were offloaded to S3 with custom caching layers to load images in milliseconds.</li>
+            <li>CDN Optimization, ensuring efficient handling of 32 terabytes of monthly bandwidth.</li>
+            <li>Eliminated MySQL database bottlenecks with proprietary configuration and seamless scaling based on server capacity.</li>
+            <li>Defined in Ansible for maintainability, reproducibility, and disaster recovery.</li>
+            <li>A suite of monitoring tools for observability and proactive monitoring, such as New Relic, Checkly, and PagerDuty.</li>
+            <li>Simple, boring, battle-tested technology that has operated for over three years without a single failure.</li>
+          </ul>
+      - type: "RichText"
+        content: |
+          <h2>The result</h2>
+          <p>Costs dropped 77%, and uptime improved. Daily, predictable outages were eliminated. Stacker no longer has to worry about interruptions in business continuity. As the business has grown, the custom hosting platform has expanded to meet the demands without a hiccup.</p>
+      - type: "RichText"
+        content: |
+          <h2>Innovation when it makes sense</h2>
+          <p>Blue Drop Labs combines deep technical expertise with practical wisdom. We favor simple results over clever solutions, and proven technology over trendy alternatives. This philosophy helps us innovate where it counts.</p>
+          <p>For Stacker, this philosophy meant they got enterprise features where it actually mattered, and at a fraction of the cost. We focused on high-impact deliverables: performance for images with a purpose-built Nginx proxy; custom provisioning scripts and MySQL configurations that allow capacity to scale to meet growing demand or traffic spikes; and our custom CLI tooling so each team member can manage the infrastructure with minimal ramp-up time.</p>
+          <p>Thanks to this stability and performance, Stacker can be more strategic and creative about growth, knowing they have the foundation to support their initiatives. Innovation has cascaded to Stacker's core product offering. Since migrating to the new hosting platform, the company has launched improved portals for its customers with loads of new features and improvements. They can build with confidence instead of wasting time putting out fires.</p>
+          <p>Ready to build enterprise-grade infrastructure without the enterprise price tag? Contact us to discuss how we can transform your hosting challenges into competitive advantages.</p>
+    details:
+      cta:
+        children: "Schedule a Demo"
+        href: "/contact"
+      details:
+        - label: "Services"
+          items:
+            - "UI/UX Design"
+            - "Drupal"
+            - "A/B Testing"
+        - label: "Industry"
+          items:
+            - "Publishing"
+
+  - type: GridSeparator
+
+  - type: RelatedPosts
+    title: "Related Posts"
+    items:
+      - date: "September 26, 2025"
+        description: "Turning traffic spikes into revenue with scalable infrastructure and stress-proof hosting."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["wordpress", "cms"]
+        image:
+          src: "/assets/powdr-hosting-revolution.png"
+          alt: "Turning Traffic Spikes Into Revenue – Not Risk"
+        href: "/resources/turning-traffic-spikes-into-revenue"
+        title: "Turning Traffic Spikes Into Revenue — Not Risk"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Blue Drop Labs helped POWDR migrate the DOR system, achieving 70% cost reduction."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["drupal", "cms"]
+        image:
+          src: "/assets/unified-dor-platform.png"
+          alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
+        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
+        title: "Helping a Lifestyle Company Cut Software Costs by 70%"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Modern static website architecture enabling sub-10ms response times globally."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["cms", "performance"]
+        image:
+          src: "/assets/10ms-global-delivery.png"
+          alt: "How We Achieved 10ms Response Times Globally"
+        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
+        variant: "default"

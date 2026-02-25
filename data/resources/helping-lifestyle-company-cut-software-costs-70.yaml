@@ -1,0 +1,107 @@
+# Resource: Helping a Lifestyle Company Cut Software Costs by 70%
+# Based on Figma design: Blue Drop Labs v2 – Case Study POWDR DOR 70% Cost Reduction (node 1136-20539)
+
+title: "Helping a Lifestyle Company Cut Software Costs by 70%"
+description: "Blue Drop Labs helped POWDR migrate the Daily Operating Report (DOR) system into their existing infrastructure, creating a unified platform that serves both marketing content and operational data—achieving 70% cost reduction."
+components:
+  - type: DetailPageHero
+    author: "Matt Robison"
+    date: "September 26, 2025"
+    eyebrow: "Case Study"
+    title: "Helping a Lifestyle Company Cut Software Costs by 70%"
+    image:
+      src: "/assets/unified-dor-platform.png"
+      alt: "Unified DOP Platform – 70% cost reduction"
+
+  - type: Wysiwyg
+    components:
+      - type: "RichText"
+        content: |
+          <p>POWDR is a holding company managing 15+ outdoor recreation businesses, including ski resorts, national park concessions, and action sports camps. Their ski resorts depend heavily on real-time operational data—lift status, trail conditions, and weather reports—to communicate with guests and ensure safety.</p>
+          <p>They were paying a high annual license fee for third-party software to power their Daily Operating Report (DOR), which tracks critical daily information that guests need to plan their visits. This information flows to marketing websites, mobile apps, and on-mountain displays, making it essential for guest communication. The software suffered performance problems, slow development cycles to implement simple features, and an inability to customize for POWDR's specific needs.</p>
+          <p>Blue Drop Labs helped POWDR migrate the DOR system into their existing infrastructure, creating a unified platform that serves both marketing content and operational data. The result: an underperforming annual expense was transformed into a strategic asset with a lower total cost of ownership.</p>
+      - type: "InlineImage"
+        image:
+          src: "/assets/70-reduction.png"
+          alt: "Cost comparison – Legacy Vendor Cost vs Unified Platform Cost, 70% reduction"
+          width: 720
+          height: 500
+      - type: "Metrics"
+        title: "HIGHLIGHTS"
+        metrics:
+          - value: "70%+ Annual Cost Reduction"
+            description: "Lower maintenance costs with superior functionality."
+          - value: "Full Control Over Product Roadmap"
+            description: "Reduced rigid third-party limitations and the ability to build custom features in-house on accelerated timelines."
+          - value: "Real-Time Performance at Scale"
+            description: "API handles a high volume of requests monthly with zero downtime; the team has become more focused on growth initiatives."
+      - type: "RichText"
+        content: |
+          <h2>Improving Operational Efficiency</h2>
+          <p>The previous platform would often fail during critical morning updates. Resort staff no longer deal with panicked 6 AM Friday calls when snow reporting systems crash right before the weekend rush, worrying that guests won't know about updated weather conditions. Staff can now focus on daily tasks and other operations instead of putting out technical fires.</p>
+      - type: "RichText"
+        content: |
+          <h2>Strategic Flexibility</h2>
+          <p>Instead of waiting a year for simple feature requests that may never get prioritized by a third-party vendor, POWDR can now implement custom features on-demand. When they identify a need, they can budget for it and have it built within weeks rather than hoping it makes someone else's roadmap. New features are pushed out every month. This proven speed and flexibility have encouraged staff to suggest further improvements. Everything gets tailored to POWDR's specific needs and business processes.</p>
+      - type: "RichText"
+        content: |
+          <h2>Reliable Performance and Reduced Risk</h2>
+          <p>The DOR depends on real-time updates. Conditions on the slopes must be updated and communicated immediately. Accuracy, performance, and uptime are essential for business operations and ensuring guests and resort staff can make informed decisions. The previous platform experienced frequent failures and delays, exposing resorts to reputational damage and other risks.</p>
+          <p>The new DOR handles millions of requests monthly with zero downtime. All updates are reliably pushed out to mobile apps and other channels. By eliminating regular emergency escalations and constant frustrations, we've allowed more focus on growth initiatives and improvements.</p>
+      - type: "RichText"
+        content: |
+          <h2>The Bottom Line</h2>
+          <p>POWDR gained complete control over its operational reporting system while dramatically reducing costs and eliminating frustrating delays. In addition, they gained the agility to respond to evolving business needs.</p>
+          <p>Ready to break free from expensive third-party limitations? Contact us to discuss how we can transform your operational challenges into competitive advantages.</p>
+    details:
+      cta:
+        children: "Schedule a Demo"
+        href: "/contact"
+      details:
+        - label: "Services"
+          items:
+            - "UI/UX Design"
+            - "Drupal"
+            - "A/B Testing"
+        - label: "Industry"
+          items:
+            - "Publishing"
+
+  - type: GridSeparator
+
+  - type: RelatedPosts
+    title: "Related Posts"
+    items:
+      - date: "September 26, 2025"
+        description: "Turning traffic spikes into revenue with scalable infrastructure and stress-proof hosting."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["wordpress", "cms"]
+        image:
+          src: "/assets/powdr-hosting-revolution.png"
+          alt: "Turning Traffic Spikes Into Revenue – Not Risk"
+        href: "/resources/turning-traffic-spikes-into-revenue"
+        title: "Turning Traffic Spikes Into Revenue – Not Risk"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Modern static website architecture enabling sub-10ms response times globally."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["cms", "performance"]
+        image:
+          src: "/assets/10ms-global-delivery.png"
+          alt: "How We Achieved 10ms Response Times Globally"
+        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
+        variant: "default"
+      - date: "September 26, 2025"
+        description: "Building enterprise-grade infrastructure on a bootstrap budget."
+        eyebrow: "Case Study"
+        type: "case-study"
+        topic: ["ui-ux"]
+        image:
+          src: "/assets/engineered-foundation.png"
+          alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        href: "/resources/building-enterprise-grade-infrastructure"
+        title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+        variant: "default"
