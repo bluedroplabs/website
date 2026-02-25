@@ -11,11 +11,14 @@ import { Button } from "../Button/Button";
 import { ArrowRightDownIcon } from "../Icon";
 import type { IFooter } from "./Footer.types";
 
+const footerMonoStyle =
+  "text-default-light font-mono text-size-16/4 font-normal uppercase not-italic";
+
 const styles = {
   container: "lg:py-12 2xl:py-16 space-y-12",
   content:
     "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 2xl:col-span-8 2xl:justify-between",
-  copyright: "text-default-light uppercase font-mono",
+  copyright: footerMonoStyle,
   description: "font-light leading-6 text-default-strong text-lg",
   form: "lg:w-full 2xl:w-[50.47%]",
   input:
@@ -30,14 +33,14 @@ const styles = {
   nav: "flex gap-x-5 gap-y-8 max-lg:flex-wrap max-lg:pr-6 lg:gap-x-20 2xl:w-[49.52%] 2xl:justify-between",
   secondaryText: "font-mono font-medium uppercase mt-6",
   submitButton: "uppercase font-medium lg:max-2xl:text-sm",
-  title: "leading-none text-default-light uppercase font-mono",
+  title: footerMonoStyle,
   themeButton: "size-6 text-default-light uppercase",
   themeButtons: "flex gap-2 items-center",
   themeGroup: "flex justify-between gap-x-8 max-lg:mt-8 lg:max-2xl:w-full",
   themeIcon: (isActive: boolean) =>
     cn("size-4.5", isActive ? "text-icon-default" : "text-icon-inactive"),
   themeItem: "flex items-center",
-  utilityLink: "text-default-light uppercase font-mono",
+  utilityLink: footerMonoStyle,
   utilityLinks:
     "max-lg:space-y-6 lg:flex lg:gap-x-6 lg:w-full 2xl:gap-x-10  2xl:justify-end",
 };
