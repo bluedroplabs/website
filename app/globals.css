@@ -136,8 +136,8 @@
   --color-button-default-outline-text: var(--color-white);
   --color-button-default-outline: var(--color-white);
   --color-button-default-text: var(--color-black);
-  --color-button-special-bg-hover-text: var(--color-brand-light-blue);
-  --color-button-special-bg-hover: var(--color-deep-green);
+  --color-button-special-bg-hover-text: var(--color-deep-green);
+  --color-button-special-bg-hover: var(--color-white);
   --color-button-special-bg: var(--color-brand-light-blue);
   --color-button-special-text: var(--color-deep-green);
   --color-default-base: var(--color-white-80);
