@@ -61,36 +61,36 @@ components:
         href: "/"
         image:
           alt: "Drupal + WordPress Managed Hosting"
-          src: "/assets/drupal-and-wordpress-development.png"
+          src: "/assets/drupal-and-wordpress-development.svg"
       - title: "Drupal & WordPress Support"
         description: "Ongoing maintenance and expert support to keep your Drupal or WordPress site secure, fast, and performing at its best."
         href: "/"
         image:
           alt: "Drupal 7 support"
-          src: "/assets/drupal-and-wordpress-support.png"
+          src: "/assets/drupal-and-wordpress-support.svg"
       - title: "Drupal 7 Extended Support"
         description: "Keep your Drupal 7 platform secure and stable with enterprise-level maintenance and updates—no costly migrations required."
         href: "/"
         image:
           alt: "Drupal + WordPress Support"
-          src: "/assets/drupal-7-extended-support.png"
+          src: "/assets/drupal-7-support.svg"
       - title: "API + Custom Development"
         description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
         href: "/"
         image:
           alt: "API + Custom Development"
-          src: "/assets/api-and-custom-development.png"
+          src: "/assets/api-and-custom-development.svg"
       - title: "Design + Experience"
         description: "Transform your brand into a high-performing digital experience with accessible, responsive, and conversion-focused design."
         href: "/"
         image:
           alt: "Design + Experience"
-          src: "/assets/design-and-experience.png"
+          src: "/assets/design-and-experience.svg"
       - title: "SEO + Marketing"
         description: "Turn your website into a high-performing growth engine with technical SEO, performance optimization, and data-driven marketing strategies."
         href: "/"
         image:
           alt: "SEO + Marketing"
-          src: "/assets/seo-and-marketing.png"
+          src: "/assets/seo-and-marketing.svg"
 
   - type: GridSeparator

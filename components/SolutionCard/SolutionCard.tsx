@@ -7,15 +7,21 @@ import Link from "next/link";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { ISolutionCard } from "./SolutionCard.types";
 
-const variants = cva("border-border-normal grid h-full max-lg:border-t", {
-  variants: {
-    variant: {
-      basic: "",
-      full: "lg:flex lg:[&>*]:basis-1/2",
+const variants = cva(
+  "border-border-normal grid h-full max-lg:border-t pt-16 px-6 lg:px-16",
+  {
+    variants: {
+      variant: {
+        basic: "",
+        full: "lg:flex lg:gap-16 lg:[&>*]:basis-1/2 lg:p-16",
+      },
     },
+    defaultVariants: { variant: "basic" },
   },
-  defaultVariants: { variant: "basic" },
-});
+);
+
+const contentBlockClasses = "flex flex-col gap-4 pb-8";
+const figureAspect = "aspect-[512/260]";
 
 export const SolutionCard = ({
   className,
@@ -29,27 +35,21 @@ export const SolutionCard = ({
 }: ISolutionCard) => {
   if (!href) return null;
 
-  const isFull = variant === "full";
-
   return (
     <article className={className} {...props}>
       <Link className={variants({ variant })} href={href}>
         <ContentBlock
-          className="pb-6 pt-12 px-6 lg:px-12 lg:pb-10"
+          className={contentBlockClasses}
           description={description}
-          descriptionClassName="mt-4 line-clamp-6"
+          descriptionClassName="font-light leading-[1.5] line-clamp-6 text-size-18 text-default-base"
           eyebrow={eyebrow}
+          eyebrowClassName="font-mono font-normal text-size-16 uppercase text-default-base"
           title={title}
-          titleClassName="mt-4 line-clamp-3 first:mt-0"
+          titleClassName="font-medium leading-[1.1] line-clamp-3 text-size-32 tracking-[-0.02em] text-default-heading first:mt-0"
           titleVariant="lg"
         />
         <div className="flex items-end">
-          <figure
-            className={cn(
-              "relative size-full",
-              isFull ? "aspect-[785/466]" : "aspect-[785/306]",
-            )}
-          >
+          <figure className={cn("relative size-full", figureAspect)}>
             <Image {...image} className="object-cover" fill />
           </figure>
         </div>

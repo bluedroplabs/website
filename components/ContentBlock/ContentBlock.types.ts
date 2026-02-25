@@ -56,9 +56,20 @@ export interface IContentBlock
   blockquoteClassName?: string;
 
   /**
+   * Custom class name for the content wrapper (description, blockquote, CTAs).
+   */
+  contentClassName?: string;
+
+  /**
    * Custom class name for the CTA group container.
    */
   ctaGroupClassName?: string;
+
+  /**
+   * When true, groups header (eyebrow, title) with description in one block with gap-5,
+   * and uses gap-8 between that group, blockquote, and CTAs. Matches Figma two-column layout.
+   */
+  groupHeaderWithDescription?: boolean;
 
   /**
    * Date text displayed alongside the eyebrow.

@@ -70,7 +70,7 @@ components:
 
   - type: Basic1Up
     image:
-      src: "/assets/trusted-platform.png"
+      src: "/assets/trusted-platform.svg"
       alt: "Platform Architecture Diagram"
     title: "A Sensible Alternative for Drupal Web Hosting"
     description: "Blue Drop's platform is a purpose-built infrastructure for Drupal sites of all sizes. Pantheon and Acquia have dominated the market, but they've become overpriced and bogged down with bureaucracy. Every Drupal website deserves a good home that doesn't break the budget. <br /><br />Our platform is built and maintained with the benefit of deep Drupal expertise. Every member of our team has 10+ years of Drupal experience. We know how it works, how it runs, and how to keep it optimized. "

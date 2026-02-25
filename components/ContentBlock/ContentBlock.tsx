@@ -60,6 +60,7 @@ const styles = {
   blockquote:
     "border-l-4 border-l-brand-aqua font-medium leading-[1.25] pl-5 text-default-heading w-fit lg:leading-[1.5] 2xl:text-lg",
   content: containerClass,
+  contentWithGap: "flex flex-col gap-8",
   ctaGroup: "grid gap-y-3 md:flex md:gap-x-4",
   date: "font-mono text-default-light uppercase max-lg:text-sm",
   description: [
@@ -79,6 +80,7 @@ export const ContentBlock = ({
   blockquote,
   blockquoteClassName,
   className,
+  contentClassName,
   ctaGroupClassName,
   date,
   dateClassName,
@@ -87,6 +89,7 @@ export const ContentBlock = ({
   eyebrow,
   eyebrowClassName,
   eyebrowVariant = "default",
+  groupHeaderWithDescription = false,
   Icon,
   iconClassName,
   primaryCTA,
@@ -126,10 +129,22 @@ export const ContentBlock = ({
     hasTypewriter ? {} : undefined,
   );
 
+  const getColumnClass = (colClasses: string) =>
+    cn(isInline && "flex-1", colClasses);
+
   const classes = {
     author: cn(styles.author, authorClassName),
     blockquote: cn(styles.blockquote, blockquoteClassName),
-    container: cn(containerVariants({ variant }), className),
+    container: cn(
+      containerVariants({ variant }),
+      groupHeaderWithDescription && "gap-8",
+      className,
+    ),
+    content: cn(
+      getColumnClass(styles.content),
+      groupHeaderWithDescription && styles.contentWithGap,
+      contentClassName,
+    ),
     ctaGroup: cn(styles.ctaGroup, ctaGroupClassName),
     date: cn(styles.date, dateClassName),
     description: cn(styles.description, descriptionClassName),
@@ -138,40 +153,72 @@ export const ContentBlock = ({
     title: cn(titleVariants({ variant: titleVariant }), titleClassName),
   };
 
-  const getColumnClass = (classes: string) => cn(isInline && "flex-1", classes);
+  const headerBlock = (
+    <div className={getColumnClass(styles.header)}>
+      {Icon && <Icon className={classes.icon} />}
+      {(date || eyebrow) && (
+        <div className={styles.eyebrowContainer}>
+          {eyebrow && <p className={classes.eyebrow}>{eyebrow}</p>}
+          {date && (
+            <time
+              className={classes.date}
+              dateTime={formatDateTimeAttribute(date)}
+            >
+              {date}
+            </time>
+          )}
+        </div>
+      )}
+      {title &&
+        (hasTypewriter ? (
+          <Heading className={classes.title} ref={titleRef}>
+            {parse(title)}
+          </Heading>
+        ) : (
+          <Heading className={classes.title}>{parse(title)}</Heading>
+        ))}
 
-  return (
-    <div className={classes.container} {...props}>
-      <div className={getColumnClass(styles.header)}>
-        {Icon && <Icon className={classes.icon} />}
-        {(date || eyebrow) && (
-          <div className={styles.eyebrowContainer}>
-            {eyebrow && <p className={classes.eyebrow}>{eyebrow}</p>}
-            {date && (
-              <time
-                className={classes.date}
-                dateTime={formatDateTimeAttribute(date)}
-              >
-                {date}
-              </time>
+      {blockquote && isInline && (
+        <blockquote className={classes.blockquote}>{blockquote}</blockquote>
+      )}
+      {author && <cite className={classes.author}>{author}</cite>}
+    </div>
+  );
+
+  if (groupHeaderWithDescription) {
+    return (
+      <div className={classes.container} {...props}>
+        <div className="flex flex-col gap-5">
+          {headerBlock}
+          {description && (
+            <div className={classes.description}>{parse(description)}</div>
+          )}
+        </div>
+        {blockquote && !isInline && (
+          <blockquote className={classes.blockquote}>{blockquote}</blockquote>
+        )}
+        {(primaryCTA || secondaryCTA) && (
+          <div className={classes.ctaGroup}>
+            {primaryCTA && (
+              <Button {...primaryCTA} className={primaryCTAClassName} />
+            )}
+            {secondaryCTA && (
+              <Button
+                {...secondaryCTA}
+                className={secondaryCTAClassName}
+                variant="outline"
+              />
             )}
           </div>
         )}
-        {title &&
-          (hasTypewriter ? (
-            <Heading className={classes.title} ref={titleRef}>
-              {parse(title)}
-            </Heading>
-          ) : (
-            <Heading className={classes.title}>{parse(title)}</Heading>
-          ))}
-
-        {blockquote && isInline && (
-          <blockquote className={classes.blockquote}>{blockquote}</blockquote>
-        )}
-        {author && <cite className={classes.author}>{author}</cite>}
       </div>
-      <div className={getColumnClass(styles.content)}>
+    );
+  }
+
+  return (
+    <div className={classes.container} {...props}>
+      {headerBlock}
+      <div className={classes.content}>
         {description && (
           <div className={classes.description}>{parse(description)}</div>
         )}
