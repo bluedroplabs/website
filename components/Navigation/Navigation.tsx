@@ -4,7 +4,6 @@ import { useAppTheme } from "@/hooks/useAppTheme";
 import { cn } from "@/utils/classes";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Button } from "../Button/Button";
 import { HamburgerIcon } from "../Icon/HamburgerIcon";
@@ -29,8 +28,6 @@ export const Navigation = ({
 }: INavigation) => {
   const { isDarkMode } = useAppTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
-  const isHome = pathname === "/";
 
   const logoProps = { fill: true, priority: true };
 
@@ -72,16 +69,14 @@ export const Navigation = ({
             />
           </Button>
 
-          {!isHome && (
-            <Button
-              {...cta}
-              className={cn(
-                "max-lg:flex max-lg:min-w-14 max-lg:flex-col max-lg:px-4 max-lg:py-3 max-lg:leading-tight max-lg:whitespace-normal max-lg:w-24",
-              )}
-              size="lg"
-              variant="special"
-            />
-          )}
+          <Button
+            {...cta}
+            className={cn(
+              "max-lg:flex max-lg:min-w-14 max-lg:flex-col max-lg:px-4 max-lg:py-3 max-lg:leading-tight max-lg:whitespace-normal max-lg:w-24",
+            )}
+            size="lg"
+            variant="special"
+          />
         </div>
       </header>
 
