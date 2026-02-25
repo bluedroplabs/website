@@ -74,7 +74,8 @@ components:
     blockquote: "Most clients save 30-50% compared to Pantheon or Acquia while receiving better performance."
     image:
       alt: "Placeholder image"
-      src: "/assets/platform.png"
+      src: "/assets/platform-light.svg"
+      srcLight: "/assets/platform-dark.svg"
     primaryCTA:
       children: "Schedule a demo"
       href: "/contact"

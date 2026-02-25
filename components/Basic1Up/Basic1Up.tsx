@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils/classes";
+import { useAppTheme } from "@/hooks/useAppTheme";
 import Image from "next/image";
 import type { HTMLAttributes } from "react";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
@@ -30,16 +31,21 @@ export const Basic1Up = ({
   ...props
 }: IBasic1Up) => {
   const isLeft = alignment === "left";
+  const { isDarkMode } = useAppTheme();
 
   const Asset = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => {
     if (!image) return null;
+    const { srcLight: _srcLight, ...imageProps } = image;
+    const imageSrc =
+      isDarkMode && image.srcLight ? image.srcLight : image.src;
 
     return (
       <DottedBackground className={cn(dottedBgClasses, className)}>
         <div className="flex items-end size-full">
           <figure className={cn(figureClasses)} {...props}>
             <Image
-              {...image}
+              {...imageProps}
+              src={imageSrc}
               className="object-cover"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
