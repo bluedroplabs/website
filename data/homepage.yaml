@@ -16,35 +16,17 @@ components:
     description: "Invest in your growth and success ——— Trusted by our beloved clients"
     logos:
       - alt: "Logo 1"
-        src: "/assets/stacker.svg"
-        srcLight: "/assets/client-stacker-light.png"
-        width: 200
-        height: 60
+        icon: "StackerIcon"
       - alt: "Logo 2"
-        src: "/assets/powdr.svg"
-        srcLight: "/assets/client-powdr-light.png"
-        width: 200
-        height: 60
+        icon: "PowdrIcon"
       - alt: "Logo 3"
-        src: "/assets/mtm.svg"
-        srcLight: "/assets/client-mtm360-light.png"
-        width: 200
-        height: 50
+        icon: "MtmIcon"
       - alt: "Logo 4"
-        src: "/assets/rothliving.svg"
-        srcLight: "/assets/client-rothliving-light.png"
-        width: 200
-        height: 50
+        icon: "RothlivingIcon"
       - alt: "Logo 5"
-        src: "/assets/zion.svg"
-        srcLight: "/assets/client-zion-light.png"
-        width: 200
-        height: 50
+        icon: "ZionIcon"
       - alt: "Logo 6"
-        src: "/assets/zula.svg"
-        srcLight: "/assets/client-zula-light.png"
-        width: 200
-        height: 50
+        icon: "ZulaIcon"
 
   - type: FeaturedIconGrid
     eyebrow: "Problems we solve"
