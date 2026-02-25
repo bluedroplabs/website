@@ -34,7 +34,7 @@ export const SolutionsPackage = ({
           {packages.map((solutionPackage, index) => (
             <PackageCard
               className={cn(
-                "border-t border-border-normal md:basis-1/2",
+                "md:basis-1/2",
                 index === 0 && "border-r border-border-normal",
               )}
               key={index}
@@ -43,7 +43,7 @@ export const SolutionsPackage = ({
           ))}
         </div>
       </Container>
-      <Container className="border-b border-border-normal">
+      <Container>
         <FeaturedTextList
           {...footer}
           className="border-x border-border-normal max-lg:px-6 [&>div]:py-12"
