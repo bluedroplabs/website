@@ -80,6 +80,27 @@ const iconMap = {
   WarningIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.WarningIcon })),
   ),
+  SwapIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SwapIcon })),
+  ),
+  AccountTreeIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.AccountTreeIcon })),
+  ),
+  MemoryIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.MemoryIcon })),
+  ),
+  DatabaseIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.DatabaseIcon })),
+  ),
+  TuneIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.TuneIcon })),
+  ),
+  BoltIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.BoltIcon })),
+  ),
+  HistoryIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.HistoryIcon })),
+  ),
 };
 
 export const IconCard = (props: IIconCard) => {
