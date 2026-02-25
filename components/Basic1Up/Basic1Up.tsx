@@ -36,8 +36,7 @@ export const Basic1Up = ({
   const Asset = ({ className, ...props }: HTMLAttributes<HTMLDivElement>) => {
     if (!image) return null;
     const { srcLight: _srcLight, ...imageProps } = image;
-    const imageSrc =
-      isDarkMode && image.srcLight ? image.srcLight : image.src;
+    const imageSrc = isDarkMode && image.srcLight ? image.srcLight : image.src;
 
     return (
       <DottedBackground className={cn(dottedBgClasses, className)}>
@@ -45,10 +44,10 @@ export const Basic1Up = ({
           <figure className={cn(figureClasses)} {...props}>
             <Image
               {...imageProps}
-              src={imageSrc}
               className="object-cover"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
+              src={imageSrc}
             />
           </figure>
         </div>

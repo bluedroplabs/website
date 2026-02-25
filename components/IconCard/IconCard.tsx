@@ -92,10 +92,10 @@ export const IconCard = (props: IIconCard) => {
     return (
       <div className="flex gap-6">
         <Suspense fallback={null}>
-          <Icon className="size-8 min-w-8 text-icon-default lg:size-12 lg:min-w-12" />
+          <Icon className="size-8 min-w-8 text-icon-default lg:size-10 lg:min-w-10" />
         </Suspense>
         <div className="space-y-2">
-          <h3 className="font-semibold text-xl text-default-heading lg:text-size-24">
+          <h3 className="font-semibold text-xl text-default-heading lg:text-size-20">
             {title}
           </h3>
           <p className="font-light lg:text-lg">{description}</p>
