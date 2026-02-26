@@ -63,7 +63,7 @@ components:
       href: "/contact"
     secondaryCTA:
       children: "Learn more"
-      href: "/about-us"
+      href: "/platform"
 
   - type: GridSeparator
 
