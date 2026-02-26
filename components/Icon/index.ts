@@ -21,6 +21,7 @@ export { HistoryIcon } from "./HistoryIcon";
 export { HostIcon } from "./HostIcon";
 export { LaptopIcon } from "./LaptopIcon";
 export { LinkIcon } from "./LinkIcon";
+export { LogoIcon } from "./LogoIcon";
 export { MemoryIcon } from "./MemoryIcon";
 export { MoonIcon } from "./MoonIcon";
 export { MtmIcon } from "./MtmIcon";

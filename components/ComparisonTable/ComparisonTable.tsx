@@ -2,11 +2,11 @@
 
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils";
-import Image from "next/image";
 import type { ReactNode } from "react";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { CrossIcon } from "../Icon";
 import { CheckIcon } from "../Icon/CheckIcon";
+import { LogoIcon } from "../Icon/LogoIcon";
 import { ScrollArea, ScrollBar } from "../ScrollArea/ScrollArea";
 import type { IComparisonTable } from "./ComparisonTable.types";
 import { ComparisonTableHighlightBg } from "./components/ComparisonTableHighlightBg";
@@ -38,11 +38,10 @@ const styles = {
 const renderHeaderContent = (header: ReactNode): ReactNode => {
   if (header === "LOGO") {
     return (
-      <Image
-        alt="Blue Drop Labs Logo"
-        height={51}
-        src="/assets/logo.svg"
-        width={225}
+      <LogoIcon
+        aria-hidden
+        className="h-[51px] w-[225px] shrink-0"
+        role="img"
       />
     );
   }
