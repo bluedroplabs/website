@@ -3,7 +3,6 @@
 import { cn } from "@/utils";
 import { cva } from "class-variance-authority";
 import Image from "next/image";
-import Link from "next/link";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { ISolutionCard } from "./SolutionCard.types";
 
@@ -27,17 +26,15 @@ export const SolutionCard = ({
   className,
   description,
   eyebrow,
-  href,
+  // href,
   image,
   title,
   variant,
   ...props
 }: ISolutionCard) => {
-  if (!href) return null;
-
   return (
     <article className={className} {...props}>
-      <Link className={variants({ variant })} href={href}>
+      <div className={variants({ variant })}>
         <ContentBlock
           className={contentBlockClasses}
           description={description}
@@ -53,7 +50,7 @@ export const SolutionCard = ({
             <Image {...image} className="object-cover" fill />
           </figure>
         </div>
-      </Link>
+      </div>
     </article>
   );
 };

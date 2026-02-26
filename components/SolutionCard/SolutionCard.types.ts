@@ -21,9 +21,9 @@ export interface ISolutionCard extends HTMLAttributes<HTMLElement> {
   eyebrow?: string;
 
   /**
-   * The URL to link to when the card is clicked.
+   * The URL to link to when the card is clicked. Optional when link is disabled.
    */
-  href: string;
+  href?: string;
 
   /**
    * Image properties for displaying an image within the card.
