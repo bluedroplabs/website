@@ -35,7 +35,11 @@ export const Navigation = ({
   return (
     <>
       <header className={cn(styles.container, className)} {...props}>
-        <Link className={styles.logo} href="/">
+        <Link
+          aria-label="Blue Drop Labs - Home"
+          className={styles.logo}
+          href="/"
+        >
           {isDarkMode
             ? darkLogo?.src && <Image {...darkLogo} {...logoProps} />
             : logo?.src && <Image {...logo} {...logoProps} />}

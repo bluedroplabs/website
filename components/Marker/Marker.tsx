@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import markerSDK from "@marker.io/browser";
 
 export function Marker() {
   useEffect(() => {
@@ -12,14 +11,23 @@ export function Marker() {
       return;
     }
 
-    // Load Marker.io widget asynchronously
-    markerSDK
-      .loadWidget({
-        project: projectId,
-      })
-      .catch((error) => {
-        console.error("Failed to load Marker.io widget:", error);
-      });
+    // Defer Marker.io loading until the browser is idle to avoid
+    // impacting page load performance metrics
+    const load = () => {
+      import("@marker.io/browser")
+        .then(({ default: markerSDK }) =>
+          markerSDK.loadWidget({ project: projectId }),
+        )
+        .catch((error) => {
+          console.error("Failed to load Marker.io widget:", error);
+        });
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(load, { timeout: 5000 });
+    } else {
+      setTimeout(load, 2000);
+    }
   }, []);
 
   return null;

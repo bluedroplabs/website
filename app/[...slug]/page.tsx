@@ -1,8 +1,10 @@
 import { DynamicComponents } from "@/components/DynamicComponents/DynamicComponents";
 import { loadPageData } from "@/utils/data";
 import fs from "fs";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import path from "path";
+import { preload } from "react-dom";
 
 interface PageProps {
   params: { slug: string[] };
@@ -35,6 +37,17 @@ export async function generateStaticParams() {
   return slugs;
 }
 
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const pageData = loadPageData(slug);
+  return {
+    title: pageData?.title,
+    description: pageData?.description,
+  };
+}
+
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
 
@@ -52,5 +65,14 @@ export default async function Page({ params }: PageProps) {
   if (!pageData) notFound();
 
   const { components = [] } = pageData;
+
+  // Preload the hero image to improve LCP discovery
+  const firstComponent = components[0] as unknown as {
+    image?: { src?: string };
+  };
+  if (firstComponent?.image?.src) {
+    preload(firstComponent.image.src, { as: "image", fetchPriority: "high" });
+  }
+
   return <DynamicComponents components={components} />;
 }

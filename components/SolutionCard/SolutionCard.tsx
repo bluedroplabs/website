@@ -47,7 +47,12 @@ export const SolutionCard = ({
         />
         <div className="flex items-end">
           <figure className={cn("relative size-full", figureAspect)}>
-            <Image {...image} className="object-cover" fill />
+            <Image
+              {...image}
+              className="object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </figure>
         </div>
       </div>
