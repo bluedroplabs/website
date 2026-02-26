@@ -12,7 +12,7 @@ import { ArrowRightDownIcon } from "../Icon";
 import type { IFooter } from "./Footer.types";
 
 const footerMonoStyle =
-  "text-default-light font-mono text-size-16/4 font-normal uppercase not-italic";
+  "text-default-light font-mono text-size-14/4 font-normal uppercase not-italic";
 
 const styles = {
   container: "lg:py-12 2xl:py-16 space-y-12",
@@ -33,7 +33,7 @@ const styles = {
   nav: "flex gap-x-5 gap-y-8 max-lg:flex-wrap max-lg:pr-6 lg:gap-x-20 2xl:w-[49.52%] 2xl:justify-between",
   secondaryText: "font-mono font-medium uppercase mt-6",
   submitButton: "uppercase font-medium lg:max-2xl:text-sm",
-  title: footerMonoStyle,
+  title: "text-default-light font-mono text-size-16/4 font-normal uppercase",
   themeButton: "size-6 text-default-light uppercase",
   themeButtons: "flex gap-2 items-center",
   themeGroup: "flex justify-between gap-x-8 max-lg:mt-8 lg:max-2xl:w-full",

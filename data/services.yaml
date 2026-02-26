@@ -9,7 +9,7 @@ components:
     description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
     title: "Complete Design, Development, & Support"
     image:
-      src: "/assets/services-hero-asset.webp"
+      src: "/assets/services-hero-asset.png"
       alt: "Full Stack Development Hero Image"
     primaryCTA:
       children: "Schedule a demo"
@@ -23,10 +23,10 @@ components:
     items:
       - title: "We're available when you need us"
         content: '<ul className="pt-3 space-y-4"><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Direct Slack access to our technical team</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Quick response times, not days or weeks</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">No barriers between you and the people working on your solutions</li></ul>'
-      - title: "Legacy System Maintenance"
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      - title: "We Don't Waste Your Money"
+        content: '<ul className="pt-3 space-y-4"><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Each team member has 10+ years of experience</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Transparent pricing with no hidden fees</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Month-to-month contracts, not multi-year lock-ins</li></ul>'
       - title: "We actually solve problems"
-        content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        content: '<ul className="pt-3 space-y-4"><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Give us your hardest, most complicated issues</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">We focus on getting things done, not creating dependencies</li><li className="flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0">Most clients retain us for years because we become true partners</li></ul>'
 
   - type: GridSeparator
 
