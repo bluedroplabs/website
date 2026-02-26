@@ -75,10 +75,7 @@ export function Basic1Up({
     isLeft ? "md:-mr-5" : "md:-ml-5",
   );
 
-  const assetMobileClassName = cn(
-    "md:-ml-5 px-6 py-12 md:px-8 md:py-20 lg:px-16 2xl:py-20",
-    !isLeft && "md:hidden",
-  );
+  const assetMobileClassName = cn(!isLeft && "md:hidden");
 
   return (
     <Container
