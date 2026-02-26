@@ -20,7 +20,7 @@ export const DetailPageHero = ({
   ...props
 }: IDetailPageHero) => {
   return (
-    <DottedBackground>
+    <DottedBackground className="max-md:bg-none">
       <Container
         className={cn(
           "bg-gradient-to-b from-transparent via-page-default via-60% to-page-default w-full",
@@ -41,7 +41,7 @@ export const DetailPageHero = ({
           )}
         </figure>
 
-        <DottedBackground className="max-lg:pt-16 lg:!bg-none lg:flex-1 lg:max-w-1/2 lg:pb-16 lg:pr-10 2xl:pb-20 2xl:pr-20">
+        <DottedBackground className="w-full max-lg:pt-16 lg:!bg-none lg:flex-1 lg:max-w-1/2 lg:pb-16 lg:pr-10 2xl:pb-20 2xl:pr-20">
           <ContentBlock
             author={author ? `By ${author}` : ""}
             authorClassName="mt-6 lg:mt-8"
@@ -53,6 +53,7 @@ export const DetailPageHero = ({
             eyebrowVariant="highlight"
             primaryCTA={primaryCTA}
             secondaryCTA={secondaryCTA}
+            secondaryCTAClassName="bg-page-default"
             title={title}
             titleClassName="font-normal mb-4 mt-6 lg:mt-8"
             titleVariant="2xl"

@@ -9,7 +9,7 @@ components:
     description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
     title: "Complete Design, Development, & Support"
     image:
-      src: "/assets/services-hero-asset.png"
+      src: "/assets/services-hero-asset.webp"
       alt: "Full Stack Development Hero Image"
     primaryCTA:
       children: "Schedule a demo"

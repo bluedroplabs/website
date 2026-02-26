@@ -34,7 +34,7 @@ components:
     description: "We're the experts who intentionally stay lean, use AI-enabled processes, and maintain a globally distributed team to deliver exceptional work without the enterprise overhead. <br /><br/> We’ve solved complex challenges that make others say, “That’s not possible.”"
     image:
       alt: "Placeholder image"
-      src: "/assets/premium-service.png"
+      src: "/assets/premium-service.webp"
 
   - type: GridSeparator
 
@@ -45,7 +45,7 @@ components:
     description: "We don't believe in artificial limitations or forcing clients into rigid packages. Every engagement is tailored to your specific needs, budget, and timeline. We adapt to your requirements. We proactively improve your digital tools. We give you the freedom to focus more on growing your business. <br/><br/><strong>Most of our clients retain us for years</strong> because we become their trusted technical partner, not just another vendor.”"
     image:
       alt: "Placeholder image"
-      src: "/assets/partnerships-over-transactions.png"
+      src: "/assets/partnerships-over-transactions.webp"
 
   - type: GridSeparator
 
@@ -56,7 +56,7 @@ components:
     description: "We can handle every layer of your digital infrastructure. When you work with Blue Drop Labs, you get a complete technical team that owns the entire stack. Your web and application hosting is engineered for you—while saving you money. Your websites remain stable while always improving. <br/><br/>With one team, you get complete confidence and peace of mind."
     image:
       alt: "Placeholder image"
-      src: "/assets/technical-stack.png"
+      src: "/assets/technical-stack.webp"
 
   - type: GridSeparator
 
@@ -69,9 +69,9 @@ components:
       - header: "LOGO"
         isHighlighted: true
         name: "Blue Drop"
-      - header: "Legacy Drupal Consultancies"
+      - header: "Legacy Providers"
         isHighlighted: false
-        name: "Legacy Drupal Consultancies"
+        name: "Legacy Providers"
     description: "Our goal is to change this dynamic — to become true partners who are accountable, available, and authentic."
     eyebrow: "What sets us apart"
     rows:

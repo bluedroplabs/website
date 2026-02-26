@@ -4,7 +4,7 @@
 
 cta:
   children: "Get Started"
-  href: "/"
+  href: "/contact"
 logo:
   src: "/assets/logo.svg"
   alt: "Company Logo"

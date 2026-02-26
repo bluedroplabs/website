@@ -13,6 +13,11 @@ import { Marker } from "@/components/Marker/Marker";
 
 export const metadata: Metadata = {
   title: "Blue Drop Labs - Experts in Digital Strategy",
+  description:
+    "Blue Drop Labs offers enterprise-grade Drupal and WordPress hosting, expert development, and ongoing support—all under one roof at affordable prices.",
+  other: {
+    "font-display": "swap",
+  },
 };
 
 export default function RootLayout({

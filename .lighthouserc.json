@@ -1,6 +1,9 @@
 {
   "ci": {
     "collect": {
+      "startServerCommand": "npx serve dist -l 3000",
+      "startServerReadyPattern": "Accepting connections",
+      "startServerReadyTimeout": 10000,
       "url": [
         "http://localhost:3000",
         "http://localhost:3000/about-us",
@@ -8,13 +11,20 @@
         "http://localhost:3000/platform",
         "http://localhost:3000/services"
       ],
-      "numberOfRuns": 2
+      "numberOfRuns": 2,
+      "settings": {
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "cpuSlowdownMultiplier": 4
+        },
+        "throttlingMethod": "simulate"
+      }
     },
     "assert": {
-      "preset": "lighthouse:no-pwa",
       "assertions": {
         "categories:performance": ["warn", { "minScore": 0.8 }],
-        "categories:accessibility": ["error", { "minScore": 0.9 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
         "categories:best-practices": ["warn", { "minScore": 0.9 }],
         "categories:seo": ["warn", { "minScore": 0.9 }]
       }

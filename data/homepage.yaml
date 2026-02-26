@@ -63,16 +63,16 @@ components:
       href: "/contact"
     secondaryCTA:
       children: "Learn more"
-      href: "/about-us"
+      href: "/platform"
 
   - type: GridSeparator
 
   - type: FeaturedSolutionsGrid
-    title: "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Wordpress</strong><strong class='typewriter'>React</strong> experts who set you up to scale"
+    title: "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Design</strong><strong class='typewriter'>Wordpress</strong><strong class='typewriter'>Infrastructure</strong><strong class='typewriter'>React</strong><strong class='typewriter'>Strategy</strong><strong class='typewriter'>Next.js</strong><strong class='typewriter'>Technology</strong><strong class='typewriter'>PHP</strong> experts who set you up to scale"
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     primaryCTA:
       children: "View all solutions"
-      href: "/"
+      href: "/services"
     solutions:
       - eyebrow: "Drupal + WordPress Managed Hosting"
         title: "Enterprise-Grade Solutions at Startup Speed"
