@@ -23,7 +23,7 @@ const containerVariants = cva(containerClass, {
 });
 
 const eyebrowVariants = cva(
-  "font-mono font-normal leading-[1] uppercase w-fit",
+  "font-mono font-normal leading-[1] uppercase w-fit mb-5",
   {
     variants: {
       variant: {
