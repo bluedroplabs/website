@@ -42,6 +42,12 @@ export const Container = ({
 }: IContainer) => {
   const Comp = asChild ? Slot : "div";
 
+  // Form-only props are only valid on <input> or <button>; strip when spreading onto div/Slot
+  const FORM_ONLY_KEYS = ["formAction", "formMethod", "formEncType", "formTarget"] as const;
+  const restProps = Object.fromEntries(
+    Object.entries(props).filter(([key]) => !FORM_ONLY_KEYS.includes(key as (typeof FORM_ONLY_KEYS)[number])),
+  );
+
   const classNames = cn(
     "relative w-full max-w-540 mx-auto",
     !noPadding && CONTAINER_PADDING,
@@ -52,5 +58,5 @@ export const Container = ({
     className,
   );
 
-  return <Comp className={classNames} {...props} />;
+  return <Comp className={classNames} {...restProps} />;
 };
