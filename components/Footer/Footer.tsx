@@ -161,6 +161,7 @@ export const Footer = ({
                   return (
                     <li className={styles.themeItem} key={t}>
                       <Button
+                        aria-label={`Use ${t} theme`}
                         className={styles.themeButton}
                         onClick={() => setTheme(t)}
                         size="none"

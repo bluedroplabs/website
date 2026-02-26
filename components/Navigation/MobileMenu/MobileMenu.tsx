@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import type { ICTA } from "@/types/cta.types";
 import { ChevronRight } from "@/components/Icon/ChevronRight";
 import { cn } from "@/utils/classes";
@@ -28,6 +28,8 @@ export interface IMobileMenu {
 }
 
 export const MobileMenu = ({ links, onClose, open }: IMobileMenu) => {
+  const overlayRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -39,6 +41,16 @@ export const MobileMenu = ({ links, onClose, open }: IMobileMenu) => {
     };
   }, [open]);
 
+  useEffect(() => {
+    const el = overlayRef.current;
+    if (!el) return;
+    if (open) {
+      el.removeAttribute("inert");
+    } else {
+      el.setAttribute("inert", "");
+    }
+  }, [open]);
+
   return (
     <div
       aria-hidden={!open}
@@ -48,6 +60,7 @@ export const MobileMenu = ({ links, onClose, open }: IMobileMenu) => {
         styles.overlay,
         open ? styles.overlayOpen : styles.overlayClosed,
       )}
+      ref={overlayRef}
       role="dialog"
       style={{
         transition: "opacity 500ms cubic-bezier(0.4, 0, 0.2, 1)",
