@@ -29,7 +29,12 @@ interface Basic1UpAssetProps extends HTMLAttributes<HTMLDivElement> {
   isDarkMode: boolean;
 }
 
-function Basic1UpAsset({ image, isDarkMode, className, ...figureProps }: Basic1UpAssetProps) {
+function Basic1UpAsset({
+  image,
+  isDarkMode,
+  className,
+  ...figureProps
+}: Basic1UpAssetProps) {
   const { srcLight, ...imageProps } = image;
   const src = isDarkMode && srcLight ? srcLight : image.src;
 

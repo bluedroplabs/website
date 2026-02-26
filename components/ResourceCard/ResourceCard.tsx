@@ -24,7 +24,7 @@ const contentBlockVariants = cva("", {
   defaultVariants: { variant: "default" },
 });
 
-const imageVariants = cva("overflow-hidden relative rounded-lg", {
+const imageVariants = cva("overflow-hidden relative", {
   variants: {
     variant: {
       default: "aspect-[120/118] min-w-30 md:aspect-[362/268] md:w-full",
@@ -38,7 +38,7 @@ const imageVariants = cva("overflow-hidden relative rounded-lg", {
 const variants = cva("px-6 md:p-8 items-center", {
   variants: {
     variant: {
-      default: "py-5 max-md:flex max-md:gap-5",
+      default: "py-10 max-md:flex max-md:gap-5",
       featured: "pt-5 md:pb-8 md:flex",
     },
   },

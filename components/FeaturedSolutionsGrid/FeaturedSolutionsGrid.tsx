@@ -48,10 +48,7 @@ export const FeaturedSolutionsGrid = ({
 
   return (
     <Container
-      className={cn(
-        "border-y border-border-normal bg-page-default",
-        className,
-      )}
+      className={cn("border-y border-border-normal bg-page-default", className)}
       noPadding
       {...props}
     >
