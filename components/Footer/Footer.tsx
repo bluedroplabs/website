@@ -17,10 +17,10 @@ const footerMonoStyle =
 const styles = {
   container: "lg:py-12 2xl:py-16 space-y-12",
   content:
-    "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 2xl:col-span-8 2xl:justify-between",
+    "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 2xl:col-span-8 justify-between",
   copyright: footerMonoStyle,
   description: "font-light leading-6 text-default-strong text-lg",
-  form: "lg:w-full 2xl:w-[50.47%]",
+  form: "lg:w-full lg:max-w-md 2xl:max-w-md 2xl:w-auto",
   input:
     "text-default-light leading-none h-5 w-full placeholder:text-default-light focus:outline-none bg-transparent lg:max-2xl:text-sm",
   inputGroup:
@@ -130,12 +130,7 @@ export const Footer = ({
         </div>
         <div className={styles.lowerContent}>
           <p className={cn("max-2xl:hidden", styles.copyright)}>{copyright}</p>
-          <nav
-            className={cn(
-              "lg:max-2xl:w-full 2xl:ml-auto 2xl:mr-10",
-              styles.nav,
-            )}
-          >
+          <nav className={cn("lg:max-2xl:w-full 2xl:ml-auto", styles.nav)}>
             <ul
               aria-label="Legal and company information"
               className={styles.utilityLinks}

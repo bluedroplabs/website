@@ -55,9 +55,9 @@ utilityLinks:
   - children: "Privacy Policy"
     href: "/privacy-policy"
     target: "_self"
-  - children: "Sitemap"
-    href: "/sitemap"
-    target: "_self"
+  # - children: "Sitemap"
+  #   href: "/sitemap"
+  #   target: "_self"
 
 # Copyright Information
 copyright: "© Blue Drop Labs 2025. All rights reserved."
