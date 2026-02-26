@@ -5,6 +5,7 @@ import { MultiSelect } from "@/components/MultiSelect/MultiSelect";
 import { ResourceCard } from "@/components/ResourceCard/ResourceCard";
 import type { IResourceCard } from "@/components/ResourceCard/ResourceCard.types";
 import { SearchBar } from "@/components/SearchBar/SearchBar";
+import { useResponsiveLimit } from "@/hooks/useResponsiveLimit";
 import { cn } from "@/utils/classes";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
@@ -54,6 +55,7 @@ export const CardGrid = ({
   total,
   ...props
 }: ICardGrid) => {
+  const effectiveLimit = useResponsiveLimit(limit);
   const [page, setPage] = useState<number>(1);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedFilters, setSelectedFilters] = useState<
@@ -71,10 +73,10 @@ export const CardGrid = ({
   );
 
   const effectiveTotal = useClientFiltering ? filteredItems.length : total;
-  const totalPages = Math.ceil(effectiveTotal / limit) || 1;
+  const totalPages = Math.ceil(effectiveTotal / effectiveLimit) || 1;
 
   const displayedItems = useClientFiltering
-    ? filteredItems.slice((page - 1) * limit, page * limit)
+    ? filteredItems.slice((page - 1) * effectiveLimit, page * effectiveLimit)
     : filteredItems;
 
   useEffect(() => {
@@ -110,22 +112,7 @@ export const CardGrid = ({
   if (!items || items.length === 0) return null;
 
   const hasFilteredResults = displayedItems.length > 0;
-
-  const groupedItems: (typeof displayedItems)[] = [];
-
-  if (displayedItems.length > 0) {
-    groupedItems.push([displayedItems[0]]);
-
-    let currentGroup: typeof displayedItems = [];
-    for (let i = 1; i < displayedItems.length; i++) {
-      currentGroup.push(displayedItems[i]);
-
-      if (currentGroup.length === 3 || i === displayedItems.length - 1) {
-        groupedItems.push(currentGroup);
-        currentGroup = [];
-      }
-    }
-  }
+  const [featuredItem, ...restItems] = displayedItems;
 
   return (
     <Container className={className} noPadding {...props}>
@@ -150,50 +137,61 @@ export const CardGrid = ({
           </div>
         </Container>
         {hasFilteredResults ? (
-          groupedItems.map((group, groupIndex) => (
-            <Container
-              className="max-md:px-0 md:border-t md:border-border-normal"
-              key={groupIndex}
-            >
-              <div
-                className={cn(
-                  "border-x border-border-normal lg:grid lg:grid-cols-3 lg:items-stretch",
-                )}
-              >
-                {group.map((item, itemIndex) => {
-                  const isFirst = groupIndex === 0;
-                  const globalIndex =
-                    groupIndex === 0 ? 0 : (groupIndex - 1) * 3 + itemIndex + 1;
+          <>
+            {featuredItem && (
+              <Container className="max-md:px-0 md:border-t md:border-border-normal">
+                <div className="border-x border-border-normal">
+                  <Link
+                    className="w-full lg:col-span-3"
+                    href={featuredItem.href}
+                  >
+                    <ResourceCard
+                      {...featuredItem}
+                      className="border-t border-border-normal"
+                      variant="featured"
+                    />
+                  </Link>
+                </div>
+              </Container>
+            )}
 
-                  const showVerticalBorder =
-                    !isFirst && itemIndex < group.length - 1;
+            {restItems.length > 0 && (
+              <Container className="max-md:px-0 md:border-t md:border-border-normal">
+                <div
+                  className={cn(
+                    "border-l border-border-normal md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 lg:items-stretch",
+                  )}
+                >
+                  {restItems.map((item, index) => {
+                    const isLast = index === restItems.length - 1;
+                    const columnInRow = index % 3;
+                    const showVerticalBorder = !isLast && columnInRow < 2;
 
-                  return (
-                    <Link
-                      className={cn(
-                        "w-full",
-                        isFirst && "lg:col-span-3",
-                        !isFirst && "lg:h-full",
-                      )}
-                      href={item.href}
-                      key={globalIndex}
-                    >
-                      <ResourceCard
-                        {...item}
+                    return (
+                      <Link
                         className={cn(
-                          "border-border-normal max-md:border-t",
-                          !isFirst && "lg:h-full",
-                          showVerticalBorder &&
-                            "lg:border-r lg:border-border-normal",
+                          "w-full",
+                          "lg:h-full lg:border-border-normal lg:border-b lg:border-r",
+                          "md:border-border-normal md:border-b md:border-r",
                         )}
-                        variant={isFirst ? "featured" : "default"}
-                      />
-                    </Link>
-                  );
-                })}
-              </div>
-            </Container>
-          ))
+                        href={item.href}
+                        key={index}
+                      >
+                        <ResourceCard
+                          {...item}
+                          className={cn(
+                            "lg:h-full max-md:border-border-normal max-md:border-b",
+                            showVerticalBorder && "",
+                          )}
+                          variant="default"
+                        />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </Container>
+            )}
+          </>
         ) : (
           <Container className="max-md:px-0 md:border-t md:border-border-normal">
             <div className="border-x border-border-normal px-5 py-12 text-center text-fg-muted md:px-8">
@@ -203,7 +201,7 @@ export const CardGrid = ({
           </Container>
         )}
 
-        <Container className="md:border-t border-border-normal">
+        <Container>
           <Pagination
             className="py-6 md:border-x md:border-border-normal"
             currentPage={page}
