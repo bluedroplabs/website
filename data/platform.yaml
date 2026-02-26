@@ -130,7 +130,7 @@ components:
     eyebrow: "No Bloat. Just Performance."
     primaryCTA:
       children: "Book an Assessment"
-      href: "/contact-us"
+      href: "/contact"
     title: "Stop Overpaying for Underperforming Hosting"
 
   - type: GridSeparator
