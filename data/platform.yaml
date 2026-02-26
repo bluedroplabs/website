@@ -109,7 +109,7 @@ components:
           - "Built-in CI/CD pipeline"
         cta:
           children: "Start with Standard"
-          href: "#"
+          href: "/contact"
       - title: "Enhanced"
         variant: "highlight"
         description: "Everything in Standard, plus:"
@@ -120,7 +120,7 @@ components:
           - "Priority support SLA"
         cta:
           children: "Start with Enhanced"
-          href: "/"
+          href: "/contact"
 
   - type: GridSeparator
 
