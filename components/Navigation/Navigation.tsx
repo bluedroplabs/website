@@ -78,7 +78,9 @@ export const Navigation = ({
           <Button
             {...cta}
             className={cn(
-              "max-lg:flex max-lg:min-w-14 max-lg:flex-col max-lg:px-4 max-lg:py-3 max-lg:leading-tight max-lg:whitespace-normal max-lg:w-24",
+              "max-lg:flex max-lg:min-w-14 max-lg:px-4 max-lg:py-3 max-lg:leading-tight",
+              "max-sm:flex-col max-sm:whitespace-normal max-sm:w-24",
+              "sm:whitespace-nowrap",
             )}
             size="lg"
             variant="special"
