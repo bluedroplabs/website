@@ -57,7 +57,7 @@ export const FeaturedSolutionsGrid = ({
           className="flex flex-col gap-6 py-12 lg:flex-row lg:items-start lg:pb-12 lg:pt-25"
           description={description}
           primaryCTA={primaryCTA}
-          primaryCTAClassName="mt-0"
+          primaryCTAClassName="mt-2"
           title={title}
           variant="inline"
         />

@@ -72,7 +72,7 @@ components:
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     primaryCTA:
       children: "View all solutions"
-      href: "/"
+      href: "/services"
     solutions:
       - eyebrow: "Drupal + WordPress Managed Hosting"
         title: "Enterprise-Grade Solutions at Startup Speed"
