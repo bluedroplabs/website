@@ -242,6 +242,10 @@ body {
   display: none;
 }
 
+[data-theme="dark"] .typewriter {
+  color: var(--color-black-90);
+}
+
 strong.typewriter:empty {
   background-color: transparent;
   padding-right: 0;
