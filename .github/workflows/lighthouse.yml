@@ -32,5 +32,3 @@ jobs:
           configPath: .lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
-          startServerCommand: npx serve dist -l 3000
-          startServerReadyPattern: "Serving!"
