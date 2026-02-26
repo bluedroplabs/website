@@ -13,10 +13,10 @@ components:
       alt: "The Platform"
     primaryCTA:
       children: "Schedule a demo"
-      url: "/contact"
+      href: "/contact"
     secondaryCTA:
       children: "Why Blue Drop?"
-      url: "/about-us"
+      href: "/about-us"
 
   - type: FeaturedIconList
     title: "Why the Blue Drop Labs Platform?"
@@ -39,21 +39,21 @@ components:
     title: "Built for Speed. Engineered for Scale."
     description: "From white-glove migration to Git-based deployments and autoscaling infrastructure, we deliver unmatched performance and control—simplified for your team."
     items:
-      - icon: "ExpenseIcon"
+      - icon: "DataIcon"
         description: "<strong>Advanced infrastructure</strong> at a fraction of the cost."
-      - icon: "SpeedIcon"
+      - icon: "SwapIcon"
         description: "<strong>White-glove migration</strong> from any existing host."
-      - icon: "ChartIcon"
+      - icon: "AccountTreeIcon"
         description: "<strong>Built-in CI/CD pipeline to deploy directly from GitHub, GitLab, or any Git repository."
-      - icon: "DataIcon"
+      - icon: "MemoryIcon"
         description: "<strong>Dedicated resources</strong>, less virtualization for superior performance"
-      - icon: "CheckBadgeIcon"
+      - icon: "DatabaseIcon"
         description: "<strong>MySQL optimizations are purpose-built</strong> for database-heavy applications"
-      - icon: "EmergencyIcon"
+      - icon: "ChartIcon"
         description: "<strong>Autoscaling</strong> capabilities based on demand"
-      - icon: "DataIcon"
+      - icon: "TuneIcon"
         description: "<strong>Framework-specific optimizations</strong> tailored for each supported platform."
-      - icon: "CheckBadgeIcon"
+      - icon: "BoltIcon"
         description: "<strong>CDN integration</strong> for lightning-fast content delivery."
       - icon: "EmergencyIcon"
         description: "<strong>Almost-Instant rollbacks</strong> of deployments"
@@ -70,7 +70,7 @@ components:
 
   - type: Basic1Up
     image:
-      src: "/assets/trusted-platform.png"
+      src: "/assets/trusted-platform.svg"
       alt: "Platform Architecture Diagram"
     title: "A Sensible Alternative for Drupal Web Hosting"
     description: "Blue Drop's platform is a purpose-built infrastructure for Drupal sites of all sizes. Pantheon and Acquia have dominated the market, but they've become overpriced and bogged down with bureaucracy. Every Drupal website deserves a good home that doesn't break the budget. <br /><br />Our platform is built and maintained with the benefit of deep Drupal expertise. Every member of our team has 10+ years of Drupal experience. We know how it works, how it runs, and how to keep it optimized. "

@@ -18,35 +18,35 @@ const contentBlockVariants = cva("", {
   variants: {
     variant: {
       default: "md:pt-10",
-      featured: "pb-8 pt-6 md:pl-8",
+      featured: "pb-8 pt-6",
     },
   },
   defaultVariants: { variant: "default" },
 });
 
-const imageVariants = cva("overflow-hidden relative rounded-lg", {
+const imageVariants = cva("overflow-hidden relative ", {
   variants: {
     variant: {
       default: "aspect-[120/118] min-w-30 md:aspect-[362/268] md:w-full",
       featured:
-        "aspect-[392/290] basis-1/2 size-full md:aspect-[576/416] md:w-1/2 md:mr-8 md:rounded-none",
+        "aspect-[392/290] size-full md:aspect-[576/416] md:w-full md:rounded-none lg:basis-1/2 lg:w-1/2 lg:mr-8",
     },
   },
   defaultVariants: { variant: "default" },
 });
 
-const variants = cva("px-6 md:p-8 items-center", {
+const variants = cva("px-6 md:px-8 md:py-8 items-center", {
   variants: {
     variant: {
-      default: "py-5 max-md:flex max-md:gap-5 md:pb-10",
-      featured: "pt-5 md:pb-8 md:flex",
+      default: "py-10 max-md:flex max-md:gap-5",
+      featured: "pt-5 md:pt-8 md:pb-8 md:flex md:gap-5",
     },
   },
   defaultVariants: { variant: "default" },
 });
 
 const styles = {
-  contentWrapper: (isFeatured: boolean) => cn(isFeatured && "basis-1/2"),
+  contentWrapper: (isFeatured: boolean) => cn(isFeatured && "lg:basis-1/2"),
   dateMobile:
     "block mt-3 font-mono leading-[1.25] text-default-light text-sm uppercase md:hidden",
   date: {
@@ -61,7 +61,7 @@ const styles = {
   image: "object-cover size-full",
   title: {
     default: "leading-[1.25] md:mt-6 mt-2",
-    featured: "leading-[1.25] md:mt-6 mt-4",
+    featured: "leading-[1.25] md:text-size-32 md:mt-6 mt-4 lg:text-size-48",
   },
 };
 

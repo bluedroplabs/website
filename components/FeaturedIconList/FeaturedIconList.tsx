@@ -25,8 +25,8 @@ export const FeaturedIconList = ({
           <ContentBlock
             className="md:pl-8 lg:basis-1/2 lg:pl-16"
             title={title}
-            titleClassName="font-light leading-[1.25] tracking-tighter"
-            titleVariant="lg"
+            titleClassName="font-medium leading-[1.25] tracking-tighter"
+            titleVariant="xl"
           />
           <ul className="grid gap-y-6 md:px-8 lg:basis-1/2 lg:gap-y-8 lg:px-10">
             {items.map((item, index) => (

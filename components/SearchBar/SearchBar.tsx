@@ -18,7 +18,7 @@ export const SearchBar = ({
       onSubmit={onSubmit}
     >
       <input
-        className="leading-[1.25] w-full placeholder:text-default-light"
+        className="leading-[1.25] w-full placeholder:text-default-light outline-none focus:outline-none focus-visible:outline-none"
         name="search"
         placeholder={placeholder}
         type="search"

@@ -42,7 +42,7 @@ export const PackageCard = ({
         </>
       )}
       <div className="grid h-full relative z-10">
-        <h3 className="font-medium mb-6 text-size-32 tracking-[0.02em]">
+        <h3 className="font-medium mb-6 text-size-32 lg:text-size-40 tracking-[0.02em]">
           {title}
         </h3>
         <div className="mb-6 lg:mb-10">

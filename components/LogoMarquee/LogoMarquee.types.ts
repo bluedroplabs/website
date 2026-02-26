@@ -2,6 +2,16 @@ import type { IImage } from "@/types/image.types";
 import type { HTMLAttributes } from "react";
 
 /**
+ * Logo item rendered via an Icon component (by name) instead of an image src.
+ */
+export interface ILogoIcon {
+  alt: string;
+  icon: string;
+  width?: number;
+  height?: number;
+}
+
+/**
  * Props for the LogoMarquee component.
  */
 export interface ILogoMarquee extends HTMLAttributes<HTMLElement> {
@@ -11,7 +21,7 @@ export interface ILogoMarquee extends HTMLAttributes<HTMLElement> {
   description?: string;
 
   /**
-   * Array of logo images to be displayed in the marquee.
+   * Array of logos: either image-based (src) or icon-based (icon name).
    */
-  logos: IImage[];
+  logos: (IImage | ILogoIcon)[];
 }

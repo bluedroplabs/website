@@ -16,35 +16,17 @@ components:
     description: "Invest in your growth and success ——— Trusted by our beloved clients"
     logos:
       - alt: "Logo 1"
-        src: "/assets/client-stacker.png"
-        srcLight: "/assets/client-stacker-light.png"
-        width: 200
-        height: 60
+        icon: "StackerIcon"
       - alt: "Logo 2"
-        src: "/assets/client-powdr.png"
-        srcLight: "/assets/client-powdr-light.png"
-        width: 200
-        height: 60
+        icon: "PowdrIcon"
       - alt: "Logo 3"
-        src: "/assets/client-mtm360.png"
-        srcLight: "/assets/client-mtm360-light.png"
-        width: 200
-        height: 60
+        icon: "MtmIcon"
       - alt: "Logo 4"
-        src: "/assets/client-rothliving.png"
-        srcLight: "/assets/client-rothliving-light.png"
-        width: 200
-        height: 60
+        icon: "RothlivingIcon"
       - alt: "Logo 5"
-        src: "/assets/client-zion.png"
-        srcLight: "/assets/client-zion-light.png"
-        width: 200
-        height: 60
+        icon: "ZionIcon"
       - alt: "Logo 6"
-        src: "/assets/client-zula.png"
-        srcLight: "/assets/client-zula-light.png"
-        width: 200
-        height: 60
+        icon: "ZulaIcon"
 
   - type: FeaturedIconGrid
     eyebrow: "Problems we solve"
@@ -74,7 +56,8 @@ components:
     blockquote: "Most clients save 30-50% compared to Pantheon or Acquia while receiving better performance."
     image:
       alt: "Placeholder image"
-      src: "/assets/platform.png"
+      src: "/assets/platform-light.svg"
+      srcLight: "/assets/platform-dark.svg"
     primaryCTA:
       children: "Schedule a demo"
       href: "/contact"
@@ -97,41 +80,41 @@ components:
         href: "/"
         image:
           alt: "Drupal + WordPress Managed Hosting"
-          src: "/assets/drupal-and-wordpress-development.png"
+          src: "/assets/drupal-and-wordpress-development.svg"
       - eyebrow: "Drupal 7 support"
         title: "Keep your Drupal 7 platform safe and running smoothly"
         description: "Extend the life of your Drupal 7 site with expert updates and support—no migration pressure, no downtime."
         href: "/"
         image:
           alt: "Drupal 7 support"
-          src: "/assets/drupal-7-support.png"
+          src: "/assets/drupal-7-support.svg"
       - eyebrow: "Drupal + WordPress Support"
         title: "Ongoing support and maintenance from experienced developers"
         description: "Stay confident and secure with proactive maintenance, performance tuning, and hands-on technical support."
         href: "/"
         image:
           alt: "Drupal + WordPress Support"
-          src: "/assets/drupal-and-wordpress-support.png"
+          src: "/assets/drupal-and-wordpress-support.svg"
       - eyebrow: "API + Custom Development"
         title: "Build scalable web applications and APIs that power your business growth"
         description: "Power your business with custom APIs and web applications built for flexibility, scalability, and long-term growth."
         href: "/"
         image:
           alt: "API + Custom Development"
-          src: "/assets/api-and-custom-development.png"
+          src: "/assets/api-and-custom-development.svg"
       - eyebrow: "Design + Experience"
         title: "Turn your brand into a digital experience that converts"
         description: "Polished, accessible interfaces with high-fidelity visuals and brand consistency, built to meet modern web standards and performance goals."
         href: "/"
         image:
           alt: "Design + Experience"
-          src: "/assets/design-and-experience.png"
+          src: "/assets/design-and-experience.svg"
       - eyebrow: "SEO + Marketing"
         title: "Optimize your website into a high-performing business asset"
         description: "Boost visibility and conversions with technical SEO, performance optimization, and smart marketing strategy."
         href: "/"
         image:
           alt: "SEO + Marketing"
-          src: "/assets/seo-and-marketing.png"
+          src: "/assets/seo-and-marketing.svg"
 
   - type: GridSeparator

@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/utils";
 import { Container } from "@/components/Container/Container";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { SolutionCard } from "../SolutionCard/SolutionCard";
@@ -12,12 +13,12 @@ const FeaturedSolutionsGridRow = ({
   solutions: ISolutionCard[];
 }) => {
   return (
-    <div className="lg:border-t lg:border-border-normal lg:flex lg:px-10 xl:px-20">
+    <div className="flex flex-col border-t border-border-normal lg:flex-row lg:px-10 xl:px-20">
       {solutions.map((solution, index) => (
         <SolutionCard
           key={index}
           {...solution}
-          className="lg:flex-1 lg:border-x lg:border-border-normal lg:[&:nth-child(2)]:border-l-0"
+          className="w-full border-x border-border-normal lg:flex-1 [&:nth-child(2)]:border-l-0"
         />
       ))}
     </div>
@@ -35,29 +36,32 @@ export const FeaturedSolutionsGrid = ({
   const formattedSolutionsSet: ISolutionCard[][] = [];
 
   solutions.forEach((solution, index) => {
-    // Only process even indices
     if (index % 3 === 0 && index + 1 < solutions.length) {
-      // Add a pair
       formattedSolutionsSet.push([solutions[index], solutions[index + 1]]);
     } else if (
       index % 3 === 2 ||
       (index === solutions.length - 1 && solutions.length % 3 !== 0)
     ) {
-      // Add a single
       formattedSolutionsSet.push([{ ...solution, variant: "full" }]);
     }
   });
 
   return (
-    <Container className={className} noPadding {...props}>
-      <ContentBlock
-        className="gap-y-4 py-12 px-5 md:px-8 lg:pb-12.5 lg:pt-25 lg:px-10 xl:px-20"
-        description={description}
-        primaryCTA={primaryCTA}
-        primaryCTAClassName="mt-6"
-        title={title}
-        variant="inline"
-      />
+    <Container
+      className={cn("border-y border-border-normal bg-page-default", className)}
+      noPadding
+      {...props}
+    >
+      <div className="mx-auto w-full max-w-[1440px] px-5 md:px-8 lg:px-10 xl:px-20">
+        <ContentBlock
+          className="flex flex-col gap-6 py-12 lg:flex-row lg:items-start lg:pb-12 lg:pt-25"
+          description={description}
+          primaryCTA={primaryCTA}
+          primaryCTAClassName="mt-0"
+          title={title}
+          variant="inline"
+        />
+      </div>
       <div className="grid">
         {formattedSolutionsSet.map((solutions, index) => (
           <FeaturedSolutionsGridRow key={index} solutions={solutions} />
