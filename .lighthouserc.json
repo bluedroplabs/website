@@ -2,6 +2,8 @@
   "ci": {
     "collect": {
       "startServerCommand": "npx serve dist -l 3000",
+      "startServerReadyPattern": "Accepting connections",
+      "startServerReadyTimeout": 10000,
       "url": [
         "http://localhost:3000",
         "http://localhost:3000/about-us",
@@ -9,7 +11,15 @@
         "http://localhost:3000/platform",
         "http://localhost:3000/services"
       ],
-      "numberOfRuns": 2
+      "numberOfRuns": 2,
+      "settings": {
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate"
+      }
     },
     "assert": {
       "preset": "lighthouse:no-pwa",

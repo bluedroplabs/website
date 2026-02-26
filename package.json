@@ -18,6 +18,7 @@
     "fix": "npm-run-all --continue-on-error lint:fix format",
     "prepare": "husky",
     "lighthouse": "lhci autorun",
+    "lighthouse:dev": "npx serve dist -l 3000",
     "convert:images": "node scripts/convert-hero-to-webp.mjs"
   },
   "dependencies": {
