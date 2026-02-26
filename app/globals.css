@@ -168,7 +168,7 @@
 body {
   background-color: var(--color-page-default);
   color: var(--color-default-base);
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-sans);
   font-weight: 300;
   line-height: 1.5;
   max-width: var(--breakpoint-5xl);
@@ -179,7 +179,7 @@ body {
 /* Metric description: text-base/loose/font-light */
 .metric-description {
   color: var(--color-default-base);
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-sans);
   font-size: var(--text-size-16);
   font-weight: 300;
   line-height: 150%;
