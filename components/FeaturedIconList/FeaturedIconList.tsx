@@ -19,7 +19,7 @@ export const FeaturedIconList = ({
   if (!items || items.length === 0) return null;
 
   return (
-    <section className="border-t border-t-border-normal">
+    <section className="md:border-t md:border-t-border-normal">
       <Container className={cn(styles.container, className)} {...props}>
         <div className="grid gap-y-8 py-12 md:border-x md:border-border-normal lg:flex lg:py-20">
           <ContentBlock

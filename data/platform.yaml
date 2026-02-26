@@ -9,7 +9,7 @@ components:
     description: "From legacy maintenance to cutting-edge development, we're your full-stack digital partner."
     title: "High-Performance Hosting — Without the Premium Price"
     image:
-      src: "/assets/platform-hero-asset.png"
+      src: "/assets/platform-hero-asset.svg"
       alt: "The Platform"
     primaryCTA:
       children: "Schedule a demo"

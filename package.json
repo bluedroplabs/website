@@ -16,7 +16,8 @@
     "type:check": "tsc --noEmit",
     "check": "npm-run-all --continue-on-error lint format:check type:check",
     "fix": "npm-run-all --continue-on-error lint:fix format",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lighthouse": "lhci autorun"
   },
   "dependencies": {
     "@marker.io/browser": "^0.20.2",
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@lhci/cli": "^0.15.1",
     "@storybook/addon-a11y": "^9.1.10",
     "@storybook/addon-docs": "^9.1.10",
     "@storybook/addon-themes": "^9.1.10",

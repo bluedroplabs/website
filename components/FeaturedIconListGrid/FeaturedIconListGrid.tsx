@@ -14,7 +14,10 @@ const styles = {
   ),
   description: "mt-5 [&_strong]:font-medium",
   eyebrow: "mb-5 lg:mb-4",
-  list: cn("grid grid-cols-2 lg:grid-cols-3", CONTAINER_PADDING),
+  list: cn(
+    "grid grid-cols-2 lg:grid-cols-3 overflow-hidden group",
+    CONTAINER_PADDING,
+  ),
   listItem: cn(
     "border-l border-border-normal px-5 py-8 relative lg:p-10",
     "max-lg:[&:nth-child(even)]:border-r lg:[&:nth-child(3n+3)]:border-r",
@@ -24,10 +27,16 @@ const styles = {
     "max-md:[&:nth-child(odd)]:before:-left-5 max-lg:[&:nth-child(odd)]:before:-left-8",
     "max-lg:[&:nth-last-child(2)]:after:h-px max-lg:[&:nth-last-child(2)]:after:w-screen",
     "max-md:[&:nth-last-child(2)]:after:-left-5 max-lg:[&:nth-last-child(2)]:after:-left-8",
+    "max-lg:group-has-[[data-last-full-width]]:[&:nth-last-child(2)]:[&::after]:hidden",
+    "max-lg:group-has-[[data-last-full-width]]:[&:nth-last-child(3)]:[&::after]:hidden",
     "lg:[&:nth-last-child(3)]:after:h-px lg:[&:nth-last-child(3)]:after:w-screen",
     "lg:[&:nth-last-child(3)]:after:-left-10 xl:[&:nth-last-child(3)]:after:-left-20",
     "lg:[&:nth-child(3n+1)]:before:h-px lg:[&:nth-child(3n+1)]:before:w-screen",
     "lg:[&:nth-child(3n+1)]:before:-left-10 xl:[&:nth-child(3n+1)]:before:-left-20",
+  ),
+  lastItemFullWidth: cn(
+    "max-lg:col-span-2 max-lg:border-r max-lg:border-border-normal max-lg:border-l",
+    "max-lg:after:h-px max-lg:after:w-screen max-md:after:-left-5 max-lg:after:-left-8",
   ),
 };
 
@@ -65,11 +74,23 @@ export const FeaturedIconListGrid = ({
         variant={variant}
       />
       <ul className={styles.list}>
-        {formattedItems.map((item, index) => (
-          <li aria-hidden={!item.icon} className={styles.listItem} key={index}>
-            <IconCard {...item} />
-          </li>
-        ))}
+        {formattedItems.map((item, index) => {
+          const isLastRealItem = index === items.length - 1;
+          const isLastItemFullWidth = isLastRealItem && items.length % 2 === 1;
+          return (
+            <li
+              aria-hidden={!item.icon}
+              className={cn(
+                styles.listItem,
+                isLastItemFullWidth && styles.lastItemFullWidth,
+              )}
+              data-last-full-width={isLastItemFullWidth ? "" : undefined}
+              key={index}
+            >
+              <IconCard {...item} />
+            </li>
+          );
+        })}
       </ul>
     </Container>
   );
