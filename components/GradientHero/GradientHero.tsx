@@ -11,7 +11,7 @@ import { GradientSmallBg } from "./components/GradientSmallBg";
 
 const styles = {
   background: "absolute right-0 bottom-0 text-page-default h-full w-auto",
-  container: "flex items-end min-h-120",
+  container: "flex items-end min-h-120 max-w-[var(--breakpoint-2xl)] mx-auto",
   contentBlock: "relative py-10 z-10 lg:py-16",
   description: "mt-4 text-xl lg:text-2xl",
   eyebrow: "font-normal mb-6 text-default-highlight max-md:max-w-[70%] lg:mb-8",

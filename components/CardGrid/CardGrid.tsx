@@ -155,7 +155,7 @@ export const CardGrid = ({
           <>
             {featuredItem && (
               <div className="border-t border-border-normal">
-                <div className="max-w-[var(--breakpoint-2xl)]  md:max-w-[var(--breakpoint-xl)]  mx-auto">
+                <div className="md:max-w-[var(--breakpoint-2xl)] max-w-[var(--breakpoint-xl)]  mx-auto">
                   <div className="border-x border-border-normal">
                     <Link
                       className="w-full lg:col-span-3"
@@ -170,7 +170,7 @@ export const CardGrid = ({
 
             {restItems.length > 0 && (
               <div className="border-t border-border-normal">
-                <div className="max-w-[var(--breakpoint-2xl)] md:max-w-[var(--breakpoint-xl)] mx-auto">
+                <div className="md:max-w-[var(--breakpoint-2xl)] max-w-[var(--breakpoint-xl)] mx-auto">
                   <div
                     className={cn(
                       "border-l border-border-normal md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 lg:items-stretch",
