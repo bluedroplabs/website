@@ -46,7 +46,9 @@ function Basic1UpAsset({
     : "border-r border-border-normal";
 
   return (
-    <DottedBackground className={cn(dottedBgClasses, borderClassName, className)}>
+    <DottedBackground
+      className={cn(dottedBgClasses, borderClassName, className)}
+    >
       <div className="flex size-full">
         <figure className={cn(figureClasses)} {...figureProps}>
           <Image
