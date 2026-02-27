@@ -1,6 +1,5 @@
 "use client";
 
-import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils";
 import { cva } from "class-variance-authority";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
@@ -36,28 +35,30 @@ export const FeaturedText = ({
   ...props
 }: IFeaturedText) => {
   return (
-    <Container
+    <div
       className={cn("border-t border-border-normal mt-10 lg:mt-16", className)}
       {...props}
     >
-      <div className={cn("size-full", bgVariantStyles[bgVariant])}>
-        <DottedBackground className="border-x border-border-normal py-16 lg:py-30 w-full">
-          <ContentBlock
-            author={author}
-            authorClassName="mt-5 lg:mt-6"
-            className={contentBlockSizeVariants({ variant })}
-            description={description}
-            descriptionClassName="mt-5 lg:mt-6"
-            eyebrow={eyebrow}
-            eyebrowClassName="mb-6"
-            eyebrowVariant="highlight"
-            title={title}
-            titleClassName="font-light leading-[1.25] tracking-[0]"
-            titleVariant="md"
-            variant="center"
-          />
-        </DottedBackground>
+      <div className="max-w-[var(--breakpoint-2xl)] md:mx-auto">
+        <div className={cn("size-full", bgVariantStyles[bgVariant])}>
+          <DottedBackground className="border-x border-border-normal py-16 lg:py-30 w-full">
+            <ContentBlock
+              author={author}
+              authorClassName="mt-5 lg:mt-6"
+              className={contentBlockSizeVariants({ variant })}
+              description={description}
+              descriptionClassName="mt-5 lg:mt-6"
+              eyebrow={eyebrow}
+              eyebrowClassName="mb-6"
+              eyebrowVariant="highlight"
+              title={title}
+              titleClassName="font-light leading-[1.25] tracking-[0]"
+              titleVariant="md"
+              variant="center"
+            />
+          </DottedBackground>
+        </div>
       </div>
-    </Container>
+    </div>
   );
 };
