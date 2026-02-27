@@ -19,7 +19,7 @@ const styles = {
     "bg-gradient-to-b from-brand-transparent via-page-default to-page-default size-full absolute inset-0",
   gradientSmall:
     "absolute right-0 bottom-0 text-page-default h-full w-auto lg:hidden",
-  title: "font-normal leading-[0.9] lg:max-w-200",
+  title: "font-normal leading-[0.9] lg:max-w-200 text-size-56 lg:text-size-80",
   wrapper: "min-h-120 w-full relative",
 };
 
