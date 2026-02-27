@@ -15,8 +15,7 @@ const footerMonoStyle =
   "text-default-light font-mono text-size-14/4 font-normal uppercase not-italic";
 
 const styles = {
-  container:
-    "max-w-[var(--breakpoint-2xl)] p-6 md:p-16 lg:p-20 space-y-12",
+  container: "max-w-[var(--breakpoint-2xl)] p-6 md:p-16 lg:p-20 space-y-12",
   content:
     "max-lg:space-y-12 lg:col-span-full lg:flex lg:gap-x-20 2xl:col-span-8 justify-between",
   copyright: footerMonoStyle,

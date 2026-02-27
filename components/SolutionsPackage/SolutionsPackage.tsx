@@ -29,20 +29,17 @@ export const SolutionsPackage = ({
           titleClassName="mb-5 last:mb-0"
         />
       </Container>
-      <Container className="border-b border-border-normal">
-        <div className="border-x border-border-normal md:flex">
+      <div className="border-b border-border-normal">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal md:flex md:divide-x md:divide-border-normal">
           {packages.map((solutionPackage, index) => (
             <PackageCard
-              className={cn(
-                "md:basis-1/2",
-                index === 0 && "border-r border-border-normal",
-              )}
-              key={index}
+              className="md:basis-1/2"
+              key={solutionPackage.title ?? index}
               {...solutionPackage}
             />
           ))}
         </div>
-      </Container>
+      </div>
       <Container>
         <FeaturedTextList
           {...footer}
