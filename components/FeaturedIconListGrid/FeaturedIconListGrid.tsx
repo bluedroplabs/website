@@ -19,7 +19,7 @@ export const FeaturedIconListGrid = ({
   return (
     <section className={cn("border-t border-border-normal", className)}>
       <div className="border-b border-border-normal">
-        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-0">
           <div className="border-x border-border-normal">
             <Container
               className="py-16 lg:py-24 px-5 md:px-8 lg:px-10 xl:px-20"
