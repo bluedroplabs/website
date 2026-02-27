@@ -67,13 +67,13 @@ components:
         href: "/"
         image:
           alt: "Drupal 7 support"
-          src: "/assets/drupal-and-wordpress-support.svg"
+          src: "/assets/drupal-7-support.svg"
       - title: "Drupal 7 Extended Support"
         description: "Keep your Drupal 7 platform secure and stable with enterprise-level maintenance and updates—no costly migrations required."
         href: "/"
         image:
           alt: "Drupal + WordPress Support"
-          src: "/assets/drupal-7-support.svg"
+          src: "/assets/drupal-and-wordpress-support.svg"
       - title: "API + Custom Development"
         description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
         href: "/"
