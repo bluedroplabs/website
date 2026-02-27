@@ -19,7 +19,7 @@ export const SolutionsPackage = ({
   return (
     <Container className={cn("pt-14 lg:pt-25", className)} {...props} noPadding>
       <div className="border-b border-border-normal">
-        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-6 md:px-16 lg:px-0">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-6 md:px-16 3xl:px-0">
           <ContentBlock
             className="mb-8 lg:mb-12"
             description={description}
@@ -32,7 +32,7 @@ export const SolutionsPackage = ({
         </div>
       </div>
       <div className="border-b border-border-normal">
-        <div className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal md:flex md:divide-x md:divide-border-normal">
+        <div className="3xl:max-w-[var(--breakpoint-2xl)] max-w-[var(--breakpoint-xl)] mx-auto border-x border-border-normal md:flex md:divide-x md:divide-border-normal">
           {packages.map((solutionPackage, index) => (
             <PackageCard
               className="md:basis-1/2"

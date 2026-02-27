@@ -24,12 +24,12 @@ export const FeaturedTextList = ({
     >
       <div
         className={cn(
-          "flex py-14 max-lg:flex-col max-lg:gap-8 lg:py-20 px-0",
+          "flex py-14 max-lg:flex-col max-lg:gap-8 px-0",
           !noPadding,
         )}
       >
         {title && (
-          <h2 className="leading-[1.25] font-medium text-size-24 lg:pl-16 lg:text-size-32 lg:w-[31.148%]">
+          <h2 className="leading-[1.25] font-medium text-size-24 lg:text-size-32 lg:w-[31.148%]">
             {title}
           </h2>
         )}
