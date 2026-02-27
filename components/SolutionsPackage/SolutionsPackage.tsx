@@ -18,31 +18,30 @@ export const SolutionsPackage = ({
 }: ISolutionsPackage) => {
   return (
     <Container className={cn("pt-14 lg:pt-25", className)} {...props} noPadding>
-      <Container className="border-b border-border-normal">
-        <ContentBlock
-          className="mb-8 lg:mb-12"
-          description={description}
-          eyebrow={eyebrow}
-          eyebrowClassName="mb-5"
-          eyebrowVariant="highlight"
-          title={title}
-          titleClassName="mb-5 last:mb-0"
-        />
-      </Container>
-      <Container className="border-b border-border-normal">
-        <div className="border-x border-border-normal md:flex">
+      <div className="border-b border-border-normal">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-6 md:px-16 3xl:px-0">
+          <ContentBlock
+            className="mb-8 lg:mb-12"
+            description={description}
+            eyebrow={eyebrow}
+            eyebrowClassName="mb-5"
+            eyebrowVariant="highlight"
+            title={title}
+            titleClassName="mb-5 last:mb-0"
+          />
+        </div>
+      </div>
+      <div className="border-b border-border-normal">
+        <div className="3xl:max-w-[var(--breakpoint-2xl)] max-w-[var(--breakpoint-xl)] mx-auto border-x border-border-normal md:flex md:divide-x md:divide-border-normal">
           {packages.map((solutionPackage, index) => (
             <PackageCard
-              className={cn(
-                "md:basis-1/2",
-                index === 0 && "border-r border-border-normal",
-              )}
-              key={index}
+              className="md:basis-1/2"
+              key={solutionPackage.title ?? index}
               {...solutionPackage}
             />
           ))}
         </div>
-      </Container>
+      </div>
       <Container>
         <FeaturedTextList
           {...footer}

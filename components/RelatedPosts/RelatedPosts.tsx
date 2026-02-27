@@ -33,29 +33,29 @@ export const RelatedPosts = ({
   return (
     <Container {...props} className={cn("mb-10", className)} noPadding>
       <Container className="border-b border-border-normal">
-        <h2 className="border-x border-border-normal font-medium font-mono px-5 py-6 uppercase lg:px-8">
+        <h2 className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal font-medium font-mono px-5 py-6 uppercase lg:px-8">
           {title}
         </h2>
       </Container>
-      <Container
-        className="border-b border-border-normal"
-        displays={{ lg: "flex" }}
-      >
-        {displayItems.map((item, index) => (
-          <Container
-            className="border-border-normal last:border-b-0 max-lg:border-b lg:first:border-l lg:last:border-r"
-            key={`${item.href}-${index}`}
-            noPadding
-          >
-            <Link className="block w-full" href={item.href}>
-              <ResourceCard
-                {...item}
-                className="w-full max-lg:border-b max-lg:border-border-normal max-lg:last:border-b-0 md:max-lg:border-x"
-              />
-            </Link>
-          </Container>
-        ))}
-      </Container>
+
+      <div className="border-b border-border-normal">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto flex">
+          {displayItems.map((item, index) => (
+            <Container
+              className="border-border-normal last:border-b-0 max-lg:border-b lg:first:border-l lg:last:border-r"
+              key={`${item.href}-${index}`}
+              noPadding
+            >
+              <Link className="block w-full" href={item.href}>
+                <ResourceCard
+                  {...item}
+                  className="w-full max-lg:border-b max-lg:border-border-normal max-lg:last:border-b-0 md:max-lg:border-x"
+                />
+              </Link>
+            </Container>
+          ))}
+        </div>
+      </div>
     </Container>
   );
 };

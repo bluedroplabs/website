@@ -12,6 +12,8 @@
   --breakpoint-3xl: 1600px;
   --breakpoint-4xl: 1920px;
   --breakpoint-5xl: 2160px;
+  --breakpoint-6xl: 2560px;
+  --breakpoint-7xl: 3072px;
 
   /* Typography */
   --text-size-12: 0.75rem;
@@ -171,7 +173,7 @@ body {
   font-family: var(--font-sans);
   font-weight: 300;
   line-height: 1.5;
-  max-width: var(--breakpoint-5xl);
+  max-width: var(--breakpoint-7xl);
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -189,7 +191,7 @@ body {
 .bg-dotted {
   background-image: radial-gradient(
     circle,
-    var(--color-brand-aqua) 0.0225rem,
+    color-mix(in srgb, var(--color-brand-aqua) 30%, transparent) 0.0225rem,
     transparent 0.0625rem
   );
   background-size: 0.90625rem 0.90625rem;

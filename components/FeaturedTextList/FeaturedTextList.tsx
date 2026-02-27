@@ -3,7 +3,6 @@
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils/classes";
 import parse from "html-react-parser";
-import { CONTAINER_PADDING } from "../Container/Container.constants";
 import type { IFeaturedTextList } from "./FeaturedTextList.types";
 
 export const FeaturedTextList = ({
@@ -16,15 +15,21 @@ export const FeaturedTextList = ({
   if (!items || items.length === 0) return null;
 
   return (
-    <Container className={className} noPadding {...props}>
+    <Container
+      className={cn(
+        "max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal",
+        className,
+      )}
+      {...props}
+    >
       <div
         className={cn(
-          "flex py-14 max-lg:flex-col max-lg:gap-8 lg:py-20",
-          !noPadding && CONTAINER_PADDING,
+          "flex py-14 max-lg:flex-col max-lg:gap-8 px-0",
+          !noPadding,
         )}
       >
         {title && (
-          <h2 className="leading-[1.25] font-medium text-size-24 lg:pl-16 lg:text-size-32 lg:w-[31.148%]">
+          <h2 className="leading-[1.25] font-medium text-size-24 lg:text-size-32 lg:w-[31.148%]">
             {title}
           </h2>
         )}

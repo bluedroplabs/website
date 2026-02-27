@@ -1,97 +1,86 @@
 "use client";
 
 import { Container } from "@/components/Container/Container";
+import { ContentBlock } from "@/components/ContentBlock/ContentBlock";
+import { IconCard } from "@/components/IconCard/IconCard";
 import { cn } from "@/utils";
-import { CONTAINER_PADDING } from "../Container/Container.constants";
-import { ContentBlock } from "../ContentBlock/ContentBlock";
-import { IconCard } from "../IconCard/IconCard";
 import type { IFeaturedIconListGrid } from "./FeaturedIconListGrid.types";
 
-const styles = {
-  contentBlock: cn(
-    "pb-8 pt-14 lg:border-x lg:border-border-normal lg:pb-12 lg:pt-25",
-    CONTAINER_PADDING,
-  ),
-  description: "mt-5 [&_strong]:font-medium",
-  eyebrow: "mb-5 lg:mb-4",
-  list: cn(
-    "grid grid-cols-2 lg:grid-cols-3 overflow-hidden group",
-    CONTAINER_PADDING,
-  ),
-  listItem: cn(
-    "border-l border-border-normal px-5 py-8 relative lg:p-10",
-    "max-lg:[&:nth-child(even)]:border-r lg:[&:nth-child(3n+3)]:border-r",
-    "after:absolute after:left-0 after:bottom-0 after:bg-border-normal",
-    "before:absolute before:left-0 before:top-0 before:bg-border-normal",
-    "max-lg:[&:nth-child(odd)]:before:h-px max-lg:[&:nth-child(odd)]:before:w-screen",
-    "max-md:[&:nth-child(odd)]:before:-left-5 max-lg:[&:nth-child(odd)]:before:-left-8",
-    "max-lg:[&:nth-last-child(2)]:after:h-px max-lg:[&:nth-last-child(2)]:after:w-screen",
-    "max-md:[&:nth-last-child(2)]:after:-left-5 max-lg:[&:nth-last-child(2)]:after:-left-8",
-    "max-lg:group-has-[[data-last-full-width]]:[&:nth-last-child(2)]:[&::after]:hidden",
-    "max-lg:group-has-[[data-last-full-width]]:[&:nth-last-child(3)]:[&::after]:hidden",
-    "lg:[&:nth-last-child(3)]:after:h-px lg:[&:nth-last-child(3)]:after:w-screen",
-    "lg:[&:nth-last-child(3)]:after:-left-10 xl:[&:nth-last-child(3)]:after:-left-20",
-    "lg:[&:nth-child(3n+1)]:before:h-px lg:[&:nth-child(3n+1)]:before:w-screen",
-    "lg:[&:nth-child(3n+1)]:before:-left-10 xl:[&:nth-child(3n+1)]:before:-left-20",
-  ),
-  lastItemFullWidth: cn(
-    "max-lg:col-span-2 max-lg:border-r max-lg:border-border-normal max-lg:border-l",
-    "max-lg:after:h-px max-lg:after:w-screen max-md:after:-left-5 max-lg:after:-left-8",
-  ),
-};
+const MOBILE_COLS = 2;
+const LG_COLS = 3;
+
+function getGridItemClasses(index: number, total: number): string {
+  const lastRowStartMobile =
+    total > 0 ? Math.floor((total - 1) / MOBILE_COLS) * MOBILE_COLS : 0;
+  const lastRowStartLg =
+    total > 0 ? Math.floor((total - 1) / LG_COLS) * LG_COLS : 0;
+
+  const isLastColMobile = index % MOBILE_COLS === MOBILE_COLS - 1;
+  const isLastColLg = index % LG_COLS === LG_COLS - 1;
+  const isLastRowMobile = index >= lastRowStartMobile;
+  const isLastRowLg = index >= lastRowStartLg;
+  const isSingleItemInLastMobileRow =
+    total % MOBILE_COLS === 1 && index === total - 1;
+
+  return cn(
+    "border-border-normal border-r px-5 py-8 lg:p-10 border-b",
+    isSingleItemInLastMobileRow && "col-span-2 lg:col-span-1",
+    isLastColLg && "lg:border-r-0",
+    isLastColMobile && "max-lg:border-r-0",
+    isLastRowMobile && "max-lg:border-b-0",
+    isLastRowLg && "lg:border-b-0",
+  );
+}
 
 export const FeaturedIconListGrid = ({
   className,
-  description,
   eyebrow,
-  items,
   title,
+  description,
+  items = [],
   variant = "inline",
-  ...props
 }: IFeaturedIconListGrid) => {
-  if (!items || items.length === 0) return null;
-
-  const formattedItems = [...items];
-
-  while (formattedItems.length % 3 !== 0) {
-    formattedItems.push({} as (typeof items)[number]);
-  }
+  const hasItems = items.length > 0;
 
   return (
-    <Container
-      className={cn("border-t border-border-normal", className)}
-      noPadding
-      {...props}
-    >
-      <ContentBlock
-        className={styles.contentBlock}
-        description={description}
-        descriptionClassName={styles.description}
-        eyebrow={eyebrow}
-        eyebrowClassName={styles.eyebrow}
-        eyebrowVariant="highlight"
-        title={title}
-        variant={variant}
-      />
-      <ul className={styles.list}>
-        {formattedItems.map((item, index) => {
-          const isLastRealItem = index === items.length - 1;
-          const isLastItemFullWidth = isLastRealItem && items.length % 2 === 1;
-          return (
-            <li
-              aria-hidden={!item.icon}
-              className={cn(
-                styles.listItem,
-                isLastItemFullWidth && styles.lastItemFullWidth,
-              )}
-              data-last-full-width={isLastItemFullWidth ? "" : undefined}
-              key={index}
+    <section className={cn("border-t border-border-normal", className)}>
+      <div className="border-b border-border-normal">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-0">
+          <div className="border-x border-border-normal">
+            <Container
+              className="py-16 lg:py-24 px-5 md:px-8 lg:px-10 xl:px-20"
+              noPadding
             >
-              <IconCard {...item} />
-            </li>
-          );
-        })}
-      </ul>
-    </Container>
+              <ContentBlock
+                description={description}
+                descriptionClassName="mt-5 text-fg-muted max-w-154.5"
+                eyebrow={eyebrow}
+                eyebrowClassName="mb-4"
+                eyebrowVariant="highlight"
+                title={title}
+                variant={variant}
+              />
+            </Container>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
+        {hasItems && (
+          <div className="border-x border-border-normal">
+            <div className="grid grid-cols-2 lg:grid-cols-3">
+              {items.map((item, index) => (
+                <div
+                  className={getGridItemClasses(index, items.length)}
+                  key={index}
+                >
+                  <IconCard {...item} />
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 };

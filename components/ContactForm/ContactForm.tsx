@@ -10,7 +10,7 @@ import { useRef, useState } from "react";
 import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
 const styles = {
-  container: "border-t border-border-normal",
+  container: "max-w-[var(--breakpoint-2xl)]",
   wrapper: "max-lg:!px-0 lg:flex",
   leftColumn:
     "flex flex-col justify-between max-lg:mb-12 lg:w-1/2 px-14 py-14 border-x border-border-normal",
@@ -90,93 +90,102 @@ export const ContactForm = ({
   };
 
   return (
-    <Container className={cn(styles.container, className)} {...props} noPadding>
-      <Container className={styles.wrapper} displays={{ lg: "flex" }}>
-        {/* Left Column - Contact Info */}
-        <div className={styles.leftColumn}>
-          <div>
-            {contactTitle && <h2 className={styles.title}>{contactTitle}</h2>}
-            {contactDescription && (
-              <p className={styles.description}>{contactDescription}</p>
-            )}
-          </div>
-          <div>
-            {(contactEmail || bookCallLink) && (
-              <div className={styles.contactLinks}>
-                <p className={styles.separator}>OR REACH US AT</p>
+    <div className="border-t border-border-normal">
+      <Container
+        className={cn(styles.container, className)}
+        {...props}
+        noPadding
+      >
+        <Container className={styles.wrapper} displays={{ lg: "flex" }}>
+          {/* Left Column - Contact Info */}
+          <div className={styles.leftColumn}>
+            <div>
+              {contactTitle && <h2 className={styles.title}>{contactTitle}</h2>}
+              {contactDescription && (
+                <p className={styles.description}>{contactDescription}</p>
+              )}
+            </div>
+            <div>
+              {(contactEmail || bookCallLink) && (
                 <div className={styles.contactLinks}>
-                  {contactEmail && (
-                    <a
-                      className={styles.contactLink}
-                      href={contactEmailHref || `mailto:${contactEmail}`}
-                    >
-                      <span className={styles.contactLinkText}>
-                        {contactEmail}
-                      </span>
-                      <ArrowRightDownIcon className="size-4 text-default-heading" />
-                    </a>
-                  )}
-                  {bookCallLink && (
-                    <a className={styles.contactLink} href={bookCallLink.href}>
-                      <span className={styles.contactLinkText}>
-                        {bookCallLink.children}
-                      </span>
-                      <ArrowRightDownIcon className="size-4 text-default-heading" />
-                    </a>
+                  <p className={styles.separator}>OR REACH US AT</p>
+                  <div className={styles.contactLinks}>
+                    {contactEmail && (
+                      <a
+                        className={styles.contactLink}
+                        href={contactEmailHref || `mailto:${contactEmail}`}
+                      >
+                        <span className={styles.contactLinkText}>
+                          {contactEmail}
+                        </span>
+                        <ArrowRightDownIcon className="size-4 text-default-heading" />
+                      </a>
+                    )}
+                    {bookCallLink && (
+                      <a
+                        className={styles.contactLink}
+                        href={bookCallLink.href}
+                      >
+                        <span className={styles.contactLinkText}>
+                          {bookCallLink.children}
+                        </span>
+                        <ArrowRightDownIcon className="size-4 text-default-heading" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Right Column - Contact Form */}
+          <div className={styles.rightColumn}>
+            <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
+              {fields.map((field) => (
+                <div className={styles.fieldGroup} key={field.name}>
+                  <label className={styles.label} htmlFor={field.name}>
+                    {field.label}
+                    {field.labelSuffix && ` ${field.labelSuffix}`}
+                  </label>
+                  {field.type === "textarea" ? (
+                    <textarea
+                      className={styles.textarea}
+                      id={field.name}
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      required={field.required}
+                    />
+                  ) : (
+                    <input
+                      className={styles.input}
+                      id={field.name}
+                      name={field.name}
+                      placeholder={field.placeholder}
+                      required={field.required}
+                      type={field.type || "text"}
+                    />
                   )}
                 </div>
-              </div>
-            )}
+              ))}
+
+              <Button
+                className={styles.submitButton}
+                disabled={isPending}
+                type="submit"
+              >
+                {isPending ? "SENDING..." : submitButtonText}
+              </Button>
+            </form>
           </div>
-        </div>
 
-        {/* Right Column - Contact Form */}
-        <div className={styles.rightColumn}>
-          <form className={styles.form} onSubmit={handleSubmit} ref={formRef}>
-            {fields.map((field) => (
-              <div className={styles.fieldGroup} key={field.name}>
-                <label className={styles.label} htmlFor={field.name}>
-                  {field.label}
-                  {field.labelSuffix && ` ${field.labelSuffix}`}
-                </label>
-                {field.type === "textarea" ? (
-                  <textarea
-                    className={styles.textarea}
-                    id={field.name}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    required={field.required}
-                  />
-                ) : (
-                  <input
-                    className={styles.input}
-                    id={field.name}
-                    name={field.name}
-                    placeholder={field.placeholder}
-                    required={field.required}
-                    type={field.type || "text"}
-                  />
-                )}
-              </div>
-            ))}
-
-            <Button
-              className={styles.submitButton}
-              disabled={isPending}
-              type="submit"
-            >
-              {isPending ? "SENDING..." : submitButtonText}
-            </Button>
-          </form>
-        </div>
-
-        {showToast && (
-          <Toast
-            message="Message sent successfully!"
-            onDismiss={() => setShowToast(false)}
-          />
-        )}
+          {showToast && (
+            <Toast
+              message="Message sent successfully!"
+              onDismiss={() => setShowToast(false)}
+            />
+          )}
+        </Container>
       </Container>
-    </Container>
+    </div>
   );
 };

@@ -11,9 +11,10 @@ import type { IBasic1Up } from "./Basic1Up.types";
 import type { IImage } from "@/types/image.types";
 
 const dottedBgClasses = [
-  "size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+1.25rem)]",
+  "size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+0.25rem)]",
   "before:bg-deep-green-5 before:content-[''] before:absolute before:inset-0 before:-z-10 before:size-full",
-  "border-border-light border-l border-solid min-h-0 overflow-hidden",
+  "after:absolute after:left-0 after:top-0 after:z-[0] after:h-full after:w-px after:bg-deep-green-5 after:content-['']",
+  "border-border-light border-solid min-h-0 overflow-hidden",
 ];
 
 const figureClasses = [
@@ -27,20 +28,28 @@ const descriptionClasses =
 interface Basic1UpAssetProps extends HTMLAttributes<HTMLDivElement> {
   image: IImage;
   isDarkMode: boolean;
+  isLeft?: boolean;
 }
 
 function Basic1UpAsset({
   image,
   isDarkMode,
+  isLeft,
   className,
   ...figureProps
 }: Basic1UpAssetProps) {
   const { srcLight, ...imageProps } = image;
   const src = isDarkMode && srcLight ? srcLight : image.src;
 
+  const borderClassName = isLeft
+    ? "border-l border-border-normal"
+    : "border-r border-border-normal";
+
   return (
-    <DottedBackground className={cn(dottedBgClasses, className)}>
-      <div className="flex items-end size-full">
+    <DottedBackground
+      className={cn(dottedBgClasses, borderClassName, className)}
+    >
+      <div className="flex size-full">
         <figure className={cn(figureClasses)} {...figureProps}>
           <Image
             {...imageProps}
@@ -72,26 +81,26 @@ export function Basic1Up({
 
   const contentBlockClassName = cn(
     "md:col-span-6 flex flex-col justify-center px-6 py-12 md:px-8 md:py-25 lg:px-16 2xl:py-25",
-    isLeft ? "md:-mr-5" : "md:-ml-5",
   );
 
-  const assetMobileClassName = cn(
-    "md:-ml-5 px-6 py-12 md:px-8 md:py-20 lg:px-16 2xl:py-20",
-    !isLeft && "md:hidden",
-  );
+  const assetMobileClassName = cn(!isLeft && "md:hidden");
 
   return (
     <Container
       {...props}
-      className={cn("border border-border-normal border-solid", className)}
+      className={cn(
+        "border border-border-normal border-solid max-w-[var(--breakpoint-2xl)] mx-auto ",
+        className,
+      )}
       displays={{ md: "grid" }}
       noPadding
     >
       {!isLeft && (
         <Basic1UpAsset
-          className="max-md:hidden md:-mr-5"
+          className="max-md:hidden"
           image={image}
           isDarkMode={isDarkMode}
+          isLeft={false}
         />
       )}
       <ContentBlock
@@ -113,6 +122,7 @@ export function Basic1Up({
         className={assetMobileClassName}
         image={image}
         isDarkMode={isDarkMode}
+        isLeft={isLeft}
       />
     </Container>
   );

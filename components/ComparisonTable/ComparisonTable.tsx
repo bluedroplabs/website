@@ -16,7 +16,7 @@ const styles = {
   cell: "relative border-l border-border-normal",
   checkIcon: "size-8 mx-auto text-icon-hover",
   contentBlock:
-    "border-x border-border-normal mx-6 pb-8 px-6 pt-14  lg:pb-12 lg:pt-25",
+    "border-x border-border-normal pb-8 px-6 pt-14  lg:pb-12 lg:pt-25",
   contentBlockWrapper: "border-b border-border-normal",
   contentDescription: "mt-5",
   contentTitle: "mt-5",
@@ -25,7 +25,7 @@ const styles = {
   row: "font-semibold text-lg",
   rowHeader: "px-6 py-4 max-lg:text-base lg:px-8 lg:py-7",
   table: "min-w-120 w-full table-fixed overflow-hidden",
-  tableWrapper: "mx-6 border-x border-border-normal",
+  tableWrapper: "border-x border-border-normal",
   th: "font-medium px-6 py-5.25 relative text-center text-xl max-lg:px-6.25 max-lg:text-base",
   thBorderLeft: "border-l border-border-normal",
   thHeaderWrapper: "flex justify-center",
@@ -62,93 +62,111 @@ export const ComparisonTable = ({
   const columnWidth = `${100 / totalColumns}%`;
 
   return (
-    <Container className={className} noPadding {...props}>
-      <div className={styles.contentBlockWrapper}>
-        <ContentBlock
-          className={styles.contentBlock}
-          description={description}
-          descriptionClassName={styles.contentDescription}
-          eyebrow={eyebrow}
-          eyebrowVariant="highlight"
-          title={title}
-          titleClassName={styles.contentTitle}
-          variant="center"
-        />
-      </div>
-      <div className={styles.tableWrapper}>
-        <ScrollArea className="w-full">
-          <table className={styles.table}>
-            <colgroup>
-              {Array.from({ length: totalColumns }).map((_, i) => (
-                <col key={i} style={{ width: columnWidth }} />
-              ))}
-            </colgroup>
-
-            {caption && <caption className="sr-only">{caption}</caption>}
-            <thead>
-              <tr>
-                {columns.map(({ header }, index) => (
-                  <th
-                    className={cn(
-                      styles.th,
-                      index !== 0 && styles.thBorderLeft,
-                    )}
-                    key={index}
-                    scope="col"
-                  >
-                    <div className={styles.thHeaderWrapper}>
-                      {renderHeaderContent(header)}
-                    </div>
-                  </th>
+    <div className="w-full">
+      <Container
+        className={cn(
+          "max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-0",
+          className,
+        )}
+        noPadding
+        {...props}
+      >
+        <div>
+          <div className={styles.contentBlockWrapper}>
+            <ContentBlock
+              className={styles.contentBlock}
+              description={description}
+              descriptionClassName={styles.contentDescription}
+              eyebrow={eyebrow}
+              eyebrowVariant="highlight"
+              title={title}
+              titleClassName={styles.contentTitle}
+              variant="center"
+            />
+          </div>
+        </div>
+        <div className={styles.tableWrapper}>
+          <ScrollArea className="w-full">
+            <table className={styles.table}>
+              <colgroup>
+                {Array.from({ length: totalColumns }).map((_, i) => (
+                  <col key={i} style={{ width: columnWidth }} />
                 ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map(({ label, values }, index) => (
-                <tr className={styles.row} key={index}>
-                  <td className={styles.rowHeader} scope="row">
-                    {label}
-                  </td>
-                  {values.map((value, colIndex) => {
-                    const { isHighlighted, name } = columns[colIndex + 1] || {};
-                    const ariaLabel = `${value ? "Included in" : "Not included in"} ${name}`;
+              </colgroup>
 
-                    return (
-                      <td
-                        aria-label={ariaLabel}
-                        className={styles.cell}
-                        key={colIndex}
-                        scope="row"
-                      >
-                        {value ? (
-                          <CheckIcon aria-hidden className={styles.checkIcon} />
-                        ) : (
-                          <CrossIcon aria-hidden className={styles.crossIcon} />
-                        )}
-
-                        {index === rows.length - 1 && isHighlighted && (
-                          <>
-                            <ComparisonTableHighlightsSmallBg
-                              className={cn("lg:hidden", styles.highlightBg)}
-                            />
-                            <ComparisonTableHighlightBg
-                              className={cn(
-                                "max-lg:hidden",
-                                styles.highlightBg,
-                              )}
-                            />
-                          </>
-                        )}
-                      </td>
-                    );
-                  })}
+              {caption && <caption className="sr-only">{caption}</caption>}
+              <thead>
+                <tr>
+                  {columns.map(({ header }, index) => (
+                    <th
+                      className={cn(
+                        styles.th,
+                        index !== 0 && styles.thBorderLeft,
+                      )}
+                      key={index}
+                      scope="col"
+                    >
+                      <div className={styles.thHeaderWrapper}>
+                        {renderHeaderContent(header)}
+                      </div>
+                    </th>
+                  ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-      </div>
-    </Container>
+              </thead>
+              <tbody>
+                {rows.map(({ label, values }, index) => (
+                  <tr className={styles.row} key={index}>
+                    <td className={styles.rowHeader} scope="row">
+                      {label}
+                    </td>
+                    {values.map((value, colIndex) => {
+                      const { isHighlighted, name } =
+                        columns[colIndex + 1] || {};
+                      const ariaLabel = `${value ? "Included in" : "Not included in"} ${name}`;
+
+                      return (
+                        <td
+                          aria-label={ariaLabel}
+                          className={styles.cell}
+                          key={colIndex}
+                          scope="row"
+                        >
+                          {value ? (
+                            <CheckIcon
+                              aria-hidden
+                              className={styles.checkIcon}
+                            />
+                          ) : (
+                            <CrossIcon
+                              aria-hidden
+                              className={styles.crossIcon}
+                            />
+                          )}
+
+                          {index === rows.length - 1 && isHighlighted && (
+                            <>
+                              <ComparisonTableHighlightsSmallBg
+                                className={cn("lg:hidden", styles.highlightBg)}
+                              />
+                              <ComparisonTableHighlightBg
+                                className={cn(
+                                  "max-lg:hidden",
+                                  styles.highlightBg,
+                                )}
+                              />
+                            </>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
+        </div>
+      </Container>
+    </div>
   );
 };

@@ -13,7 +13,7 @@ import type { INavigation } from "./Navigation.types";
 
 const styles = {
   container:
-    "flex min-h-16 items-center justify-between max-w-540 mx-auto px-5 py-3 max-sm:py-0 max-sm:pr-0 sticky top-0 bg-page-default w-full z-50 before:absolute before:border-b before:border-border-normal before:w-screen before:bottom-0 before:left-1/2 before:-translate-x-1/2",
+    "flex min-h-16 items-center justify-between mx-auto px-5 py-3 max-sm:py-0 max-sm:pr-0 sticky top-0 bg-page-default w-full z-50 before:absolute before:border-b before:border-border-normal before:w-screen before:bottom-0 before:left-1/2 before:-translate-x-1/2",
   link: "text-interactive-nav font-normal",
   list: "flex gap-x-4 xl:gap-x-8",
   logo: "h-8 max-w-39.5 relative w-full lg:h-9",
@@ -78,7 +78,9 @@ export const Navigation = ({
           <Button
             {...cta}
             className={cn(
-              "max-lg:flex max-lg:min-w-14 max-lg:flex-col max-lg:px-4 max-lg:py-3 max-lg:leading-tight max-lg:whitespace-normal max-lg:w-24",
+              "max-lg:flex max-lg:min-w-14 max-lg:px-4 max-lg:py-3 max-lg:leading-tight",
+              "max-sm:flex-col max-sm:whitespace-normal max-sm:w-24",
+              "sm:whitespace-nowrap",
             )}
             size="lg"
             variant="special"
