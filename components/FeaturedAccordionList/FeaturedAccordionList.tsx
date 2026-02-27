@@ -26,40 +26,42 @@ export const FeaturedAccordionList = ({
   );
 
   return (
-    <Container
-      className={cn(
-        "border-t border-border-normal py-14 lg:gap-x-10 lg:py-20",
-        className,
-      )}
-      displays={{ lg: "flex" }}
-      {...props}
-    >
-      <ContentBlock
-        className="lg:basis-1/2"
-        description={description}
-        descriptionClassName="mt-5"
-        title={title}
-      />
-      <Accordion
-        className="max-lg:mt-10 lg:basis-1/2"
-        collapsible
-        type="single"
+    <div className="border-t border-border-normal">
+      <Container
+        className={cn(
+          "mx-auto max-w-[var(--breakpoint-2xl)] px-6 md:px-16 lg:px-20 py-14 md:py-16 lg:py-20",
+          className,
+        )}
+        displays={{ lg: "flex" }}
+        {...props}
       >
-        {filteredItems.map((item, index) => (
-          <AccordionItem
-            className="border-t border-border-normal leading-[1.25] text-size-20"
-            key={index}
-            value={index.toString()}
-          >
-            <AccordionTrigger className="py-6 font-semibold">
-              {item.title}
-            </AccordionTrigger>
-            <AccordionContent className="pb-8">
-              {parse(item.content)}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-    </Container>
+        <ContentBlock
+          className="lg:basis-1/2"
+          description={description}
+          descriptionClassName="mt-5"
+          title={title}
+        />
+        <Accordion
+          className="max-lg:mt-10 lg:basis-1/2"
+          collapsible
+          type="single"
+        >
+          {filteredItems.map((item, index) => (
+            <AccordionItem
+              className="border-t border-border-normal leading-[1.25] text-size-20"
+              key={index}
+              value={index.toString()}
+            >
+              <AccordionTrigger className="py-6 font-semibold">
+                {item.title}
+              </AccordionTrigger>
+              <AccordionContent className="pb-8">
+                {parse(item.content)}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </Container>
+    </div>
   );
 };
