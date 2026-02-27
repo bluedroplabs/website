@@ -117,79 +117,81 @@ export const CardGrid = ({
   return (
     <Container className={className} noPadding {...props}>
       <section>
-        <Container className="border-t border-border-normal max-md:px-0">
-          <div className="border-x border-border-normal flex gap-x-8 items-center justify-between px-5 py-4 lg:px-8 lg:py-6">
-            <SearchBar
-              className="w-full"
-              onSubmit={(e) => {
-                e.preventDefault();
-                setSearchTerm(e.currentTarget.search.value);
-              }}
-            />
-            {filters?.map((filter) => (
-              <MultiSelect
-                {...filter}
-                className="whitespace-nowrap max-md:hidden"
-                key={filter.name}
-                onChange={handleFilterChange(filter.name)}
+        <div className="border-t border-border-normal">
+          <div className="max-w-[var(--breakpoint-2xl)] mx-auto">
+            <div className="border-x border-border-normal flex gap-x-8 items-center justify-between px-5 py-4 lg:px-8 lg:py-6">
+              <SearchBar
+                className="w-full"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  setSearchTerm(e.currentTarget.search.value);
+                }}
               />
-            ))}
+              {filters?.map((filter) => (
+                <MultiSelect
+                  {...filter}
+                  className="whitespace-nowrap max-md:hidden"
+                  key={filter.name}
+                  onChange={handleFilterChange(filter.name)}
+                />
+              ))}
+            </div>
           </div>
-        </Container>
+        </div>
         {hasFilteredResults ? (
           <>
             {featuredItem && (
-              <Container className="max-md:px-0 md:border-t md:border-border-normal">
-                <div className="border-x border-border-normal">
-                  <Link
-                    className="w-full lg:col-span-3"
-                    href={featuredItem.href}
-                  >
-                    <ResourceCard
-                      {...featuredItem}
-                      className="border-t border-border-normal"
-                      variant="featured"
-                    />
-                  </Link>
+              <div className="border-t border-border-normal">
+                <div className="max-w-[var(--breakpoint-2xl)]  md:max-w-[var(--breakpoint-xl)]  mx-auto">
+                  <div className="border-x border-border-normal">
+                    <Link
+                      className="w-full lg:col-span-3"
+                      href={featuredItem.href}
+                    >
+                      <ResourceCard {...featuredItem} variant="featured" />
+                    </Link>
+                  </div>
                 </div>
-              </Container>
+              </div>
             )}
 
             {restItems.length > 0 && (
-              <Container className="max-md:px-0 md:border-t md:border-border-normal">
-                <div
-                  className={cn(
-                    "border-l border-border-normal md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 lg:items-stretch",
-                  )}
-                >
-                  {restItems.map((item, index) => {
-                    const isLast = index === restItems.length - 1;
-                    const columnInRow = index % 3;
-                    const showVerticalBorder = !isLast && columnInRow < 2;
+              <div className="border-t border-border-normal">
+                <div className="max-w-[var(--breakpoint-2xl)] md:max-w-[var(--breakpoint-xl)] mx-auto">
+                  <div
+                    className={cn(
+                      "border-l border-border-normal md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 lg:items-stretch",
+                    )}
+                  >
+                    {restItems.map((item, index) => {
+                      const isLast = index === restItems.length - 1;
+                      const columnInRow = index % 3;
+                      const showVerticalBorder = !isLast && columnInRow < 2;
 
-                    return (
-                      <Link
-                        className={cn(
-                          "w-full",
-                          "lg:h-full lg:border-border-normal lg:border-b lg:border-r",
-                          "md:border-border-normal md:border-b md:border-r",
-                        )}
-                        href={item.href}
-                        key={index}
-                      >
-                        <ResourceCard
-                          {...item}
+                      return (
+                        <Link
                           className={cn(
-                            "lg:h-full max-md:border-border-normal max-md:border-b",
-                            showVerticalBorder && "",
+                            "w-full",
+                            "lg:h-full lg:border-border-normal lg:border-b lg:border-r",
+                            "md:border-border-normal md:border-b md:border-r",
                           )}
-                          variant="default"
-                        />
-                      </Link>
-                    );
-                  })}
+                          href={item.href}
+                          key={index}
+                        >
+                          <ResourceCard
+                            {...item}
+                            className={cn(
+                              "lg:h-full max-md:border-border-normal max-md:border-b",
+                              showVerticalBorder && "",
+                            )}
+                            variant="default"
+                          />
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
-              </Container>
+              </div>
             )}
           </>
         ) : (
