@@ -14,7 +14,7 @@ const dottedBgClasses = [
   "size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+0.25rem)]",
   "before:bg-deep-green-5 before:content-[''] before:absolute before:inset-0 before:-z-10 before:size-full",
   "after:absolute after:left-0 after:top-0 after:z-[0] after:h-full after:w-px after:bg-deep-green-5 after:content-['']",
-  "border-border-light border-l border-solid min-h-0 overflow-hidden",
+  "border-border-light border-solid min-h-0 overflow-hidden",
 ];
 
 const figureClasses = [
@@ -28,19 +28,25 @@ const descriptionClasses =
 interface Basic1UpAssetProps extends HTMLAttributes<HTMLDivElement> {
   image: IImage;
   isDarkMode: boolean;
+  isLeft?: boolean;
 }
 
 function Basic1UpAsset({
   image,
   isDarkMode,
+  isLeft,
   className,
   ...figureProps
 }: Basic1UpAssetProps) {
   const { srcLight, ...imageProps } = image;
   const src = isDarkMode && srcLight ? srcLight : image.src;
 
+  const borderClassName = isLeft
+    ? "border-l border-border-normal"
+    : "border-r border-border-normal";
+
   return (
-    <DottedBackground className={cn(dottedBgClasses, className)}>
+    <DottedBackground className={cn(dottedBgClasses, borderClassName, className)}>
       <div className="flex size-full">
         <figure className={cn(figureClasses)} {...figureProps}>
           <Image
@@ -92,6 +98,7 @@ export function Basic1Up({
           className="max-md:hidden"
           image={image}
           isDarkMode={isDarkMode}
+          isLeft={false}
         />
       )}
       <ContentBlock
@@ -113,6 +120,7 @@ export function Basic1Up({
         className={assetMobileClassName}
         image={image}
         isDarkMode={isDarkMode}
+        isLeft={isLeft}
       />
     </Container>
   );

@@ -32,7 +32,7 @@ export const SolutionsPackage = ({
         </div>
       </div>
       <div className="border-b border-border-normal">
-        <div className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-bimage.pngorder-normal md:flex md:divide-x md:divide-border-normal">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal md:flex md:divide-x md:divide-border-normal">
           {packages.map((solutionPackage, index) => (
             <PackageCard
               className="md:basis-1/2"

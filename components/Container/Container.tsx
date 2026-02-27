@@ -56,7 +56,7 @@ export const Container = ({
   );
 
   const classNames = cn(
-    "relative w-full max-w-540 mx-auto",
+    "relative w-full mx-auto",
     !noPadding && CONTAINER_PADDING,
     displays.sm && styles.sm[displays.sm],
     displays.md && styles.md[displays.md],
