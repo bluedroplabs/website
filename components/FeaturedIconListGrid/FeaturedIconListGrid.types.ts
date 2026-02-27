@@ -9,6 +9,6 @@ export type TFeaturedIconListGridItem = Pick<
 
 export interface IFeaturedIconListGrid
   extends HTMLAttributes<HTMLElement>,
-    Pick<IContentBlock, "description" | "eyebrow" | "title"> {
+    Pick<IContentBlock, "description" | "eyebrow" | "title" | "variant"> {
   items?: TFeaturedIconListGridItem[];
 }

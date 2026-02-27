@@ -12,33 +12,36 @@ export const FeaturedIconListGrid = ({
   title,
   description,
   items = [],
+  variant = "inline",
 }: IFeaturedIconListGrid) => {
   const hasItems = items.length > 0;
 
   return (
     <section className={cn("border-t border-border-normal", className)}>
-      <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
-        <div className="border-x border-border-normal">
-          <Container
-            className="py-16 lg:py-24 px-5 md:px-8 lg:px-10 xl:px-20"
-            noPadding
-          >
-            <ContentBlock
-              description={description}
-              descriptionClassName="mt-5 text-fg-muted max-w-154.5"
-              eyebrow={eyebrow}
-              eyebrowClassName="mb-4"
-              eyebrowVariant="highlight"
-              title={title}
-              titleClassName="font-light leading-tight"
-              titleVariant="lg"
-              variant="inline"
-            />
-          </Container>
+      <div className="border-b border-border-normal">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
+          <div className="border-x border-border-normal">
+            <Container
+              className="py-16 lg:py-24 px-5 md:px-8 lg:px-10 xl:px-20"
+              noPadding
+            >
+              <ContentBlock
+                description={description}
+                descriptionClassName="mt-5 text-fg-muted max-w-154.5"
+                eyebrow={eyebrow}
+                eyebrowClassName="mb-4"
+                eyebrowVariant="highlight"
+                title={title}
+                variant={variant}
+              />
+            </Container>
+          </div>
         </div>
+      </div>
 
+      <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
         {hasItems && (
-          <div className="border-l border-border-normal border-t">
+          <div className="border-l border-border-normal">
             <div className="grid grid-cols-2 lg:grid-cols-3">
               {items.map((item, index) => {
                 const lastRowStartIndex =
