@@ -59,7 +59,10 @@ export const FeaturedIconListGrid = ({
 
   return (
     <Container
-      className={cn("border-t border-border-normal", className)}
+      className={cn(
+        "border-t border-border-normal max-w-[var(--breakpoint-2xl)] mx-auto",
+        className,
+      )}
       noPadding
       {...props}
     >

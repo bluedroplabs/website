@@ -13,7 +13,7 @@ const FeaturedSolutionsGridRow = ({
   solutions: ISolutionCard[];
 }) => {
   return (
-    <div className="flex flex-col border-t border-border-normal lg:flex-row lg:px-10 xl:px-20">
+    <div className="flex flex-col lg:flex-row max-w-[var(--breakpoint-2xl)] mx-auto">
       {solutions.map((solution, index) => (
         <SolutionCard
           key={index}
@@ -48,13 +48,16 @@ export const FeaturedSolutionsGrid = ({
 
   return (
     <Container
-      className={cn("border-y border-border-normal bg-page-default", className)}
+      className={cn(
+        "border-y border-border-normal bg-page-default mx-auto",
+        className,
+      )}
       noPadding
       {...props}
     >
-      <div className="mx-auto w-full max-w-[1440px] px-5 md:px-8 lg:px-10 xl:px-20">
+      <div className="mx-auto max-w-[var(--breakpoint-2xl)] px-6 2xl:px-16 3xl:px-0">
         <ContentBlock
-          className="flex flex-col gap-6 py-12 lg:flex-row lg:items-start lg:pb-12 lg:pt-25"
+          className="flex flex-col gap-6 py-12 lg:flex-row lg:items-start lg:pb-12 lg:pt-25 lg:px-16"
           description={description}
           primaryCTA={primaryCTA}
           primaryCTAClassName="mt-2"
@@ -62,11 +65,15 @@ export const FeaturedSolutionsGrid = ({
           variant="inline"
         />
       </div>
-      <div className="grid">
-        {formattedSolutionsSet.map((solutions, index) => (
-          <FeaturedSolutionsGridRow key={index} solutions={solutions} />
-        ))}
-      </div>
+
+      {formattedSolutionsSet.map((solutions, index) => (
+        <div
+          className="grid w-full mx-auto border-t border-border-normal px-6 2xl:px-16 3xl:px-0"
+          key={index}
+        >
+          <FeaturedSolutionsGridRow solutions={solutions} />
+        </div>
+      ))}
     </Container>
   );
 };

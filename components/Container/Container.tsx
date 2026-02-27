@@ -14,7 +14,7 @@ const styles = {
   md: {
     block: "md:block",
     flex: "md:flex",
-    grid: "md:grid md:grid-cols-12 md:gap-x-10",
+    grid: "md:grid md:grid-cols-12 md:gap-x-0",
   },
   lg: {
     block: "lg:block",
@@ -42,7 +42,6 @@ export const Container = ({
 }: IContainer) => {
   const Comp = asChild ? Slot : "div";
 
-  // Form-only props are only valid on <input> or <button>; strip when spreading onto div/Slot
   const FORM_ONLY_KEYS = [
     "formAction",
     "formMethod",

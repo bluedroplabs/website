@@ -20,41 +20,43 @@ export const FeaturedIconGrid = ({
   if (!items || items.length === 0) return null;
 
   return (
-    <Container
-      className={cn(
-        "border-t border-border-normal py-12 space-y-8 lg:py-20 lg:space-y-12",
-        className,
-      )}
-      displays={{ lg: "grid" }}
-      {...props}
-    >
-      <ContentBlock
-        className={variant === "inline" ? "lg:col-span-12" : "lg:col-span-8"}
-        description={description}
-        descriptionClassName={contentMargin}
-        eyebrow={eyebrow}
-        eyebrowVariant="highlight"
-        title={title}
-        titleClassName={contentMargin}
-        variant={variant}
-      />
+    <div className="border-t border-border-normal">
       <Container
-        asChild
-        className="col-span-full justify-between max-lg:space-y-8 md:max-lg:flex-wrap md:max-lg:gap-x-5"
-        displays={{ md: "flex", lg: "grid" }}
-        noPadding
+        className={cn(
+          "py-12 space-y-8 lg:py-20 lg:space-y-12 max-w-[var(--breakpoint-2xl)] mx-auto",
+          className,
+        )}
+        displays={{ lg: "grid" }}
+        {...props}
       >
-        <ul>
-          {items.map((item, index) => (
-            <li
-              className="md:basis-[calc(50%-0.625rem)] lg:col-span-3"
-              key={index}
-            >
-              <IconCard {...item} />
-            </li>
-          ))}
-        </ul>
+        <ContentBlock
+          className={variant === "inline" ? "lg:col-span-12" : "lg:col-span-8"}
+          description={description}
+          descriptionClassName={contentMargin}
+          eyebrow={eyebrow}
+          eyebrowVariant="highlight"
+          title={title}
+          titleClassName={contentMargin}
+          variant={variant}
+        />
+        <Container
+          asChild
+          className="col-span-full justify-between max-lg:space-y-8 md:max-lg:flex-wrap md:max-lg:gap-x-5"
+          displays={{ md: "flex", lg: "grid" }}
+          noPadding
+        >
+          <ul>
+            {items.map((item, index) => (
+              <li
+                className="md:basis-[calc(50%-0.625rem)] lg:col-span-3"
+                key={index}
+              >
+                <IconCard {...item} />
+              </li>
+            ))}
+          </ul>
+        </Container>
       </Container>
-    </Container>
+    </div>
   );
 };

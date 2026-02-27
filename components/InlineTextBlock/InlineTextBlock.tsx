@@ -17,7 +17,10 @@ export const InlineTextBlock = ({
 }: IInlineTextBlock) => {
   return (
     <Container
-      className={cn("border-t border-border-normal", className)}
+      className={cn(
+        "max-w-[var(--breakpoint-2xl)] mx-auto border-t border-border-normal",
+        className,
+      )}
       {...props}
     >
       <ContentBlock
