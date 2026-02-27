@@ -14,11 +14,11 @@ const bgVariantStyles: Record<TFeaturedTextBgVariant, string> = {
   none: "",
 };
 
-const contentBlockSizeVariants = cva("mx-auto", {
+const contentBlockSizeVariants = cva("mx-auto w-full", {
   variants: {
     variant: {
-      default: "max-w-207",
-      small: "max-w-154.5",
+      default: "max-w-full md:max-w-207",
+      small: "max-w-full md:max-w-154.5",
     },
   },
   defaultVariants: { variant: "default" },
@@ -27,35 +27,32 @@ const contentBlockSizeVariants = cva("mx-auto", {
 export const FeaturedText = ({
   author,
   bgVariant = "none",
-  className,
   description,
   eyebrow,
   title,
   variant = "default",
-  ...props
 }: IFeaturedText) => {
   return (
-    <div
-      className={cn("border-t border-border-normal mt-10 lg:mt-16", className)}
-      {...props}
-    >
-      <div className="max-w-[var(--breakpoint-2xl)] md:mx-auto">
+    <div className="border-t border-border-normal">
+      <div className="max-w-[var(--breakpoint-2xl)] md:mx-auto  px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
         <div className={cn("size-full", bgVariantStyles[bgVariant])}>
-          <DottedBackground className="border-x border-border-normal py-16 lg:py-30 w-full">
-            <ContentBlock
-              author={author}
-              authorClassName="mt-5 lg:mt-6"
-              className={contentBlockSizeVariants({ variant })}
-              description={description}
-              descriptionClassName="mt-5 lg:mt-6"
-              eyebrow={eyebrow}
-              eyebrowClassName="mb-6"
-              eyebrowVariant="highlight"
-              title={title}
-              titleClassName="font-light leading-[1.25] tracking-[0]"
-              titleVariant="md"
-              variant="center"
-            />
+          <DottedBackground className="border-x border-border-normal w-full">
+            <div className="flex justify-center px-10 py-14 md:px-14 md:py-14 lg:py-30">
+              <ContentBlock
+                author={author}
+                authorClassName="mt-5 lg:mt-6"
+                className={contentBlockSizeVariants({ variant })}
+                description={description}
+                descriptionClassName="mt-5 lg:mt-6"
+                eyebrow={eyebrow}
+                eyebrowClassName="mb-6"
+                eyebrowVariant="highlight"
+                title={title}
+                titleClassName="font-light leading-[1.25] tracking-[0]"
+                titleVariant="md"
+                variant="center"
+              />
+            </div>
           </DottedBackground>
         </div>
       </div>

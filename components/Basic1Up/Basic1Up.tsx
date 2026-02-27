@@ -89,7 +89,7 @@ export function Basic1Up({
     <Container
       {...props}
       className={cn(
-        "border border-border-normal border-solid max-w-[var(--breakpoint-2xl)] mx-auto",
+        "border border-border-normal border-solid max-w-[var(--breakpoint-2xl)] mx-auto ",
         className,
       )}
       displays={{ md: "grid" }}
