@@ -116,7 +116,7 @@ export function Basic1Up({
         primaryCTA={primaryCTA}
         secondaryCTA={secondaryCTA}
         title={title}
-        titleClassName="text-size-40 lg:text-size-48 leading-[1.1] tracking-tight py-0"
+        titleClassName="text-size-40 lg:text-size-48 leading-[1.1] tracking-tight py-0 mt-5"
       />
       <Basic1UpAsset
         className={assetMobileClassName}

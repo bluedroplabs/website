@@ -18,7 +18,7 @@ const FeaturedSolutionsGridRow = ({
         <SolutionCard
           key={index}
           {...solution}
-          className="w-full border-x border-border-normal lg:flex-1 [&:nth-child(2)]:border-l-0"
+          className="w-full border-x border-border-normal lg:flex-1 lg:[&:nth-child(2)]:border-l-0"
         />
       ))}
     </div>
@@ -68,7 +68,7 @@ export const FeaturedSolutionsGrid = ({
 
       {formattedSolutionsSet.map((solutions, index) => (
         <div
-          className="grid w-full mx-auto border-t border-border-normal px-6 2xl:px-16 3xl:px-0"
+          className="grid w-full mx-auto lg:border-t border-border-normal px-6 2xl:px-16 3xl:px-0"
           key={index}
         >
           <FeaturedSolutionsGridRow solutions={solutions} />

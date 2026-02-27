@@ -7,7 +7,7 @@ import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { ISolutionCard } from "./SolutionCard.types";
 
 const variants = cva(
-  "border-border-normal grid h-full max-lg:border-t pt-16 px-6 lg:px-16",
+  "border-border-normal grid h-full max-lg:border-t pt-12 px-6 lg:px-16",
   {
     variants: {
       variant: {
@@ -40,9 +40,9 @@ export const SolutionCard = ({
           description={description}
           descriptionClassName="font-light leading-[1.5] line-clamp-6 text-size-18 text-default-base"
           eyebrow={eyebrow}
-          eyebrowClassName="font-mono font-normal text-size-16 uppercase text-default-base"
+          eyebrowClassName="font-mono font-normal text-size-14 uppercase md:text-default-base"
           title={title}
-          titleClassName="font-medium leading-[1.1] line-clamp-3 text-size-32 tracking-[-0.02em] text-default-heading first:mt-0"
+          titleClassName="font-medium leading-[1.1] line-clamp-3 tracking-[-0.02em] first:mt-0"
           titleVariant="lg"
         />
         <div className="flex items-end">
