@@ -46,6 +46,19 @@ function filterItems(
   });
 }
 
+function isInLastRow(
+  index: number,
+  itemsLength: number,
+  itemsPerRow: number,
+): boolean {
+  if (itemsLength === 0 || itemsPerRow <= 0) return false;
+
+  const lastRowStartIndex =
+    Math.floor((itemsLength - 1) / itemsPerRow) * itemsPerRow;
+
+  return index >= lastRowStartIndex;
+}
+
 export const CardGrid = ({
   className,
   filters,
@@ -164,16 +177,25 @@ export const CardGrid = ({
                     )}
                   >
                     {restItems.map((item, index) => {
-                      const isLast = index === restItems.length - 1;
-                      const columnInRow = index % 3;
-                      const showVerticalBorder = !isLast && columnInRow < 2;
+                      const isLastRowLg = isInLastRow(
+                        index,
+                        restItems.length,
+                        3,
+                      );
+                      const isLastRowMd = isInLastRow(
+                        index,
+                        restItems.length,
+                        2,
+                      );
 
                       return (
                         <Link
                           className={cn(
                             "w-full",
-                            "lg:h-full lg:border-border-normal lg:border-b lg:border-r",
-                            "md:border-border-normal md:border-b md:border-r",
+                            "lg:h-full lg:border-border-normal lg:border-r",
+                            !isLastRowLg && "lg:border-b",
+                            "md:border-border-normal md:border-r",
+                            !isLastRowMd && "md:border-b",
                           )}
                           href={item.href}
                           key={index}
@@ -182,7 +204,6 @@ export const CardGrid = ({
                             {...item}
                             className={cn(
                               "lg:h-full max-md:border-border-normal max-md:border-b",
-                              showVerticalBorder && "",
                             )}
                             variant="default"
                           />
