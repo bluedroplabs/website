@@ -17,7 +17,7 @@ export const FeaturedTextList = ({
   return (
     <Container
       className={cn(
-        "max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal",
+        "3xl:max-w-[var(--breakpoint-2xl)] max-w-[var(--breakpoint-xl)] mx-auto border-x border-border-normal",
         className,
       )}
       {...props}
