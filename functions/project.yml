@@ -1,0 +1,9 @@
+packages:
+  - name: api
+    functions:
+      - name: newsletter
+        runtime: nodejs:22
+        web: true
+      - name: contact
+        runtime: nodejs:22
+        web: true
