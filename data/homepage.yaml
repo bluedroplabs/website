@@ -55,7 +55,7 @@ components:
     description: "High-performance hosting for Drupal and WordPress that scales with your success, not against it. Fixed, predictable pricing with direct access to experts. Get the advanced infrastructure you needs at a fraction of the cost."
     blockquote: "Most clients save 30-50% compared to Pantheon or Acquia while receiving better performance."
     image:
-      alt: "Placeholder image"
+      alt: "Blue Drop Labs platform abstract image"
       src: "/assets/platform-light.svg"
       srcLight: "/assets/platform-dark.svg"
     primaryCTA:
@@ -68,7 +68,7 @@ components:
   - type: GridSeparator
 
   - type: FeaturedSolutionsGrid
-    title: "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Design</strong><strong class='typewriter'>Wordpress</strong><strong class='typewriter'>Infrastructure</strong><strong class='typewriter'>React</strong><strong class='typewriter'>Strategy</strong><strong class='typewriter'>Next.js</strong><strong class='typewriter'>Technology</strong><strong class='typewriter'>PHP</strong> experts who set you up to scale"
+    title: "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Design</strong><strong class='typewriter'>WordPress</strong><strong class='typewriter'>Infrastructure</strong><strong class='typewriter'>React</strong><strong class='typewriter'>AI</strong><strong class='typewriter'>Next.js</strong><strong class='typewriter'>Strategy</strong><strong class='typewriter'>PHP</strong><strong class='typewriter'>Technology</strong> experts who set you up to scale"
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     primaryCTA:
       children: "View all solutions"
