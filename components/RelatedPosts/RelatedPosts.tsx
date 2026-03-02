@@ -39,10 +39,10 @@ export const RelatedPosts = ({
       </Container>
 
       <div className="border-b border-border-normal">
-        <div className="max-w-[var(--breakpoint-2xl)] mx-auto">
+        <div className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal flex flex-col lg:flex-row">
           {displayItems.map((item, index) => (
             <Container
-              className="border-border-normal border-b last:border-b-0"
+              className="border-border-normal max-lg:border-b max-lg:last:border-b-0 lg:flex-1 lg:border-l first:lg:border-l-0"
               key={`${item.href}-${index}`}
               noPadding
             >
