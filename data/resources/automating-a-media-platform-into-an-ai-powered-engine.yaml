@@ -17,33 +17,31 @@ components:
     components:
       - type: "RichText"
         content: |
-          <p>Stacker is a digital media company connecting thousands of brands with publishers to distribute stories worldwide. Their system used to be powered by spreadsheets, manual copying and pasting, and ad-hoc analytics reports. With so many manual processes, growth potential was limited.</p>
+          <p>Stacker is a content distribution platform connecting hundreds of brands with publishers to distribute stories worldwide. Their system used to be powered by spreadsheets, manual copying and pasting, and ad-hoc analytics reports. With so many manual processes, growth potential was limited.</p>
           <p>Blue Drop Labs helped Stacker evolve its platform with automated workflows, advanced analytics, and a modern customer portal that transformed how brands track and optimize their content distribution.</p>
       - type: "Metrics"
         title: "HIGHLIGHTS"
         metrics:
-          - value: "70%+ Annual Cost Reduction"
-            description: "Lower maintenance costs with superior functionality."
-          - value: "Saved Staff Hours"
-            description: "Automated workflows, eliminated manual data entry, and reduced human effort across the production process."
-          - value: "Faster Story Creation"
-            description: "Eliminated human intervention from a tedious, manual workflow—story production time dropped from 3 weeks to about 1 week."
-          - value: "Complete Platform Rebuild in 2 Months"
-            description: "Using modern Lambda micro-services on Blue Drop's cloud-agnostic framework, we created an architecture that eliminated database bottlenecks and server capacity constraints."
-          - value: "7 Year Partnership"
-            description: "Blue Drop Labs has managed media frameworks and platform evolution, including a full-time dedicated team focused on scaling the system."
+          - value: "Saved staff hours"
+            description: "Automated story submission and tracking processes eliminated over 10,000 emails over the course of 6 months."
+          - value: "Faster story pipeline"
+            description: "Time from story submission to publication dropped from 3 weeks to approximately 1 week."
+          - value: "Complete platform rebuild in 2 months"
+            description: "Using modern development practices, Blue Drop Labs designed and launched a full customer portal in an accelerated timeline, under budget."
+          - value: "5-year partnership"
+            description: "Blue Drop Labs has proven reliable through crisis response, strategic recommendations, and the ability to wear many hats depending on what Stacker needs."
       - type: "RichText"
         content: |
           <h2>The challenge: Scaling beyond spreadsheets and email</h2>
           <p>Stacker began with a very specific use case: distributing slideshows to a handful of partners. The systems were custom-built for that narrow purpose. As the industry evolved and Stacker grew, those systems became bottlenecks. The process looked like this:</p>
           <ul>
-            <li>Brands submitted content by emailing it to their Blue Drop rep.</li>
-            <li>Regular staff manually copy/paste/format content into Blue Drop's CMS.</li>
-            <li>When stories were published, staff had to manually refer to GTM tags for brands.</li>
-            <li>Results were tracked via spreadsheets that were shared with brands after.</li>
+            <li>Brands submitted content by sending links to their blog posts</li>
+            <li>Stacker staff manually copied and pasted content into their CMS</li>
+            <li>When stories were published, staff sent individual emails to notify brands</li>
+            <li>Results were tracked in Google spreadsheets that were shared back and forth</li>
           </ul>
           <p>There was no centralized analytics platform and no way for brands to track their stories through the production process.</p>
-          <p>Beyond operational inefficiencies, Stacker faced a strategic challenge. As a bootstrap startup without venture capital backing, they needed to invest smartly. They required a partner who understood how to deliver enterprise-grade solutions on a practical budget.</p>
+          <p>Beyond operational inefficiencies, Stacker faced a strategic challenge. As a bootstrapped startup without venture capital backing, they needed to invest smartly. They required a partner who understood how to deliver enterprise-grade solutions on a practical budget.</p>
           <p>We helped Stacker develop 3 iterations of the platform to solve these inefficiencies.</p>
       - type: "RichText"
         content: |
@@ -55,10 +53,10 @@ components:
           <h2>Version 2: The tracker</h2>
           <p>The second iteration tackled the submission and production workflow. We automated the entire story submission and tracking process:</p>
           <ul>
-            <li>Streamlined story workflow through the admin, reducing manual handoffs.</li>
-            <li>Pre-production concepts tracked through the pre-production stage.</li>
-            <li>Automation that monitors the system proactively, in key places across the pipeline.</li>
-            <li>Brands could be tracked for what they published in the ad server process.</li>
+            <li>Brands could submit stories directly through the portal</li>
+            <li>The system automatically tracked stories through each production stage</li>
+            <li>Automated notifications replaced thousands of manual emails</li>
+            <li>Brands could see exactly where their content was in the editorial process</li>
           </ul>
           <p>The impact was immediate and measurable. In just six months, Stacker eliminated approximately 10,000 manual emails. Story production time dropped from 3 weeks to about 1 week as the automation removed bottlenecks and manual handoffs.</p>
           <p>Version 2 automated existing processes and made them efficient, eliminating manual work without fundamentally changing the business model.</p>
@@ -67,12 +65,11 @@ components:
           <h2>Version 3: Insights, intelligence, and AI</h2>
           <p>Rather than merely automating existing processes, V3 introduced capabilities that were previously impossible.</p>
           <ul>
-            <li>Comprehensive Analytics Dashboard—to provide a bird's eye view of the system.</li>
-            <li>Quality Checks—for when Blue Drop Labs finds potential issues.</li>
-            <li>Component development—for developers to create new components.</li>
-            <li>AI-Powered Recommendations—for when the system recommends articles.</li>
+            <li><strong>Comprehensive Analytics Dashboard</strong>—Brands can track pickup numbers, page views, and detailed performance metrics across Stacker's partner network</li>
+            <li><strong>Quality Metrics</strong>—Not just how many pickups, but which ones. Household names versus smaller outlets, demographic breakdowns, and geographic distribution</li>
+            <li><strong>Comparative Benchmarking</strong>—Brands can see how their content performs compared to others in their category</li>
+            <li><strong>AI-Powered Recommendations</strong>—The system analyzes past performance and suggests story types and topics that are likely to perform well</li>
           </ul>
-          <p>This approach allowed Stacker to scale with intelligence built into the platform.</p>
       - type: "RichText"
         content: |
           <h2>Rapid development with a modern technology stack</h2>
@@ -80,13 +77,13 @@ components:
           <p>We built a design system that will be used across all of Stacker's web applications going forward, establishing consistency and accelerating future development. The decoupled architecture pulls data from multiple systems: ClickUp for task management, Stacker's data warehouse for analytics, and Drupal for content. More data sources can be integrated in the future. Front-end developers built components in Storybook while the back-end team built APIs in anticipation of what data those components would need.</p>
       - type: "RichText"
         content: |
-          <h2>7 years of innovation and stability</h2>
+          <h2>5 years of innovation and stability</h2>
           <p>The new portal and automation capabilities are only possible because of the stable foundation established earlier. The custom hosting platform we built eliminated daily outages and performance problems, giving Stacker the confidence to innovate.</p>
-          <p>The evolution from V1 to V3 demonstrates how thoughtful, incremental improvements compound over time. Each version built on the last, automating workflows, reducing costs, and eventually introducing capabilities that create new value rather than just efficiency. The proof has accumulated over the seven years of this strategic partnership.</p>
+          <p>The evolution from V1 to V3 demonstrates how thoughtful, incremental improvements compound over time. Each version built on the last, automating workflows, reducing costs, and eventually introducing capabilities that create new value rather than just efficiency. The proof has accumulated over the five years of this strategic partnership.</p>
       - type: "RichText"
         content: |
           <h2>A repeatable process</h2>
-          <p>For bootstrap startups and growing companies facing similar challenges—manual processes that don't scale, the need for enterprise features without enterprise budgets, the desire for a partner rather than just a vendor—Stacker's journey offers a roadmap.</p>
+          <p>For bootstrapped startups and growing companies facing similar challenges—manual processes that don't scale, the need for enterprise features without enterprise budgets, the desire for a partner rather than just a vendor—Stacker's journey offers a roadmap.</p>
           <p>Start with the biggest pain points. Automate what exists before building what's new. Build on stable foundations.</p>
           <p>Contact us to see how we can help you.</p>
     details:

@@ -54,7 +54,7 @@ const styles = {
     featured: "leading-[1]",
   },
   description: {
-    default: "mt-4 max-md:hidden hidden",
+    default: "mt-4 max-md:hidden",
     featured: "mt-4 max-md:hidden",
   },
   eyebrow: "max-md:text-size-14",

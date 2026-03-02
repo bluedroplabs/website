@@ -25,7 +25,7 @@ export const Wysiwyg = ({
 }: IWysiwyg) => {
   return (
     <div className={cn("border-t border-border-normal", className)} {...props}>
-      <div className="max-w-[var(--breakpoint-2xl)] mx-auto">
+      <div className="max-w-[var(--breakpoint-2xl)] mx-auto max-lg:px-4">
         <Container
           className="py-14 max-lg:!px-0 lg:border-x lg:border-border-normal lg:items-start lg:gap-x-30 lg:py-20"
           displays={{ sm: "flex" }}

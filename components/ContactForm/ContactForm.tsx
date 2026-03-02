@@ -11,7 +11,7 @@ import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
 const styles = {
   container: "max-w-[var(--breakpoint-2xl)]",
-  wrapper: "max-lg:!px-0 lg:flex",
+  wrapper: "flex flex-col-reverse max-lg:!px-0 lg:flex-row",
   leftColumn:
     "flex flex-col justify-between max-lg:mb-12 lg:w-1/2 px-14 py-14 border-x border-border-normal",
   title:
