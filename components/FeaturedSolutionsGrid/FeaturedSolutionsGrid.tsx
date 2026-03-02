@@ -13,12 +13,12 @@ const FeaturedSolutionsGridRow = ({
   solutions: ISolutionCard[];
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row max-w-[var(--breakpoint-2xl)] mx-auto">
+    <div className="flex w-full min-w-0 flex-col lg:flex-row max-w-[var(--breakpoint-2xl)] mx-auto">
       {solutions.map((solution, index) => (
         <SolutionCard
           key={index}
           {...solution}
-          className="w-full border-x border-border-normal lg:flex-1 lg:[&:nth-child(2)]:border-l-0"
+          className="w-full min-w-0 border-x border-border-normal lg:flex-1 lg:basis-0 lg:[&:nth-child(2)]:border-l-0"
         />
       ))}
     </div>
@@ -68,7 +68,7 @@ export const FeaturedSolutionsGrid = ({
 
       {formattedSolutionsSet.map((solutions, index) => (
         <div
-          className="grid w-full mx-auto lg:border-t border-border-normal px-6 2xl:px-16 3xl:px-0"
+          className="grid w-full min-w-0 mx-auto lg:border-t border-border-normal px-6 2xl:px-16 3xl:px-0"
           key={index}
         >
           <FeaturedSolutionsGridRow solutions={solutions} />

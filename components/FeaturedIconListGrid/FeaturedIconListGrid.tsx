@@ -23,7 +23,7 @@ function getGridItemClasses(index: number, total: number): string {
     total % MOBILE_COLS === 1 && index === total - 1;
 
   return cn(
-    "border-border-normal border-r px-5 py-8 lg:p-10 border-b",
+    "min-w-0 border-border-normal border-r px-5 py-8 lg:p-10 border-b",
     isSingleItemInLastMobileRow && "col-span-2 lg:col-span-1",
     isLastColLg && "lg:border-r-0",
     isLastColMobile && "max-lg:border-r-0",

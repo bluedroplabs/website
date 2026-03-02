@@ -3,6 +3,7 @@
 import { cn } from "@/utils";
 import { cva } from "class-variance-authority";
 import Image from "next/image";
+import { useAppTheme } from "@/hooks/useAppTheme";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { ISolutionCard } from "./SolutionCard.types";
 
@@ -32,6 +33,11 @@ export const SolutionCard = ({
   variant,
   ...props
 }: ISolutionCard) => {
+  const { isDarkMode } = useAppTheme();
+  const imageSrc =
+    isDarkMode && image.srcDark ? image.srcDark : image.src;
+  const { srcDark: _srcDark, srcLight: _srcLight, ...imageProps } = image;
+
   return (
     <article className={className} {...props}>
       <div className={variants({ variant })}>
@@ -53,10 +59,11 @@ export const SolutionCard = ({
             )}
           >
             <Image
-              {...image}
+              {...imageProps}
               className="object-contain"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
+              src={imageSrc}
             />
           </figure>
         </div>
