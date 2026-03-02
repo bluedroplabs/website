@@ -34,8 +34,7 @@ export const SolutionCard = ({
   ...props
 }: ISolutionCard) => {
   const { isDarkMode } = useAppTheme();
-  const imageSrc =
-    isDarkMode && image.srcDark ? image.srcDark : image.src;
+  const imageSrc = isDarkMode && image.srcDark ? image.srcDark : image.src;
   const { srcDark: _srcDark, srcLight: _srcLight, ...imageProps } = image;
 
   return (
@@ -48,7 +47,7 @@ export const SolutionCard = ({
           eyebrow={eyebrow}
           eyebrowClassName="font-mono font-normal text-size-14 uppercase md:text-default-base"
           title={title}
-          titleClassName="font-medium leading-[1.1] line-clamp-3 tracking-[-0.02em] first:mt-0"
+          titleClassName="font-medium leading-[1.1] line-clamp-3 tracking-[-0.02em] first:mt-0 mt-4"
           titleVariant="lg"
         />
         <div className="flex items-end">
