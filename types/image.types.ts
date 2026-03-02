@@ -22,8 +22,13 @@ export interface IImage extends React.ComponentProps<typeof Image> {
   height?: number;
 
   /**
-   * Optional source URL for the light/dark mode variant.
-   * If not provided, will auto-generate by appending "-light" before the file extension.
+   * Optional source URL for the light mode variant.
    */
   srcLight?: string;
+
+  /**
+   * Optional source URL for the dark mode variant.
+   * When present and the app is in dark mode, this is used instead of src.
+   */
+  srcDark?: string;
 }

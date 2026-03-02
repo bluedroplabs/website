@@ -55,7 +55,7 @@ components:
         description: "<strong>Framework-specific optimizations</strong> tailored for each supported platform."
       - icon: "BoltIcon"
         description: "<strong>CDN integration</strong> for lightning-fast content delivery."
-      - icon: "EmergencyIcon"
+      - icon: "HistoryIcon"
         description: "<strong>Almost-Instant rollbacks</strong> of deployments"
 
   - type: FeaturedText

@@ -73,7 +73,8 @@ components:
         href: "/"
         image:
           alt: "Drupal + WordPress Support"
-          src: "/assets/drupal-and-wordpress-support.svg"
+          src: "/assets/drupal-and-wordpress-support-light.svg"
+          srcDark: "/assets/drupal-and-wordpress-support-dark.svg"
       - title: "API + Custom Development"
         description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
         href: "/"
@@ -91,6 +92,7 @@ components:
         href: "/"
         image:
           alt: "SEO + Marketing"
-          src: "/assets/seo-and-marketing.svg"
+          src: "/assets/seo-and-marketing-light.svg"
+          srcDark: "/assets/seo-and-marketing-dark.svg"
 
   - type: GridSeparator

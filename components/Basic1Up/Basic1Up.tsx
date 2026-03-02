@@ -11,7 +11,7 @@ import type { IBasic1Up } from "./Basic1Up.types";
 import type { IImage } from "@/types/image.types";
 
 const dottedBgClasses = [
-  "size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+0.25rem)]",
+  "size-full relative max-md:w-screen md:col-span-6 md:w-[calc(100%+0.1rem)]",
   "before:bg-deep-green-5 before:content-[''] before:absolute before:inset-0 before:-z-10 before:size-full",
   "after:absolute after:left-0 after:top-0 after:z-[0] after:h-full after:w-px after:bg-deep-green-5 after:content-['']",
   "border-border-light border-solid min-h-0 overflow-hidden",
