@@ -1,14 +1,14 @@
-# Resource: Building Enterprise-Grade Infrastructure on a Bootstrap Budget
+# Resource: Building Enterprise-Grade Infrastructure on a Bootstrapped Budget
 # Based on Figma design: Blue Drop Labs v2 – Case Study Stacker Hosting & Infrastructure (node 1136-20666)
 
-title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
-description: "When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs by 77% while improving performance and eliminating daily outages."
+title: "Building Enterprise-Grade Infrastructure on a Bootstrapped Budget"
+description: "When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs while improving performance."
 components:
   - type: DetailPageHero
     author: "Matt Robison"
     date: "September 26, 2025"
     eyebrow: "Case Study"
-    title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
+    title: "Building Enterprise-Grade Infrastructure on a Bootstrapped Budget"
     image:
       src: "/assets/engineered-foundation.png"
       alt: "Platform reliability – from collapse to control"
@@ -18,8 +18,8 @@ components:
       - type: "RichText"
         content: |
           <p>When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs while improving performance.</p>
-          <p>Stacker is a digital media company building a next-generation content distribution platform. This platform is the critical hub of their business, serving thousands of brands and publishers, distributing stories to partner websites and media outlets worldwide. If it goes down, revenue generation stops.</p>
-          <p>Stacker faced critical infrastructure challenges that threatened core business operations. Storage limits, terrible performance, and daily site outages during peak traffic periods prevented stable growth. The platform's reliability was always an open question.</p>
+          <p>Stacker is a digital media company building a next-generation content distribution platform. This platform is the critical hub of their business, serving thousands of brands and publishers, distributing stories to partner websites and media outlets worldwide. If it goes down, a critical component of the digital media ecosystem comes to a halt.</p>
+          <p>Stacker faced critical infrastructure challenges that threatened core business operations. Storage limits, under performance, and regular site outages during peak traffic periods prevented stable growth. The platform's reliability was always an open question.</p>
           <p>Blue Drop Labs architected and implemented a custom hosting solution that transformed Stacker's infrastructure from a liability into a competitive advantage. The solution reduced costs, eliminated regular downtimes, and has scaled to meet growing demands. This stability has allowed Stacker to iterate and improve their offerings with confidence.</p>
       - type: "InlineImage"
         image:
@@ -28,16 +28,16 @@ components:
           width: 720
           height: 500
       - type: "Metrics"
-        title: "HIGHLIGHTS"
+        title: "Highlights"
         metrics:
           - value: "77% Cost Reduction"
-            description: "Monthly fees dropped from €35,000 to €8,000 monthly."
+            description: "Monthly fees dropped from $3500/month to $800/month."
           - value: "400% Performance Improvement"
-            description: "Reduced load times for critical administration systems from 3s+ (unreliable) to under 1s (reliable)."
+            description: "Reduced load times for critical administration pages from 10+ seconds to under 2 seconds."
           - value: "99.9% Uptime"
-            description: "The platform went from experiencing disastrous, unmanageable outages regularly to reliable, predictable uptime."
+            description: "The platform went from expected downtimes every single day to expected stability."
           - value: "Proactive Incident Management"
-            description: "Integrated projects don't merely stop and troubleshoot—we monitor and prevent issues before they impact the business."
+            description: "Integrated tools provide 24/7 monitoring and automatic alerting, ensuring rapid response to any issues."
       - type: "RichText"
         content: |
           <h2>A new foundation for a growing platform</h2>
@@ -54,14 +54,13 @@ components:
       - type: "RichText"
         content: |
           <h2>The result</h2>
-          <p>Costs dropped 77%, and uptime improved. Daily, predictable outages were eliminated. Stacker no longer has to worry about interruptions in business continuity. As the business has grown, the custom hosting platform has expanded to meet the demands without a hiccup.</p>
+          <p>The result: Costs dropped 77%, and uptime improved. Daily, predictable outages were eliminated. Stacker no longer has to worry about interruptions in business continuity. As the business has grown, the custom hosting platform has expanded to meet the demands without a hiccup.</p>
       - type: "RichText"
         content: |
           <h2>Innovation when it makes sense</h2>
           <p>Blue Drop Labs combines deep technical expertise with practical wisdom. We favor simple results over clever solutions, and proven technology over trendy alternatives. This philosophy helps us innovate where it counts.</p>
-          <p>For Stacker, this philosophy meant they got enterprise features where it actually mattered, and at a fraction of the cost. We focused on high-impact deliverables: performance for images with a purpose-built Nginx proxy; custom provisioning scripts and MySQL configurations that allow capacity to scale to meet growing demand or traffic spikes; and our custom CLI tooling so each team member can manage the infrastructure with minimal ramp-up time.</p>
+          <p>For Stacker, this philosophy meant they got enterprise features where it actually mattered, and at a fraction of the cost. We focused on high-impact deliverables: performance for images with a purpose-built Nginx proxy. Custom provisioning scripts and MySQL configurations allow capacity to scale to meet growing demand or traffic spikes. Our custom CLI tooling allows each team member to manage the infrastructure with minimal ramp-up time.</p>
           <p>Thanks to this stability and performance, Stacker can be more strategic and creative about growth, knowing they have the foundation to support their initiatives. Innovation has cascaded to Stacker's core product offering. Since migrating to the new hosting platform, the company has launched improved portals for its customers with loads of new features and improvements. They can build with confidence instead of wasting time putting out fires.</p>
-          <p>Ready to build enterprise-grade infrastructure without the enterprise price tag? Contact us to discuss how we can transform your hosting challenges into competitive advantages.</p>
     details:
       cta:
         children: "Schedule a Demo"
