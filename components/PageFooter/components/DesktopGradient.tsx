@@ -1,15 +1,24 @@
+"use client";
+
+import { useAppTheme } from "@/hooks/useAppTheme";
 import type { SVGProps } from "react";
 
-export const DesktopGradient = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    fill="none"
-    viewBox="0 0 1440 526"
-    width="100%"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <g filter="url(#desktop-gradient-filter0)" opacity="0.8">
-      <ellipse
+export const DesktopGradient = (props: SVGProps<SVGSVGElement>) => {
+  const { isDarkMode } = useAppTheme();
+  const groupOpacity = isDarkMode ? 0.45 : 0.8;
+  const mixBlendMode = isDarkMode ? "color-dodge" : "normal";
+
+  return (
+    <svg
+      fill="none"
+      viewBox="0 0 1440 526"
+      width="100%"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ mixBlendMode }}
+      {...props}
+    >
+      <g filter="url(#desktop-gradient-filter0)" opacity={groupOpacity}>
+        <ellipse
         cx="541"
         cy="-27.5"
         fill="url(#desktop-gradient-paint0)"
@@ -17,7 +26,7 @@ export const DesktopGradient = (props: SVGProps<SVGSVGElement>) => (
         ry="210.5"
       />
     </g>
-    <g filter="url(#desktop-gradient-filter1)" opacity="0.8">
+    <g filter="url(#desktop-gradient-filter1)" opacity={groupOpacity}>
       <ellipse
         cx="878"
         cy="6.5"
@@ -93,4 +102,5 @@ export const DesktopGradient = (props: SVGProps<SVGSVGElement>) => (
       </radialGradient>
     </defs>
   </svg>
-);
+  );
+};

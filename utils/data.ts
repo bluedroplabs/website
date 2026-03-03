@@ -29,7 +29,12 @@ export function loadFooterData(): IFooter | null {
   try {
     const footerPath = join(process.cwd(), "data", "footer.yaml");
     const footerContents = readFileSync(footerPath, "utf8");
-    return parse(footerContents);
+    const data = parse(footerContents) as IFooter;
+    const year = new Date().getFullYear();
+    if (data?.copyright) {
+      data.copyright = data.copyright.replace(/\d{4}/, String(year));
+    }
+    return data;
   } catch (error) {
     console.error("Error loading Footer data:", error);
     return null;

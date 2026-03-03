@@ -11,11 +11,11 @@ const styles = {
     "flex items-center justify-center relative flex-col overflow-hidden",
   description: "text-default-base",
   title: "mb-3",
-  mobileGradient: "absolute top-0 lg:hidden dark:mix-blend-color-dodge",
-  desktopGradient: "absolute top-0 max-lg:hidden dark:mix-blend-color-dodge",
+  mobileGradient: "absolute top-0 lg:hidden",
+  desktopGradient: "absolute top-0 max-lg:hidden",
   dottedBackground: "z-20 relative h-full",
   gradientBg:
-    "bg-gradient-to-b from-brand-aqua/30 via-page-default via-50% to-page-default h-full z-10 relative",
+    "bg-gradient-to-b from-brand-aqua/30 dark:from-brand-aqua/15 via-page-default via-50% to-page-default h-full z-10 relative",
 };
 
 export const PageFooter = ({

@@ -1,15 +1,24 @@
+"use client";
+
+import { useAppTheme } from "@/hooks/useAppTheme";
 import type { SVGProps } from "react";
 
-export const MobileGradient = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    fill="none"
-    viewBox="0 0 393 473"
-    width="100%"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <g filter="url(#mobile-gradient-filter0)" opacity="0.8">
-      <ellipse
+export const MobileGradient = (props: SVGProps<SVGSVGElement>) => {
+  const { isDarkMode } = useAppTheme();
+  const groupOpacity = isDarkMode ? 0.45 : 0.8;
+  const mixBlendMode = isDarkMode ? "color-dodge" : "normal";
+
+  return (
+    <svg
+      fill="none"
+      viewBox="0 0 393 473"
+      width="100%"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ mixBlendMode }}
+      {...props}
+    >
+      <g filter="url(#mobile-gradient-filter0)" opacity={groupOpacity}>
+        <ellipse
         cx="152"
         cy="-64.1841"
         fill="url(#mobile-gradient-paint0)"
@@ -17,7 +26,7 @@ export const MobileGradient = (props: SVGProps<SVGSVGElement>) => (
         ry="172.5"
       />
     </g>
-    <g filter="url(#mobile-gradient-filter1)" opacity="0.8">
+    <g filter="url(#mobile-gradient-filter1)" opacity={groupOpacity}>
       <ellipse
         cx="242"
         cy="28.8159"
@@ -93,4 +102,5 @@ export const MobileGradient = (props: SVGProps<SVGSVGElement>) => (
       </radialGradient>
     </defs>
   </svg>
-);
+  );
+};
