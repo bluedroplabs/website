@@ -1,0 +1,28 @@
+# 404 Page Configuration
+# Content for the "Page not found" experience. Loaded by not-found.tsx.
+
+title: "Page Not Found - Blue Drop Labs"
+description: "The page you're looking for doesn't exist or has been moved."
+components:
+  - type: GradientHero
+    eyebrow: "Error 404"
+    title: "Page not found"
+    description: "The page you're looking for doesn't exist or has been moved."
+
+  - type: GridSeparator
+
+  - type: CtaBlock
+    cta:
+      children: "Go to homepage"
+      href: "/"
+      target: _self
+    description: "Let's get you back on track."
+    title: "Ready to get started?"
+
+  - type: CtaBlock
+    cta:
+      children: "Contact us"
+      href: "/contact"
+      target: _self
+    description: "Need help finding something?"
+    title: "We're here to help"

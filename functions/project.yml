@@ -4,6 +4,10 @@ packages:
       - name: newsletter
         runtime: nodejs:22
         web: true
+        limits:
+          timeout: 10000
       - name: contact
         runtime: nodejs:22
         web: true
+        limits:
+          timeout: 10000

@@ -20,7 +20,10 @@ async function verifyTurnstile(token, remoteip) {
     const data = await res.json().catch(() => ({}));
     return data.success
       ? { success: true }
-      : { success: false, errorCodes: data["error-codes"] || ["invalid-input-response"] };
+      : {
+          success: false,
+          errorCodes: data["error-codes"] || ["invalid-input-response"],
+        };
   } catch (err) {
     console.error("Turnstile verification error:", err);
     return { success: false, errorCodes: ["internal-error"] };
