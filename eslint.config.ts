@@ -16,6 +16,7 @@ export default defineConfig([
       "storybook-static",
       ".vscode",
       "*.d.ts",
+      "functions/scripts/**",
     ],
   },
   {
