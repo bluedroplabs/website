@@ -1,10 +1,26 @@
 import { createHash } from "node:crypto";
+import { verifyTurnstile } from "../_shared/verify-turnstile.js";
 
 export async function main(event) {
   if (event?.http?.method !== "POST") {
     return {
       body: { error: "Method not allowed. Use POST." },
       statusCode: 405,
+      headers: { "Content-Type": "application/json" },
+    };
+  }
+
+  const turnstileResult = await verifyTurnstile(
+    event.cfTurnstileResponse,
+    event.http?.headers?.["x-forwarded-for"]?.split(",")[0]?.trim(),
+  );
+  if (!turnstileResult.success) {
+    return {
+      body: {
+        error:
+          "Verification failed. Please complete the security check and try again.",
+      },
+      statusCode: 400,
       headers: { "Content-Type": "application/json" },
     };
   }

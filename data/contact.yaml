@@ -15,9 +15,9 @@ components:
     contactEmail: "hello@bluedroplabs.com"
     contactEmailHref: "mailto:hello@bluedroplabs.com"
     formAction: "/api/contact"
-    bookCallLink:
-      children: "Book a call"
-      href: "#"
+    # bookCallLink:
+    #   children: "Book a call"
+    #   href: "#"
     fields:
       - name: fullName
         label: "Full Name"

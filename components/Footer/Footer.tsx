@@ -2,6 +2,8 @@
 
 import { Container } from "@/components/Container/Container";
 import { Toast } from "@/components/Toast/Toast";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
+import { TurnstileWidget } from "@/components/TurnstileWidget";
 import { cn } from "@/utils/classes";
 
 import { themeIconMap, themes } from "@/contants/theme";
@@ -65,25 +67,43 @@ export const Footer = ({
   const isMounted = useIsMounted();
   const [showToast, setShowToast] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [showTurnstile, setShowTurnstile] = useState(false);
   const emailInputRef = useRef<HTMLInputElement>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
+
+  const turnstileEnabled = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const canSubmit = !turnstileEnabled || turnstileToken;
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const hasInput = e.target.value.trim().length >= 1;
+    setShowTurnstile(hasInput);
+    if (!hasInput) setTurnstileToken(null);
+  };
 
   const handleNewsletterSubmit = async (
     e: React.FormEvent<HTMLFormElement>,
   ) => {
     e.preventDefault();
     const email = emailInputRef.current?.value?.trim();
-    if (!email || !formAction || isSubmitting) return;
+    if (!email || !formAction || isSubmitting || !canSubmit) return;
 
     setIsSubmitting(true);
     try {
       const response = await fetch(formAction, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          ...(turnstileToken && { cfTurnstileResponse: turnstileToken }),
+        }),
       });
 
       if (response.ok) {
         if (emailInputRef.current) emailInputRef.current.value = "";
+        setShowTurnstile(false);
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
         setShowToast(true);
       }
     } finally {
@@ -146,9 +166,13 @@ export const Footer = ({
             <div className={styles.inputGroup}>
               <input
                 aria-label="Email address"
+                autoComplete="off"
                 className={styles.input}
+                data-1p-ignore
+                data-lpignore="true"
                 disabled={isSubmitting}
                 name="email"
+                onChange={handleEmailChange}
                 placeholder="Enter your email"
                 ref={emailInputRef}
                 required
@@ -156,7 +180,7 @@ export const Footer = ({
               />
               <Button
                 className={styles.submitButton}
-                disabled={isSubmitting}
+                disabled={isSubmitting || !canSubmit}
                 size="none"
                 type="submit"
                 variant="ghost"
@@ -164,6 +188,16 @@ export const Footer = ({
                 Subscribe
               </Button>
             </div>
+            {turnstileEnabled && showTurnstile && (
+              <div className="mt-4 w-full min-w-80 max-w-xl">
+                <TurnstileWidget
+                  ref={turnstileRef}
+                  onExpire={() => setTurnstileToken(null)}
+                  onSuccess={setTurnstileToken}
+                  size="flexible"
+                />
+              </div>
+            )}
           </form>
           {showToast && (
             <Toast
@@ -173,7 +207,9 @@ export const Footer = ({
           )}
         </div>
         <div className={styles.lowerContent}>
-          <p className={cn("max-2xl:hidden", styles.copyright)}>{copyright}</p>
+          <p className={cn("max-2xl:hidden", styles.copyright)}>
+            {copyright.replace("{{year}}", String(new Date().getFullYear()))}
+          </p>
           <nav className={cn("lg:max-2xl:w-full 2xl:ml-auto", styles.nav)}>
             <ul
               aria-label="Legal and company information"
@@ -195,7 +231,9 @@ export const Footer = ({
           </nav>
 
           <div className={styles.themeGroup}>
-            <p className={cn("2xl:hidden", styles.copyright)}>{copyright}</p>
+            <p className={cn("2xl:hidden", styles.copyright)}>
+              {copyright.replace("{{year}}", String(new Date().getFullYear()))}
+            </p>
             <nav>
               <ul className={styles.themeButtons}>
                 {themes.map((t) => {

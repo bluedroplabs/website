@@ -10,10 +10,10 @@ components:
       children: "Start Your Project"
       href: "/contact"
       target: _self
-    description: "High-performance hosting, expert development, and ongoing support— all under one roof. We eliminate vendor juggling while delivering enterprise results at affordable prices."
+    description: "High-performance hosting, expert development, and ongoing support — all under one roof. We eliminate vendor juggling while delivering enterprise results at affordable prices."
     title: "Your Website Deserves Better"
   - type: LogoMarquee
-    description: "Invest in your growth and success ——— Trusted by our beloved clients"
+    description: "Invest in your growth and success — Trusted by our beloved clients"
     logos:
       - alt: "Logo 1"
         icon: "StackerIcon"

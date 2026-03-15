@@ -1,7 +1,7 @@
 import type { IFooter } from "./Footer.types";
 
 const FOOTER_DEFAULT_PROPS: IFooter = {
-  copyright: "© Blue Drop Labs 2025. All rights reserved.",
+  copyright: "© Dentzau, LLC d/b/a Blue Drop Labs {{year}}. All rights reserved.",
   darkLogo: {
     src: "/assets/logo-dark.svg",
     alt: "Company Dark Logo",
