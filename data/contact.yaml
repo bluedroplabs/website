@@ -7,11 +7,11 @@ components:
   - type: GradientHero
     eyebrow: "LET'S BUILD SOMETHING GREAT TOGETHER"
     title: "Ready to start your next project?"
-    description: "Tell us about your goals, and we'll help you find the right way forward."
+    description: "Tell us about your goals — we can't wait to hear what you're building."
 
   - type: ContactForm
-    contactTitle: "Talk to our team"
-    contactDescription: "We're a small, senior team that responds quickly and works directly with you — no layers, no handoffs."
+    contactTitle: "Let's talk"
+    contactDescription: "We're senior experts who love solving hard problems. Drop us a line and we'll get back to you fast — we're excited to hear from you."
     contactEmail: "hello@bluedroplabs.com"
     contactEmailHref: "mailto:hello@bluedroplabs.com"
     formAction: "/api/contact"

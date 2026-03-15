@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { CookieConsentBanner } from "@/components/CookieConsentBanner";
+import { GoogleTagManagerWithConsent } from "@/components/GoogleTagManager";
 import { Marker } from "@/components/Marker/Marker";
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default function RootLayout({
             />
           )}
           <CookieConsentBanner />
+          <GoogleTagManagerWithConsent />
           <Marker />
         </ThemeProvider>
       </body>

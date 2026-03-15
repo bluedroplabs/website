@@ -116,7 +116,6 @@ export const ContactForm = ({
         error?: string;
       };
 
-
       if (response.ok) {
         formRef.current.reset();
         setTurnstileToken(null);
@@ -124,7 +123,9 @@ export const ContactForm = ({
         setToastMessage("Thanks for reaching out! We'll get back to you soon.");
         setShowToast(true);
       } else {
-        setToastMessage(data.error ?? "Something went wrong. Please try again.");
+        setToastMessage(
+          data.error ?? "Something went wrong. Please try again.",
+        );
         setShowToast(true);
       }
     } catch {
@@ -238,9 +239,9 @@ export const ContactForm = ({
               {turnstileEnabled && (
                 <div className="mt-4 w-full min-w-80 max-w-xl">
                   <TurnstileWidget
-                    ref={turnstileRef}
                     onExpire={() => setTurnstileToken(null)}
                     onSuccess={setTurnstileToken}
+                    ref={turnstileRef}
                     size="flexible"
                   />
                 </div>

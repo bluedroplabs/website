@@ -191,9 +191,9 @@ export const Footer = ({
             {turnstileEnabled && showTurnstile && (
               <div className="mt-4 w-full min-w-80 max-w-xl">
                 <TurnstileWidget
-                  ref={turnstileRef}
                   onExpire={() => setTurnstileToken(null)}
                   onSuccess={setTurnstileToken}
+                  ref={turnstileRef}
                   size="flexible"
                 />
               </div>

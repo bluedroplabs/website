@@ -24,10 +24,10 @@ export const TurnstileWidget = forwardRef<
 
   return (
     <Turnstile
-      ref={ref}
       onExpire={onExpire}
       onSuccess={onSuccess}
       options={{ size, theme }}
+      ref={ref}
       siteKey={siteKey}
     />
   );
