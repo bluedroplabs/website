@@ -6,7 +6,7 @@ describe("isExternalLink", () => {
     it("returns false for root-relative paths", () => {
       expect(isExternalLink("/")).toBe(false);
       expect(isExternalLink("/about")).toBe(false);
-      expect(isExternalLink("/blog/post-slug")).toBe(false);
+      expect(isExternalLink("/resources/article-slug")).toBe(false);
     });
 
     it("returns false for dot-relative paths", () => {

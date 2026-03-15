@@ -1,7 +1,7 @@
 import { RESOURCE_CARD_EXAMPLE_PROPS } from "../ResourceCard/ResourceCard.examples";
-import type { IRelatedPosts } from "./RelatedPosts.types";
+import type { IRelatedArticles } from "./RelatedArticles.types";
 
-const RELATED_POSTS_DEFAULT_PROPS: IRelatedPosts = {
+const RELATED_ARTICLES_DEFAULT_PROPS: IRelatedArticles = {
   items: [
     RESOURCE_CARD_EXAMPLE_PROPS.default,
     RESOURCE_CARD_EXAMPLE_PROPS.default,
@@ -11,12 +11,12 @@ const RELATED_POSTS_DEFAULT_PROPS: IRelatedPosts = {
     className: "",
     image: {
       src: `https://picsum.photos/1000/1000?random=${index}`,
-      alt: `Related Post Example Image ${index + 1}`,
+      alt: `Related Article Example Image ${index + 1}`,
     },
   })),
-  title: "Related Posts",
+  title: "Related Articles",
 };
 
-export const RELATED_POSTS_EXAMPLE_PROPS = {
-  default: RELATED_POSTS_DEFAULT_PROPS,
+export const RELATED_ARTICLES_EXAMPLE_PROPS = {
+  default: RELATED_ARTICLES_DEFAULT_PROPS,
 };

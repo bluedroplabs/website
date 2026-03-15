@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils";
 import { ResourceCard } from "../ResourceCard/ResourceCard";
-import type { IRelatedPosts } from "./RelatedPosts.types";
+import type { IRelatedArticles } from "./RelatedArticles.types";
 
 function deterministicSample<T extends { href?: string }>(
   items: T[],
@@ -22,12 +22,12 @@ function deterministicSample<T extends { href?: string }>(
   return sorted.slice(0, count);
 }
 
-export const RelatedPosts = ({
+export const RelatedArticles = ({
   className,
   items,
   title,
   ...props
-}: IRelatedPosts) => {
+}: IRelatedArticles) => {
   const displayItems = useMemo(() => deterministicSample(items, 3), [items]);
 
   return (

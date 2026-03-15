@@ -44,7 +44,7 @@ export interface IResourceCard extends HTMLAttributes<HTMLElement> {
   variant?: TResourceCardVariant;
 
   /**
-   * Resource type for filtering (e.g. "blog", "whitepaper", "article", "report").
+   * Resource type for filtering (e.g. "article", "whitepaper", "report", "case-study").
    * Must match filter option values when using CardGrid filters.
    */
   type?: string;

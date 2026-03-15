@@ -51,8 +51,8 @@ components:
 
   - type: GridSeparator
 
-  - type: RelatedPosts
-    title: "Related Posts"
+  - type: RelatedArticles
+    title: "Related Articles"
     items:
       - date: "October 12, 2025"
         description: "Quarterly benchmarks and trends in digital experience platform adoption."
@@ -62,7 +62,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=10"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/articles/sending-an-articles-publish-date-to-google-analytics"
         title: "Digital Experience Platform Adoption Report Q4 2025"
         variant: "default"
       - date: "October 8, 2025"
@@ -73,7 +73,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=9"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/articles/sending-an-articles-publish-date-to-google-analytics"
         title: "WordPress Multisite at Scale"
         variant: "default"
       - date: "October 18, 2025"
@@ -84,7 +84,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=12"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/articles/sending-an-articles-publish-date-to-google-analytics"
         title: "Drupal Front-End APIs and Decoupled Architecture"
         variant: "default"
       - date: "October 1, 2025"
@@ -95,7 +95,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=7"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/articles/sending-an-articles-publish-date-to-google-analytics"
         title: "Accessible Forms and Validation Best Practices"
         variant: "default"
       - date: "October 15, 2025"
@@ -106,7 +106,7 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=11"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/articles/sending-an-articles-publish-date-to-google-analytics"
         title: "Design Systems That Scale"
         variant: "default"
       - date: "October 5, 2025"
@@ -117,6 +117,6 @@ components:
         image:
           src: "https://picsum.photos/800/600?random=8"
           alt: "Resource Card Example Image"
-        href: "/resources/sending-an-articles-publish-date-to-google-analytics"
+        href: "/resources/articles/sending-an-articles-publish-date-to-google-analytics"
         title: "Drupal 10 Migration Guide for Enterprise"
         variant: "default"

@@ -17,7 +17,7 @@ import { GridSeparator } from "@/components/GridSeparator/GridSeparator";
 import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
 import { InlineTextBlock } from "@/components/InlineTextBlock/InlineTextBlock";
 import { LogoMarquee } from "@/components/LogoMarquee/LogoMarquee";
-import { RelatedPosts } from "@/components/RelatedPosts/RelatedPosts";
+import { RelatedArticles } from "@/components/RelatedArticles/RelatedArticles";
 import { SolutionsPackage } from "@/components/SolutionsPackage/SolutionsPackage";
 import { Wysiwyg } from "@/components/Wysiwyg/Wysiwyg";
 import type { TPageComponent } from "@/types/page.types";
@@ -42,7 +42,7 @@ const componentMap = {
   HomepageHero,
   InlineTextBlock,
   LogoMarquee,
-  RelatedPosts,
+  RelatedArticles,
   SolutionsPackage,
   Wysiwyg,
 };

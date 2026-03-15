@@ -24,13 +24,23 @@ function getPageSlugs(): string[][] {
   });
 
   if (fs.existsSync(resourcesDir)) {
-    const resourceFiles = fs.readdirSync(resourcesDir);
-    resourceFiles.forEach((file) => {
-      if (file.endsWith(".yaml")) {
-        const slug = file.replace(/\.yaml$/, "");
-        slugs.push(["resources", slug]);
-      }
+    const resourceTypeDirs = fs.readdirSync(resourcesDir, {
+      withFileTypes: true,
     });
+
+    for (const dirent of resourceTypeDirs) {
+      if (!dirent.isDirectory()) continue;
+
+      const typeDir = path.join(resourcesDir, dirent.name);
+      const typeFiles = fs.readdirSync(typeDir);
+
+      typeFiles.forEach((file) => {
+        if (file.endsWith(".yaml")) {
+          const slug = file.replace(/\.yaml$/, "");
+          slugs.push(["resources", dirent.name, slug]);
+        }
+      });
+    }
   }
 
   return slugs;
@@ -55,7 +65,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({
       url: BASE_URL.replace(/\/$/, "") + urlPath,
       lastModified: now,
-      changeFrequency: slugParts[0] === "resources" ? "monthly" : "weekly",
+      changeFrequency:
+        slugParts[0] === "resources" && slugParts.length > 1
+          ? "monthly"
+          : "weekly",
       priority: slugParts[0] === "resources" ? 0.7 : 0.8,
     });
   });

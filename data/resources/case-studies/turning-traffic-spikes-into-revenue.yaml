@@ -77,8 +77,8 @@ components:
 
   - type: GridSeparator
 
-  - type: RelatedPosts
-    title: "Related Posts"
+  - type: RelatedArticles
+    title: "Related Articles"
     items:
       - date: "September 26, 2025"
         description: "Blue Drop Labs helped POWDR migrate the DOR system, achieving 70% cost reduction."
@@ -88,7 +88,7 @@ components:
         image:
           src: "/assets/unified-dor-platform.png"
           alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
-        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
+        href: "/resources/case-studies/helping-lifestyle-company-cut-software-costs-70"
         title: "Helping a Lifestyle Company Cut Software Costs by 70%"
         variant: "default"
       - date: "September 26, 2025"
@@ -99,7 +99,7 @@ components:
         image:
           src: "/assets/10ms-global-delivery.png"
           alt: "How We Achieved 10ms Response Times Globally"
-        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        href: "/resources/case-studies/how-we-achieved-10ms-response-times-globally"
         title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
         variant: "default"
       - date: "September 26, 2025"
@@ -110,6 +110,6 @@ components:
         image:
           src: "/assets/engineered-foundation.png"
           alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
-        href: "/resources/building-enterprise-grade-infrastructure"
+        href: "/resources/case-studies/building-enterprise-grade-infrastructure"
         title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
         variant: "default"

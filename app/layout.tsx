@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   title: "Blue Drop Labs - Experts in Digital Strategy",
   description:
     "Blue Drop Labs offers enterprise-grade Drupal and WordPress hosting, expert development, and ongoing support—all under one roof at affordable prices.",
-  icons: {
-    icon: "/assets/bdl.ico",
-  },
   other: {
     "font-display": "swap",
   },

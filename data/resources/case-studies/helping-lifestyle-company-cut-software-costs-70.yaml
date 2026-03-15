@@ -69,8 +69,8 @@ components:
 
   - type: GridSeparator
 
-  - type: RelatedPosts
-    title: "Related Posts"
+  - type: RelatedArticles
+    title: "Related Articles"
     items:
       - date: "September 26, 2025"
         description: "Turning traffic spikes into revenue with scalable infrastructure and stress-proof hosting."
@@ -80,7 +80,7 @@ components:
         image:
           src: "/assets/powdr-hosting-revolution.png"
           alt: "Turning Traffic Spikes Into Revenue – Not Risk"
-        href: "/resources/turning-traffic-spikes-into-revenue"
+        href: "/resources/case-studies/turning-traffic-spikes-into-revenue"
         title: "Turning Traffic Spikes Into Revenue – Not Risk"
         variant: "default"
       - date: "September 26, 2025"
@@ -91,7 +91,7 @@ components:
         image:
           src: "/assets/10ms-global-delivery.png"
           alt: "How We Achieved 10ms Response Times Globally"
-        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        href: "/resources/case-studies/how-we-achieved-10ms-response-times-globally"
         title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
         variant: "default"
       - date: "September 26, 2025"
@@ -102,6 +102,6 @@ components:
         image:
           src: "/assets/engineered-foundation.png"
           alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
-        href: "/resources/building-enterprise-grade-infrastructure"
+        href: "/resources/case-studies/building-enterprise-grade-infrastructure"
         title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
         variant: "default"
