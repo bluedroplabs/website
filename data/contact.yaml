@@ -14,7 +14,7 @@ components:
     contactDescription: "We're senior experts who love solving hard problems. Drop us a line and we'll get back to you fast — we're excited to hear from you."
     contactEmail: "hello@bluedroplabs.com"
     contactEmailHref: "mailto:hello@bluedroplabs.com"
-    formAction: "/api/contact"
+    formAction: "/api/v1/contact"
     # bookCallLink:
     #   children: "Book a call"
     #   href: "#"

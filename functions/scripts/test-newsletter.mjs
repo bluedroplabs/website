@@ -10,7 +10,7 @@
  *   node --env-file=.env scripts/test-newsletter.mjs
  */
 
-import { main } from "../packages/api/newsletter/index.js";
+import { main } from "../packages/v1/newsletter/index.js";
 
 const event = {
   http: { method: "POST" },

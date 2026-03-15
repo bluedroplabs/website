@@ -10,7 +10,7 @@
  *   node --env-file=.env scripts/test-contact.mjs
  */
 
-import { main } from "../packages/api/contact/index.js";
+import { main } from "../packages/v1/contact/index.js";
 
 const event = {
   http: { method: "POST" },
