@@ -4,11 +4,24 @@ import { loadPageData } from "@/utils/data";
 import { buildWebSiteSchema } from "@/utils/structuredData";
 import type { Metadata } from "next";
 
+const OG_LOGO = "/assets/logo.svg";
+
 export async function generateMetadata(): Promise<Metadata> {
   const pageData = loadPageData(["homepage"]);
   return {
     title: pageData?.title,
     description: pageData?.description,
+    openGraph: {
+      title: pageData?.title,
+      description: pageData?.description,
+      images: [OG_LOGO],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageData?.title,
+      description: pageData?.description,
+      images: [OG_LOGO],
+    },
   };
 }
 

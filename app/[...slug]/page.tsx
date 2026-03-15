@@ -48,14 +48,56 @@ export async function generateStaticParams() {
   return slugs;
 }
 
+const OG_LOGO = "/assets/logo.svg";
+
+function getOgImage(
+  slug: string[],
+  pageData: { components?: unknown[] } | null,
+): string {
+  if (!pageData?.components?.length) return OG_LOGO;
+
+  const firstComponent = pageData.components[0] as {
+    type?: string;
+    image?: { src?: string };
+  };
+
+  const isLogoPage =
+    slug.length === 1 &&
+    (slug[0] === "about-us" || slug[0] === "resources");
+
+  if (isLogoPage) return OG_LOGO;
+
+  if (
+    firstComponent?.type === "DetailPageHero" &&
+    firstComponent?.image?.src
+  ) {
+    return firstComponent.image.src;
+  }
+
+  return OG_LOGO;
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const pageData = loadPageData(slug);
+  const image = getOgImage(slug, pageData);
+
   return {
     title: pageData?.title,
     description: pageData?.description,
+    openGraph: {
+      title: pageData?.title,
+      description: pageData?.description,
+      images: [image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pageData?.title,
+      description: pageData?.description,
+      images: [image],
+    },
   };
 }
 

@@ -13,7 +13,11 @@ import { CookieConsentBanner } from "@/components/CookieConsentBanner";
 import { GoogleTagManagerWithConsent } from "@/components/GoogleTagManager";
 import { Marker } from "@/components/Marker/Marker";
 
+const BASE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://www.bluedroplabs.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: "Blue Drop Labs - Experts in Digital Strategy",
   description:
     "Blue Drop Labs offers enterprise-grade Drupal and WordPress hosting, expert development, and ongoing support—all under one roof at affordable prices.",
