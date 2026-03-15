@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { verifyTurnstile } from "../_shared/verify-turnstile.js";
+import { verifyTurnstile } from "../../shared/verify-turnstile.js";
 
 export async function main(event) {
   if (event?.http?.method !== "POST") {
