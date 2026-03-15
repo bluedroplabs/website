@@ -6,8 +6,10 @@ packages:
         web: true
         limits:
           timeout: 10000
+          memory: 512
       - name: contact
         runtime: nodejs:22
         web: true
         limits:
           timeout: 10000
+          memory: 512
