@@ -34,10 +34,10 @@ components:
             description: "Monthly fees dropped from $3500/month to $800/month."
           - value: "400% Performance Improvement"
             description: "Reduced load times for critical administration pages from 10+ seconds to under 2 seconds."
-          - value: "99.9% Uptime"
+          - value: "From Daily Outages to 99.9% Uptime"
             description: "The platform went from expected downtimes every single day to expected stability."
           - value: "Proactive Incident Management"
-            description: "Integrated tools provide 24/7 monitoring and automatic alerting, ensuring rapid response to any issues."
+            description: "Integrated tools to provide 24/7 monitoring and automatic alerting, ensuring rapid response to any issues."
       - type: "RichText"
         content: |
           <h2>A new foundation for a growing platform</h2>
