@@ -6,7 +6,7 @@ description: "When Stacker's managed hosting provider failed at a critical time,
 components:
   - type: DetailPageHero
     author: "Matt Robison"
-    date: "September 26, 2025"
+    date: "October 14, 2025"
     eyebrow: "Case Study"
     title: "Building Enterprise-Grade Infrastructure on a Bootstrapped Budget"
     image:

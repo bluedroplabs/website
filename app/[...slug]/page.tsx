@@ -1,10 +1,7 @@
 import { DynamicComponents } from "@/components/DynamicComponents/DynamicComponents";
 import { StructuredData } from "@/components/StructuredData/StructuredData";
 import { loadPageData } from "@/utils/data";
-import {
-  buildArticleSchema,
-  buildWebPageSchema,
-} from "@/utils/structuredData";
+import { buildArticleSchema, buildWebPageSchema } from "@/utils/structuredData";
 import fs from "fs";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
