@@ -77,6 +77,40 @@ export const CardGrid = ({
 
   const useClientFiltering = !updateCards;
 
+  const effectiveFilters = useMemo(() => {
+    if (!filters || !items?.length) return filters;
+
+    return filters.map((filter) => {
+      if (filter.name === "type") {
+        const typesInItems = new Set(
+          items.map((i) => i.type).filter(Boolean) as string[],
+        );
+        return {
+          ...filter,
+          selections: filter.selections.map((sel) => ({
+            ...sel,
+            options: sel.options.filter((opt) => typesInItems.has(opt.value)),
+          })),
+        };
+      }
+      if (filter.name === "topic") {
+        const topicsInItems = new Set(
+          items.flatMap((i) =>
+            Array.isArray(i.topic) ? i.topic : i.topic ? [i.topic] : [],
+          ),
+        );
+        return {
+          ...filter,
+          selections: filter.selections.map((sel) => ({
+            ...sel,
+            options: sel.options.filter((opt) => topicsInItems.has(opt.value)),
+          })),
+        };
+      }
+      return filter;
+    });
+  }, [filters, items]);
+
   const filteredItems = useMemo(
     () =>
       useClientFiltering
@@ -140,14 +174,20 @@ export const CardGrid = ({
                   setSearchTerm(e.currentTarget.search.value);
                 }}
               />
-              {filters?.map((filter) => (
-                <MultiSelect
-                  {...filter}
-                  className="whitespace-nowrap max-md:hidden"
-                  key={filter.name}
-                  onChange={handleFilterChange(filter.name)}
-                />
-              ))}
+              {effectiveFilters?.map((filter) => {
+                const hasOptions = filter.selections.some(
+                  (s) => s.options.length > 0,
+                );
+                if (!hasOptions) return null;
+                return (
+                  <MultiSelect
+                    {...filter}
+                    className="whitespace-nowrap max-md:hidden"
+                    key={filter.name}
+                    onChange={handleFilterChange(filter.name)}
+                  />
+                );
+              })}
             </div>
           </div>
         </div>
