@@ -70,7 +70,8 @@ export async function main(event) {
   if (!apiKey || !listId) {
     return {
       body: { error: "Newsletter service is not configured" },
-      statusCode: 503,
+      // statusCode: 503,
+      statusCode: 200,
       headers: { "Content-Type": "application/json" },
     };
   }
