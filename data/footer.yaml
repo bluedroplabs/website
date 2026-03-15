@@ -15,7 +15,7 @@ description: "High-performance hosting, expert development, and ongoing support.
 secondaryText: "We ♥️ Open Source"
 
 # Newsletter Form Section
-formAction: "/api/v1/newsletter"
+formAction: "https://website-production-xfbvn.ondigitalocean.app/api/v1/newsletter"
 formHeading: "Join our community"
 formDescription: "Practical insights. No fluff. Get actionable guidance on development, hosting, and performance."
 
