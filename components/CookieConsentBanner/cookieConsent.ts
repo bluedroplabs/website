@@ -9,8 +9,13 @@ export function getCookieConsent(): CookieConsentStatus {
   return null;
 }
 
+/**
+ * Returns true if cookies are allowed. Cookies load by default; only blocked
+ * when the user has explicitly opted out (declined).
+ */
 export function hasCookieConsent(): boolean {
-  return getCookieConsent() === "accepted";
+  const consent = getCookieConsent();
+  return consent !== "declined";
 }
 
 export function setCookieConsent(status: "accepted" | "declined"): void {
