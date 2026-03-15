@@ -1,12 +1,14 @@
 "use client";
 
 import { Container } from "@/components/Container/Container";
+import { Toast } from "@/components/Toast/Toast";
 import { cn } from "@/utils/classes";
 
 import { themeIconMap, themes } from "@/contants/theme";
 import { useAppTheme } from "@/hooks/useAppTheme";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import Image from "next/image";
+import { useRef, useState } from "react";
 import { Button } from "../Button/Button";
 import { ArrowRightDownIcon } from "../Icon";
 import type { IFooter } from "./Footer.types";
@@ -61,6 +63,33 @@ export const Footer = ({
 }: IFooter) => {
   const { theme, setTheme, isDarkMode } = useAppTheme();
   const isMounted = useIsMounted();
+  const [showToast, setShowToast] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+
+  const handleNewsletterSubmit = async (
+    e: React.FormEvent<HTMLFormElement>,
+  ) => {
+    e.preventDefault();
+    const email = emailInputRef.current?.value?.trim();
+    if (!email || !formAction || isSubmitting) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(formAction, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (response.ok) {
+        if (emailInputRef.current) emailInputRef.current.value = "";
+        setShowToast(true);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Container
@@ -100,7 +129,11 @@ export const Footer = ({
               </div>
             ))}
           </nav>
-          <form action={formAction} className={styles.form}>
+          <form
+            action={formAction}
+            className={styles.form}
+            onSubmit={handleNewsletterSubmit}
+          >
             <h2 className={styles.title}>{formHeading}</h2>
             <p
               className={cn(
@@ -114,12 +147,16 @@ export const Footer = ({
               <input
                 aria-label="Email address"
                 className={styles.input}
+                disabled={isSubmitting}
                 name="email"
                 placeholder="Enter your email"
+                ref={emailInputRef}
+                required
                 type="email"
               />
               <Button
                 className={styles.submitButton}
+                disabled={isSubmitting}
                 size="none"
                 type="submit"
                 variant="ghost"
@@ -128,6 +165,12 @@ export const Footer = ({
               </Button>
             </div>
           </form>
+          {showToast && (
+            <Toast
+              message="Thanks for signing up! We'll be in touch."
+              onDismiss={() => setShowToast(false)}
+            />
+          )}
         </div>
         <div className={styles.lowerContent}>
           <p className={cn("max-2xl:hidden", styles.copyright)}>{copyright}</p>

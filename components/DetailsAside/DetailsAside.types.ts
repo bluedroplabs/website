@@ -1,9 +1,14 @@
 import type { ICTA } from "@/types/cta.types";
 import type { HTMLAttributes } from "react";
 
+export interface IDetailAsideDetailItem {
+  text: string;
+  href: string;
+}
+
 export interface IDetailAsideDetail {
   label: string;
-  items: string[];
+  items: (string | IDetailAsideDetailItem)[];
 }
 
 /**

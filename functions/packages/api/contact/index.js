@@ -144,6 +144,86 @@ export async function main(event) {
     console.error("Failed to add website lead tag:", tagData);
   }
 
+  const mandrillKey = process.env.MANDRILL_API_KEY;
+  if (mandrillKey) {
+    const fromEmail =
+      process.env.MANDRILL_FROM_EMAIL || "no-reply@bluedroplabs.com";
+    const emailBody = [
+      "New lead from the website",
+      "",
+      `Name: ${name || "(not provided)"}`,
+      `Email: ${email}`,
+      `Company: ${company || "(not provided)"}`,
+      "",
+      "Message:",
+      message,
+    ].join("\n");
+
+    const mandrillResponse = await fetch(
+      "https://mandrillapp.com/api/1.0/messages/send.json",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: mandrillKey,
+          message: {
+            from_email: fromEmail,
+            from_name: "Blue Drop Labs",
+            subject: `New website lead from ${email || "(not provided)"}`,
+            text: emailBody,
+            to: [{ email: "sales@bluedroplabs.com", type: "to" }],
+          },
+        }),
+      },
+    );
+
+    if (!mandrillResponse.ok) {
+      const mandrillData = await mandrillResponse.json().catch(() => ({}));
+      console.error("Failed to send lead notification email:", mandrillData);
+    }
+
+    const firstName = name?.trim().split(/\s+/)[0] || "there";
+    const confirmationBody = [
+      `Hi ${firstName},`,
+      "",
+      "Thank you for reaching out to Blue Drop Labs. We've received your message and appreciate you taking the time to connect with us.",
+      "",
+      "A member of our team will review your inquiry and get back to you as soon as possible. We typically respond within one business day.",
+      "",
+      "In the meantime, feel free to explore our website to learn more about our services.",
+      "",
+      "Best regards,",
+      "",
+      "Nathan Dentzau",
+      "CEO, Blue Drop Labs",
+    ].join("\n");
+
+    const confirmationResponse = await fetch(
+      "https://mandrillapp.com/api/1.0/messages/send.json",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: mandrillKey,
+          message: {
+            from_email: fromEmail,
+            from_name: "Nathan Dentzau",
+            subject: "We've received your message – Blue Drop Labs",
+            text: confirmationBody,
+            to: [{ email: email.trim().toLowerCase(), type: "to" }],
+          },
+        }),
+      },
+    );
+
+    if (!confirmationResponse.ok) {
+      const confirmationData = await confirmationResponse
+        .json()
+        .catch(() => ({}));
+      console.error("Failed to send confirmation email:", confirmationData);
+    }
+  }
+
   return {
     body: { message: "Contact form submitted successfully" },
     statusCode: 200,

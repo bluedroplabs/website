@@ -14,7 +14,8 @@ darkLogo:
 description: "High-performance hosting, expert development, and ongoing support."
 secondaryText: "We ♥️ Open Source"
 
-# Newsletter/Contact Form Section
+# Newsletter Form Section
+formAction: "/api/newsletter"
 formHeading: "Join our community"
 formDescription: "Practical insights. No fluff. Get actionable guidance on development, hosting, and performance."
 
@@ -37,12 +38,9 @@ primaryLinks:
       - children: "hello@bluedroplabs.com"
         href: "mailto:hello@bluedroplabs.com"
         target: "_self"
-      - children: "+1800 2329495453"
-        href: "tel:+18002329495453"
-        target: "_self"
-      - children: "Linkedin"
-        href: "https://www.linkedin.com/company/bluedroplabs"
-        target: "_blank"
+      # - children: "Linkedin"
+      #   href: "https://www.linkedin.com/company/bluedroplabs"
+      #   target: "_blank"
       - children: "Github"
         href: "https://github.com/bluedroplabs"
         target: "_blank"
@@ -54,6 +52,9 @@ utilityLinks:
     target: "_self"
   - children: "Privacy Policy"
     href: "/privacy-policy"
+    target: "_self"
+  - children: "Subprocessors"
+    href: "/subprocessors"
     target: "_self"
   # - children: "Sitemap"
   #   href: "/sitemap"

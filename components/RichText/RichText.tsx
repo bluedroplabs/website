@@ -22,6 +22,9 @@ export const RichText = ({ className, content, ...props }: IRichText) => {
         "[&_h6]:text-size-20 2xl:[&_h6]:text-size-24",
         "[&_p]:font-normal [&_p]:text-size-18 [&_p]:leading-[1.5] 2xl:[&_p]:text-size-18",
         "[&_blockquote]:border-l-2 [&_blockquote]:border-l-brand-light-blue [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:my-6 [&_blockquote]:lg:my-8",
+        "[&_table]:w-full [&_table]:border-collapse [&_table]:my-6",
+        "[&_th]:border [&_th]:border-border-normal [&_th]:px-4 [&_th]:py-3 [&_th]:text-left [&_th]:font-medium [&_th]:bg-surface-light",
+        "[&_td]:border [&_td]:border-border-normal [&_td]:px-4 [&_td]:py-3 [&_td]:text-size-16",
         className,
       )}
       {...props}

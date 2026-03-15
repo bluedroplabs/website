@@ -11,12 +11,14 @@ These functions run alongside the static Next.js site on App Platform. They are 
 
 Both return 405 for non-POST requests.
 
-### Newsletter environment variables
+### Environment variables
 
 Configure these in App Platform for the Functions component:
 
 - `MAILCHIMP_API_KEY` – Your Mailchimp API key (includes data center, e.g. `xxxx-us19`)
-- `MAILCHIMP_LIST_ID` – The audience/list ID to subscribe to (find in Mailchimp: Audience → Settings → Audience name and defaults)
+- `MAILCHIMP_LIST_ID` – The audience/list ID (find in Mailchimp: Audience → Settings → Audience name and defaults)
+- `MANDRILL_API_KEY` – Mailchimp Transactional (Mandrill) API key for contact form lead notifications to sales@bluedroplabs.com (optional; if unset, no notification email is sent)
+- `MANDRILL_FROM_EMAIL` – From address for transactional emails. Must use a verified Mandrill sending domain. Default: `no-reply@bluedroplabs.com`
 
 ## Local development
 

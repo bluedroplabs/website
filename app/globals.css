@@ -167,6 +167,10 @@
   --logo: "Solid Light";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-page-default);
   color: var(--color-default-base);
