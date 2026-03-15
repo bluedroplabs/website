@@ -76,6 +76,7 @@
   --color-deep-green: rgba(0, 32, 36, 1);
 
   /* Brand Colors */
+  --color-dentzau-yellow: #f5c518;
   --color-brand-aqua: rgba(45, 184, 207, 1);
   --color-brand-blue: rgba(0, 122, 156, 1);
   --color-brand-light-blue: rgba(114, 216, 232, 1);
@@ -256,4 +257,18 @@ strong.typewriter:empty {
   background-color: transparent;
   padding-right: 0;
   padding-left: 0;
+}
+
+.dentzau-highlight {
+  text-decoration: underline;
+  text-decoration-color: var(--color-dentzau-yellow);
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.08em;
+}
+
+.bdl-highlight {
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand-sky-blue);
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.08em;
 }
