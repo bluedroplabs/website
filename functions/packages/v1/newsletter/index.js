@@ -1,5 +1,31 @@
 import { createHash } from "node:crypto";
-import { verifyTurnstile } from "../../../shared/verify-turnstile.js";
+
+async function verifyTurnstile(token, remoteip) {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) return { success: true };
+  if (!token || typeof token !== "string" || !token.trim()) {
+    return { success: false, errorCodes: ["missing-input-response"] };
+  }
+  try {
+    const body = { secret, response: token };
+    if (remoteip) body.remoteip = remoteip;
+    const res = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      },
+    );
+    const data = await res.json().catch(() => ({}));
+    return data.success
+      ? { success: true }
+      : { success: false, errorCodes: data["error-codes"] || ["invalid-input-response"] };
+  } catch (err) {
+    console.error("Turnstile verification error:", err);
+    return { success: false, errorCodes: ["internal-error"] };
+  }
+}
 
 export async function main(event) {
   if (event?.http?.method !== "POST") {
