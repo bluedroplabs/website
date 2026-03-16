@@ -62,15 +62,11 @@ function getOgImage(
   };
 
   const isLogoPage =
-    slug.length === 1 &&
-    (slug[0] === "about-us" || slug[0] === "resources");
+    slug.length === 1 && (slug[0] === "about-us" || slug[0] === "resources");
 
   if (isLogoPage) return OG_LOGO;
 
-  if (
-    firstComponent?.type === "DetailPageHero" &&
-    firstComponent?.image?.src
-  ) {
+  if (firstComponent?.type === "DetailPageHero" && firstComponent?.image?.src) {
     return firstComponent.image.src;
   }
 
