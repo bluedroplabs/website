@@ -11,7 +11,7 @@ export const useTypewriter = (
   const {
     typingSpeed = 100,
     deletingSpeed = 100,
-    pauseTime = 1000,
+    pauseTime = 3000,
   } = options || {};
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
