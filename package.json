@@ -20,6 +20,7 @@
     "lighthouse": "lhci autorun",
     "lighthouse:dev": "npx serve dist -l 3000",
     "convert:images": "node scripts/convert-hero-to-webp.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs",
     "test": "vitest",
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",

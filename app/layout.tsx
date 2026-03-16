@@ -41,6 +41,9 @@ export default function RootLayout({
       lang="en"
       suppressHydrationWarning
     >
+      <head>
+        <link as="image" href="/assets/logo.svg" rel="preload" />
+      </head>
       <body>
         <ThemeProvider
           attribute="data-theme"

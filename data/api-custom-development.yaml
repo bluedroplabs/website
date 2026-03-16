@@ -9,7 +9,7 @@ components:
     description: "Build scalable web applications and APIs that power your business growth."
     title: "Complete Design, Development, & Support"
     image:
-      src: "/assets/api-customer-development-hero-asset.png"
+      src: "/assets/api-customer-development-hero-asset.webp"
       alt: "The Platform"
     primaryCTA:
       children: "Book a Consultation"

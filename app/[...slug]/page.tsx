@@ -48,7 +48,7 @@ export async function generateStaticParams() {
   return slugs;
 }
 
-const OG_LOGO = "/assets/logo-full-dark.png";
+const OG_LOGO = "/assets/logo-full-dark.webp";
 
 function getOgImage(
   slug: string[],

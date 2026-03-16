@@ -10,7 +10,7 @@ components:
     eyebrow: "Case Study"
     title: "Automating a Media Platform into an AI-Powered Engine"
     image:
-      src: "/assets/platform-reliability.png"
+      src: "/assets/platform-reliability.webp"
       alt: "Stacker media platform – from spreadsheets to an AI-powered engine"
 
   - type: Wysiwyg
@@ -111,7 +111,7 @@ components:
         type: "case-study"
         topic: ["wordpress", "cms"]
         image:
-          src: "/assets/powdr-hosting-revolution.png"
+          src: "/assets/powdr-hosting-revolution.webp"
           alt: "Turning Traffic Spikes Into Revenue – Not Risk"
         href: "/resources/case-studies/turning-traffic-spikes-into-revenue"
         title: "Turning Traffic Spikes Into Revenue — Not Risk"
@@ -122,7 +122,7 @@ components:
         type: "case-study"
         topic: ["drupal", "cms"]
         image:
-          src: "/assets/unified-dor-platform.png"
+          src: "/assets/unified-dor-platform.webp"
           alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
         href: "/resources/case-studies/helping-lifestyle-company-cut-software-costs-70"
         title: "Helping a Lifestyle Company Cut Software Costs by 70%"
@@ -133,7 +133,7 @@ components:
         type: "case-study"
         topic: ["ui-ux", "cms"]
         image:
-          src: "/assets/infrastructure-rebuild.png"
+          src: "/assets/infrastructure-rebuild.webp"
           alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
         href: "/resources/case-studies/building-enterprise-grade-infrastructure"
         title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
