@@ -1,12 +1,16 @@
 "use client";
 
 import { Container } from "@/components/Container/Container";
+import { Toast } from "@/components/Toast/Toast";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
+import { TurnstileWidget } from "@/components/TurnstileWidget";
 import { cn } from "@/utils/classes";
 
 import { themeIconMap, themes } from "@/contants/theme";
 import { useAppTheme } from "@/hooks/useAppTheme";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import Image from "next/image";
+import { useRef, useState } from "react";
 import { Button } from "../Button/Button";
 import { ArrowRightDownIcon } from "../Icon";
 import type { IFooter } from "./Footer.types";
@@ -61,6 +65,51 @@ export const Footer = ({
 }: IFooter) => {
   const { theme, setTheme, isDarkMode } = useAppTheme();
   const isMounted = useIsMounted();
+  const [showToast, setShowToast] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [showTurnstile, setShowTurnstile] = useState(false);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
+
+  const turnstileEnabled = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const canSubmit = !turnstileEnabled || turnstileToken;
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const hasInput = e.target.value.trim().length >= 1;
+    setShowTurnstile(hasInput);
+    if (!hasInput) setTurnstileToken(null);
+  };
+
+  const handleNewsletterSubmit = async (
+    e: React.FormEvent<HTMLFormElement>,
+  ) => {
+    e.preventDefault();
+    const email = emailInputRef.current?.value?.trim();
+    if (!email || !formAction || isSubmitting || !canSubmit) return;
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(formAction, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          ...(turnstileToken && { cfTurnstileResponse: turnstileToken }),
+        }),
+      });
+
+      if (response.ok) {
+        if (emailInputRef.current) emailInputRef.current.value = "";
+        setShowTurnstile(false);
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
+        setShowToast(true);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <Container
@@ -100,7 +149,11 @@ export const Footer = ({
               </div>
             ))}
           </nav>
-          <form action={formAction} className={styles.form}>
+          <form
+            action={formAction}
+            className={styles.form}
+            onSubmit={handleNewsletterSubmit}
+          >
             <h2 className={styles.title}>{formHeading}</h2>
             <p
               className={cn(
@@ -113,13 +166,21 @@ export const Footer = ({
             <div className={styles.inputGroup}>
               <input
                 aria-label="Email address"
+                autoComplete="off"
                 className={styles.input}
+                data-1p-ignore
+                data-lpignore="true"
+                disabled={isSubmitting}
                 name="email"
+                onChange={handleEmailChange}
                 placeholder="Enter your email"
+                ref={emailInputRef}
+                required
                 type="email"
               />
               <Button
                 className={styles.submitButton}
+                disabled={isSubmitting || !canSubmit}
                 size="none"
                 type="submit"
                 variant="ghost"
@@ -127,10 +188,28 @@ export const Footer = ({
                 Subscribe
               </Button>
             </div>
+            {turnstileEnabled && showTurnstile && (
+              <div className="mt-4 w-full min-w-80 max-w-xl">
+                <TurnstileWidget
+                  onExpire={() => setTurnstileToken(null)}
+                  onSuccess={setTurnstileToken}
+                  ref={turnstileRef}
+                  size="flexible"
+                />
+              </div>
+            )}
           </form>
+          {showToast && (
+            <Toast
+              message="Thanks for signing up! We'll be in touch."
+              onDismiss={() => setShowToast(false)}
+            />
+          )}
         </div>
         <div className={styles.lowerContent}>
-          <p className={cn("max-2xl:hidden", styles.copyright)}>{copyright}</p>
+          <p className={cn("max-2xl:hidden", styles.copyright)}>
+            {copyright.replace("{{year}}", String(new Date().getFullYear()))}
+          </p>
           <nav className={cn("lg:max-2xl:w-full 2xl:ml-auto", styles.nav)}>
             <ul
               aria-label="Legal and company information"
@@ -152,7 +231,9 @@ export const Footer = ({
           </nav>
 
           <div className={styles.themeGroup}>
-            <p className={cn("2xl:hidden", styles.copyright)}>{copyright}</p>
+            <p className={cn("2xl:hidden", styles.copyright)}>
+              {copyright.replace("{{year}}", String(new Date().getFullYear()))}
+            </p>
             <nav>
               <ul className={styles.themeButtons}>
                 {themes.map((t) => {

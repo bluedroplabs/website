@@ -30,7 +30,11 @@ export const Navigation = ({
   const { isDarkMode } = useAppTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const logoProps = { fill: true, priority: true };
+  const logoProps = {
+    fill: true,
+    priority: true,
+    fetchPriority: "high" as const,
+  };
 
   return (
     <>

@@ -2,11 +2,11 @@ import type { HTMLAttributes } from "react";
 import type { IResourceCard } from "../ResourceCard/ResourceCard.types";
 
 /**
- * Props for the RelatedPosts component.
+ * Props for the RelatedArticles component.
  */
-export interface IRelatedPosts extends HTMLAttributes<HTMLElement> {
+export interface IRelatedArticles extends HTMLAttributes<HTMLElement> {
   /**
-   * Section title displayed above the related posts list.
+   * Section title displayed above the related articles list.
    */
   title: string;
 

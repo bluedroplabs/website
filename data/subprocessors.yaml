@@ -1,0 +1,93 @@
+# Subprocessors - Blue Drop Labs
+# List of third-party subprocessors that process data on our behalf
+
+title: "Subprocessors - Blue Drop Labs"
+description: "A list of third-party subprocessors we use to deliver our services."
+components:
+  - type: GradientHero
+    eyebrow: "Legal"
+    title: "Subprocessors"
+    description: "Third-party services that process data on our behalf."
+
+  - type: Wysiwyg
+    components:
+      - type: RichText
+        content: |
+          <p><strong>Last Updated:</strong> March 2026</p>
+          <p>When you use our website or services, we engage certain third-party subprocessors to help us operate our business. This page lists the subprocessors we use, the purpose of each, and where you can learn more about their data practices.</p>
+          <p>We select subprocessors that meet our standards for security and privacy. We enter into data processing agreements where required and require subprocessors to protect your information in accordance with applicable law.</p>
+          <p>We may update this list from time to time. If we add new subprocessors that materially affect how we process your data, we will update this page and, where appropriate, notify you through our Privacy Policy or other means.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="subprocessor-list">Subprocessor List</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Subprocessor</th>
+                <th>Purpose</th>
+                <th>Location</th>
+                <th>Privacy / Security</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cloudflare</strong></td>
+                <td>Content delivery network (CDN), DDoS protection, and web application security</td>
+                <td>Global (United States)</td>
+                <td><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>DigitalOcean</strong></td>
+                <td>Cloud hosting infrastructure for our website and client projects; serverless functions</td>
+                <td>United States (multiple regions)</td>
+                <td><a href="https://www.digitalocean.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Google Analytics</strong></td>
+                <td>Website traffic analysis and usage analytics</td>
+                <td>Global (United States)</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Hotjar</strong></td>
+                <td>Website behavior analytics, heatmaps, and session recordings</td>
+                <td>European Union / Malta</td>
+                <td><a href="https://www.hotjar.com/legal/policies/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Mailchimp (Intuit)</strong></td>
+                <td>Email marketing and newsletter subscription management</td>
+                <td>United States</td>
+                <td><a href="https://www.intuit.com/privacy/statement/" target="_blank" rel="noopener noreferrer">Intuit Global Privacy Statement</a></td>
+              </tr>
+              <tr>
+                <td><strong>Stripe</strong></td>
+                <td>Payment processing for invoices and transactions</td>
+                <td>United States / Global</td>
+                <td><a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></td>
+              </tr>
+              <tr>
+                <td><strong>Wave</strong></td>
+                <td>Invoicing and payment management</td>
+                <td>Canada</td>
+                <td><a href="https://www.waveapps.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+      - type: RichText
+        content: |
+          <h2 id="contact">Questions</h2>
+          <p>If you have questions about our subprocessors or how we handle your data, please contact us at <a href="mailto:hello@bluedroplabs.com">hello@bluedroplabs.com</a>.</p>
+    details:
+      cta:
+        children: "Contact Us"
+        href: "/contact"
+      details:
+        - label: "Sections"
+          items:
+            - text: "Subprocessor List"
+              href: "#subprocessor-list"
+            - text: "Questions"
+              href: "#contact"

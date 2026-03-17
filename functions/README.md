@@ -11,14 +11,67 @@ These functions run alongside the static Next.js site on App Platform. They are 
 
 Both return 405 for non-POST requests.
 
+### Environment variables
+
+Configure these in App Platform for the Functions component:
+
+- `MAILCHIMP_API_KEY` – Your Mailchimp API key (includes data center, e.g. `xxxx-us19`)
+- `MAILCHIMP_LIST_ID` – The audience/list ID (find in Mailchimp: Audience → Settings → Audience name and defaults)
+- `MANDRILL_API_KEY` – Mailchimp Transactional (Mandrill) API key for contact form lead notifications to sales@bluedroplabs.com (optional; if unset, no notification email is sent)
+- `MANDRILL_FROM_EMAIL` – From address for transactional emails. Must use a verified Mandrill sending domain. Default: `no-reply@bluedroplabs.com`
+
 ## Local development
 
-Requires [doctl](https://docs.digitalocean.com/reference/doctl/) with the serverless extension:
+### Option 1: Deploy and invoke via doctl
+
+Requires [doctl](https://docs.digitalocean.com/reference/doctl/) with the serverless extension. Functions run in the cloud; there is no local runtime.
 
 ```bash
 doctl serverless connect
 doctl serverless deploy functions
 ```
+
+Invoke the newsletter function (set env vars in App Platform or use `--env` with a `.env` file):
+
+```bash
+doctl serverless functions invoke api/newsletter --param email:you@example.com
+```
+
+Or use `curl` with the function URL from `doctl serverless functions get api/newsletter --url`:
+
+```bash
+curl -X POST "https://faas-xxx.doserverless.co/..." \
+  -H "Content-Type: application/json" \
+  -d '{"email":"you@example.com"}'
+```
+
+Use `doctl serverless watch functions` to auto-redeploy on file changes.
+
+### Option 2: Run locally with Node
+
+For quick local testing without deploying, run the function directly:
+
+```bash
+cd functions
+MAILCHIMP_API_KEY=your_key MAILCHIMP_LIST_ID=your_list_id node scripts/test-newsletter.mjs
+```
+
+Or with a `.env` file in the `functions/` directory (Node 20+):
+
+```bash
+cd functions
+node --env-file=.env scripts/test-newsletter.mjs
+```
+
+Pass an email as an argument to override the default: `node scripts/test-newsletter.mjs you@example.com`
+
+Contact function:
+
+```bash
+node --env-file=.env scripts/test-contact.mjs
+```
+
+Optional args: `node scripts/test-contact.mjs "Name" "email@example.com" "Company"`
 
 ## App Platform setup
 

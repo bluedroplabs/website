@@ -1,0 +1,100 @@
+# Dentzau redirect landing page
+# Orphaned page – not linked from nav or footer. For visitors redirected from dentzau.com.
+
+title: "Dentzau is now Blue Drop"
+description: "Nathan Dentzau & Associates has rebranded as Blue Drop Labs. Same team, same expertise—strategy, development, design, hosting, and support."
+components:
+  - type: GradientHero
+    eyebrow: "WELCOME"
+    title: "<span class=\"dentzau-highlight\">Dentzau</span> is now<br /><span class=\"bdl-highlight\">Blue Drop!</span>"
+    description: "Same team, same expertise. We've rebranded to better reflect who we are today—your agile product development partner for strategy, development, design, hosting, and ongoing support."
+
+  - type: FeaturedText
+    description: "If you knew us as Nathan Dentzau & Associates or Dentzau, you've come to the right place. We still hand-make digital products, leverage decades of experience for technical strategy, build with open source technologies, and deliver enterprise-level Drupal consulting. We're now Blue Drop Labs—and we're ready to help you accelerate your digital business."
+    title: "Everything you need is still here"
+
+  - type: GridSeparator
+
+  - type: FeaturedIconList
+    eyebrow: "What you get"
+    title: "Partnerships over transactions"
+    description: "We adapt to your needs, not the other way around. Every engagement is tailored to your specific needs, budget, and timeline."
+    items:
+      - icon: "CheckBadgeIcon"
+        title: "Affordable Expertise"
+        description: "Enterprise-grade quality without enterprise costs. Most clients save 30-50% compared to legacy providers."
+      - icon: "ShakeHandsIcon"
+        title: "Partnership Driven"
+        description: "We become your trusted technical partner—most of our clients retain us for years."
+      - icon: "StackedIcon"
+        title: "Full-Stack Management"
+        description: "Every layer of your digital infrastructure, from hosting to code—handled by one team."
+
+  - type: GridSeparator
+
+  - type: FeaturedText
+    description: "Blue Drop Labs is a U.S.-based full-service digital agency founded by Nathan Dentzau, a Triple Certified Drupal expert with over 20 years of experience. Every team member has over a decade of development experience. We're specialists who come in, solve the problem, and deliver results quickly."
+    eyebrow: "Our team"
+    title: "Proven Experts. Practical Solutions."
+
+  - type: GridSeparator
+
+  - type: FeaturedSolutionsGrid
+    title: "Our solutions"
+    description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
+    solutions:
+      - title: "Drupal + WordPress Managed Hosting"
+        description: "We build powerful, maintainable, and secure digital experiences with custom functionality, seamless integrations, and professional craftsmanship."
+        href: "/platform"
+        image:
+          alt: "Drupal + WordPress Managed Hosting"
+          src: "/assets/drupal-and-wordpress-development.svg"
+      - title: "Drupal & WordPress Support"
+        description: "Ongoing maintenance and expert support to keep your Drupal or WordPress site secure, fast, and performing at its best."
+        href: "/services"
+        image:
+          alt: "Drupal 7 support"
+          src: "/assets/drupal-7-support.svg"
+      - title: "Drupal 7 Extended Support"
+        description: "Keep your Drupal 7 platform secure and stable with enterprise-level maintenance and updates—no costly migrations required."
+        href: "/services"
+        image:
+          alt: "Drupal + WordPress Support"
+          src: "/assets/drupal-and-wordpress-support-light.svg"
+          srcDark: "/assets/drupal-and-wordpress-support-dark.svg"
+      - title: "API + Custom Development"
+        description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
+        href: "/api-custom-development"
+        image:
+          alt: "API + Custom Development"
+          src: "/assets/api-and-custom-development.svg"
+      - title: "Design + Experience"
+        description: "Transform your brand into a high-performing digital experience with accessible, responsive, and conversion-focused design."
+        href: "/services"
+        image:
+          alt: "Design + Experience"
+          src: "/assets/design-and-experience.svg"
+      - title: "SEO + Marketing"
+        description: "Turn your website into a high-performing growth engine with technical SEO, performance optimization, and data-driven marketing strategies."
+        href: "/services"
+        image:
+          alt: "SEO + Marketing"
+          src: "/assets/seo-and-marketing-light.svg"
+          srcDark: "/assets/seo-and-marketing-dark.svg"
+
+  - type: GridSeparator
+
+  - type: FeaturedText
+    description: "Our platform delivers fixed, predictable pricing with unlimited bandwidth and visitors. No more paying extra as your traffic grows. White-glove migration from Pantheon, Acquia, or any host—most migrations completed with zero downtime."
+    eyebrow: "Hosting"
+    title: "High-performance hosting without the premium price"
+
+  - type: GridSeparator
+
+  - type: CtaBlock
+    cta:
+      children: "Explore Blue Drop Labs"
+      href: "/"
+      target: _self
+    description: "See what we're building and how we can help your organization."
+    title: "Ready to get started?"

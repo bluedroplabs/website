@@ -6,11 +6,11 @@ description: "When Stacker's managed hosting provider failed at a critical time,
 components:
   - type: DetailPageHero
     author: "Matt Robison"
-    date: "September 26, 2025"
+    date: "October 14, 2025"
     eyebrow: "Case Study"
     title: "Building Enterprise-Grade Infrastructure on a Bootstrapped Budget"
     image:
-      src: "/assets/engineered-foundation.png"
+      src: "/assets/engineered-foundation.webp"
       alt: "Platform reliability – from collapse to control"
 
   - type: Wysiwyg
@@ -23,7 +23,7 @@ components:
           <p>Blue Drop Labs architected and implemented a custom hosting solution that transformed Stacker's infrastructure from a liability into a competitive advantage. The solution reduced costs, eliminated regular downtimes, and has scaled to meet growing demands. This stability has allowed Stacker to iterate and improve their offerings with confidence.</p>
       - type: "InlineImage"
         image:
-          src: "/assets/infrastructure-rebuild.png"
+          src: "/assets/infrastructure-rebuild.webp"
           alt: "Infrastructure goals – old vs new platform performance"
           width: 720
           height: 500
@@ -34,10 +34,10 @@ components:
             description: "Monthly fees dropped from $3500/month to $800/month."
           - value: "400% Performance Improvement"
             description: "Reduced load times for critical administration pages from 10+ seconds to under 2 seconds."
-          - value: "99.9% Uptime"
+          - value: "From Daily Outages to 99.9% Uptime"
             description: "The platform went from expected downtimes every single day to expected stability."
           - value: "Proactive Incident Management"
-            description: "Integrated tools provide 24/7 monitoring and automatic alerting, ensuring rapid response to any issues."
+            description: "Integrated tools to provide 24/7 monitoring and automatic alerting, ensuring rapid response to any issues."
       - type: "RichText"
         content: |
           <h2>A new foundation for a growing platform</h2>
@@ -77,8 +77,8 @@ components:
 
   - type: GridSeparator
 
-  - type: RelatedPosts
-    title: "Related Posts"
+  - type: RelatedArticles
+    title: "Related Articles"
     items:
       - date: "September 26, 2025"
         description: "Turning traffic spikes into revenue with scalable infrastructure and stress-proof hosting."
@@ -86,9 +86,9 @@ components:
         type: "case-study"
         topic: ["wordpress", "cms"]
         image:
-          src: "/assets/powdr-hosting-revolution.png"
+          src: "/assets/powdr-hosting-revolution.webp"
           alt: "Turning Traffic Spikes Into Revenue – Not Risk"
-        href: "/resources/turning-traffic-spikes-into-revenue"
+        href: "/resources/case-studies/turning-traffic-spikes-into-revenue"
         title: "Turning Traffic Spikes Into Revenue — Not Risk"
         variant: "default"
       - date: "September 26, 2025"
@@ -97,9 +97,9 @@ components:
         type: "case-study"
         topic: ["drupal", "cms"]
         image:
-          src: "/assets/unified-dor-platform.png"
+          src: "/assets/unified-dor-platform.webp"
           alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
-        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
+        href: "/resources/case-studies/helping-lifestyle-company-cut-software-costs-70"
         title: "Helping a Lifestyle Company Cut Software Costs by 70%"
         variant: "default"
       - date: "September 26, 2025"
@@ -108,8 +108,8 @@ components:
         type: "case-study"
         topic: ["cms", "performance"]
         image:
-          src: "/assets/10ms-global-delivery.png"
+          src: "/assets/10ms-global-delivery.webp"
           alt: "How We Achieved 10ms Response Times Globally"
-        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        href: "/resources/case-studies/how-we-achieved-10ms-response-times-globally"
         title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
         variant: "default"

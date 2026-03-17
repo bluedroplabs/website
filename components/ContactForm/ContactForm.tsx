@@ -3,9 +3,10 @@
 import { Container } from "@/components/Container/Container";
 import { Button } from "@/components/Button/Button";
 import { ArrowRightDownIcon } from "@/components/Icon";
-import { cn } from "@/utils/classes";
-
 import { Toast } from "@/components/Toast/Toast";
+import type { TurnstileInstance } from "@marsidev/react-turnstile";
+import { TurnstileWidget } from "@/components/TurnstileWidget";
+import { cn } from "@/utils/classes";
 import { useRef, useState } from "react";
 import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
@@ -70,23 +71,69 @@ export const ContactForm = ({
   contactEmail,
   contactEmailHref,
   bookCallLink,
+  formAction = "/api/contact",
   fields = defaultFields,
   submitButtonText = "SEND MESSAGE",
   ...props
 }: IContactForm) => {
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
   const [isPending, setIsPending] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const formRef = useRef<HTMLFormElement>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const turnstileEnabled = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const canSubmit = !turnstileEnabled || turnstileToken;
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO - Integrate with actual API
-    setIsPending(true);
+    if (!formRef.current || isPending || !canSubmit) return;
 
-    // Reset form and show toast
-    formRef.current?.reset();
-    setShowToast(true);
-    setIsPending(false);
+    const formData = new FormData(formRef.current);
+    const fullName = formData.get("fullName")?.toString() ?? "";
+    const email = formData.get("email")?.toString() ?? "";
+    const company = formData.get("company")?.toString() ?? "";
+    const message = formData.get("message")?.toString() ?? "";
+
+    if (!email || !message) return;
+
+    setIsPending(true);
+    try {
+      const response = await fetch(formAction, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fullName,
+          email,
+          company: company || undefined,
+          message,
+          ...(turnstileToken && { cfTurnstileResponse: turnstileToken }),
+        }),
+      });
+
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+      };
+
+      if (response.ok) {
+        formRef.current.reset();
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
+        setToastMessage("Thanks for reaching out! We'll get back to you soon.");
+        setShowToast(true);
+      } else {
+        setToastMessage(
+          data.error ?? "Something went wrong. Please try again.",
+        );
+        setShowToast(true);
+      }
+    } catch {
+      setToastMessage("Something went wrong. Please try again.");
+      setShowToast(true);
+    } finally {
+      setIsPending(false);
+    }
   };
 
   return (
@@ -157,7 +204,28 @@ export const ContactForm = ({
                     />
                   ) : (
                     <input
+                      autoComplete={
+                        field.name === "fullName" ||
+                        field.name === "email" ||
+                        field.name === "company"
+                          ? "off"
+                          : undefined
+                      }
                       className={styles.input}
+                      data-1p-ignore={
+                        field.name === "fullName" ||
+                        field.name === "email" ||
+                        field.name === "company"
+                          ? true
+                          : undefined
+                      }
+                      data-lpignore={
+                        field.name === "fullName" ||
+                        field.name === "email" ||
+                        field.name === "company"
+                          ? "true"
+                          : undefined
+                      }
                       id={field.name}
                       name={field.name}
                       placeholder={field.placeholder}
@@ -168,9 +236,20 @@ export const ContactForm = ({
                 </div>
               ))}
 
+              {turnstileEnabled && (
+                <div className="mt-4 w-full min-w-80 max-w-xl">
+                  <TurnstileWidget
+                    onExpire={() => setTurnstileToken(null)}
+                    onSuccess={setTurnstileToken}
+                    ref={turnstileRef}
+                    size="flexible"
+                  />
+                </div>
+              )}
+
               <Button
                 className={styles.submitButton}
-                disabled={isPending}
+                disabled={isPending || !canSubmit}
                 type="submit"
               >
                 {isPending ? "SENDING..." : submitButtonText}
@@ -180,7 +259,7 @@ export const ContactForm = ({
 
           {showToast && (
             <Toast
-              message="Message sent successfully!"
+              message={toastMessage}
               onDismiss={() => setShowToast(false)}
             />
           )}

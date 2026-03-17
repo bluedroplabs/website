@@ -10,7 +10,7 @@ components:
     eyebrow: "Case Study"
     title: "Automating a Media Platform into an AI-Powered Engine"
     image:
-      src: "/assets/platform-reliability.png"
+      src: "/assets/platform-reliability.webp"
       alt: "Stacker media platform – from spreadsheets to an AI-powered engine"
 
   - type: Wysiwyg
@@ -20,7 +20,7 @@ components:
           <p>Stacker is a content distribution platform connecting hundreds of brands with publishers to distribute stories worldwide. Their system used to be powered by spreadsheets, manual copying and pasting, and ad-hoc analytics reports. With so many manual processes, growth potential was limited.</p>
           <p>Blue Drop Labs helped Stacker evolve its platform with automated workflows, advanced analytics, and a modern customer portal that transformed how brands track and optimize their content distribution.</p>
       - type: "Metrics"
-        title: "HIGHLIGHTS"
+        title: "Highlights"
         metrics:
           - value: "Saved staff hours"
             description: "Automated story submission and tracking processes eliminated over 10,000 emails over the course of 6 months."
@@ -35,7 +35,7 @@ components:
           <h2>The challenge: Scaling beyond spreadsheets and email</h2>
           <p>Stacker began with a very specific use case: distributing slideshows to a handful of partners. The systems were custom-built for that narrow purpose. As the industry evolved and Stacker grew, those systems became bottlenecks. The process looked like this:</p>
           <ul>
-            <li>Brands submitted content by sending links to their blog posts</li>
+            <li>Brands submitted content by sending links to their articles</li>
             <li>Stacker staff manually copied and pasted content into their CMS</li>
             <li>When stories were published, staff sent individual emails to notify brands</li>
             <li>Results were tracked in Google spreadsheets that were shared back and forth</li>
@@ -65,10 +65,10 @@ components:
           <h2>Version 3: Insights, intelligence, and AI</h2>
           <p>Rather than merely automating existing processes, V3 introduced capabilities that were previously impossible.</p>
           <ul>
-            <li><strong>Comprehensive Analytics Dashboard</strong>—Brands can track pickup numbers, page views, and detailed performance metrics across Stacker's partner network</li>
-            <li><strong>Quality Metrics</strong>—Not just how many pickups, but which ones. Household names versus smaller outlets, demographic breakdowns, and geographic distribution</li>
-            <li><strong>Comparative Benchmarking</strong>—Brands can see how their content performs compared to others in their category</li>
-            <li><strong>AI-Powered Recommendations</strong>—The system analyzes past performance and suggests story types and topics that are likely to perform well</li>
+            <li><strong>Comprehensive Analytics Dashboard</strong> - Brands can track pickup numbers, page views, and detailed performance metrics across Stacker's partner network</li>
+            <li><strong>Quality Metrics</strong> - Not just how many pickups, but which ones. Household names versus smaller outlets, demographic breakdowns, and geographic distribution</li>
+            <li><strong>Comparative Benchmarking</strong> - Brands can see how their content performs compared to others in their category</li>
+            <li><strong>AI-Powered Recommendations</strong> - The system analyzes past performance and suggests story types and topics that are likely to perform well</li>
           </ul>
       - type: "RichText"
         content: |
@@ -102,8 +102,8 @@ components:
 
   - type: GridSeparator
 
-  - type: RelatedPosts
-    title: "Related Posts"
+  - type: RelatedArticles
+    title: "Related Articles"
     items:
       - date: "September 26, 2025"
         description: "Turning traffic spikes into revenue with scalable infrastructure and stress-proof hosting."
@@ -111,9 +111,9 @@ components:
         type: "case-study"
         topic: ["wordpress", "cms"]
         image:
-          src: "/assets/powdr-hosting-revolution.png"
+          src: "/assets/powdr-hosting-revolution.webp"
           alt: "Turning Traffic Spikes Into Revenue – Not Risk"
-        href: "/resources/turning-traffic-spikes-into-revenue"
+        href: "/resources/case-studies/turning-traffic-spikes-into-revenue"
         title: "Turning Traffic Spikes Into Revenue — Not Risk"
         variant: "default"
       - date: "September 26, 2025"
@@ -122,9 +122,9 @@ components:
         type: "case-study"
         topic: ["drupal", "cms"]
         image:
-          src: "/assets/unified-dor-platform.png"
+          src: "/assets/unified-dor-platform.webp"
           alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
-        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
+        href: "/resources/case-studies/helping-lifestyle-company-cut-software-costs-70"
         title: "Helping a Lifestyle Company Cut Software Costs by 70%"
         variant: "default"
       - date: "September 26, 2025"
@@ -133,8 +133,8 @@ components:
         type: "case-study"
         topic: ["ui-ux", "cms"]
         image:
-          src: "/assets/infrastructure-rebuild.png"
+          src: "/assets/infrastructure-rebuild.webp"
           alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
-        href: "/resources/building-enterprise-grade-infrastructure"
+        href: "/resources/case-studies/building-enterprise-grade-infrastructure"
         title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
         variant: "default"

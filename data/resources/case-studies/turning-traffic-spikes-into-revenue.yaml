@@ -6,11 +6,11 @@ description: "Blue Drop Labs provided managed Drupal hosting with flat-rate pric
 components:
   - type: DetailPageHero
     author: "Matt Robison"
-    date: "September 26, 2025"
+    date: "March 15, 2026"
     eyebrow: "Case Study"
     title: "Turning Traffic Spikes Into Revenue — Not Risk"
     image:
-      src: "/assets/powdr-hosting-revolution.png"
+      src: "/assets/powdr-hosting-revolution.webp"
       alt: "POWDR hosting and support – Turning traffic spikes into revenue"
 
   - type: Wysiwyg
@@ -22,7 +22,7 @@ components:
           <p>Blue Drop Labs provided managed Drupal hosting with flat-rate pricing, unlimited bandwidth, and direct access to senior engineers for premium support. We became an extension of POWDR's team rather than just another vendor, resulting in lower costs and increased stability.</p>
       - type: "InlineImage"
         image:
-          src: "/assets/powdr-platform-today.png"
+          src: "/assets/powdr-platform-today.webp"
           alt: "POWDR high-traffic hosting infrastructure"
           width: 720
           height: 320
@@ -43,7 +43,7 @@ components:
           <p>When POWDR's sites experience timeouts or slow loading during peak booking periods, they lose sales. The new hosting infrastructure ensures that high-traffic moments translate to revenue rather than frustrated customers and abandoned carts. Annual Drupal version upgrades happen strategically during the summer months to reduce risk during the peak season.</p>
       - type: "InlineImage"
         image:
-          src: "/assets/build-speed-acceleration.png"
+          src: "/assets/build-speed-acceleration.webp"
           alt: "Build time comparison – Old way 30 seconds vs Blue Drop 3 seconds"
           width: 720
           height: 500
@@ -77,8 +77,8 @@ components:
 
   - type: GridSeparator
 
-  - type: RelatedPosts
-    title: "Related Posts"
+  - type: RelatedArticles
+    title: "Related Articles"
     items:
       - date: "September 26, 2025"
         description: "Blue Drop Labs helped POWDR migrate the DOR system, achieving 70% cost reduction."
@@ -86,9 +86,9 @@ components:
         type: "case-study"
         topic: ["drupal", "cms"]
         image:
-          src: "/assets/unified-dor-platform.png"
+          src: "/assets/unified-dor-platform.webp"
           alt: "Helping a Lifestyle Company Cut Software Costs by 70%"
-        href: "/resources/helping-lifestyle-company-cut-software-costs-70"
+        href: "/resources/case-studies/helping-lifestyle-company-cut-software-costs-70"
         title: "Helping a Lifestyle Company Cut Software Costs by 70%"
         variant: "default"
       - date: "September 26, 2025"
@@ -97,9 +97,9 @@ components:
         type: "case-study"
         topic: ["cms", "performance"]
         image:
-          src: "/assets/10ms-global-delivery.png"
+          src: "/assets/10ms-global-delivery.webp"
           alt: "How We Achieved 10ms Response Times Globally"
-        href: "/resources/how-we-achieved-10ms-response-times-globally"
+        href: "/resources/case-studies/how-we-achieved-10ms-response-times-globally"
         title: "How We Achieved 10ms Response Times Globally (And You Can Too)"
         variant: "default"
       - date: "September 26, 2025"
@@ -108,8 +108,8 @@ components:
         type: "case-study"
         topic: ["ui-ux"]
         image:
-          src: "/assets/engineered-foundation.png"
+          src: "/assets/engineered-foundation.webp"
           alt: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
-        href: "/resources/building-enterprise-grade-infrastructure"
+        href: "/resources/case-studies/building-enterprise-grade-infrastructure"
         title: "Building Enterprise-Grade Infrastructure on a Bootstrap Budget"
         variant: "default"

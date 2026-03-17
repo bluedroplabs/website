@@ -1,0 +1,145 @@
+# Terms of Use - Blue Drop Labs
+# Legal terms for digital agency and web hosting services
+
+title: "Terms of Use - Blue Drop Labs"
+description: "Terms of use governing the use of Blue Drop Labs website and services, including professional services and web hosting."
+components:
+  - type: GradientHero
+    eyebrow: "Legal"
+    title: "Terms of Use"
+    description: "Please read these terms carefully before using our website or services."
+
+  - type: Wysiwyg
+    components:
+      - type: RichText
+        content: |
+          <p><strong>Last Updated:</strong> March 2026</p>
+          <p>These Terms of Use ("Terms") govern your access to and use of the Blue Drop Labs website, services, and any related applications (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to these Terms, do not use our Services.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="agreement-to-terms">1. Agreement to Terms</h2>
+          <p>Dentzau, LLC d/b/a Blue Drop Labs ("we," "us," or "our") provides digital agency services, including but not limited to web development, design, consulting, and managed web hosting. These Terms apply to all visitors, users, and clients who access or use our Services. By using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="description-of-services">2. Description of Services</h2>
+          <p>We offer professional services including:</p>
+          <ul>
+            <li><strong>Web Development & Design:</strong> Custom website development, design, and user experience services</li>
+            <li><strong>Managed Hosting:</strong> Web hosting, infrastructure management, and related technical support</li>
+            <li><strong>Consulting & Strategy:</strong> Digital strategy, technical consulting, and ongoing support</li>
+            <li><strong>Maintenance & Support:</strong> Ongoing maintenance, updates, and technical support for websites and applications</li>
+          </ul>
+          <p>Specific services, deliverables, and terms for client engagements are defined in separate service agreements, statements of work, or hosting agreements.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="use-of-the-website">3. Use of the Website</h2>
+          <p>You agree to use our website only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+          <ul>
+            <li>Use the website in any way that violates applicable laws or regulations</li>
+            <li>Attempt to gain unauthorized access to our systems, networks, or the systems of our clients</li>
+            <li>Transmit any viruses, malware, or other harmful code</li>
+            <li>Interfere with or disrupt the website or servers and networks connected to the website</li>
+            <li>Use the website to collect or harvest personal information of other users</li>
+            <li>Use automated systems (bots, scrapers) to access the website without our prior written consent</li>
+          </ul>
+
+      - type: RichText
+        content: |
+          <h2 id="hosting-services">4. Hosting Services</h2>
+          <p>For clients using our managed hosting services:</p>
+          <ul>
+            <li><strong>Acceptable Use:</strong> You agree to use hosting services only for lawful purposes. Prohibited uses include hosting illegal content, malware, spam, or material that infringes on intellectual property rights.</li>
+            <li><strong>Resource Usage:</strong> Hosting plans are subject to fair use policies. Excessive resource consumption may result in temporary throttling or require plan upgrades.</li>
+            <li><strong>Data & Backups:</strong> We implement backup procedures; however, you are responsible for maintaining your own backups of critical data. We are not liable for data loss.</li>
+            <li><strong>Uptime:</strong> We strive for high availability but do not guarantee uninterrupted service. Scheduled maintenance will be communicated when possible.</li>
+          </ul>
+
+      - type: RichText
+        content: |
+          <h2 id="intellectual-property">5. Intellectual Property</h2>
+          <p>All content on our website—including text, graphics, logos, images, and software—is the property of Blue Drop Labs or our licensors and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from our content without our prior written consent.</p>
+          <p>For client projects, intellectual property rights are typically addressed in our service agreements. Unless otherwise agreed in writing, pre-existing materials remain the property of their respective owners, and work product is governed by the terms of the applicable agreement.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="user-content-and-submissions">6. User Content and Submissions</h2>
+          <p>When you submit information through our contact forms, newsletter signup, or other means, you grant us a non-exclusive, royalty-free license to use that information to respond to your inquiries and provide our services. We will handle your personal information in accordance with our Privacy Policy.</p>
+          <p>You represent that any content you submit does not violate any third-party rights or applicable laws.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="disclaimers">7. Disclaimers</h2>
+          <p>Our website and Services are provided "as is" and "as available" without warranties of any kind, either express or implied. We do not warrant that the website will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+          <p>Information on our website is for general purposes only and does not constitute professional advice. You should consult with appropriate professionals for advice tailored to your specific situation.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="limitation-of-liability">8. Limitation of Liability</h2>
+          <p>To the maximum extent permitted by law, Blue Drop Labs and its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or business opportunities, arising from your use of our Services.</p>
+          <p>Our total liability for any claims arising from or related to these Terms or the Services shall not exceed the amount you paid us in the twelve (12) months preceding the claim, or one hundred dollars ($100), whichever is greater.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="indemnification">9. Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless Blue Drop Labs and its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, and expenses (including reasonable attorneys' fees) arising from your use of the Services, your violation of these Terms, or your violation of any third-party rights.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="termination">10. Termination</h2>
+          <p>We may suspend or terminate your access to our website or Services at any time, with or without cause or notice. For hosting and service agreements, termination rights are set forth in the applicable agreement.</p>
+          <p>Upon termination, your right to use the Services ceases immediately. Provisions of these Terms that by their nature should survive termination shall survive, including intellectual property, disclaimers, limitation of liability, and indemnification.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="changes-to-terms">11. Changes to Terms</h2>
+          <p>We may modify these Terms at any time. We will notify you of material changes by posting the updated Terms on this page and updating the "Last Updated" date. Your continued use of the Services after such changes constitutes acceptance of the modified Terms.</p>
+          <p>For clients with active service agreements, material changes to terms affecting those services will be communicated in accordance with the applicable agreement.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="governing-law">12. Governing Law</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the State of Connecticut and the United States, without regard to Connecticut's conflict of law provisions. Any disputes arising from these Terms or the Services shall be resolved in the courts located in the State of Connecticut.</p>
+
+      - type: RichText
+        content: |
+          <h2 id="contact-us">13. Contact Us</h2>
+          <p>If you have questions about these Terms of Use, please contact us at:</p>
+          <p><strong>Blue Drop Labs</strong><br/>
+          Email: <a href="mailto:hello@bluedroplabs.com">hello@bluedroplabs.com</a></p>
+          <p>We will respond to your inquiry as soon as reasonably practicable.</p>
+    details:
+      cta:
+        children: "Contact Us"
+        href: "/contact"
+      details:
+        - label: "Sections"
+          items:
+            - text: "Agreement to Terms"
+              href: "#agreement-to-terms"
+            - text: "Description of Services"
+              href: "#description-of-services"
+            - text: "Use of the Website"
+              href: "#use-of-the-website"
+            - text: "Hosting Services"
+              href: "#hosting-services"
+            - text: "Intellectual Property"
+              href: "#intellectual-property"
+            - text: "User Content"
+              href: "#user-content-and-submissions"
+            - text: "Disclaimers"
+              href: "#disclaimers"
+            - text: "Limitation of Liability"
+              href: "#limitation-of-liability"
+            - text: "Indemnification"
+              href: "#indemnification"
+            - text: "Termination"
+              href: "#termination"
+            - text: "Changes to Terms"
+              href: "#changes-to-terms"
+            - text: "Governing Law"
+              href: "#governing-law"
+            - text: "Contact Us"
+              href: "#contact-us"
