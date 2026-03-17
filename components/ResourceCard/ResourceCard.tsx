@@ -68,7 +68,6 @@ const styles = {
 export const ResourceCard = ({
   className,
   date,
-  description,
   eyebrow,
   image,
   title,
@@ -93,8 +92,6 @@ export const ResourceCard = ({
           className={contentBlockVariants({ variant })}
           date={date}
           dateClassName={styles.date[variant]}
-          description={description}
-          descriptionClassName={styles.description[variant]}
           eyebrow={eyebrow}
           eyebrowClassName={styles.eyebrow}
           eyebrowVariant="highlight"
