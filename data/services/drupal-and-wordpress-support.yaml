@@ -8,14 +8,14 @@ components:
     title: "Drupal & WordPress Support"
     description: "Ongoing support and maintenance for your Drupal or WordPress website."
     image:
-      src: "/assets/drupal-and-wordpress-support-light.svg"
-      srcDark: "/assets/drupal-and-wordpress-support-dark.svg"
+      src: "/assets/drupal-and-wordpress-support-hero-light.png"
+      srcDark: "/assets/drupal-and-wordpress-support-hero-dark.png"
       alt: "Drupal & WordPress Support"
     primaryCTA:
       children: "Book a Consultation"
       href: "/contact"
 
-  - type: FeaturedIconListGrid
+  - type: FeaturedSplitIconList
     title: "Reliable Support from People Who Actually Know Your CMS"
     items:
       - icon: "BoltIcon"
@@ -117,20 +117,16 @@ components:
 
   - type: GridSeparator
 
-  - type: FeaturedIconListGrid
+  - type: FeaturedProcessList
     title: "Our Process"
     items:
-      - icon: "ClockIcon"
-        title: "Discovery Call (15 minutes)"
+      - title: "Discovery Call (15 minutes)"
         description: "We'll discuss your current website setup, pain points, and goals to understand exactly what support you need."
-      - icon: "ChartIcon"
-        title: "Technical Assessment"
+      - title: "Technical Assessment"
         description: "Our team reviews your site's current state and provides recommendations tailored to your needs and budget."
-      - icon: "CheckBadgeIcon"
-        title: "Choose Your Support Level with Monthly Flexibility"
+      - title: "Choose Your Support Level with Monthly Flexibility"
         description: "Select from our transparent pricing tiers and start immediately with our flexible contracts. No long-term commitments required."
-      - icon: "ShakeHandsIcon"
-        title: "Ongoing Support & Communication"
+      - title: "Ongoing Support & Communication"
         description: "Begin regular check-ins and get access to our ticketing system."
 
   - type: CtaBlock

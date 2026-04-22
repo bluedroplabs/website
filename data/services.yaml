@@ -56,11 +56,11 @@ components:
     title: "Our solutions"
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     solutions:
-      - title: "Drupal + WordPress Managed Hosting"
+      - title: "Drupal & WordPress Development"
         description: "We build powerful, maintainable, and secure digital experiences with custom functionality, seamless integrations, and professional craftsmanship."
-        href: "/"
+        href: "/services/drupal-and-wordpress-development"
         image:
-          alt: "Drupal + WordPress Managed Hosting"
+          alt: "Drupal & WordPress Development"
           src: "/assets/drupal-and-wordpress-development.svg"
       - title: "Drupal & WordPress Support"
         description: "Ongoing maintenance and expert support to keep your Drupal or WordPress site secure, fast, and performing at its best."

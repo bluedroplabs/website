@@ -15,7 +15,7 @@ components:
       children: "Book a Consultation"
       href: "/contact"
 
-  - type: InlineTextBlock
+  - type: FeaturedSplitText
     title: "Enterprise-Grade Solutions at Startup Speed"
     description: "Roll out custom web applications, APIs, and integrations that solve your unique business challenges. Whether you need a custom dashboard, internal tools, a prototype, or a full-scale application, we bring the expertise to make it happen—fast and efficiently."
 

@@ -15,7 +15,7 @@ components:
       children: "Book a Consultation"
       href: "/contact"
 
-  - type: FeaturedIconListGrid
+  - type: FeaturedSplitIconList
     title: "Expert Care That Keeps Your Drupal 7 Site Running Strong"
     items:
       - icon: "ClockIcon"
