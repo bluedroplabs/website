@@ -16,13 +16,15 @@ const FeaturedSolutionsGridRow = ({
   return (
     <div className="flex w-full min-w-0 flex-col lg:flex-row max-w-[var(--breakpoint-2xl)] mx-auto">
       {solutions.map((solution, index) => {
-        const cardClassName =
-          "w-full min-w-0 border-x border-border-normal lg:flex-1 lg:basis-0 lg:[&:nth-child(2)]:border-l-0";
+        const cardClassName = cn(
+          "w-full min-w-0 border-x border-border-normal lg:flex-1 lg:basis-0",
+          index > 0 && "lg:border-l-0",
+        );
 
         if (solution.href) {
           return (
             <Link
-              className="w-full min-w-0 lg:flex-1 lg:basis-0"
+              className="flex w-full min-w-0 lg:flex-1 lg:basis-0"
               href={solution.href}
               key={index}
             >

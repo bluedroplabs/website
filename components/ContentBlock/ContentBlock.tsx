@@ -16,7 +16,7 @@ const containerVariants = cva(containerClass, {
     variant: {
       left: "[&>div]:text-left",
       center: "[&>div]:text-center [&>div]:items-center",
-      inline: "lg:gap-10 lg:flex-row",
+      inline: "",
     },
   },
   defaultVariants: { variant: "left" },
@@ -55,6 +55,24 @@ const titleVariants = cva(
   },
 );
 
+const descriptionVariants = cva(
+  [
+    "font-light text-default-base lg:text-lg [&_strong]:font-bold",
+    "[&_ul]:mt-3 [&_ul]:space-y-3 [&_ul]:text-size-16 [&_ul]:lg:text-size-18",
+    "[&_li]:flex [&_li]:pl-6.25 [&_li]:relative [&_li]:before:absolute [&_li]:before:top-2 [&_li]:before:size-2.25 [&_li]:before:bg-brand-aqua [&_li]:before:left-0",
+  ],
+  {
+    variants: {
+      variant: {
+        default: "",
+        spaced: "[&>p]:mt-8",
+        end: "lg:mt-auto",
+      },
+    },
+    defaultVariants: { variant: "default" },
+  },
+);
+
 const styles = {
   author: "font-mono not-italic uppercase",
   blockquote:
@@ -63,12 +81,6 @@ const styles = {
   contentWithGap: "flex flex-col gap-8",
   ctaGroup: "grid gap-y-3 md:flex md:gap-x-4",
   date: "font-mono text-default-light uppercase max-lg:text-sm",
-  description: [
-    "font-light text-default-base lg:text-lg [&_strong]:font-bold",
-    "[&>p]:mt-8",
-    "[&_ul]:mt-3 [&_ul]:space-y-3 [&_ul]:text-size-16 [&_ul]:lg:text-size-18",
-    "[&_li]:flex [&_li]:pl-6.25 [&_li]:relative [&_li]:before:absolute [&_li]:before:top-2 [&_li]:before:size-2.25 [&_li]:before:bg-brand-aqua [&_li]:before:left-0",
-  ],
   eyebrowContainer: "flex items-center gap-x-4.5",
   icon: "size-8 text-icon-default lg:size-12",
   header: containerClass,
@@ -86,6 +98,7 @@ export const ContentBlock = ({
   dateClassName,
   description,
   descriptionClassName,
+  descriptionVariant = "default",
   eyebrow,
   eyebrowClassName,
   eyebrowVariant = "default",
@@ -137,7 +150,7 @@ export const ContentBlock = ({
     blockquote: cn(styles.blockquote, blockquoteClassName),
     container: cn(
       containerVariants({ variant }),
-      groupHeaderWithDescription && "gap-8",
+      groupHeaderWithDescription && "gap-4",
       className,
     ),
     content: cn(
@@ -147,28 +160,34 @@ export const ContentBlock = ({
     ),
     ctaGroup: cn(styles.ctaGroup, ctaGroupClassName),
     date: cn(styles.date, dateClassName),
-    description: cn(styles.description, descriptionClassName),
+    description: cn(
+      descriptionVariants({ variant: descriptionVariant }),
+      descriptionClassName,
+    ),
     eyebrow: cn(eyebrowVariants({ variant: eyebrowVariant }), eyebrowClassName),
     icon: cn(styles.icon, iconClassName),
     title: cn(titleVariants({ variant: titleVariant }), titleClassName),
   };
 
+  const eyebrowBlock = (date || eyebrow) && (
+    <div
+      className={cn(
+        styles.eyebrowContainer,
+        variant === "center" && "justify-center",
+      )}
+    >
+      {eyebrow && <p className={classes.eyebrow}>{eyebrow}</p>}
+      {date && (
+        <time className={classes.date} dateTime={formatDateTimeAttribute(date)}>
+          {date}
+        </time>
+      )}
+    </div>
+  );
+
   const headerBlock = (
     <div className={getColumnClass(styles.header)}>
       {Icon && <Icon className={classes.icon} />}
-      {(date || eyebrow) && (
-        <div className={styles.eyebrowContainer}>
-          {eyebrow && <p className={classes.eyebrow}>{eyebrow}</p>}
-          {date && (
-            <time
-              className={classes.date}
-              dateTime={formatDateTimeAttribute(date)}
-            >
-              {date}
-            </time>
-          )}
-        </div>
-      )}
       {title &&
         (hasTypewriter ? (
           <Heading className={classes.title} ref={titleRef}>
@@ -188,6 +207,7 @@ export const ContentBlock = ({
   if (groupHeaderWithDescription) {
     return (
       <div className={classes.container} {...props}>
+        {eyebrowBlock}
         <div className="flex flex-col gap-5">
           {headerBlock}
           {description && (
@@ -215,31 +235,45 @@ export const ContentBlock = ({
     );
   }
 
+  const contentBlock = (
+    <div className={classes.content}>
+      {description && (
+        <div className={classes.description}>{parse(description)}</div>
+      )}
+      {blockquote && !isInline && (
+        <blockquote className={classes.blockquote}>{blockquote}</blockquote>
+      )}
+      {(primaryCTA || secondaryCTA) && (
+        <div className={classes.ctaGroup}>
+          {primaryCTA && (
+            <Button {...primaryCTA} className={primaryCTAClassName} />
+          )}
+          {secondaryCTA && (
+            <Button
+              {...secondaryCTA}
+              className={secondaryCTAClassName}
+              variant="outline"
+            />
+          )}
+        </div>
+      )}
+    </div>
+  );
+
   return (
     <div className={classes.container} {...props}>
-      {headerBlock}
-      <div className={classes.content}>
-        {description && (
-          <div className={classes.description}>{parse(description)}</div>
-        )}
-        {blockquote && !isInline && (
-          <blockquote className={classes.blockquote}>{blockquote}</blockquote>
-        )}
-        {(primaryCTA || secondaryCTA) && (
-          <div className={classes.ctaGroup}>
-            {primaryCTA && (
-              <Button {...primaryCTA} className={primaryCTAClassName} />
-            )}
-            {secondaryCTA && (
-              <Button
-                {...secondaryCTA}
-                className={secondaryCTAClassName}
-                variant="outline"
-              />
-            )}
-          </div>
-        )}
-      </div>
+      {eyebrowBlock}
+      {isInline ? (
+        <div className="flex flex-col lg:flex-row lg:gap-10">
+          {headerBlock}
+          {contentBlock}
+        </div>
+      ) : (
+        <>
+          {headerBlock}
+          {contentBlock}
+        </>
+      )}
     </div>
   );
 };

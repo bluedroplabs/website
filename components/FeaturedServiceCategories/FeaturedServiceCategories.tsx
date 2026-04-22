@@ -81,11 +81,10 @@ export const FeaturedServiceCategories = ({
       <div className="max-w-[var(--breakpoint-2xl)] mx-auto">
         <div className="px-6 py-12 lg:px-16 lg:pb-12 lg:pt-25">
           <ContentBlock
-            className="lg:items-end"
+            className="gap-4 lg:gap-5"
             description={description}
-            descriptionClassName="mt-5"
+            descriptionVariant="end"
             eyebrow={eyebrow}
-            eyebrowClassName="mb-4"
             eyebrowVariant="highlight"
             title={title}
             variant="inline"
@@ -98,9 +97,8 @@ export const FeaturedServiceCategories = ({
           <div className="max-w-[var(--breakpoint-2xl)] mx-auto border-x border-border-normal">
             <div className="px-6 py-12 lg:px-16 lg:py-16">
               <ContentBlock
-                className="lg:items-end"
                 description={group.description}
-                descriptionClassName="mt-5"
+                descriptionVariant="end"
                 title={group.title}
                 titleVariant="xl"
                 variant="inline"

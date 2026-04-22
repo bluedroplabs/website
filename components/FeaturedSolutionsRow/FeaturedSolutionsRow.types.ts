@@ -17,6 +17,11 @@ export interface IFeaturedSolutionsRow extends HTMLAttributes<HTMLElement> {
   description?: string;
 
   /**
+   * Eyebrow text rendered above the section title.
+   */
+  eyebrow?: string;
+
+  /**
    * Optional primary CTA rendered in the section header.
    */
   primaryCTA?: ICTA;

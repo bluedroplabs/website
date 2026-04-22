@@ -30,13 +30,15 @@ export const FeaturedIconGrid = ({
         {...props}
       >
         <ContentBlock
-          className={variant === "inline" ? "lg:col-span-12" : "lg:col-span-8"}
+          className={cn(
+            variant === "inline" ? "lg:col-span-12" : "lg:col-span-8",
+            "gap-4 lg:gap-5",
+          )}
           description={description}
-          descriptionClassName={contentMargin}
+          descriptionClassName={variant === "inline" ? "" : contentMargin}
           eyebrow={eyebrow}
           eyebrowVariant="highlight"
           title={title}
-          titleClassName={contentMargin}
           variant={variant}
         />
         <Container

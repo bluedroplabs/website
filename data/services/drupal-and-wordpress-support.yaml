@@ -98,6 +98,7 @@ components:
   - type: GridSeparator
 
   - type: FeaturedSolutionsRow
+    eyebrow: "Add-Ons"
     title: "Go Beyond Maintenance — <em>Improve & Evolve</em>"
     description: "Extend your support plan with advanced services that help your website grow, perform better, and convert more visitors."
     solutions:

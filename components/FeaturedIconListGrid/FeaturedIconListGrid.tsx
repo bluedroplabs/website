@@ -64,9 +64,7 @@ export const FeaturedIconListGrid = ({
               noPadding
             >
               <ContentBlock
-                className={hasDescription ? "lg:items-end" : ""}
                 description={description}
-                descriptionClassName="mt-5"
                 eyebrow={eyebrow}
                 eyebrowClassName="mb-4"
                 eyebrowVariant="highlight"

@@ -44,12 +44,13 @@ function FeaturedSolutionsRowCard({
 export const FeaturedSolutionsRow = ({
   className,
   description,
+  eyebrow,
   primaryCTA,
   solutions,
   title,
   ...props
 }: IFeaturedSolutionsRow) => {
-  const hasHeader = Boolean(title || description);
+  const hasHeader = Boolean(title || description || eyebrow);
 
   return (
     <Container
@@ -63,8 +64,11 @@ export const FeaturedSolutionsRow = ({
       {hasHeader && (
         <div className="mx-auto max-w-[var(--breakpoint-2xl)] px-6 2xl:px-16 3xl:px-0">
           <ContentBlock
-            className="flex flex-col gap-6 py-12 lg:flex-row lg:items-start lg:pb-12 lg:pt-25 lg:px-16"
+            className="gap-4 py-12 lg:gap-5 lg:pb-12 lg:pt-25 lg:px-16"
             description={description}
+            descriptionVariant="end"
+            eyebrow={eyebrow}
+            eyebrowVariant="highlight"
             primaryCTA={primaryCTA}
             primaryCTAClassName="mt-2"
             title={title}

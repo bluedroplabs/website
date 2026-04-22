@@ -31,7 +31,7 @@ components:
     alignment: left
     eyebrow: "Innovative & Bold"
     title: "Premium service at a fraction of the cost"
-    description: "We're the experts who intentionally stay lean, use AI-enabled processes, and maintain a globally distributed team to deliver exceptional work without the enterprise overhead. <br /><br/> We’ve solved complex challenges that make others say, “That’s not possible.”"
+    description: "<p>We're the experts who intentionally stay lean, use AI-enabled processes, and maintain a globally distributed team to deliver exceptional work without the enterprise overhead.</p><p>We’ve solved complex challenges that make others say, “That’s not possible.”</p>"
     image:
       alt: "Placeholder image"
       src: "/assets/premium-service.webp"
