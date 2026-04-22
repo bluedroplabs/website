@@ -10,6 +10,9 @@ const iconMap = {
   AlarmIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.AlarmIcon })),
   ),
+  AnalyticsIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.AnalyticsIcon })),
+  ),
   ArrowRightDownIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ArrowRightDownIcon })),
   ),
@@ -71,6 +74,12 @@ const iconMap = {
   HostIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.HostIcon })),
   ),
+  JoinIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.JoinIcon })),
+  ),
+  LanguageIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.LanguageIcon })),
+  ),
   LaptopIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.LaptopIcon })),
   ),
@@ -91,6 +100,9 @@ const iconMap = {
   ),
   RocketIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.RocketIcon })),
+  ),
+  SchemaIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SchemaIcon })),
   ),
   SchoolIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.SchoolIcon })),

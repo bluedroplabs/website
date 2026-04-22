@@ -34,16 +34,16 @@ components:
     description: "Our team blends deep technical SEO knowledge with creative marketing strategy to ensure every optimization serves your business goals."
     variant: "inline"
     items:
-      - icon: "CodeBlockIcon"
+      - icon: "SchemaIcon"
         title: "Full-Stack Understanding"
         description: "Our developers and marketers collaborate seamlessly so every SEO and content improvement is backed by technical precision."
-      - icon: "ChartIcon"
+      - icon: "AnalyticsIcon"
         title: "Transparent, Data-Driven Approach"
         description: "You see exactly what's being done and why. Regular reports track progress toward KPIs that actually matter to your business."
-      - icon: "DomainIcon"
+      - icon: "LanguageIcon"
         title: "Platform-Agnostic Optimization"
         description: "From WordPress and Drupal to headless CMS or custom sites, we work with your existing setup — no pressure to migrate."
-      - icon: "ShakeHandsIcon"
+      - icon: "JoinIcon"
         title: "Ongoing Partnership, Not Just a Project"
         description: "We stay with you after implementation continuously improving performance, content, and ROI as your business grows."
 
@@ -55,7 +55,7 @@ components:
       - title: "Marketing Strategy and Positioning"
         description: "We help you define, refine, and communicate your brand message effectively across all digital touch points."
         items:
-          - icon: "BrainIcon"
+          - icon: "CampaignIcon"
             title: "Brand Messaging Workshops"
             features:
               - "Discover your unique value proposition."
@@ -67,7 +67,7 @@ components:
               - "Optimize navigation for both users and search engines."
               - "Design user pathways that guide visitors to conversion."
               - "Create logical content hierarchies that boost SEO."
-          - icon: "CodeBlockIcon"
+          - icon: "EditNoteIcon"
             title: "Website Copywriting"
             features:
               - "Explain the value proposition efficiently and effectively"
@@ -76,19 +76,19 @@ components:
       - title: "Content Strategy"
         description: "Content is the foundation of effective SEO. We help you create and optimize content that drives visibility, engagement, and conversion."
         items:
-          - icon: "DataIcon"
+          - icon: "FindInPageIcon"
             title: "Content Audit & Gap Analysis"
             features:
               - "Evaluate existing content effectiveness."
               - "Identify topic opportunities based on search data."
               - "Map content to user journey stages."
-          - icon: "ClockIcon"
+          - icon: "EventNoteIcon"
             title: "Editorial Calendar Development"
             features:
               - "Brainstorm content ideas that can succeed in the AI Overviews landscape."
               - "Create sustainable content publishing schedules."
               - "Align content with business goals and seasonality."
-          - icon: "StackedIcon"
+          - icon: "LibraryBooksIcon"
             title: "Cornerstone Content Creation"
             features:
               - "Develop in-depth content on your core service areas."
@@ -97,13 +97,13 @@ components:
       - title: "Technical SEO"
         description: "We handle the behind-the-scenes optimization that makes search engines love your site—clean code, fast load times, and flawless indexing."
         items:
-          - icon: "BoltIcon"
+          - icon: "RocketIcon"
             title: "Resolve Technical Issues"
             features:
               - "Achieve 95% Core Web Vitals scores on mobile and desktop."
               - "Fix canonical URL implementation and optimize URL pattern structures."
               - "Surface and address duplicate content."
-          - icon: "SwapIcon"
+          - icon: "SyncAltIcon"
             title: "Site Migration Support"
             features:
               - "Ensure all links and redirects are ready so you don't lose authority."
@@ -115,7 +115,7 @@ components:
               - "Add structured data markup (JSON-LD)"
               - "Increase rich snippet and AI-inclusion opportunities."
               - "Categorize content for inclusion in AI overviews and LLMs."
-          - icon: "ShieldLockIcon"
+          - icon: "VerifiedUserIcon"
             title: "GDPR Compliance"
             features:
               - "Implement cookie consent."
@@ -124,13 +124,13 @@ components:
       - title: "Ongoing SEO and <br/> Performance"
         description: "Sustainable SEO requires consistent attention. Keep your site competitive in today's dynamic search landscape and never worry about your content pipeline."
         items:
-          - icon: "DevUpdateIcon"
+          - icon: "SyncIcon"
             title: "Content Marketing and Engineering"
             features:
               - "Distribute and repackage content for optimal reach."
               - "Update content quarterly to ensure freshness."
               - "Ideate and produce content regularly to build authority and traffic."
-          - icon: "ChartIcon"
+          - icon: "AnalyticsIcon"
             title: "Analytics and Reporting"
             features:
               - "Create custom dashboards for your KPIs."

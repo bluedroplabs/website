@@ -10,47 +10,41 @@ const iconMap = {
   AccountTreeIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.AccountTreeIcon })),
   ),
-  BoltIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.BoltIcon })),
+  AnalyticsIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.AnalyticsIcon })),
   ),
-  BrainIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.BrainIcon })),
-  ),
-  ChartIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.ChartIcon })),
-  ),
-  CheckBadgeIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.CheckBadgeIcon })),
-  ),
-  ClockIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.ClockIcon })),
+  CampaignIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.CampaignIcon })),
   ),
   CodeBlockIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.CodeBlockIcon })),
   ),
-  DataIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.DataIcon })),
+  EditNoteIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.EditNoteIcon })),
   ),
-  DevUpdateIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.DevUpdateIcon })),
+  EventNoteIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.EventNoteIcon })),
   ),
-  HistoryIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.HistoryIcon })),
+  FindInPageIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.FindInPageIcon })),
+  ),
+  LibraryBooksIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.LibraryBooksIcon })),
   ),
   LinkIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.LinkIcon })),
   ),
-  ShieldLockIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.ShieldLockIcon })),
+  RocketIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.RocketIcon })),
   ),
-  SpeedIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.SpeedIcon })),
+  SyncAltIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SyncAltIcon })),
   ),
-  StackedIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.StackedIcon })),
+  SyncIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SyncIcon })),
   ),
-  SwapIcon: lazy(() =>
-    import("../Icon").then((m) => ({ default: m.SwapIcon })),
+  VerifiedUserIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.VerifiedUserIcon })),
   ),
 };
 
