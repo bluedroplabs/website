@@ -39,7 +39,10 @@ describe("ContactForm", () => {
       render(<ContactForm {...defaultProps} />);
 
       expect(
-        screen.getByRole("heading", { level: 2, name: defaultProps.contactTitle }),
+        screen.getByRole("heading", {
+          level: 2,
+          name: defaultProps.contactTitle,
+        }),
       ).toBeInTheDocument();
       expect(
         screen.getByText(defaultProps.contactDescription!),

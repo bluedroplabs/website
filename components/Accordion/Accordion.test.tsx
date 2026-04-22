@@ -31,7 +31,10 @@ function renderAccordion({
 } = {}) {
   if (type === "multiple") {
     return render(
-      <Accordion defaultValue={defaultValue ? [defaultValue] : []} type="multiple">
+      <Accordion
+        defaultValue={defaultValue ? [defaultValue] : []}
+        type="multiple"
+      >
         {items}
       </Accordion>,
     );

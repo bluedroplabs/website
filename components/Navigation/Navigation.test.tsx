@@ -57,7 +57,9 @@ describe("Navigation", () => {
     ).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: /close menu/i }));
-    expect(screen.getByRole("button", { name: /open menu/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: /open menu/i }),
+    ).toBeInTheDocument();
   });
 
   it("opens the mobile menu dialog when the toggle is clicked", async () => {

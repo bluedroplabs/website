@@ -94,9 +94,9 @@ describe("Footer", () => {
   });
 
   it("POSTs to formAction when the newsletter form is submitted", async () => {
-    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue(
-      new Response(null, { status: 200 }),
-    );
+    const fetchSpy = vi
+      .spyOn(globalThis, "fetch")
+      .mockResolvedValue(new Response(null, { status: 200 }));
     const user = userEvent.setup();
 
     render(<Footer {...defaultProps} formAction="/api/newsletter" />);
