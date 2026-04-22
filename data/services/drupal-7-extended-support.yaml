@@ -157,7 +157,10 @@ components:
 
   - type: GridSeparator
 
-  - type: FeaturedText
-    title: "Your Drupal 7 website has become a critical part of your business. Don't leave the continuity of that business up to chance. <strong>Protect its future.</strong>"
+  - type: FeaturedTextCta
+    text: "Your Drupal 7 website has become a critical part of your business. Don't leave the continuity of that business up to chance. <strong>Protect its future.</strong>"
+    cta:
+      children: "Get Drupal 7 Support Now"
+      href: "/contact"
 
   - type: GridSeparator

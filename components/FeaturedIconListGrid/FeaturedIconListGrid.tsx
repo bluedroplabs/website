@@ -7,16 +7,24 @@ import { cn } from "@/utils";
 import type { IFeaturedIconListGrid } from "./FeaturedIconListGrid.types";
 
 const MOBILE_COLS = 2;
-const LG_COLS = 3;
 
-function getGridItemClasses(index: number, total: number): string {
+const LG_GRID_CLASSES = {
+  3: "lg:grid-cols-3",
+  4: "lg:grid-cols-4",
+} as const;
+
+function getGridItemClasses(
+  index: number,
+  total: number,
+  lgCols: number,
+): string {
   const lastRowStartMobile =
     total > 0 ? Math.floor((total - 1) / MOBILE_COLS) * MOBILE_COLS : 0;
   const lastRowStartLg =
-    total > 0 ? Math.floor((total - 1) / LG_COLS) * LG_COLS : 0;
+    total > 0 ? Math.floor((total - 1) / lgCols) * lgCols : 0;
 
   const isLastColMobile = index % MOBILE_COLS === MOBILE_COLS - 1;
-  const isLastColLg = index % LG_COLS === LG_COLS - 1;
+  const isLastColLg = index % lgCols === lgCols - 1;
   const isLastRowMobile = index >= lastRowStartMobile;
   const isLastRowLg = index >= lastRowStartLg;
   const isSingleItemInLastMobileRow =
@@ -34,6 +42,7 @@ function getGridItemClasses(index: number, total: number): string {
 
 export const FeaturedIconListGrid = ({
   className,
+  columns = 3,
   eyebrow,
   title,
   description,
@@ -43,6 +52,7 @@ export const FeaturedIconListGrid = ({
   const hasItems = items.length > 0;
   const hasDescription = Boolean(description);
   const headerVariant = hasDescription ? variant : "center";
+  const lgGridClass = LG_GRID_CLASSES[columns];
 
   return (
     <section className={cn("border-t border-border-normal", className)}>
@@ -71,10 +81,10 @@ export const FeaturedIconListGrid = ({
       <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 3xl:px-0">
         {hasItems && (
           <div className="border-x border-border-normal">
-            <div className="grid grid-cols-2 lg:grid-cols-3">
+            <div className={cn("grid grid-cols-2", lgGridClass)}>
               {items.map((item, index) => (
                 <div
-                  className={getGridItemClasses(index, items.length)}
+                  className={getGridItemClasses(index, items.length, columns)}
                   key={index}
                 >
                   <IconCard {...item} />

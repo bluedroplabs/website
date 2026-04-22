@@ -63,6 +63,7 @@ components:
     eyebrow: "Features"
     title: "Everything You Need to Keep Your Site Running Smoothly"
     description: "Our CMS support covers everything you need to keep your website fast, secure, and reliable — all handled by senior developers."
+    columns: 4
     items:
       - icon: "ShieldLockIcon"
         title: "Security updates and patches"
@@ -86,7 +87,8 @@ components:
         title: "Documentation and recommendations"
         description: "Clear reporting and technical transparency."
 
-  - type: CtaBlock
+  - type: FeaturedCtaBand
+    variant: "inline"
     title: "Need reliable web hosting that won't punish you for success?"
     description: "We can migrate your Drupal or WordPress site to our high-performance platform for faster load times and predictable pricing."
     cta:
@@ -129,8 +131,9 @@ components:
       - title: "Ongoing Support & Communication"
         description: "Begin regular check-ins and get access to our ticketing system."
 
-  - type: CtaBlock
-    title: "Let us support you in running your CMS website.<br />Ready to get started?"
+  - type: FeaturedTextCta
+    variant: "heading"
+    text: "Let us support you in running your CMS website.<br />Ready to get started?"
     cta:
       children: "Start your support plan today"
       href: "/contact"
@@ -153,10 +156,10 @@ components:
 
   - type: GridSeparator
 
-  - type: InlineTextBlock
+  - type: FeaturedCtaBand
     title: "Still on Drupal 7? You're Not Alone."
     description: "We offer extended support to keep your Drupal 7 sites secure — no migration pressure, just stability and expertise."
-    primaryCTA:
+    cta:
       children: "Learn About Drupal 7 Support"
       href: "/services/drupal-7-extended-support"
 

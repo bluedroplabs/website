@@ -29,6 +29,12 @@ export interface IPackageCard extends HTMLAttributes<HTMLElement> {
   features: IList["items"];
 
   /**
+   * Optional icon rendered above the title. Must match a key in the
+   * PackageCard iconMap.
+   */
+  icon?: string;
+
+  /**
    * Determines the visual variant of the component.
    * Defaults to `default` if not specified.
    */

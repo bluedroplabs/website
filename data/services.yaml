@@ -89,7 +89,7 @@ components:
           src: "/assets/design-and-experience.svg"
       - title: "SEO + Marketing"
         description: "Turn your website into a high-performing growth engine with technical SEO, performance optimization, and data-driven marketing strategies."
-        href: "/"
+        href: "/services/seo-and-marketing"
         image:
           alt: "SEO + Marketing"
           src: "/assets/seo-and-marketing-light.svg"

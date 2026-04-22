@@ -2,6 +2,7 @@
 
 import { cn } from "@/utils/classes";
 import Image from "next/image";
+import { lazy, Suspense } from "react";
 import { Button } from "../Button/Button";
 import { List } from "../List/List";
 import type { IPackageCard } from "./PackageCard.types";
@@ -14,16 +15,27 @@ const bgCommonProps = {
   role: "presentation",
 };
 
+const iconMap = {
+  ProjectDeliveryIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ProjectDeliveryIcon })),
+  ),
+  StaffAugmentationIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.StaffAugmentationIcon })),
+  ),
+};
+
 export const PackageCard = ({
   className,
   cta,
   description,
   features,
+  icon,
   title,
   variant,
   ...props
 }: IPackageCard) => {
   const isHighlighted = variant === "highlight";
+  const Icon = icon ? iconMap[icon as keyof typeof iconMap] : null;
 
   return (
     <div className={cn("px-6 py-12 relative lg:px-12", className)} {...props}>
@@ -42,6 +54,11 @@ export const PackageCard = ({
         </>
       )}
       <div className="grid h-full relative z-10">
+        {Icon && (
+          <Suspense fallback={null}>
+            <Icon className="size-10 lg:size-12 mb-6" />
+          </Suspense>
+        )}
         <h3 className="font-medium mb-6 text-size-32 lg:text-size-40 tracking-[0.02em]">
           {title}
         </h3>

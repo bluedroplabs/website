@@ -54,8 +54,9 @@ components:
     title: "Stop Wrestling with Complex Requirements"
     description: "<p>We're specialists who know exactly how to handle Drupal and WordPress complexity. Whether it's a simple integration or advanced business logic, we deliver solutions that are <strong>secure</strong>, <strong>maintainable</strong>, and <strong>performant</strong>.</p><p><strong>Are you facing:</strong></p><ul><li>Custom functionality that your team can't build in-house?</li><li>Performance problems with custom code?</li><li>Contrib modules or plugins that get you only 80% of what you need?</li><li>Legacy code that needs to be modernized?</li><li>Tight deadlines with no available developers?</li></ul>"
 
-  - type: CtaBlock
-    title: "Whether you need a fix, a feature, or a full rebuild — <strong>we make your CMS work for you, not against you.</strong>"
+  - type: FeaturedTextCta
+    variant: "heading"
+    text: "Whether you need a fix, a feature, or a full rebuild — <strong>we make your CMS work for you, not against you.</strong>"
     cta:
       children: "Let's Talk"
       href: "/contact"
@@ -71,6 +72,7 @@ components:
       items: []
     packages:
       - title: "Staff Augmentation"
+        icon: "StaffAugmentationIcon"
         description: "Embed our developers directly into your team. Perfect when you need extra hands or specialized expertise for a portion of your project."
         features:
           - "Embed our developers in your team"
@@ -82,6 +84,7 @@ components:
           children: "Inquire now"
           href: "/contact"
       - title: "Complete Project Delivery"
+        icon: "ProjectDeliveryIcon"
         variant: "highlight"
         description: "We take full ownership from requirements to deployment. Ideal when you want to hand off the entire development process to experts who understand Drupal inside and out."
         features:
