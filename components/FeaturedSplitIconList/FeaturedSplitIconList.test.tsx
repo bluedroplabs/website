@@ -48,10 +48,7 @@ describe("FeaturedSplitIconList", () => {
 
   it("merges a custom className onto the container", () => {
     const { container } = render(
-      <FeaturedSplitIconList
-        {...defaultProps}
-        className="test-custom-class"
-      />,
+      <FeaturedSplitIconList {...defaultProps} className="test-custom-class" />,
     );
 
     expect(container.firstElementChild!.className).toContain(

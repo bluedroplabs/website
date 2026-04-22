@@ -4,8 +4,11 @@ import { axe } from "vitest-axe";
 import { FeaturedTextCta } from "./FeaturedTextCta";
 import { FEATURED_TEXT_CTA_EXAMPLE_PROPS } from "./FeaturedTextCta.examples";
 
-const { default: bodyProps, heading: headingProps, noCta: noCtaProps } =
-  FEATURED_TEXT_CTA_EXAMPLE_PROPS;
+const {
+  default: bodyProps,
+  heading: headingProps,
+  noCta: noCtaProps,
+} = FEATURED_TEXT_CTA_EXAMPLE_PROPS;
 
 describe("FeaturedTextCta", () => {
   it("renders body variant text inside a <p> tag", () => {

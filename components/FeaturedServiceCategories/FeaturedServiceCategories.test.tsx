@@ -42,9 +42,7 @@ describe("FeaturedServiceCategories", () => {
     render(<FeaturedServiceCategories {...minimalProps} />);
 
     expect(screen.getByText(minimalProps.title)).toBeInTheDocument();
-    expect(
-      screen.queryByText(defaultProps.eyebrow!),
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText(defaultProps.eyebrow!)).not.toBeInTheDocument();
     expect(
       screen.queryByText(defaultProps.description!),
     ).not.toBeInTheDocument();
