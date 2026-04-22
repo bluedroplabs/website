@@ -151,12 +151,15 @@ components:
     variant: "inline"
     items:
       - icon: "GppBadIcon"
+        iconClassName: "opacity-50"
         title: "Security Vulnerabilities"
         description: "Without community patches, attackers target outdated Drupal 7 sites."
       - icon: "BugIcon"
+        iconClassName: "opacity-50"
         title: "Compatibility Issues"
         description: "PHP 8+ support requires expert handling when your servers are updated."
       - icon: "ExpenseIcon"
+        iconClassName: "opacity-50"
         title: "Investment Protection"
         description: "Your site holds years of business logic and data — don't risk losing it."
 

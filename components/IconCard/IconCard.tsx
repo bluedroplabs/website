@@ -1,8 +1,12 @@
+import { cn } from "@/utils/classes";
 import { lazy, Suspense } from "react";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { IIconCard } from "./IconCard.types";
 
 const iconMap = {
+  AddModIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.AddModIcon })),
+  ),
   AlarmIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.AlarmIcon })),
   ),
@@ -33,6 +37,9 @@ const iconMap = {
   ),
   DataIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.DataIcon })),
+  ),
+  DescriptionIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.DescriptionIcon })),
   ),
   DevUpdateIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.DevUpdateIcon })),
@@ -70,11 +77,23 @@ const iconMap = {
   LinkIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.LinkIcon })),
   ),
+  LockIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.LockIcon })),
+  ),
   MoonIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MoonIcon })),
   ),
   PlusIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.PlusIcon })),
+  ),
+  ReceiptIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ReceiptIcon })),
+  ),
+  RocketIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.RocketIcon })),
+  ),
+  SchoolIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SchoolIcon })),
   ),
   ShakeHandsIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ShakeHandsIcon })),
@@ -92,6 +111,9 @@ const iconMap = {
     import("../Icon").then((m) => ({ default: m.StressIcon })),
   ),
   SunIcon: lazy(() => import("../Icon").then((m) => ({ default: m.SunIcon }))),
+  SyncIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SyncIcon })),
+  ),
   SystemUpdateIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.SystemUpdateIcon })),
   ),
@@ -116,6 +138,9 @@ const iconMap = {
   TuneIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.TuneIcon })),
   ),
+  UpdateIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.UpdateIcon })),
+  ),
   BoltIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.BoltIcon })),
   ),
@@ -125,7 +150,13 @@ const iconMap = {
 };
 
 export const IconCard = (props: IIconCard) => {
-  const { description, icon, title, variant = "default" } = props;
+  const {
+    description,
+    icon,
+    iconClassName,
+    title,
+    variant = "default",
+  } = props;
   const Icon = icon && iconMap[icon as keyof typeof iconMap];
 
   if ((!description && !title) || !Icon) return null;
@@ -134,7 +165,12 @@ export const IconCard = (props: IIconCard) => {
     return (
       <div className="flex gap-6">
         <Suspense fallback={null}>
-          <Icon className="size-8 min-w-8 text-icon-default lg:size-10 lg:min-w-10" />
+          <Icon
+            className={cn(
+              "size-8 min-w-8 text-icon-default lg:size-10 lg:min-w-10",
+              iconClassName,
+            )}
+          />
         </Suspense>
         <div className="space-y-2">
           <h3 className="font-semibold text-xl text-default-heading lg:text-size-20">
@@ -155,6 +191,7 @@ export const IconCard = (props: IIconCard) => {
           <Icon {...props} />
         </Suspense>
       )}
+      iconClassName={iconClassName}
       title={title}
       titleClassName="font-semibold mt-4 lg:mt-6"
       titleTag="h3"
