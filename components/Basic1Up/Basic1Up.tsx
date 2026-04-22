@@ -38,8 +38,8 @@ function Basic1UpAsset({
   className,
   ...figureProps
 }: Basic1UpAssetProps) {
-  const { srcLight, ...imageProps } = image;
-  const src = isDarkMode && srcLight ? srcLight : image.src;
+  const { srcDark, srcLight: _srcLight, ...imageProps } = image;
+  const src = isDarkMode && srcDark ? srcDark : image.src;
 
   const borderClassName = isLeft
     ? "border-l border-border-normal"

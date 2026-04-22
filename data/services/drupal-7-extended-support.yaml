@@ -140,7 +140,7 @@ components:
 
   - type: GridSeparator
 
-  - type: FeaturedIconGrid
+  - type: FeaturedIconListGrid
     title: "Why You Need Drupal 7 Support Right Now"
     description: "Drupal 7 reached end-of-life on January 5, 2025 — meaning no more official security patches or community support. Without expert maintenance, your website faces growing risks that could impact performance, security, and business continuity."
     variant: "inline"
@@ -154,6 +154,8 @@ components:
       - icon: "ExpenseIcon"
         title: "Investment Protection"
         description: "Your site holds years of business logic and data — don't risk losing it."
+
+  - type: GridSeparator
 
   - type: FeaturedText
     title: "Your Drupal 7 website has become a critical part of your business. Don't leave the continuity of that business up to chance. <strong>Protect its future.</strong>"

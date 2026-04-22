@@ -36,7 +36,6 @@ export const FeaturedProcessList = ({
       <ol className="w-full border-t border-border-normal">
         {items.map((item, index) => (
           <li
-            key={index}
             className={cn(
               "max-w-[var(--breakpoint-2xl)] mx-auto",
               "flex flex-col lg:flex-row gap-6 lg:gap-10",
@@ -44,6 +43,7 @@ export const FeaturedProcessList = ({
               "px-6 py-10 lg:px-16 lg:py-12",
               index > 0 && "border-t",
             )}
+            key={index}
           >
             <div className="flex flex-col gap-3 shrink-0 lg:flex-row lg:items-start lg:w-[462px]">
               <span className="font-mono font-medium text-size-16 text-default-highlight leading-none uppercase whitespace-nowrap lg:mt-2">

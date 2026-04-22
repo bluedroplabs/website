@@ -41,6 +41,8 @@ export const FeaturedIconListGrid = ({
   variant = "inline",
 }: IFeaturedIconListGrid) => {
   const hasItems = items.length > 0;
+  const hasDescription = Boolean(description);
+  const headerVariant = hasDescription ? variant : "center";
 
   return (
     <section className={cn("border-t border-border-normal", className)}>
@@ -48,17 +50,18 @@ export const FeaturedIconListGrid = ({
         <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-5 md:px-8 lg:px-10 xl:px-20 2xl:px-0">
           <div className="2xl:border-x border-border-normal">
             <Container
-              className="py-16 lg:py-24 px-5 md:px-8 lg:px-10 xl:px-20"
+              className="py-16 lg:pb-12 lg:pt-25 px-5 md:px-8 lg:px-10 xl:px-20"
               noPadding
             >
               <ContentBlock
+                className={hasDescription ? "lg:items-end" : ""}
                 description={description}
-                descriptionClassName="mt-5 text-fg-muted max-w-154.5"
+                descriptionClassName="mt-5"
                 eyebrow={eyebrow}
                 eyebrowClassName="mb-4"
                 eyebrowVariant="highlight"
                 title={title}
-                variant={variant}
+                variant={headerVariant}
               />
             </Container>
           </div>

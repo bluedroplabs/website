@@ -46,7 +46,8 @@ components:
     description: "From database architecture to user interface design, we handle every aspect of your project. No need to coordinate between multiple vendors or worry about integration issues. Our team has deep knowledge across the entire technology stack, meaning we can architect robust backends that scale, design intuitive frontends that convert, and ensure seamless integration between all components.<br /><br />Our globally distributed team uses modern development practices to deliver high-quality solutions at a fraction of the cost of traditional agencies. No bloated overhead or unnecessary bureaucracy."
     alignment: "left"
     image:
-      src: "https://picsum.photos/720/672"
+      src: "/assets/production-light.png"
+      srcDark: "/assets/production-dark.png"
       alt: "A cross-section stack visual showing backend, frontend, and database layers connected"
 
   - type: GridSeparator

@@ -8,7 +8,8 @@ components:
     title: "Drupal & WordPress Development"
     description: "Build powerful, maintainable, and secure digital experiences — from integrations and authoring tools to fully custom functionality."
     image:
-      src: "/assets/drupal-and-wordpress-development.svg"
+      src: "/assets/drupal-and-wordpress-development-hero-light.png"
+      srcDark: "/assets/drupal-and-wordpress-development-hero-dark.png"
       alt: "Drupal & WordPress Development"
     primaryCTA:
       children: "Book a Consultation"

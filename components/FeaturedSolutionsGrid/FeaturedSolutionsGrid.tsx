@@ -32,11 +32,7 @@ const FeaturedSolutionsGridRow = ({
         }
 
         return (
-          <SolutionCard
-            key={index}
-            {...solution}
-            className={cardClassName}
-          />
+          <SolutionCard key={index} {...solution} className={cardClassName} />
         );
       })}
     </div>
