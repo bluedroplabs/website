@@ -64,20 +64,20 @@ components:
           src: "/assets/drupal-and-wordpress-development.svg"
       - title: "Drupal & WordPress Support"
         description: "Ongoing maintenance and expert support to keep your Drupal or WordPress site secure, fast, and performing at its best."
-        href: "/"
+        href: "/services/drupal-and-wordpress-support"
         image:
           alt: "Drupal 7 support"
           src: "/assets/drupal-7-support.svg"
       - title: "Drupal 7 Extended Support"
         description: "Keep your Drupal 7 platform secure and stable with enterprise-level maintenance and updates—no costly migrations required."
-        href: "/"
+        href: "/services/drupal-7-extended-support"
         image:
           alt: "Drupal + WordPress Support"
           src: "/assets/drupal-and-wordpress-support-light.svg"
           srcDark: "/assets/drupal-and-wordpress-support-dark.svg"
       - title: "API + Custom Development"
         description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
-        href: "/"
+        href: "/services/api-custom-development"
         image:
           alt: "API + Custom Development"
           src: "/assets/api-and-custom-development.svg"

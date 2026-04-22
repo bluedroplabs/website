@@ -1,0 +1,161 @@
+# Drupal 7 Extended Support Configuration
+# This file defines the /services/drupal-7-extended-support page
+
+title: "Drupal 7 Extended Support"
+description: "Keep your Drupal 7 platform safe and running smoothly without the pressure to migrate."
+components:
+  - type: DetailPageHero
+    title: "Drupal 7 Extended Support"
+    description: "Keep your Drupal 7 platform safe and running smoothly without the pressure to migrate."
+    image:
+      src: "/assets/drupal-7-support-hero-asset-light.png"
+      srcDark: "/assets/drupal-7-support-hero-asset-dark.png"
+      alt: "Drupal 7 Extended Support"
+    primaryCTA:
+      children: "Book a Consultation"
+      href: "/contact"
+
+  - type: FeaturedIconListGrid
+    title: "Expert Care That Keeps Your Drupal 7 Site Running Strong"
+    items:
+      - icon: "ClockIcon"
+        title: "Fast Response Times"
+        description: "48-hour turnaround on support requests with direct Slack access to our development team."
+      - icon: "ExpenseIcon"
+        title: "Transparent, Affordable Pricing"
+        description: "Our pricing respects your budget while delivering premium support that scales with your needs."
+      - icon: "CheckBadgeIcon"
+        title: "Expert Problem Solvers"
+        description: "Every developer on our team has over a decade of Drupal experience. We get the job done quickly and efficiently."
+
+  - type: FeaturedIconGrid
+    eyebrow: "Proven Partners for Drupal 7 Success"
+    title: "Enterprise-level expertise for any organization"
+    description: "Drupal 7 isn't just software. It's become a key pillar of your business, one you can't simply replace or swap out. You need the right people working on it, at a price that doesn't cripple your cash flow."
+    variant: "inline"
+    items:
+      - icon: "FlowChartIcon"
+        title: "Direct Access to Developers"
+        description: "No account managers—just direct communication with the experts building and maintaining your site."
+      - icon: "ClockIcon"
+        title: "Immediate Availability"
+        description: "We're on call for urgent issues, with 48-hour turnaround and proactive updates."
+      - icon: "BoltIcon"
+        title: "Proven Problem Solvers"
+        description: "Our team has solved complex Drupal challenges for Fortune 500 companies and mission-critical sites."
+      - icon: "ExpenseIcon"
+        title: "Enterprise Expertise, Accessible Pricing"
+        description: "Get high-level Drupal support without enterprise-level costs or contracts."
+
+  - type: FeaturedText
+    title: "Finally, Drupal 7 support that makes sense: <strong>proven experts, fair pricing, and zero migration pressure.</strong>"
+
+  - type: GridSeparator
+
+  - type: SolutionsPackage
+    eyebrow: "Our Packages"
+    title: "Find the right package for your business"
+    description: "No long-term commitment required, though discounts are available for annual contracts. All plans include ongoing security monitoring and guaranteed 48-hour response time."
+    footer:
+      title: ""
+      items: []
+    packages:
+      - title: "Basic Plan"
+        description: "Reliable support for small sites. <strong>$250</strong> per month."
+        features:
+          - "Drupal Core and module updates"
+          - "Security monitoring"
+          - "Basic support requests"
+        cta:
+          children: "Start with Basic"
+          href: "/contact"
+      - title: "Professional Plan"
+        variant: "highlight"
+        description: "Hands-on support and development expertise. <strong>$1000</strong> per month."
+        features:
+          - "Everything in Basic, plus:"
+          - "Direct Slack access"
+          - "Custom module and theme development"
+          - "Priority support queue"
+        cta:
+          children: "Start with Pro"
+          href: "/contact"
+      - title: "Enterprise Plan"
+        description: "Fully managed Drupal 7 continuity solution. <strong>Custom pricing.</strong>"
+        features:
+          - "All services included"
+          - "Dedicated team allocation"
+          - "Flexible communication"
+        cta:
+          children: "Inquire Now"
+          href: "/contact"
+
+  - type: GridSeparator
+
+  - type: FeaturedIconListGrid
+    eyebrow: "Ongoing Support"
+    title: "How Does This Work?"
+    description: "Our process is simple. We'll start with a kickoff call to understand your project needs and current pain points, then audit your current setup and provide actionable recommendations. After that, you'll choose the engagement that works best for you."
+    items:
+      - icon: "ChartIcon"
+        title: "Proactive Monitoring"
+        description: "We detect and fix issues before they impact your site's performance or security."
+      - icon: "DevUpdateIcon"
+        title: "Updates & Security Patches"
+        description: "Drupal core, module, and PHP updates applied promptly and safely."
+      - icon: "ShakeHandsIcon"
+        title: "Direct Communication"
+        description: "Reach us instantly through Slack or our support portal."
+      - icon: "BoltIcon"
+        title: "Fast Turnaround"
+        description: "Most requests resolved within 48 hours or less."
+      - icon: "CheckBadgeIcon"
+        title: "Transparent Tracking"
+        description: "Follow every task and update through our client dashboard."
+      - icon: "HistoryIcon"
+        title: "Regular Check-ins"
+        description: "We schedule periodic reviews to ensure your site continues meeting your goals."
+
+  - type: GridSeparator
+
+  - type: FeaturedSolutionsRow
+    title: "Don't Just Survive on Drupal 7 — <em>Thrive on Drupal 7</em>"
+    description: "While others might pressure you to migrate, we help you maximize your investment. Your Drupal 7 site can continue to grow and improve."
+    solutions:
+      - title: "Module Development"
+        description: "Custom functionality to meet evolving business needs."
+        image:
+          alt: "Module Development"
+          src: "https://picsum.photos/512/260?random=1"
+      - title: "Theme Design"
+        description: "Modern design updates without full rebuilds."
+        image:
+          alt: "Theme Design"
+          src: "https://picsum.photos/512/260?random=2"
+      - title: "SEO and Content Marketing"
+        description: "Uncover issues that might be affecting your rankings and attract more customers."
+        image:
+          alt: "SEO and Content Marketing"
+          src: "https://picsum.photos/512/260?random=3"
+
+  - type: GridSeparator
+
+  - type: FeaturedIconGrid
+    title: "Why You Need Drupal 7 Support Right Now"
+    description: "Drupal 7 reached end-of-life on January 5, 2025 — meaning no more official security patches or community support. Without expert maintenance, your website faces growing risks that could impact performance, security, and business continuity."
+    variant: "inline"
+    items:
+      - icon: "ShieldLockIcon"
+        title: "Security Vulnerabilities"
+        description: "Without community patches, attackers target outdated Drupal 7 sites."
+      - icon: "BugIcon"
+        title: "Compatibility Issues"
+        description: "PHP 8+ support requires expert handling when your servers are updated."
+      - icon: "ExpenseIcon"
+        title: "Investment Protection"
+        description: "Your site holds years of business logic and data — don't risk losing it."
+
+  - type: FeaturedText
+    title: "Your Drupal 7 website has become a critical part of your business. Don't leave the continuity of that business up to chance. <strong>Protect its future.</strong>"
+
+  - type: GridSeparator

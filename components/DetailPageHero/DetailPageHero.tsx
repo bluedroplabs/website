@@ -2,6 +2,7 @@
 
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils/classes";
+import { useAppTheme } from "@/hooks/useAppTheme";
 import Image from "next/image";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { DottedBackground } from "../DottedBackground/DottedBackground";
@@ -19,6 +20,10 @@ export const DetailPageHero = ({
   title,
   ...props
 }: IDetailPageHero) => {
+  const { isDarkMode } = useAppTheme();
+  const { srcDark, srcLight: _srcLight, ...imageProps } = image;
+  const imageSrc = isDarkMode && srcDark ? srcDark : image.src;
+
   return (
     <DottedBackground className="max-md:bg-none">
       <Container
@@ -30,15 +35,14 @@ export const DetailPageHero = ({
         {...props}
       >
         <figure className="aspect-[416/346] border-b border-border-normal relative w-screen -mx-5 md:-mx-8 lg:hidden">
-          {image && (
-            <Image
-              {...image}
-              className="object-cover"
-              fill
-              priority
-              sizes="100vw, (min-width: 768px) 50vw"
-            />
-          )}
+          <Image
+            {...imageProps}
+            className="object-cover"
+            fill
+            priority
+            sizes="100vw, (min-width: 768px) 50vw"
+            src={imageSrc}
+          />
         </figure>
 
         <DottedBackground className="w-full max-lg:pt-16 lg:!bg-none lg:flex-1 lg:max-w-1/2 lg:pb-16 lg:pr-10 2xl:pb-20 2xl:pr-20">
@@ -61,15 +65,14 @@ export const DetailPageHero = ({
         </DottedBackground>
 
         <figure className="aspect-[416/346] bg-page-default border-l border-border-normal relative w-[calc(100%+1.25rem)] md:w-[calc(100%+2rem)] max-lg:mt-8 max-lg:hidden lg:aspect-[6/5] lg:flex-1 lg:-mr-20 lg:w-[calc(100%+5rem)]">
-          {image && (
-            <Image
-              {...image}
-              className="object-cover"
-              fill
-              priority
-              sizes="100vw, (min-width: 768px) 50vw"
-            />
-          )}
+          <Image
+            {...imageProps}
+            className="object-cover"
+            fill
+            priority
+            sizes="100vw, (min-width: 768px) 50vw"
+            src={imageSrc}
+          />
         </figure>
       </Container>
     </DottedBackground>

@@ -64,7 +64,7 @@ components:
           srcDark: "/assets/drupal-and-wordpress-support-dark.svg"
       - title: "API + Custom Development"
         description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
-        href: "/api-custom-development"
+        href: "/services/api-custom-development"
         image:
           alt: "API + Custom Development"
           src: "/assets/api-and-custom-development.svg"

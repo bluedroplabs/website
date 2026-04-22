@@ -10,6 +10,7 @@ import { FeaturedIconGrid } from "@/components/FeaturedIconGrid/FeaturedIconGrid
 import { FeaturedIconList } from "@/components/FeaturedIconList/FeaturedIconList";
 import { FeaturedIconListGrid } from "@/components/FeaturedIconListGrid/FeaturedIconListGrid";
 import { FeaturedSolutionsGrid } from "@/components/FeaturedSolutionsGrid/FeaturedSolutionsGrid";
+import { FeaturedSolutionsRow } from "@/components/FeaturedSolutionsRow/FeaturedSolutionsRow";
 import { FeaturedText } from "@/components/FeaturedText/FeaturedText";
 import { FeaturedTextList } from "@/components/FeaturedTextList/FeaturedTextList";
 import { GradientHero } from "@/components/GradientHero/GradientHero";
@@ -35,6 +36,7 @@ const componentMap = {
   FeaturedIconList,
   FeaturedIconListGrid,
   FeaturedSolutionsGrid,
+  FeaturedSolutionsRow,
   FeaturedText,
   FeaturedTextList,
   GradientHero,

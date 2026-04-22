@@ -17,6 +17,7 @@ export async function generateStaticParams() {
   const slugs: { slug: string[] }[] = [];
   const dataFiles = fs.readdirSync(dataDir);
   const resourcesDir = path.join(dataDir, "resources");
+  const servicesDir = path.join(dataDir, "services");
 
   dataFiles.forEach((file) => {
     if (file.endsWith(".yaml")) {
@@ -43,6 +44,15 @@ export async function generateStaticParams() {
         }
       });
     }
+  }
+
+  if (fs.existsSync(servicesDir)) {
+    fs.readdirSync(servicesDir).forEach((file) => {
+      if (file.endsWith(".yaml")) {
+        const slug = file.replace(/\.yaml$/, "");
+        slugs.push({ slug: ["services", slug] });
+      }
+    });
   }
 
   return slugs;
