@@ -18,7 +18,7 @@ components:
   - type: FeaturedSplitIconList
     title: "Expert Care That Keeps Your Drupal 7 Site Running Strong"
     items:
-      - icon: "ClockIcon"
+      - icon: "AlarmIcon"
         title: "Fast Response Times"
         description: "48-hour turnaround on support requests with direct Slack access to our development team."
       - icon: "ExpenseIcon"
@@ -37,7 +37,7 @@ components:
       - icon: "FlowChartIcon"
         title: "Direct Access to Developers"
         description: "No account managers—just direct communication with the experts building and maintaining your site."
-      - icon: "ClockIcon"
+      - icon: "AlarmIcon"
         title: "Immediate Availability"
         description: "We're on call for urgent issues, with 48-hour turnaround and proactive updates."
       - icon: "BoltIcon"
@@ -47,8 +47,8 @@ components:
         title: "Enterprise Expertise, Accessible Pricing"
         description: "Get high-level Drupal support without enterprise-level costs or contracts."
 
-  - type: FeaturedText
-    title: "Finally, Drupal 7 support that makes sense: <strong>proven experts, fair pricing, and zero migration pressure.</strong>"
+  - type: FeaturedTextCta
+    text: "Finally, Drupal 7 support that makes sense: <strong>proven experts, fair pricing, and zero migration pressure.</strong>"
 
   - type: GridSeparator
 
@@ -61,7 +61,9 @@ components:
       items: []
     packages:
       - title: "Basic Plan"
-        description: "Reliable support for small sites. <strong>$250</strong> per month."
+        description: "Reliable support for small sites. Best for small sites."
+        price: "$250"
+        priceSuffix: "per month"
         features:
           - "Drupal Core and module updates"
           - "Security monitoring"
@@ -71,9 +73,11 @@ components:
           href: "/contact"
       - title: "Professional Plan"
         variant: "highlight"
-        description: "Hands-on support and development expertise. <strong>$1000</strong> per month."
+        description: "Hands-on support and development <br/> expertise."
+        price: "$1000"
+        priceSuffix: "per month"
+        featuresIntro: "Everything in Basic, plus:"
         features:
-          - "Everything in Basic, plus:"
           - "Direct Slack access"
           - "Custom module and theme development"
           - "Priority support queue"
@@ -81,9 +85,10 @@ components:
           children: "Start with Pro"
           href: "/contact"
       - title: "Enterprise Plan"
-        description: "Fully managed Drupal 7 continuity solution. <strong>Custom pricing.</strong>"
+        description: "Fully managed Drupal 7 continuity solution."
+        price: "Custom pricing"
+        featuresIntro: "All services included"
         features:
-          - "All services included"
           - "Dedicated team allocation"
           - "Flexible communication"
         cta:
@@ -97,29 +102,29 @@ components:
     title: "How Does This Work?"
     description: "Our process is simple. We'll start with a kickoff call to understand your project needs and current pain points, then audit your current setup and provide actionable recommendations. After that, you'll choose the engagement that works best for you."
     items:
-      - icon: "ChartIcon"
+      - icon: "MonitorHeartIcon"
         title: "Proactive Monitoring"
         description: "We detect and fix issues before they impact your site's performance or security."
-      - icon: "DevUpdateIcon"
+      - icon: "SystemUpdateIcon"
         title: "Updates & Security Patches"
         description: "Drupal core, module, and PHP updates applied promptly and safely."
-      - icon: "ShakeHandsIcon"
+      - icon: "ForumIcon"
         title: "Direct Communication"
         description: "Reach us instantly through Slack or our support portal."
       - icon: "BoltIcon"
         title: "Fast Turnaround"
         description: "Most requests resolved within 48 hours or less."
-      - icon: "CheckBadgeIcon"
+      - icon: "FactCheckIcon"
         title: "Transparent Tracking"
         description: "Follow every task and update through our client dashboard."
-      - icon: "HistoryIcon"
+      - icon: "CalendarTodayIcon"
         title: "Regular Check-ins"
         description: "We schedule periodic reviews to ensure your site continues meeting your goals."
 
   - type: GridSeparator
 
   - type: FeaturedSolutionsRow
-    title: "Don't Just Survive on Drupal 7 — <em>Thrive on Drupal 7</em>"
+    title: "Don't Just Survive on Drupal 7 — <br/> <em>Thrive on Drupal 7</em>"
     description: "While others might pressure you to migrate, we help you maximize your investment. Your Drupal 7 site can continue to grow and improve."
     solutions:
       - title: "Module Development"
@@ -145,7 +150,7 @@ components:
     description: "Drupal 7 reached end-of-life on January 5, 2025 — meaning no more official security patches or community support. Without expert maintenance, your website faces growing risks that could impact performance, security, and business continuity."
     variant: "inline"
     items:
-      - icon: "ShieldLockIcon"
+      - icon: "GppBadIcon"
         title: "Security Vulnerabilities"
         description: "Without community patches, attackers target outdated Drupal 7 sites."
       - icon: "BugIcon"

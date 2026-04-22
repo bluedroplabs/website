@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils/classes";
+import parse from "html-react-parser";
 import Image from "next/image";
 import { lazy, Suspense } from "react";
 import { Button } from "../Button/Button";
@@ -29,7 +30,10 @@ export const PackageCard = ({
   cta,
   description,
   features,
+  featuresIntro,
   icon,
+  price,
+  priceSuffix,
   title,
   variant,
   ...props
@@ -53,18 +57,39 @@ export const PackageCard = ({
           />
         </>
       )}
-      <div className="grid h-full relative z-10">
+      <div className="flex flex-col gap-6 h-full relative z-10">
         {Icon && (
           <Suspense fallback={null}>
-            <Icon className="size-10 lg:size-12 mb-6" />
+            <Icon className="size-10 lg:size-12" />
           </Suspense>
         )}
-        <h3 className="font-medium mb-6 text-size-32 lg:text-size-40 tracking-[0.02em]">
+        <h3 className="font-medium text-size-32 lg:text-size-40 tracking-[0.02em]">
           {title}
         </h3>
-        <div className="mb-6 lg:mb-10">
-          <p className="mb-3 text-size-16 lg:text-size-18">{description}</p>
-          <List className="font-medium" items={features} />
+        <div className="flex flex-col gap-6">
+          {description && (
+            <p className="font-light text-size-16 lg:text-size-18">
+              {parse(description)}
+            </p>
+          )}
+          {price && (
+            <p className="text-size-16 lg:text-size-18">
+              <strong className="font-semibold text-default-heading text-size-20 lg:text-size-24">
+                {price}
+              </strong>
+              {priceSuffix && (
+                <span className="font-light ml-2">{priceSuffix}</span>
+              )}
+            </p>
+          )}
+          <div className="flex flex-col gap-3">
+            {featuresIntro && (
+              <p className="font-light text-size-16 lg:text-size-18">
+                {featuresIntro}
+              </p>
+            )}
+            <List className="font-medium" items={features} />
+          </div>
         </div>
         <Button
           {...cta}

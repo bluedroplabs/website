@@ -50,12 +50,7 @@ export const SolutionCard = ({
           titleClassName="font-medium leading-[1.1] line-clamp-3 tracking-[-0.02em] first:mt-0 mt-4"
           titleVariant="lg"
         />
-        <figure
-          className={cn(
-            "relative w-full self-end",
-            figureAspect,
-          )}
-        >
+        <figure className={cn("relative w-full self-end", figureAspect)}>
           <Image
             {...imageProps}
             className="object-contain object-bottom"

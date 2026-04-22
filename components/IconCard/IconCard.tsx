@@ -3,6 +3,9 @@ import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { IIconCard } from "./IconCard.types";
 
 const iconMap = {
+  AlarmIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.AlarmIcon })),
+  ),
   ArrowRightDownIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ArrowRightDownIcon })),
   ),
@@ -13,6 +16,9 @@ const iconMap = {
     import("../Icon").then((m) => ({ default: m.BillsIcon })),
   ),
   BugIcon: lazy(() => import("../Icon").then((m) => ({ default: m.BugIcon }))),
+  CalendarTodayIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.CalendarTodayIcon })),
+  ),
   ChartIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ChartIcon })),
   ),
@@ -43,8 +49,17 @@ const iconMap = {
   ExpenseIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.ExpenseIcon })),
   ),
+  FactCheckIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.FactCheckIcon })),
+  ),
   FlowChartIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.FlowChartIcon })),
+  ),
+  ForumIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.ForumIcon })),
+  ),
+  GppBadIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.GppBadIcon })),
   ),
   HostIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.HostIcon })),
@@ -77,6 +92,9 @@ const iconMap = {
     import("../Icon").then((m) => ({ default: m.StressIcon })),
   ),
   SunIcon: lazy(() => import("../Icon").then((m) => ({ default: m.SunIcon }))),
+  SystemUpdateIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.SystemUpdateIcon })),
+  ),
   WarningIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.WarningIcon })),
   ),
@@ -88,6 +106,9 @@ const iconMap = {
   ),
   MemoryIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.MemoryIcon })),
+  ),
+  MonitorHeartIcon: lazy(() =>
+    import("../Icon").then((m) => ({ default: m.MonitorHeartIcon })),
   ),
   DatabaseIcon: lazy(() =>
     import("../Icon").then((m) => ({ default: m.DatabaseIcon })),

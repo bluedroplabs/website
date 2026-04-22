@@ -66,13 +66,12 @@ export const FeaturedSolutionsRow = ({
           <ContentBlock
             className="gap-4 py-12 lg:gap-5 lg:pb-12 lg:pt-25 lg:px-16"
             description={description}
-            descriptionVariant="end"
             eyebrow={eyebrow}
             eyebrowVariant="highlight"
             primaryCTA={primaryCTA}
             primaryCTAClassName="mt-2"
             title={title}
-            variant="inline"
+            variant="center"
           />
         </div>
       )}
@@ -85,10 +84,10 @@ export const FeaturedSolutionsRow = ({
       >
         <div className="grid grid-cols-1 lg:grid-cols-3 max-w-[var(--breakpoint-2xl)] mx-auto">
           {solutions.map((solution, index) => {
+            const isLast = index === solutions.length - 1;
             const borderClasses = cn(
-              "border-x border-border-normal max-lg:border-b",
-              "lg:[&:not(:last-child)]:border-r-0",
-              "lg:[&:not(:first-child)]:border-l-0",
+              "border-x border-border-normal max-lg:border-b lg:border-r-0",
+              isLast && "lg:border-r",
             );
 
             if (solution.href) {

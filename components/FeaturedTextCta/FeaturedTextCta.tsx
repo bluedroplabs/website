@@ -41,7 +41,7 @@ export const FeaturedTextCta = ({
           >
             {parse(text)}
           </Tag>
-          <Button {...cta} />
+          {cta && <Button {...cta} />}
         </div>
       </div>
     </Container>

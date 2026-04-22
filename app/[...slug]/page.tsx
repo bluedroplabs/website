@@ -112,14 +112,7 @@ export default async function Page({ params }: PageProps) {
 
   if (!slug?.length) notFound();
 
-  let pageData;
-
-  try {
-    pageData = await loadPageData(slug);
-  } catch (error) {
-    console.error(`Error loading page data for /${slug.join("/")}:`, error);
-    notFound();
-  }
+  const pageData = loadPageData(slug);
 
   if (!pageData) notFound();
 

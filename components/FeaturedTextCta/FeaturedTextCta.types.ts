@@ -20,9 +20,9 @@ export type TFeaturedTextCtaVariant = "body" | "heading";
  */
 export interface IFeaturedTextCta extends HTMLAttributes<HTMLElement> {
   /**
-   * Call-to-action button rendered below the text.
+   * Call-to-action button rendered below the text. Optional — omit to render text only.
    */
-  cta: ICTA;
+  cta?: ICTA;
 
   /**
    * Body or heading text. Supports inline HTML.
