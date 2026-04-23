@@ -1,0 +1,167 @@
+# Drupal & WordPress Support Configuration
+# This file defines the /services/drupal-and-wordpress-support page
+
+title: "Drupal & WordPress Support"
+description: "Ongoing support and maintenance for your Drupal or WordPress website."
+components:
+  - type: DetailPageHero
+    title: "Drupal & WordPress Support"
+    description: "Ongoing support and maintenance for your Drupal or WordPress website."
+    image:
+      src: "/assets/drupal-and-wordpress-support-hero-light.png"
+      srcDark: "/assets/drupal-and-wordpress-support-hero-dark.png"
+      alt: "Drupal & WordPress Support"
+    primaryCTA:
+      children: "Book a Consultation"
+      href: "/contact"
+
+  - type: FeaturedSplitIconList
+    title: "Reliable Support from People Who Actually Know Your CMS"
+    items:
+      - icon: "BoltIcon"
+        title: "Fast, Reliable Help When You Need It"
+        description: "We resolve issues quickly — usually within 48 hours — so your site stays up, secure, and stress-free."
+      - icon: "ShakeHandsIcon"
+        title: "Direct Access to Developers"
+        description: "No layers, no delays. You'll speak directly with the experts building and maintaining your site."
+      - icon: "CheckBadgeIcon"
+        title: "Built on Trust, Not Contracts"
+        description: "We earn your confidence month after month — no long-term lock-ins or hidden fees."
+
+  - type: FeaturedIconGrid
+    eyebrow: "What Sets Us Apart"
+    title: "What Makes Blue Drop Labs Different"
+    description: "We're not another agency reselling generic support. Our senior developers handle every ticket, ensuring quality work, quick resolutions, and transparent communication."
+    variant: "inline"
+    items:
+      - icon: "SchoolIcon"
+        title: "All-Senior Team"
+        description: "Every developer brings 10+ years of Drupal and WordPress experience."
+      - icon: "ForumIcon"
+        title: "No Middle Layers"
+        description: "Work directly with the people solving your problems — no project manager bottlenecks."
+      - icon: "ReceiptIcon"
+        title: "Transparent, Predictable Pricing"
+        description: "No hidden costs or retainers. Just clear monthly pricing that fits your needs."
+      - icon: "SyncIcon"
+        title: "Flexible Month-to-Month Contracts"
+        description: "Stay because you want to, not because you're stuck in a long-term agreement."
+
+  - type: GridSeparator
+
+  - type: InlineTextBlock
+    eyebrow: "Is This You?"
+    title: "Are you tired of chasing CMS updates and fighting bugs?"
+    description: "<p>We work with marketing, sales, and IT teams who are always in these situations:</p><ul><li>Falling behind on critical security updates</li><li>Bugs and delays from a lack of in-house CMS expertise</li><li>Unreliable freelancers who disappear when you need them most</li><li>Website downtime affecting your business (and sleep)</li><li>No budget to hire an experienced, full-time developer</li></ul><p>Let's fix that — book a support audit.</p>"
+    primaryCTA:
+      children: "Book an Assessment"
+      href: "/contact"
+
+  - type: GridSeparator
+
+  - type: FeaturedIconListGrid
+    eyebrow: "Features"
+    title: "Everything You Need to Keep Your Site Running Smoothly"
+    description: "Our CMS support covers everything you need to keep your website fast, secure, and reliable — all handled by senior developers."
+    columns: 4
+    items:
+      - icon: "LockIcon"
+        title: "Security updates and patches"
+        description: "Protect your site from vulnerabilities."
+      - icon: "UpdateIcon"
+        title: "Core and plugin/module updates"
+        description: "Keep your CMS current and stable."
+      - icon: "BugIcon"
+        title: "Bug fixes and troubleshooting"
+        description: "Quickly resolve issues affecting your site."
+      - icon: "RocketIcon"
+        title: "Performance optimization"
+        description: "Speed up load times and improve user experience."
+      - icon: "AddModIcon"
+        title: "Basic feature requests and improvements"
+        description: "Add small enhancements or tweaks as needed."
+      - icon: "MonitorHeartIcon"
+        title: "Regular health checks"
+        description: "Monitor your site's performance and stability."
+      - icon: "DescriptionIcon"
+        title: "Documentation and recommendations"
+        description: "Clear reporting and technical transparency."
+
+  - type: FeaturedCtaBand
+    variant: "inline"
+    title: "Need reliable web hosting that won't punish you for success?"
+    description: "We can migrate your Drupal or WordPress site to our high-performance platform for faster load times and predictable pricing."
+    cta:
+      children: "Learn more"
+      href: "/platform"
+
+  - type: GridSeparator
+
+  - type: FeaturedSolutionsRow
+    eyebrow: "Add-Ons"
+    title: "Go Beyond Maintenance — <em>Improve & Evolve</em>"
+    description: "Extend your support plan with advanced services that help your website grow, perform better, and convert more visitors."
+    solutions:
+      - title: "Design + Experience"
+        description: "Redesign or refine your theme for a modern, accessible, and on-brand look that keeps users engaged."
+        image:
+          alt: "Design + Experience"
+          src: "https://picsum.photos/512/260?random=10"
+      - title: "Custom Module/Plugin Development"
+        description: "Add new functionality, connect third-party tools, and build solutions tailored to your workflows."
+        image:
+          alt: "Custom Module/Plugin Development"
+          src: "https://picsum.photos/512/260?random=11"
+      - title: "SEO & Marketing Optimization"
+        description: "Improve visibility, speed, and conversions through data-driven optimization and smart content strategy."
+        image:
+          alt: "SEO & Marketing Optimization"
+          src: "https://picsum.photos/512/260?random=12"
+
+  - type: GridSeparator
+
+  - type: FeaturedProcessList
+    title: "Our Process"
+    items:
+      - title: "Discovery Call (15 minutes)"
+        description: "We'll discuss your current website setup, pain points, and goals to understand exactly what support you need."
+      - title: "Technical Assessment"
+        description: "Our team reviews your site's current state and provides recommendations tailored to your needs and budget."
+      - title: "Choose Your Support Level with Monthly Flexibility"
+        description: "Select from our transparent pricing tiers and start immediately with our flexible contracts. No long-term commitments required."
+      - title: "Ongoing Support & Communication"
+        description: "Begin regular check-ins and get access to our ticketing system."
+
+  - type: FeaturedTextCta
+    variant: "heading"
+    text: "Let us support you in running your CMS website.<br />Ready to get started?"
+    cta:
+      children: "Start your support plan today"
+      href: "/contact"
+
+  - type: GridSeparator
+
+  - type: FeaturedAccordionList
+    title: "Frequently Asked Questions"
+    items:
+      - title: "Can you support multiple websites or environments?"
+        content: "Yes. We regularly support clients with multiple sites, staging environments, and complex hosting setups — each one covered by the same direct-to-developer support model."
+      - title: "Do you only work on Drupal and WordPress?"
+        content: "Drupal and WordPress are our specialties, but our team also handles related technologies like custom APIs, headless front-ends, and third-party integrations."
+      - title: "What if we already have an in-house developer?"
+        content: "We often work alongside in-house teams to provide overflow capacity, deep CMS expertise, or emergency coverage when your developers need backup."
+      - title: "Can you help migrate us to better hosting?"
+        content: "Absolutely. We run a high-performance hosting platform optimized for Drupal and WordPress, and we handle migrations with zero downtime as part of the onboarding."
+      - title: "Is there a minimum contract term?"
+        content: "No. All of our support plans are month-to-month — stay because the service is working for you, not because you're locked in."
+
+  - type: GridSeparator
+
+  - type: FeaturedCtaBand
+    title: "Still on Drupal 7? You're Not Alone."
+    description: "We offer extended support to keep your Drupal 7 sites secure — no migration pressure, just stability and expertise."
+    cta:
+      children: "Learn About Drupal 7 Support"
+      href: "/services/drupal-7-extended-support"
+
+  - type: GridSeparator

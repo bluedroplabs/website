@@ -1,0 +1,157 @@
+# Drupal & WordPress Development Configuration
+# This file defines the /services/drupal-and-wordpress-development page
+
+title: "Drupal & WordPress Development"
+description: "Build powerful, maintainable, and secure digital experiences — from integrations and authoring tools to fully custom functionality."
+components:
+  - type: DetailPageHero
+    title: "Drupal & WordPress Development"
+    description: "Build powerful, maintainable, and secure digital experiences — from integrations and authoring tools to fully custom functionality."
+    image:
+      src: "/assets/drupal-and-wordpress-development-hero-light.png"
+      srcDark: "/assets/drupal-and-wordpress-development-hero-dark.png"
+      alt: "Drupal & WordPress Development"
+    primaryCTA:
+      children: "Book a Consultation"
+      href: "/contact"
+
+  - type: FeaturedSplitIconList
+    title: "Practical solutions. Proven results. Built by experts who know your CMS inside out."
+    items:
+      - icon: "StackedIcon"
+        title: "Scalable, Custom Solutions"
+        description: "From new modules to complex integrations, we build for today's needs and tomorrow's growth."
+      - icon: "CodeBlockIcon"
+        title: "Built for Performance & Security"
+        description: "Every line of code follows best practices for speed, scalability, and security."
+      - icon: "ShakeHandsIcon"
+        title: "Flexible Collaboration"
+        description: "Work with us your way. Embedded experts or full project delivery."
+
+  - type: FeaturedIconGrid
+    eyebrow: "What Sets Us Apart"
+    title: "The Expertise Behind Hundreds of Successful Builds"
+    description: "Our team has built hundreds of custom modules and plugins, from simple content integrations to complex enterprise-level solutions."
+    variant: "inline"
+    items:
+      - icon: "SchoolIcon"
+        title: "Senior-Level Expertise"
+        description: "Every developer brings 10+ years of real-world CMS experience — no juniors learning on your time."
+      - icon: "CodeBlockIcon"
+        title: "Code That Scales and Performs"
+        description: "We follow strict coding standards and best practices to deliver fast, secure, and maintainable systems."
+      - icon: "ForumIcon"
+        title: "Direct Collaboration"
+        description: "Work directly with the developers who build your solution. Fewer layers, faster feedback, better results."
+      - icon: "ExpenseIcon"
+        title: "Transparent, Flexible Engagements"
+        description: "Clear pricing, flexible contracts, and complete visibility — no surprise fees or unnecessary lock-ins."
+
+  - type: GridSeparator
+
+  - type: InlineTextBlock
+    eyebrow: "Is This You?"
+    title: "Stop Wrestling with Complex Requirements"
+    description: "<p>We're specialists who know exactly how to handle Drupal and WordPress complexity. Whether it's a simple integration or advanced business logic, we deliver solutions that are <strong>secure</strong>, <strong>maintainable</strong>, and <strong>performant</strong>.</p><p><strong>Are you facing:</strong></p><ul><li>Custom functionality that your team can't build in-house?</li><li>Performance problems with custom code?</li><li>Contrib modules or plugins that get you only 80% of what you need?</li><li>Legacy code that needs to be modernized?</li><li>Tight deadlines with no available developers?</li></ul>"
+
+  - type: FeaturedTextCta
+    variant: "heading"
+    text: "Whether you need a fix, a feature, or a full rebuild — <strong>we make your CMS work for you, not against you.</strong>"
+    cta:
+      children: "Let's Talk"
+      href: "/contact"
+
+  - type: GridSeparator
+
+  - type: SolutionsPackage
+    eyebrow: "How we work Together"
+    title: "A Flexible Partnership"
+    description: "No two companies work the same way—so we're flexible. Our goal is to make your job easier, whether you need short-term help or a long-term development partner."
+    footer:
+      title: ""
+      items: []
+    packages:
+      - title: "Staff Augmentation"
+        icon: "StaffAugmentationIcon"
+        description: "Embed our developers directly into your team. Perfect when you need extra hands or specialized expertise for a portion of your project."
+        features:
+          - "Embed our developers in your team"
+          - "Work within your existing processes"
+          - "Flexible timeline based on your needs"
+          - "Complete specific development tasks"
+          - "Knowledge transfer to your team"
+        cta:
+          children: "Inquire now"
+          href: "/contact"
+      - title: "Complete Project Delivery"
+        icon: "ProjectDeliveryIcon"
+        variant: "highlight"
+        description: "We take full ownership from requirements to deployment. Ideal when you want to hand off the entire development process to experts who understand Drupal inside and out."
+        features:
+          - "We handle everything from start to finish"
+          - "Regular updates and milestone reviews"
+          - "Thorough testing and documentation"
+          - "Clean handoff with training"
+        cta:
+          children: "Get started"
+          href: "/contact"
+
+  - type: GridSeparator
+
+  - type: FeaturedProcessList
+    title: "Our Process"
+    items:
+      - title: "Discovery Call"
+        description: "We start with a detailed discussion of your needs, existing systems, and business requirements to ensure we're building exactly what you need."
+      - title: "Technical Assessment"
+        description: "Our team reviews your current Drupal or WordPress setup and identifies any dependencies or integration points."
+      - title: "Choose Your Engagement Model"
+        description: "Whether you need extra developers to support your existing team or a full team to launch your project, choose how we collaborate — through Staff Augmentation or Complete Project Delivery."
+      - title: "Development & Communication"
+        description: "We maintain full transparency throughout development with direct Slack access, regular updates, and milestone demos. You can track progress through GitHub while our team incorporates feedback and ensures alignment every step of the way."
+      - title: "Testing, Documentation & Deployment"
+        description: "We thoroughly test and document every feature before launch to ensure performance and reliability. Our team handles deployment smoothly and provides post-launch support for optimization or additional enhancements."
+
+  - type: GridSeparator
+
+  - type: FeaturedIconListGrid
+    eyebrow: "Common Development Projects"
+    title: "Transform Your CMS Into a Powerhouse"
+    description: "From integrations to AI enhancements, we turn Drupal and WordPress into platforms that work smarter and perform better."
+    items:
+      - icon: "LinkIcon"
+        title: "Data Integration & APIs"
+        description: "<ul><li>CRM integrations (Salesforce, HubSpot, etc.)</li><li>E-commerce platform connections</li><li>Marketing tool integrations</li><li>Payment gateway integrations</li><li>REST API development</li></ul>"
+      - icon: "AccountTreeIcon"
+        title: "Custom Workflows & Automations"
+        description: "<ul><li>Custom reporting and dashboards</li><li>Data transformations and migrations</li><li>Editorial workflows and approvals</li></ul>"
+      - icon: "SpeedIcon"
+        title: "User Experience Enhancements"
+        description: "<ul><li>Custom search and filtering</li><li>Progressive decoupling</li><li>Cache optimization</li><li>AI-powered content editing</li></ul>"
+      - icon: "ShieldLockIcon"
+        title: "Performance & Security"
+        description: "<ul><li>Database query optimization</li><li>Caching layer implementation</li><li>Load testing and optimization</li><li>Custom authentication systems</li></ul>"
+      - icon: "DevUpdateIcon"
+        title: "DevOps"
+        description: "<ul><li>Automated testing frameworks</li><li>Continuous integration/deployment pipelines</li><li>Deployment automation</li></ul>"
+      - icon: "BrainIcon"
+        title: "AI Enhancements"
+        description: "<ul><li>Content editor optimizations</li><li>Automated content tagging and categorization</li><li>Smarter search recommendations</li></ul>"
+
+  - type: GridSeparator
+
+  - type: FeaturedAccordionList
+    title: "Frequently Asked Questions"
+    items:
+      - title: "What types of projects do you typically handle?"
+        content: "We take on everything from small-scope feature work and custom module/plugin builds to enterprise-level integrations, performance and security overhauls, and full platform rebuilds on Drupal or WordPress."
+      - title: "Do you only work with Drupal and WordPress?"
+        content: "Those are our core specialties, but our team also works across the broader stack — custom APIs, headless front-ends, third-party integrations, and supporting infrastructure."
+      - title: "How long does a typical development project take?"
+        content: "It depends on scope. A focused integration or module build can ship in a few weeks, while larger platform projects typically run two to six months. We'll give you a concrete timeline after the Technical Assessment."
+      - title: "Do you offer post-launch support or maintenance?"
+        content: "Yes. Every engagement ends with a clean handoff, documentation, and optional ongoing support — either through our CMS Support plans or continued development work."
+      - title: "Can you help fix issues with an existing website?"
+        content: "Absolutely. We regularly step in to fix broken features, resolve performance issues, clean up inherited code, and finish stalled projects on existing Drupal and WordPress sites."
+
+  - type: GridSeparator

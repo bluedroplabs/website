@@ -25,6 +25,11 @@ export interface IIconCard extends Omit<HTMLAttributes<HTMLElement>, "title"> {
   icon: string;
 
   /**
+   * Optional extra class applied to the rendered icon (e.g. "opacity-50").
+   */
+  iconClassName?: string;
+
+  /**
    * Determines the visual variant of the component.
    * Defaults to `default` if not specified.
    */

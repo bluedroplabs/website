@@ -20,13 +20,36 @@ export interface IPackageCard extends HTMLAttributes<HTMLElement> {
 
   /**
    * Short description text displayed within or alongside the component.
+   * Supports inline HTML (e.g. `<strong>`).
    */
   description?: string;
 
   /**
-   * Title text displayed prominently in the component.
+   * List of feature bullets.
    */
   features: IList["items"];
+
+  /**
+   * Optional plain text line displayed above the features list
+   * without a bullet (e.g. "Everything in Basic, plus:").
+   */
+  featuresIntro?: string;
+
+  /**
+   * Optional icon rendered above the title. Must match a key in the
+   * PackageCard iconMap.
+   */
+  icon?: string;
+
+  /**
+   * Prominent price label (e.g. "$250" or "Custom pricing").
+   */
+  price?: string;
+
+  /**
+   * Light-weight suffix rendered after the price (e.g. "per month").
+   */
+  priceSuffix?: string;
 
   /**
    * Determines the visual variant of the component.

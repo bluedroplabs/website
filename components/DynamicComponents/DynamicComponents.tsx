@@ -4,13 +4,21 @@ import { Basic1Up } from "@/components/Basic1Up/Basic1Up";
 import { CardGrid } from "@/components/CardGrid/CardGrid";
 import { ComparisonTable } from "@/components/ComparisonTable/ComparisonTable";
 import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { CtaBlock } from "@/components/CtaBlock/CtaBlock";
 import { DetailPageHero } from "@/components/DetailPageHero/DetailPageHero";
 import { FeaturedAccordionList } from "@/components/FeaturedAccordionList/FeaturedAccordionList";
+import { FeaturedCtaBand } from "@/components/FeaturedCtaBand/FeaturedCtaBand";
 import { FeaturedIconGrid } from "@/components/FeaturedIconGrid/FeaturedIconGrid";
 import { FeaturedIconList } from "@/components/FeaturedIconList/FeaturedIconList";
 import { FeaturedIconListGrid } from "@/components/FeaturedIconListGrid/FeaturedIconListGrid";
+import { FeaturedProcessList } from "@/components/FeaturedProcessList/FeaturedProcessList";
+import { FeaturedServiceCategories } from "@/components/FeaturedServiceCategories/FeaturedServiceCategories";
 import { FeaturedSolutionsGrid } from "@/components/FeaturedSolutionsGrid/FeaturedSolutionsGrid";
+import { FeaturedSolutionsRow } from "@/components/FeaturedSolutionsRow/FeaturedSolutionsRow";
+import { FeaturedSplitIconList } from "@/components/FeaturedSplitIconList/FeaturedSplitIconList";
+import { FeaturedSplitText } from "@/components/FeaturedSplitText/FeaturedSplitText";
 import { FeaturedText } from "@/components/FeaturedText/FeaturedText";
+import { FeaturedTextCta } from "@/components/FeaturedTextCta/FeaturedTextCta";
 import { FeaturedTextList } from "@/components/FeaturedTextList/FeaturedTextList";
 import { GradientHero } from "@/components/GradientHero/GradientHero";
 import { GridSeparator } from "@/components/GridSeparator/GridSeparator";
@@ -28,14 +36,22 @@ const componentMap = {
   Basic1Up,
   CardGrid,
   ContactForm,
+  CtaBlock,
   DetailPageHero,
   ComparisonTable,
   FeaturedAccordionList,
+  FeaturedCtaBand,
   FeaturedIconGrid,
   FeaturedIconList,
   FeaturedIconListGrid,
+  FeaturedProcessList,
+  FeaturedServiceCategories,
   FeaturedSolutionsGrid,
+  FeaturedSolutionsRow,
+  FeaturedSplitIconList,
+  FeaturedSplitText,
   FeaturedText,
+  FeaturedTextCta,
   FeaturedTextList,
   GradientHero,
   GridSeparator,

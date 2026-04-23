@@ -8,7 +8,7 @@ import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { ISolutionCard } from "./SolutionCard.types";
 
 const variants = cva(
-  "border-border-normal grid h-full max-lg:border-t pt-12 px-6 lg:px-16",
+  "border-border-normal grid grid-rows-[auto_1fr] gap-8 h-full max-lg:border-t pt-12 px-6 lg:px-16",
   {
     variants: {
       variant: {
@@ -20,7 +20,7 @@ const variants = cva(
   },
 );
 
-const contentBlockClasses = "flex flex-col gap-4 pb-8";
+const contentBlockClasses = "flex flex-col gap-4";
 const figureAspect = "aspect-[512/260]";
 
 export const SolutionCard = ({
@@ -50,22 +50,15 @@ export const SolutionCard = ({
           titleClassName="font-medium leading-[1.1] line-clamp-3 tracking-[-0.02em] first:mt-0 mt-4"
           titleVariant="lg"
         />
-        <div className="flex items-end">
-          <figure
-            className={cn(
-              "relative size-full flex items-center justify-center",
-              figureAspect,
-            )}
-          >
-            <Image
-              {...imageProps}
-              className="object-contain"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              src={imageSrc}
-            />
-          </figure>
-        </div>
+        <figure className={cn("relative w-full self-end", figureAspect)}>
+          <Image
+            {...imageProps}
+            className="object-contain object-bottom"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            src={imageSrc}
+          />
+        </figure>
       </div>
     </article>
   );

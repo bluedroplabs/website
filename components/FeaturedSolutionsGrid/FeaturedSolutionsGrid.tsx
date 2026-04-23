@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils";
+import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { SolutionCard } from "../SolutionCard/SolutionCard";
@@ -14,13 +15,28 @@ const FeaturedSolutionsGridRow = ({
 }) => {
   return (
     <div className="flex w-full min-w-0 flex-col lg:flex-row max-w-[var(--breakpoint-2xl)] mx-auto">
-      {solutions.map((solution, index) => (
-        <SolutionCard
-          key={index}
-          {...solution}
-          className="w-full min-w-0 border-x border-border-normal lg:flex-1 lg:basis-0 lg:[&:nth-child(2)]:border-l-0"
-        />
-      ))}
+      {solutions.map((solution, index) => {
+        const cardClassName = cn(
+          "w-full min-w-0 border-x border-border-normal lg:flex-1 lg:basis-0",
+          index > 0 && "lg:border-l-0",
+        );
+
+        if (solution.href) {
+          return (
+            <Link
+              className="flex w-full min-w-0 lg:flex-1 lg:basis-0"
+              href={solution.href}
+              key={index}
+            >
+              <SolutionCard {...solution} className={cardClassName} />
+            </Link>
+          );
+        }
+
+        return (
+          <SolutionCard key={index} {...solution} className={cardClassName} />
+        );
+      })}
     </div>
   );
 };

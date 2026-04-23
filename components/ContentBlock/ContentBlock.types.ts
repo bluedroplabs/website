@@ -12,6 +12,11 @@ export type TContentBlockVariant = "left" | "center" | "inline";
 export type TContentBlockEyebrowVariant = "default" | "highlight";
 
 /**
+ * Variant options for the description text.
+ */
+export type TContentBlockDescriptionVariant = "default" | "spaced" | "end";
+
+/**
  * HTML tag options for the title element.
  */
 export type TContentBlockTitleTag = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
@@ -90,6 +95,12 @@ export interface IContentBlock
    * Custom class name for the description text.
    */
   descriptionClassName?: string;
+
+  /**
+   * Variant of the description text. Controls spacing between paragraphs.
+   * Use "spaced" when the description contains multiple paragraphs that need gap between them.
+   */
+  descriptionVariant?: TContentBlockDescriptionVariant;
 
   /**
    * Eyebrow text displayed above the main title.

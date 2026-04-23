@@ -1,23 +1,23 @@
 # API + Custom Development Configuration
-# This file defines the API + Custom Development components section
-# Update this file to modify the API + Custom Development section in your application
+# This file defines the /services/api-custom-development page
 
 title: "API + Custom Development"
 description: "Build scalable web applications and APIs that power your business growth."
 components:
   - type: DetailPageHero
+    title: "API + Custom Development"
     description: "Build scalable web applications and APIs that power your business growth."
-    title: "Complete Design, Development, & Support"
     image:
-      src: "/assets/api-customer-development-hero-asset.webp"
-      alt: "The Platform"
+      src: "/assets/api-customer-development-hero-asset-light.png"
+      srcDark: "/assets/api-customer-development-hero-asset-dark.png"
+      alt: "API + Custom Development"
     primaryCTA:
       children: "Book a Consultation"
-      url: "/contact-us"
+      href: "/contact"
 
-  - type: InlineTextBlock
-    description: "Roll out custom web applications, APIs, and integrations that solve your unique business challenges. Whether you need a custom dashboard, internal tools, a prototype, or a full-scale application, we bring the expertise to make it happen—fast and efficiently."
+  - type: FeaturedSplitText
     title: "Enterprise-Grade Solutions at Startup Speed"
+    description: "Roll out custom web applications, APIs, and integrations that solve your unique business challenges. Whether you need a custom dashboard, internal tools, a prototype, or a full-scale application, we bring the expertise to make it happen—fast and efficiently."
 
   - type: FeaturedIconGrid
     eyebrow: "Custom Development, Done Right"
@@ -41,35 +41,35 @@ components:
   - type: GridSeparator
 
   - type: Basic1Up
-    image:
-      src: "https://picsum.photos/562/568"
-      alt: "A cross-section “stack” visual showing backend, frontend, and database layers connected"
-    title: "Everything You Need in One Expert Team"
-    description: "From database architecture to user interface design, we handle every aspect of your project. No need to coordinate between multiple vendors or worry about integration issues. Our team has deep knowledge across the entire technology stack, meaning we can architect robust backends that scale, design intuitive frontends that convert, and ensure seamless integration between all components. <br /><br/>Our globally distributed team uses modern development practices to deliver high-quality solutions at a fraction of the cost of traditional agencies. No bloated overhead or unnecessary bureaucracy."
     eyebrow: "Cost-Effective, Full-Stack Expertise"
+    title: "Everything You Need in One Expert Team"
+    description: "From database architecture to user interface design, we handle every aspect of your project. No need to coordinate between multiple vendors or worry about integration issues. Our team has deep knowledge across the entire technology stack, meaning we can architect robust backends that scale, design intuitive frontends that convert, and ensure seamless integration between all components.<br /><br />Our globally distributed team uses modern development practices to deliver high-quality solutions at a fraction of the cost of traditional agencies. No bloated overhead or unnecessary bureaucracy."
     alignment: "left"
+    image:
+      src: "/assets/production-light.png"
+      srcDark: "/assets/production-dark.png"
+      alt: "A cross-section stack visual showing backend, frontend, and database layers connected"
 
   - type: GridSeparator
 
   - type: FeaturedIconListGrid
-    eyebrow: "Features"
     title: "We Take Responsibility For The Complete Solution"
     description: "We're not just building your application. We're investing in your success. Most of our clients work with us for years because they trust our technical decisions and rely on our continued support as their business grows and evolves."
     items:
       - icon: "DomainIcon"
-        description: "We design systems that work together seamlessly, not just individual pieces."
         title: "Architecture"
+        description: "We design systems that work together seamlessly, not just individual pieces."
       - icon: "CodeBlockIcon"
-        description: "Every component is built to our standards and tested as part of the whole system."
         title: "Code Quality"
+        description: "Every component is built to our standards and tested as part of the whole system."
       - icon: "SpeedIcon"
-        description: "We tune the entire stack—code, database, and server configuration—for maximum speed."
         title: "Performance"
+        description: "We tune the entire stack—code, database, and server configuration—for maximum speed."
       - icon: "ShieldLockIcon"
-        description: "Comprehensive protection across all layers, from application code to server hardening."
         title: "Security"
+        description: "Comprehensive protection across all layers, from application code to server hardening."
       - icon: "HostIcon"
-        description: "We provide and manage high-performance hosting optimized specifically for your application and establish an optimal deployment pipeline."
         title: "Hosting & Deployment"
+        description: "We provide and manage high-performance hosting optimized specifically for your application and establish an optimal deployment pipeline."
 
   - type: GridSeparator

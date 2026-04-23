@@ -56,28 +56,28 @@ components:
     title: "Our solutions"
     description: "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business."
     solutions:
-      - title: "Drupal + WordPress Managed Hosting"
+      - title: "Drupal & WordPress Development"
         description: "We build powerful, maintainable, and secure digital experiences with custom functionality, seamless integrations, and professional craftsmanship."
-        href: "/"
+        href: "/services/drupal-and-wordpress-development"
         image:
-          alt: "Drupal + WordPress Managed Hosting"
+          alt: "Drupal & WordPress Development"
           src: "/assets/drupal-and-wordpress-development.svg"
       - title: "Drupal & WordPress Support"
         description: "Ongoing maintenance and expert support to keep your Drupal or WordPress site secure, fast, and performing at its best."
-        href: "/"
+        href: "/services/drupal-and-wordpress-support"
         image:
           alt: "Drupal 7 support"
           src: "/assets/drupal-7-support.svg"
       - title: "Drupal 7 Extended Support"
         description: "Keep your Drupal 7 platform secure and stable with enterprise-level maintenance and updates—no costly migrations required."
-        href: "/"
+        href: "/services/drupal-7-extended-support"
         image:
           alt: "Drupal + WordPress Support"
           src: "/assets/drupal-and-wordpress-support-light.svg"
           srcDark: "/assets/drupal-and-wordpress-support-dark.svg"
       - title: "API + Custom Development"
         description: "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth."
-        href: "/"
+        href: "/services/api-custom-development"
         image:
           alt: "API + Custom Development"
           src: "/assets/api-and-custom-development.svg"
@@ -89,7 +89,7 @@ components:
           src: "/assets/design-and-experience.svg"
       - title: "SEO + Marketing"
         description: "Turn your website into a high-performing growth engine with technical SEO, performance optimization, and data-driven marketing strategies."
-        href: "/"
+        href: "/services/seo-and-marketing"
         image:
           alt: "SEO + Marketing"
           src: "/assets/seo-and-marketing-light.svg"

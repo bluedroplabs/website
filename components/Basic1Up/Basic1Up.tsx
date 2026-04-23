@@ -38,8 +38,8 @@ function Basic1UpAsset({
   className,
   ...figureProps
 }: Basic1UpAssetProps) {
-  const { srcLight, ...imageProps } = image;
-  const src = isDarkMode && srcLight ? srcLight : image.src;
+  const { srcDark, srcLight: _srcLight, ...imageProps } = image;
+  const src = isDarkMode && srcDark ? srcDark : image.src;
 
   const borderClassName = isLeft
     ? "border-l border-border-normal"
@@ -116,7 +116,7 @@ export function Basic1Up({
         primaryCTA={primaryCTA}
         secondaryCTA={secondaryCTA}
         title={title}
-        titleClassName="text-size-40 lg:text-size-48 leading-[1.1] tracking-tight py-0 mt-5"
+        titleClassName="text-size-40 lg:text-size-48 leading-[1.1] tracking-tight py-0"
       />
       <Basic1UpAsset
         className={assetMobileClassName}

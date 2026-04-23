@@ -21,13 +21,13 @@ export const SolutionsPackage = ({
       <div className="border-b border-border-normal">
         <div className="max-w-[var(--breakpoint-2xl)] mx-auto px-6 md:px-16 3xl:px-0">
           <ContentBlock
-            className="mb-8 lg:mb-12"
+            className="gap-4 mb-8 lg:gap-5 lg:mb-12"
             description={description}
+            descriptionVariant="end"
             eyebrow={eyebrow}
-            eyebrowClassName="mb-5"
             eyebrowVariant="highlight"
             title={title}
-            titleClassName="mb-5 last:mb-0"
+            variant="inline"
           />
         </div>
       </div>
