@@ -1,0 +1,20 @@
+---
+import { HomepageHero } from "@/components/HomepageHero/HomepageHero";
+
+export interface Props {
+  title: string;
+  description?: string;
+  ctaLabel: string;
+  ctaUrl: string;
+  ctaTarget?: "_self" | "_blank";
+}
+
+const { title, description, ctaLabel, ctaUrl, ctaTarget = "_self" } =
+  Astro.props;
+---
+
+<HomepageHero
+  title={title}
+  description={description}
+  cta={{ children: ctaLabel, href: ctaUrl, target: ctaTarget }}
+/>

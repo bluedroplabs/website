@@ -1,0 +1,29 @@
+---
+import { resolveDrupalImage, type CanvasImage } from "@data/drupal/media";
+
+export interface Props {
+  variant: "basic" | "full";
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  image: CanvasImage;
+  darkImage?: CanvasImage;
+  url?: string;
+}
+const { variant, eyebrow, title, description, image: sourceImage, darkImage: sourceDarkImage, url } = Astro.props;
+const image = resolveDrupalImage(sourceImage);
+const darkImage = sourceDarkImage ? resolveDrupalImage(sourceDarkImage) : undefined;
+const Tag = url ? "a" : "article";
+---
+
+<Tag href={url} class:list={["group grid h-full border-t border-border-normal px-6 pt-12 lg:px-16", variant === "full" ? "lg:grid-cols-2 lg:gap-16 lg:py-16" : "grid-rows-[auto_1fr] gap-8"]}>
+  <div>
+    {eyebrow && <p class="font-mono text-size-14 uppercase">{eyebrow}</p>}
+    <h3 class="mt-4 text-size-32 font-medium leading-tight" set:html={title} />
+    {description && <div class="mt-4 line-clamp-6 text-size-18 font-light leading-relaxed" set:html={description} />}
+  </div>
+  <figure class="relative mt-8 aspect-[512/260] self-end">
+    <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" class:list={["size-full object-contain object-bottom", darkImage && "dark:hidden"]} />
+    {darkImage && <img src={darkImage.src} alt={darkImage.alt || image.alt} width={darkImage.width} height={darkImage.height} loading="lazy" class="hidden size-full object-contain object-bottom dark:block" />}
+  </figure>
+</Tag>

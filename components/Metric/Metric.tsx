@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import type { IMetric } from "./Metric.types";
 
 export const Metric = ({

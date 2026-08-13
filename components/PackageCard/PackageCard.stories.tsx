@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { PackageCard } from "./PackageCard";
 import { PACKAGE_CARD_EXAMPLE_PROPS } from "./PackageCard.examples";
 

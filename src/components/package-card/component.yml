@@ -1,0 +1,56 @@
+name: Package Card
+machineName: package-card
+status: true
+required:
+  - variant
+  - title
+  - ctaLabel
+  - ctaUrl
+props:
+  properties:
+    variant:
+      title: Style
+      type: string
+      enum:
+        - default
+        - highlight
+      meta:enum:
+        default: Default
+        highlight: Highlight
+      examples:
+        - default
+    icon:
+      title: Icon
+      type: string
+      examples:
+        - ProjectDeliveryIcon
+    title:
+      title: Title
+      type: string
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    price:
+      title: Price
+      type: string
+    priceSuffix:
+      title: Price suffix
+      type: string
+    ctaLabel:
+      title: CTA label
+      type: string
+      examples:
+        - Learn more
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+      examples:
+        - /contact
+slots:
+  features:
+    title: Features

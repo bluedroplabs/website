@@ -1,0 +1,82 @@
+name: Basic One Up
+machineName: basic-one-up
+status: true
+required:
+  - alignment
+  - title
+  - image
+props:
+  properties:
+    alignment:
+      title: Image alignment
+      type: string
+      enum:
+        - left
+        - right
+      meta:enum:
+        left: Left
+        right: Right
+      examples:
+        - left
+    eyebrow:
+      title: Eyebrow
+      type: string
+      examples:
+        - Our platform
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Enterprise Performance Without Enterprise Pricing
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>High-performance hosting that scales with your success.</p>
+    blockquote:
+      title: Highlight
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Most clients save 30–50%.</p>
+    image:
+      title: Image
+      type: object
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: https://www.bluedroplabs.com/assets/logo-full-dark.webp
+          alt: Blue Drop Labs
+          width: 1200
+          height: 630
+    darkImage:
+      title: Dark mode image
+      type: object
+      $ref: json-schema-definitions://canvas.module/image
+    primaryCtaLabel:
+      title: Primary CTA label
+      type: string
+      examples:
+        - Schedule a demo
+    primaryCtaUrl:
+      title: Primary CTA URL
+      type: string
+      format: uri-reference
+      examples:
+        - /contact
+    secondaryCtaLabel:
+      title: Secondary CTA label
+      type: string
+      examples:
+        - Learn more
+    secondaryCtaUrl:
+      title: Secondary CTA URL
+      type: string
+      format: uri-reference
+      examples:
+        - /platform
+slots: []

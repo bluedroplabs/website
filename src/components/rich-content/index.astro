@@ -1,0 +1,12 @@
+---
+export interface Props { variant: "article" | "legal"; }
+const { variant } = Astro.props;
+const hasAside = Astro.slots.has("aside") && variant === "article";
+---
+
+<section class="border-t border-border-normal">
+  <div class:list={["mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-14 md:px-8 lg:px-16 lg:py-20", hasAside && "lg:grid lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-20"]}>
+    <article class="formatted-text min-w-0 space-y-8 lg:space-y-12"><slot name="content" /></article>
+    {hasAside && <div class="mt-12 lg:mt-0"><slot name="aside" /></div>}
+  </div>
+</section>

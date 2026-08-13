@@ -6,6 +6,11 @@ import type { HTMLAttributes } from "react";
  */
 export interface IHomepageHero extends HTMLAttributes<HTMLElement> {
   /**
+   * Main heading. Canvas may provide filtered inline HTML.
+   */
+  title: string;
+
+  /**
    * Call-to-action button properties.
    */
   cta: ICTA;

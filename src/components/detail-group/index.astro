@@ -1,0 +1,10 @@
+---
+export interface Props { label: string; items: string; }
+const { label, items } = Astro.props;
+const values = items.split(/\r?\n/).map((value) => value.trim()).filter(Boolean);
+---
+
+<section class="py-5">
+  <h3 class="font-mono text-size-12 uppercase text-brand-aqua">{label}</h3>
+  <ul class="mt-3 space-y-1">{values.map((value) => <li set:html={value} />)}</ul>
+</section>

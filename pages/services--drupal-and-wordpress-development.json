@@ -1,0 +1,456 @@
+{
+  "title": "Drupal & WordPress Development",
+  "path": "/services/drupal-and-wordpress-development",
+  "description": "Build powerful, maintainable, and secure digital experiences — from integrations and authoring tools to fully custom functionality.",
+  "listing": {
+    "enabled": true,
+    "type": "service",
+    "eyebrow": "Service",
+    "summary": "We build powerful, maintainable, and secure digital experiences with custom functionality, seamless integrations, and professional craftsmanship.",
+    "weight": 0,
+    "imageSource": "/assets/drupal-and-wordpress-development.svg"
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "service",
+        "title": "Drupal & WordPress Development",
+        "description": "Build powerful, maintainable, and secure digital experiences — from integrations and authoring tools to fully custom functionality.",
+        "image": {
+          "mediaSource": "/assets/drupal-and-wordpress-development-hero-light.png"
+        },
+        "darkImage": {
+          "mediaSource": "/assets/drupal-and-wordpress-development-hero-dark.png"
+        },
+        "primaryCtaLabel": "Book a Consultation",
+        "primaryCtaUrl": "/contact"
+      }
+    },
+    "002-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "split",
+        "columns": 2,
+        "title": "Practical solutions. Proven results. Built by experts who know your CMS inside out."
+      },
+      "slots": {
+        "items": [
+          "003-icon-card",
+          "004-icon-card",
+          "005-icon-card"
+        ]
+      }
+    },
+    "003-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "StackedIcon",
+        "title": "Scalable, Custom Solutions",
+        "description": "From new modules to complex integrations, we build for today's needs and tomorrow's growth."
+      }
+    },
+    "004-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "CodeBlockIcon",
+        "title": "Built for Performance & Security",
+        "description": "Every line of code follows best practices for speed, scalability, and security."
+      }
+    },
+    "005-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "ShakeHandsIcon",
+        "title": "Flexible Collaboration",
+        "description": "Work with us your way. Embedded experts or full project delivery."
+      }
+    },
+    "006-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "grid",
+        "columns": 3,
+        "eyebrow": "What Sets Us Apart",
+        "title": "The Expertise Behind Hundreds of Successful Builds",
+        "description": "Our team has built hundreds of custom modules and plugins, from simple content integrations to complex enterprise-level solutions."
+      },
+      "slots": {
+        "items": [
+          "007-icon-card",
+          "008-icon-card",
+          "009-icon-card",
+          "010-icon-card"
+        ]
+      }
+    },
+    "007-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "SchoolIcon",
+        "title": "Senior-Level Expertise",
+        "description": "Every developer brings 10+ years of real-world CMS experience — no juniors learning on your time."
+      }
+    },
+    "008-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "CodeBlockIcon",
+        "title": "Code That Scales and Performs",
+        "description": "We follow strict coding standards and best practices to deliver fast, secure, and maintainable systems."
+      }
+    },
+    "009-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "ForumIcon",
+        "title": "Direct Collaboration",
+        "description": "Work directly with the developers who build your solution. Fewer layers, faster feedback, better results."
+      }
+    },
+    "010-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "ExpenseIcon",
+        "title": "Transparent, Flexible Engagements",
+        "description": "Clear pricing, flexible contracts, and complete visibility — no surprise fees or unnecessary lock-ins."
+      }
+    },
+    "011-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "012-inline-text-block": {
+      "type": "js.inline-text-block",
+      "props": {
+        "eyebrow": "Is This You?",
+        "title": "Stop Wrestling with Complex Requirements",
+        "description": "<p>We're specialists who know exactly how to handle Drupal and WordPress complexity. Whether it's a simple integration or advanced business logic, we deliver solutions that are <strong>secure</strong>, <strong>maintainable</strong>, and <strong>performant</strong>.</p><p><strong>Are you facing:</strong></p><ul><li>Custom functionality that your team can't build in-house?</li><li>Performance problems with custom code?</li><li>Contrib modules or plugins that get you only 80% of what you need?</li><li>Legacy code that needs to be modernized?</li><li>Tight deadlines with no available developers?</li></ul>"
+      }
+    },
+    "013-text-cta": {
+      "type": "js.text-cta",
+      "props": {
+        "variant": "heading",
+        "text": "Whether you need a fix, a feature, or a full rebuild — <strong>we make your CMS work for you, not against you.</strong>",
+        "ctaLabel": "Let's Talk",
+        "ctaUrl": "/contact"
+      }
+    },
+    "014-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "015-package-list": {
+      "type": "js.package-list",
+      "props": {
+        "eyebrow": "How we work Together",
+        "title": "A Flexible Partnership",
+        "description": "No two companies work the same way—so we're flexible. Our goal is to make your job easier, whether you need short-term help or a long-term development partner.",
+        "footerTitle": ""
+      },
+      "slots": {
+        "packages": [
+          "016-package-card",
+          "022-package-card"
+        ],
+        "footerItems": []
+      }
+    },
+    "016-package-card": {
+      "type": "js.package-card",
+      "props": {
+        "variant": "default",
+        "icon": "StaffAugmentationIcon",
+        "title": "Staff Augmentation",
+        "description": "Embed our developers directly into your team. Perfect when you need extra hands or specialized expertise for a portion of your project.",
+        "ctaLabel": "Inquire now",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "features": [
+          "017-feature-item",
+          "018-feature-item",
+          "019-feature-item",
+          "020-feature-item",
+          "021-feature-item"
+        ]
+      }
+    },
+    "017-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Embed our developers in your team"
+      }
+    },
+    "018-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Work within your existing processes"
+      }
+    },
+    "019-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Flexible timeline based on your needs"
+      }
+    },
+    "020-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Complete specific development tasks"
+      }
+    },
+    "021-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Knowledge transfer to your team"
+      }
+    },
+    "022-package-card": {
+      "type": "js.package-card",
+      "props": {
+        "variant": "highlight",
+        "icon": "ProjectDeliveryIcon",
+        "title": "Complete Project Delivery",
+        "description": "We take full ownership from requirements to deployment. Ideal when you want to hand off the entire development process to experts who understand Drupal inside and out.",
+        "ctaLabel": "Get started",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "features": [
+          "023-feature-item",
+          "024-feature-item",
+          "025-feature-item",
+          "026-feature-item"
+        ]
+      }
+    },
+    "023-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "We handle everything from start to finish"
+      }
+    },
+    "024-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Regular updates and milestone reviews"
+      }
+    },
+    "025-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Thorough testing and documentation"
+      }
+    },
+    "026-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Clean handoff with training"
+      }
+    },
+    "027-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "028-process-list": {
+      "type": "js.process-list",
+      "props": {
+        "title": "Our Process"
+      },
+      "slots": {
+        "items": [
+          "029-process-step",
+          "030-process-step",
+          "031-process-step",
+          "032-process-step",
+          "033-process-step"
+        ]
+      }
+    },
+    "029-process-step": {
+      "type": "js.process-step",
+      "props": {
+        "title": "Discovery Call",
+        "description": "We start with a detailed discussion of your needs, existing systems, and business requirements to ensure we're building exactly what you need."
+      }
+    },
+    "030-process-step": {
+      "type": "js.process-step",
+      "props": {
+        "title": "Technical Assessment",
+        "description": "Our team reviews your current Drupal or WordPress setup and identifies any dependencies or integration points."
+      }
+    },
+    "031-process-step": {
+      "type": "js.process-step",
+      "props": {
+        "title": "Choose Your Engagement Model",
+        "description": "Whether you need extra developers to support your existing team or a full team to launch your project, choose how we collaborate — through Staff Augmentation or Complete Project Delivery."
+      }
+    },
+    "032-process-step": {
+      "type": "js.process-step",
+      "props": {
+        "title": "Development & Communication",
+        "description": "We maintain full transparency throughout development with direct Slack access, regular updates, and milestone demos. You can track progress through GitHub while our team incorporates feedback and ensures alignment every step of the way."
+      }
+    },
+    "033-process-step": {
+      "type": "js.process-step",
+      "props": {
+        "title": "Testing, Documentation & Deployment",
+        "description": "We thoroughly test and document every feature before launch to ensure performance and reliability. Our team handles deployment smoothly and provides post-launch support for optimization or additional enhancements."
+      }
+    },
+    "034-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "035-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "list-grid",
+        "columns": 3,
+        "eyebrow": "Common Development Projects",
+        "title": "Transform Your CMS Into a Powerhouse",
+        "description": "From integrations to AI enhancements, we turn Drupal and WordPress into platforms that work smarter and perform better."
+      },
+      "slots": {
+        "items": [
+          "036-icon-card",
+          "037-icon-card",
+          "038-icon-card",
+          "039-icon-card",
+          "040-icon-card",
+          "041-icon-card"
+        ]
+      }
+    },
+    "036-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "LinkIcon",
+        "title": "Data Integration & APIs",
+        "description": "<ul><li>CRM integrations (Salesforce, HubSpot, etc.)</li><li>E-commerce platform connections</li><li>Marketing tool integrations</li><li>Payment gateway integrations</li><li>REST API development</li></ul>"
+      }
+    },
+    "037-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "AccountTreeIcon",
+        "title": "Custom Workflows & Automations",
+        "description": "<ul><li>Custom reporting and dashboards</li><li>Data transformations and migrations</li><li>Editorial workflows and approvals</li></ul>"
+      }
+    },
+    "038-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "SpeedIcon",
+        "title": "User Experience Enhancements",
+        "description": "<ul><li>Custom search and filtering</li><li>Progressive decoupling</li><li>Cache optimization</li><li>AI-powered content editing</li></ul>"
+      }
+    },
+    "039-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "ShieldLockIcon",
+        "title": "Performance & Security",
+        "description": "<ul><li>Database query optimization</li><li>Caching layer implementation</li><li>Load testing and optimization</li><li>Custom authentication systems</li></ul>"
+      }
+    },
+    "040-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "DevUpdateIcon",
+        "title": "DevOps",
+        "description": "<ul><li>Automated testing frameworks</li><li>Continuous integration/deployment pipelines</li><li>Deployment automation</li></ul>"
+      }
+    },
+    "041-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "BrainIcon",
+        "title": "AI Enhancements",
+        "description": "<ul><li>Content editor optimizations</li><li>Automated content tagging and categorization</li><li>Smarter search recommendations</li></ul>"
+      }
+    },
+    "042-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "043-accordion-list": {
+      "type": "js.accordion-list",
+      "props": {
+        "title": "Frequently Asked Questions"
+      },
+      "slots": {
+        "items": [
+          "044-accordion-item",
+          "045-accordion-item",
+          "046-accordion-item",
+          "047-accordion-item",
+          "048-accordion-item"
+        ]
+      }
+    },
+    "044-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "What types of projects do you typically handle?",
+        "content": "We take on everything from small-scope feature work and custom module/plugin builds to enterprise-level integrations, performance and security overhauls, and full platform rebuilds on Drupal or WordPress.",
+        "openByDefault": false
+      }
+    },
+    "045-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "Do you only work with Drupal and WordPress?",
+        "content": "Those are our core specialties, but our team also works across the broader stack — custom APIs, headless front-ends, third-party integrations, and supporting infrastructure.",
+        "openByDefault": false
+      }
+    },
+    "046-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "How long does a typical development project take?",
+        "content": "It depends on scope. A focused integration or module build can ship in a few weeks, while larger platform projects typically run two to six months. We'll give you a concrete timeline after the Technical Assessment.",
+        "openByDefault": false
+      }
+    },
+    "047-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "Do you offer post-launch support or maintenance?",
+        "content": "Yes. Every engagement ends with a clean handoff, documentation, and optional ongoing support — either through our CMS Support plans or continued development work.",
+        "openByDefault": false
+      }
+    },
+    "048-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "Can you help fix issues with an existing website?",
+        "content": "Absolutely. We regularly step in to fix broken features, resolve performance issues, clean up inherited code, and finish stalled projects on existing Drupal and WordPress sites.",
+        "openByDefault": false
+      }
+    },
+    "049-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

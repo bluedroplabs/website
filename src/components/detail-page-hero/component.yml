@@ -1,0 +1,88 @@
+name: Detail Page Hero
+machineName: detail-page-hero
+status: true
+required:
+  - variant
+  - title
+  - image
+props:
+  properties:
+    variant:
+      title: Content type
+      type: string
+      enum:
+        - service
+        - article
+        - platform
+      meta:enum:
+        service: Service
+        article: Article
+        platform: Platform
+      examples:
+        - service
+    eyebrow:
+      title: Eyebrow
+      type: string
+      examples:
+        - Case Study
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - API + Custom Development
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Scalable systems built around your business.</p>
+    author:
+      title: Author
+      type: string
+      examples:
+        - Blue Drop Labs
+    date:
+      title: Date
+      type: string
+      examples:
+        - January 4
+        - 2026
+    image:
+      title: Image
+      type: object
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: https://www.bluedroplabs.com/assets/logo-full-dark.webp
+          alt: Blue Drop Labs
+          width: 1200
+          height: 630
+    darkImage:
+      title: Dark mode image
+      type: object
+      $ref: json-schema-definitions://canvas.module/image
+    primaryCtaLabel:
+      title: Primary CTA label
+      type: string
+      examples:
+        - Schedule a demo
+    primaryCtaUrl:
+      title: Primary CTA URL
+      type: string
+      format: uri-reference
+      examples:
+        - /contact
+    secondaryCtaLabel:
+      title: Secondary CTA label
+      type: string
+      examples:
+        - Learn more
+    secondaryCtaUrl:
+      title: Secondary CTA URL
+      type: string
+      format: uri-reference
+      examples:
+        - /about-us
+slots: []

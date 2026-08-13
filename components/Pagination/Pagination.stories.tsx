@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Pagination } from "./Pagination";
 import { PAGINATION_EXAMPLE_PROPS } from "./Pagination.examples";
 

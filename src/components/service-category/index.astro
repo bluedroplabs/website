@@ -1,0 +1,14 @@
+---
+export interface Props { title: string; description?: string; }
+const { title, description } = Astro.props;
+---
+
+<section class="grid gap-8 px-6 py-12 lg:grid-cols-12 lg:px-16 lg:py-16">
+  <header class="lg:col-span-4">
+    <h3 class="text-size-28 font-semibold leading-tight" set:html={title} />
+    {description && <div class="mt-4 font-light leading-relaxed" set:html={description} />}
+  </header>
+  <div class="grid gap-8 md:grid-cols-2 lg:col-span-8 lg:grid-cols-3">
+    <slot name="offerings" />
+  </div>
+</section>

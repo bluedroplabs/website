@@ -1,0 +1,25 @@
+---
+import IconRenderer from "@components/legacy/IconRenderer";
+
+export interface Props {
+  variant: "default" | "inline";
+  icon: string;
+  title: string;
+  description?: string;
+}
+
+const { variant, icon, title, description } = Astro.props;
+---
+
+<article
+  class:list={[
+    "h-full min-w-0 border-border-normal py-6",
+    variant === "default" ? "px-5 lg:px-8" : "flex gap-6",
+  ]}
+>
+  <IconRenderer name={icon} className="size-10 min-w-10 text-icon-default" />
+  <div>
+    <h3 class:list={["font-semibold text-default-heading", variant === "default" ? "mt-5 text-size-24" : "text-size-20"]} set:html={title} />
+    {description && <div class="mt-2 text-size-18 font-light leading-relaxed" set:html={description} />}
+  </div>
+</article>

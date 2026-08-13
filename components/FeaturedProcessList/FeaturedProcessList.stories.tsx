@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedProcessList } from "./FeaturedProcessList";
 import { FEATURED_PROCESS_LIST_EXAMPLE_PROPS } from "./FeaturedProcessList.examples";
 

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedCtaBand } from "./FeaturedCtaBand";
 import { FEATURED_CTA_BAND_EXAMPLE_PROPS } from "./FeaturedCtaBand.examples";
 

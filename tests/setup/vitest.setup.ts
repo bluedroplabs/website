@@ -4,6 +4,23 @@ import * as axeMatchers from "vitest-axe/matchers";
 import { afterEach, expect, vi } from "vitest";
 import React from "react";
 
+const localStorageValues = new Map<string, string>();
+const localStorageMock: Storage = {
+  clear: () => localStorageValues.clear(),
+  getItem: (key) => localStorageValues.get(key) ?? null,
+  key: (index) => [...localStorageValues.keys()][index] ?? null,
+  get length() {
+    return localStorageValues.size;
+  },
+  removeItem: (key) => localStorageValues.delete(key),
+  setItem: (key, value) => localStorageValues.set(key, String(value)),
+};
+
+Object.defineProperty(globalThis, "localStorage", {
+  configurable: true,
+  value: localStorageMock,
+});
+
 afterEach(() => cleanup());
 
 expect.extend(jestDomMatchers);

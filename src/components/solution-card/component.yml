@@ -1,0 +1,53 @@
+name: Solution Card
+machineName: solution-card
+status: true
+required:
+  - variant
+  - title
+  - image
+props:
+  properties:
+    variant:
+      title: Style
+      type: string
+      enum:
+        - basic
+        - full
+      meta:enum:
+        basic: Basic
+        full: Full
+      examples:
+        - basic
+    eyebrow:
+      title: Eyebrow
+      type: string
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    image:
+      title: Image
+      type: object
+      $ref: json-schema-definitions://canvas.module/image
+      examples:
+        - src: https://www.bluedroplabs.com/assets/logo-full-dark.webp
+          alt: Blue Drop Labs
+          width: 1200
+          height: 630
+    darkImage:
+      title: Dark mode image
+      type: object
+      $ref: json-schema-definitions://canvas.module/image
+    url:
+      title: URL
+      type: string
+      format: uri-reference
+slots: []

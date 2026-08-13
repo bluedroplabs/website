@@ -1,0 +1,14 @@
+---
+import { GradientHero } from "@/components/GradientHero/GradientHero";
+
+export interface Props {
+  variant: "primary" | "secondary";
+  eyebrow?: string;
+  title: string;
+  description?: string;
+}
+
+const props = Astro.props;
+---
+
+<GradientHero {...props} client:load />

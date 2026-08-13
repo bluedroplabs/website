@@ -23,6 +23,7 @@
 
 # production
 /build
+/.astro/
 
 # misc
 .DS_Store

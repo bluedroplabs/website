@@ -1,0 +1,55 @@
+name: Icon Collection
+machineName: icon-collection
+status: true
+required:
+  - variant
+  - columns
+  - title
+props:
+  properties:
+    variant:
+      title: Layout
+      type: string
+      enum:
+        - grid
+        - list
+        - list-grid
+        - split
+      meta:enum:
+        grid: Grid
+        list: List
+        list-grid: Bordered grid
+        split: Split
+      examples:
+        - grid
+    columns:
+      title: Columns
+      type: integer
+      enum:
+        - 2
+        - 3
+        - 4
+      meta:enum:
+        "2": Two
+        "3": Three
+        "4": Four
+      examples:
+        - 4
+    eyebrow:
+      title: Eyebrow
+      type: string
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+slots:
+  items:
+    title: Icon cards

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Navigation } from "./Navigation";
 import { NAVIGATION_EXAMPLE_PROPS } from "./Navigation.examples";
 

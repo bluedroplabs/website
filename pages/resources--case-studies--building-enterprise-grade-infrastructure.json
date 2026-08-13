@@ -1,0 +1,164 @@
+{
+  "title": "Building Enterprise-Grade Infrastructure on a Bootstrapped Budget",
+  "path": "/resources/case-studies/building-enterprise-grade-infrastructure",
+  "description": "When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs while improving performance.",
+  "listing": {
+    "enabled": true,
+    "type": "resource",
+    "resourceType": "case-study",
+    "eyebrow": "Case Study",
+    "summary": "When Stacker's managed hosting provider failed, Blue Drop Labs built a custom hosting solution that reduced costs by 77% while improving performance and eliminating daily outages.",
+    "date": "2025-10-14",
+    "weight": 3,
+    "imageSource": "/assets/engineered-foundation.webp",
+    "topicNames": [
+      "UI/UX"
+    ]
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "article",
+        "eyebrow": "Case Study",
+        "title": "Building Enterprise-Grade Infrastructure on a Bootstrapped Budget",
+        "author": "Matt Robison",
+        "date": "October 14, 2025",
+        "image": {
+          "mediaSource": "/assets/engineered-foundation.webp"
+        }
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "article"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-inline-image",
+          "005-metrics-grid",
+          "010-rich-text",
+          "011-rich-text",
+          "012-rich-text"
+        ],
+        "aside": [
+          "013-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p>When Stacker's managed hosting provider failed at a critical time, Blue Drop Labs built a custom hosting solution that reduced costs while improving performance.</p>\n<p>Stacker is a digital media company building a next-generation content distribution platform. This platform is the critical hub of their business, serving thousands of brands and publishers, distributing stories to partner websites and media outlets worldwide. If it goes down, a critical component of the digital media ecosystem comes to a halt.</p>\n<p>Stacker faced critical infrastructure challenges that threatened core business operations. Storage limits, under performance, and regular site outages during peak traffic periods prevented stable growth. The platform's reliability was always an open question.</p>\n<p>Blue Drop Labs architected and implemented a custom hosting solution that transformed Stacker's infrastructure from a liability into a competitive advantage. The solution reduced costs, eliminated regular downtimes, and has scaled to meet growing demands. This stability has allowed Stacker to iterate and improve their offerings with confidence.</p>\n"
+      }
+    },
+    "004-inline-image": {
+      "type": "js.inline-image",
+      "props": {
+        "image": {
+          "mediaSource": "/assets/infrastructure-rebuild.webp"
+        }
+      }
+    },
+    "005-metrics-grid": {
+      "type": "js.metrics-grid",
+      "props": {
+        "title": "Highlights"
+      },
+      "slots": {
+        "metrics": [
+          "006-metric-item",
+          "007-metric-item",
+          "008-metric-item",
+          "009-metric-item"
+        ]
+      }
+    },
+    "006-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "77% Cost Reduction",
+        "description": "Monthly fees dropped from $3500/month to $800/month."
+      }
+    },
+    "007-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "400% Performance Improvement",
+        "description": "Reduced load times for critical administration pages from 10+ seconds to under 2 seconds."
+      }
+    },
+    "008-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "From Daily Outages to 99.9% Uptime",
+        "description": "The platform went from expected downtimes every single day to expected stability."
+      }
+    },
+    "009-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Proactive Incident Management",
+        "description": "Integrated tools to provide 24/7 monitoring and automatic alerting, ensuring rapid response to any issues."
+      }
+    },
+    "010-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>A new foundation for a growing platform</h2>\n<p>Stacker faced cascading infrastructure problems. Their file system exceeded their managed hosting provider's maximum storage limits. Their next hosting provider proved even worse, with daily outages and subpar performance despite being on the largest enterprise plan available. This track record was followed by a catastrophic three-day total outage.</p>\n<p>Blue Drop Labs created a custom infrastructure that solved all of Stacker's technical problems, delivering a solution that improved performance while reducing costs.</p>\n<ul>\n  <li>All images were offloaded to S3 with custom caching layers to load images in milliseconds.</li>\n  <li>CDN Optimization, ensuring efficient handling of 32 terabytes of monthly bandwidth.</li>\n  <li>Eliminated MySQL database bottlenecks with proprietary configuration and seamless scaling based on server capacity.</li>\n  <li>Defined in Ansible for maintainability, reproducibility, and disaster recovery.</li>\n  <li>A suite of monitoring tools for observability and proactive monitoring, such as New Relic, Checkly, and PagerDuty.</li>\n  <li>Simple, boring, battle-tested technology that has operated for over three years without a single failure.</li>\n</ul>\n"
+      }
+    },
+    "011-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>The result</h2>\n<p>The result: Costs dropped 77%, and uptime improved. Daily, predictable outages were eliminated. Stacker no longer has to worry about interruptions in business continuity. As the business has grown, the custom hosting platform has expanded to meet the demands without a hiccup.</p>\n"
+      }
+    },
+    "012-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Innovation when it makes sense</h2>\n<p>Blue Drop Labs combines deep technical expertise with practical wisdom. We favor simple results over clever solutions, and proven technology over trendy alternatives. This philosophy helps us innovate where it counts.</p>\n<p>For Stacker, this philosophy meant they got enterprise features where it actually mattered, and at a fraction of the cost. We focused on high-impact deliverables: performance for images with a purpose-built Nginx proxy. Custom provisioning scripts and MySQL configurations allow capacity to scale to meet growing demand or traffic spikes. Our custom CLI tooling allows each team member to manage the infrastructure with minimal ramp-up time.</p>\n<p>Thanks to this stability and performance, Stacker can be more strategic and creative about growth, knowing they have the foundation to support their initiatives. Innovation has cascaded to Stacker's core product offering. Since migrating to the new hosting platform, the company has launched improved portals for its customers with loads of new features and improvements. They can build with confidence instead of wasting time putting out fires.</p>\n"
+      }
+    },
+    "013-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Schedule a Demo",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "014-detail-group",
+          "015-detail-group"
+        ]
+      }
+    },
+    "014-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Services",
+        "items": "UI/UX Design\nDrupal\nA/B Testing"
+      }
+    },
+    "015-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Industry",
+        "items": "Publishing"
+      }
+    },
+    "016-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "017-related-resources": {
+      "type": "js.related-resources",
+      "props": {
+        "title": "Related Articles",
+        "limit": 3
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { CtaBlock } from "./CtaBlock";
 import { CTA_BLOCK_EXAMPLE_PROPS } from "./CtaBlock.examples";
 

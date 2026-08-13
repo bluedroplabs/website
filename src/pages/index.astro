@@ -1,0 +1,34 @@
+---
+import CanvasComponentTree from "@drupal-canvas/headless-astro/CanvasComponentTree.astro";
+import {
+  fetchPage,
+  isPageRedirect,
+} from "@drupal-canvas/headless-astro";
+
+import Layout from "@layouts/Layout.astro";
+
+const result = await fetchPage(Astro, "/");
+
+if (result && isPageRedirect(result)) {
+  return Astro.redirect(result.redirect.url, result.redirect.statusCode);
+}
+
+const page = result;
+
+if (!page) Astro.response.status = 404;
+---
+
+<Layout title={page?.head.title}>
+  {
+    page ? (
+      <CanvasComponentTree tree={page.content} />
+    ) : (
+      <section class="mx-auto max-w-5xl px-6 py-24 text-center">
+        <h1 class="text-size-h1 font-semibold">Awaiting the Canvas homepage</h1>
+        <p class="mt-6 text-default-base">
+          Drupal is connected, but the published home page is not available yet.
+        </p>
+      </section>
+    )
+  }
+</Layout>

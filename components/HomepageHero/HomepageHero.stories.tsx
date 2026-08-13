@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { HomepageHero } from "./HomepageHero";
 import { HOMEPAGE_HERO_EXAMPLE_PROPS } from "./HomepageHero.examples";
 

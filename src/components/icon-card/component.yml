@@ -1,0 +1,38 @@
+name: Icon Card
+machineName: icon-card
+status: true
+required:
+  - variant
+  - icon
+  - title
+props:
+  properties:
+    variant:
+      title: Style
+      type: string
+      enum:
+        - default
+        - inline
+      meta:enum:
+        default: Stacked
+        inline: Inline
+      examples:
+        - default
+    icon:
+      title: Icon
+      type: string
+      examples:
+        - BoltIcon
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+slots: []

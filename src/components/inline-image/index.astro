@@ -1,0 +1,12 @@
+---
+import { resolveDrupalImage, type CanvasImage } from "@data/drupal/media";
+
+export interface Props { image: CanvasImage; caption?: string; }
+const { image: sourceImage, caption } = Astro.props;
+const image = resolveDrupalImage(sourceImage);
+---
+
+<figure>
+  <img src={image.src} alt={image.alt} width={image.width} height={image.height} loading="lazy" class="h-auto w-full rounded object-cover" />
+  {caption && <figcaption class="mt-3 text-size-14 text-default-base">{caption}</figcaption>}
+</figure>

@@ -1,0 +1,7 @@
+name: Grid Separator
+machineName: grid-separator
+status: true
+required: []
+props:
+  properties: {}
+slots: []

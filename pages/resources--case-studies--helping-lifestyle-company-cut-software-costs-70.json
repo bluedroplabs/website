@@ -1,0 +1,163 @@
+{
+  "title": "Helping a Lifestyle Company Cut Software Costs by 70%",
+  "path": "/resources/case-studies/helping-lifestyle-company-cut-software-costs-70",
+  "description": "Blue Drop Labs helped POWDR migrate the Daily Operating Report (DOR) system into their existing infrastructure, creating a unified platform that serves both marketing content and operational data—achieving 70% cost reduction.",
+  "listing": {
+    "enabled": true,
+    "type": "resource",
+    "resourceType": "case-study",
+    "eyebrow": "Case Study",
+    "summary": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "date": "2025-11-20",
+    "weight": 1,
+    "imageSource": "/assets/unified-dor-platform.webp",
+    "topicNames": [
+      "Drupal"
+    ]
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "article",
+        "eyebrow": "Case Study",
+        "title": "Helping a Lifestyle Company Cut Software Costs by 70%",
+        "author": "Matt Robison",
+        "date": "November 20, 2025",
+        "image": {
+          "mediaSource": "/assets/unified-dor-platform.webp"
+        }
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "article"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-inline-image",
+          "005-metrics-grid",
+          "009-rich-text",
+          "010-rich-text",
+          "011-rich-text",
+          "012-rich-text"
+        ],
+        "aside": [
+          "013-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p>POWDR is a holding company managing 15+ outdoor recreation businesses, including ski resorts, national park concessions, and action sports camps. Their ski resorts depend heavily on real-time operational data—lift status, trail conditions, and weather reports—to communicate with guests and ensure safety.</p>\n<p>They were paying a high annual license fee for third-party software to power their Daily Operating Report (DOR), which tracks critical daily information that guests need to plan their visits. This information flows to marketing websites, mobile apps, and on-mountain displays, making it essential for guest communication. The software suffered performance problems, slow development cycles to implement simple features, and an inability to customize for POWDR's specific needs.</p>\n<p>Blue Drop Labs helped POWDR migrate the DOR system into their existing infrastructure, creating a unified platform that serves both marketing content and operational data. The result: an underperforming annual expense was transformed into a strategic asset with a lower total cost of ownership.</p>\n"
+      }
+    },
+    "004-inline-image": {
+      "type": "js.inline-image",
+      "props": {
+        "image": {
+          "mediaSource": "/assets/70-reduction.webp"
+        }
+      }
+    },
+    "005-metrics-grid": {
+      "type": "js.metrics-grid",
+      "props": {
+        "title": "HIGHLIGHTS"
+      },
+      "slots": {
+        "metrics": [
+          "006-metric-item",
+          "007-metric-item",
+          "008-metric-item"
+        ]
+      }
+    },
+    "006-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "70%+ Annual Cost Reduction",
+        "description": "Lower maintenance costs with superior functionality."
+      }
+    },
+    "007-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Full Control Over Product Roadmap",
+        "description": "Reduced rigid third-party limitations and the ability to build custom features in-house on accelerated timelines."
+      }
+    },
+    "008-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Real-Time Performance at Scale",
+        "description": "API handles a high volume of requests monthly with zero downtime; the team has become more focused on growth initiatives."
+      }
+    },
+    "009-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Improving Operational Efficiency</h2>\n<p>The previous platform would often fail during critical morning updates. Resort staff no longer deal with panicked 6 AM Friday calls when snow reporting systems crash right before the weekend rush, worrying that guests won't know about updated weather conditions. Staff can now focus on daily tasks and other operations instead of putting out technical fires.</p>\n"
+      }
+    },
+    "010-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Strategic Flexibility</h2>\n<p>Instead of waiting a year for simple feature requests that may never get prioritized by a third-party vendor, POWDR can now implement custom features on-demand. When they identify a need, they can budget for it and have it built within weeks rather than hoping it makes someone else's roadmap. New features are pushed out every month. This proven speed and flexibility have encouraged staff to suggest further improvements. Everything gets tailored to POWDR's specific needs and business processes.</p>\n"
+      }
+    },
+    "011-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Reliable Performance and Reduced Risk</h2>\n<p>The DOR depends on real-time updates. Conditions on the slopes must be updated and communicated immediately. Accuracy, performance, and uptime are essential for business operations and ensuring guests and resort staff can make informed decisions. The previous platform experienced frequent failures and delays, exposing resorts to reputational damage and other risks.</p>\n<p>The new DOR handles millions of requests monthly with zero downtime. All updates are reliably pushed out to mobile apps and other channels. By eliminating regular emergency escalations and constant frustrations, we've allowed more focus on growth initiatives and improvements.</p>\n"
+      }
+    },
+    "012-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>The Bottom Line</h2>\n<p>POWDR gained complete control over its operational reporting system while dramatically reducing costs and eliminating frustrating delays. In addition, they gained the agility to respond to evolving business needs.</p>\n<p>Ready to break free from expensive third-party limitations? Contact us to discuss how we can transform your operational challenges into competitive advantages.</p>\n"
+      }
+    },
+    "013-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Schedule a Demo",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "014-detail-group",
+          "015-detail-group"
+        ]
+      }
+    },
+    "014-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Services",
+        "items": "UI/UX Design\nDrupal\nA/B Testing"
+      }
+    },
+    "015-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Industry",
+        "items": "Publishing"
+      }
+    },
+    "016-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "017-related-resources": {
+      "type": "js.related-resources",
+      "props": {
+        "title": "Related Articles",
+        "limit": 3
+      }
+    }
+  }
+}

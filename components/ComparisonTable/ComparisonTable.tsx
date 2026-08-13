@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/components/Container/Container";
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import type { ReactNode } from "react";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import { CrossIcon } from "../Icon";

@@ -1,5 +1,5 @@
 const BASE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.bluedroplabs.com";
+  import.meta.env.PUBLIC_SITE_URL || "https://www.bluedroplabs.com";
 
 function ensureTrailingSlash(path: string): string {
   const clean = BASE_URL.replace(/\/$/, "") + path;

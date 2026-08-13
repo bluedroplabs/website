@@ -1,0 +1,262 @@
+{
+  "title": "Blue Drop Labs - Experts in Digital Strategy",
+  "path": "/",
+  "description": "Unlock your true potential. Start by telling us about your project—we'll get back to you within 24 hours.",
+  "elements": {
+    "001-homepage-hero": {
+      "type": "js.homepage-hero",
+      "props": {
+        "title": "Your Website Deserves Better",
+        "description": "High-performance hosting, expert development, and ongoing support — all under one roof. We eliminate vendor juggling while delivering enterprise results at affordable prices.",
+        "ctaLabel": "Start Your Project",
+        "ctaUrl": "/contact",
+        "ctaTarget": "_self"
+      }
+    },
+    "002-logo-marquee": {
+      "type": "js.logo-marquee",
+      "props": {
+        "description": "Invest in your growth and success — Trusted by our beloved clients"
+      },
+      "slots": {
+        "logos": [
+          "003-logo-item",
+          "004-logo-item",
+          "005-logo-item",
+          "006-logo-item",
+          "007-logo-item",
+          "008-logo-item"
+        ]
+      }
+    },
+    "003-logo-item": {
+      "type": "js.logo-item",
+      "props": {
+        "name": "Logo 1",
+        "icon": "StackerIcon"
+      }
+    },
+    "004-logo-item": {
+      "type": "js.logo-item",
+      "props": {
+        "name": "Logo 2",
+        "icon": "PowdrIcon"
+      }
+    },
+    "005-logo-item": {
+      "type": "js.logo-item",
+      "props": {
+        "name": "Logo 3",
+        "icon": "MtmIcon"
+      }
+    },
+    "006-logo-item": {
+      "type": "js.logo-item",
+      "props": {
+        "name": "Logo 4",
+        "icon": "RothlivingIcon"
+      }
+    },
+    "007-logo-item": {
+      "type": "js.logo-item",
+      "props": {
+        "name": "Logo 5",
+        "icon": "ZionIcon"
+      }
+    },
+    "008-logo-item": {
+      "type": "js.logo-item",
+      "props": {
+        "name": "Logo 6",
+        "icon": "ZulaIcon"
+      }
+    },
+    "009-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "grid",
+        "columns": 3,
+        "eyebrow": "Problems we solve",
+        "title": "Stop overpaying for underperforming solutions",
+        "description": "If you're facing any of these frustrating situations, you're not alone:"
+      },
+      "slots": {
+        "items": [
+          "010-icon-card",
+          "011-icon-card",
+          "012-icon-card",
+          "013-icon-card"
+        ]
+      }
+    },
+    "010-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "BillsIcon",
+        "title": "Hosting bills that punish your success",
+        "description": "Traffic grows, performance suffers, costs skyrocket. Legacy hosts like Pantheon and Acquia charge more as you succeed, while throttling resources when you need them most."
+      }
+    },
+    "011-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "ClockIcon",
+        "title": "Development teams that move at a snail's pace",
+        "description": "Waiting weeks for simple changes. Getting charged premium rates for basic work. Communicating through project managers who don't understand your technical needs."
+      }
+    },
+    "012-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "WarningIcon",
+        "title": "Vendor coordination nightmares",
+        "description": "Managing separate companies for hosting, development, SEO, and support. Each pointing fingers when something breaks. None taking ownership of your overall success."
+      }
+    },
+    "013-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "BugIcon",
+        "title": "Code quality issues that compound over time",
+        "description": "Patches on patches. Performance that degrades with every update. Technical debt that makes simple changes impossibly expensive."
+      }
+    },
+    "014-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "015-basic-one-up": {
+      "type": "js.basic-one-up",
+      "props": {
+        "alignment": "left",
+        "eyebrow": "Our platform",
+        "title": "Enterprise Performance Without Enterprise Pricing",
+        "description": "High-performance hosting for Drupal and WordPress that scales with your success, not against it. Fixed, predictable pricing with direct access to experts. Get the advanced infrastructure you need at a fraction of the cost.",
+        "blockquote": "Most clients save 30-50% compared to Pantheon or Acquia while receiving better performance.",
+        "image": {
+          "mediaSource": "/assets/platform-light.svg"
+        },
+        "primaryCtaLabel": "Schedule a demo",
+        "primaryCtaUrl": "/contact",
+        "secondaryCtaLabel": "Learn more",
+        "secondaryCtaUrl": "/platform"
+      }
+    },
+    "016-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "017-solutions-collection": {
+      "type": "js.solutions-collection",
+      "props": {
+        "variant": "grid",
+        "title": "We're <strong class='typewriter'>Drupal</strong><strong class='typewriter'>Design</strong><strong class='typewriter'>WordPress</strong><strong class='typewriter'>Infrastructure</strong><strong class='typewriter'>React</strong><strong class='typewriter'>AI</strong><strong class='typewriter'>Next.js</strong><strong class='typewriter'>Strategy</strong><strong class='typewriter'>PHP</strong><strong class='typewriter'>Technology</strong> experts who set you up to scale",
+        "description": "From legacy maintenance to cutting-edge development, we handle everything so you can focus on your business.",
+        "ctaLabel": "View all solutions",
+        "ctaUrl": "/services"
+      },
+      "slots": {
+        "items": [
+          "018-solution-card",
+          "019-solution-card",
+          "020-solution-card",
+          "021-solution-card",
+          "022-solution-card",
+          "023-solution-card"
+        ]
+      }
+    },
+    "018-solution-card": {
+      "type": "js.solution-card",
+      "props": {
+        "variant": "basic",
+        "eyebrow": "Drupal + WordPress Managed Hosting",
+        "title": "Enterprise-Grade Solutions at Startup Speed",
+        "description": "Launch fast, secure, and scalable digital experiences built by experts who know your CMS inside and out.",
+        "image": {
+          "mediaSource": "/assets/drupal-and-wordpress-development.svg"
+        },
+        "url": "/"
+      }
+    },
+    "019-solution-card": {
+      "type": "js.solution-card",
+      "props": {
+        "variant": "basic",
+        "eyebrow": "Drupal 7 support",
+        "title": "Keep your Drupal 7 platform safe and running smoothly",
+        "description": "Extend the life of your Drupal 7 site with expert updates and support—no migration pressure, no downtime.",
+        "image": {
+          "mediaSource": "/assets/drupal-7-support.svg"
+        },
+        "url": "/"
+      }
+    },
+    "020-solution-card": {
+      "type": "js.solution-card",
+      "props": {
+        "variant": "basic",
+        "eyebrow": "Drupal + WordPress Support",
+        "title": "Ongoing support and maintenance from experienced developers",
+        "description": "Stay confident and secure with proactive maintenance, performance tuning, and hands-on technical support.",
+        "image": {
+          "mediaSource": "/assets/drupal-and-wordpress-support-light.svg"
+        },
+        "darkImage": {
+          "mediaSource": "/assets/drupal-and-wordpress-support-dark.svg"
+        },
+        "url": "/"
+      }
+    },
+    "021-solution-card": {
+      "type": "js.solution-card",
+      "props": {
+        "variant": "basic",
+        "eyebrow": "API + Custom Development",
+        "title": "Build scalable web applications and APIs that power your business growth",
+        "description": "Power your business with custom APIs and web applications built for flexibility, scalability, and long-term growth.",
+        "image": {
+          "mediaSource": "/assets/api-and-custom-development.svg"
+        },
+        "url": "/"
+      }
+    },
+    "022-solution-card": {
+      "type": "js.solution-card",
+      "props": {
+        "variant": "basic",
+        "eyebrow": "Design + Experience",
+        "title": "Turn your brand into a digital experience that converts",
+        "description": "Polished, accessible interfaces with high-fidelity visuals and brand consistency, built to meet modern web standards and performance goals.",
+        "image": {
+          "mediaSource": "/assets/design-and-experience.svg"
+        },
+        "url": "/"
+      }
+    },
+    "023-solution-card": {
+      "type": "js.solution-card",
+      "props": {
+        "variant": "basic",
+        "eyebrow": "SEO + Marketing",
+        "title": "Optimize your website into a high-performing business asset",
+        "description": "Boost visibility and conversions with technical SEO, performance optimization, and smart marketing strategy.",
+        "image": {
+          "mediaSource": "/assets/seo-and-marketing-light.svg"
+        },
+        "darkImage": {
+          "mediaSource": "/assets/seo-and-marketing-dark.svg"
+        },
+        "url": "/"
+      }
+    },
+    "024-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

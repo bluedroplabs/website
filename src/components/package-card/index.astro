@@ -1,0 +1,23 @@
+---
+import IconRenderer from "@components/legacy/IconRenderer";
+export interface Props {
+  variant: "default" | "highlight";
+  icon?: string;
+  title: string;
+  description?: string;
+  price?: string;
+  priceSuffix?: string;
+  ctaLabel: string;
+  ctaUrl: string;
+}
+const { variant, icon, title, description, price, priceSuffix, ctaLabel, ctaUrl } = Astro.props;
+---
+
+<article class:list={["relative flex min-h-full flex-col border-b border-border-normal px-6 py-12 lg:px-12", variant === "highlight" && "bg-brand-aqua/10"]}>
+  {icon && <IconRenderer name={icon} className="size-12 text-icon-default" />}
+  <h3 class="mt-5 text-size-32 font-medium">{title}</h3>
+  {description && <div class="mt-4 font-light leading-relaxed" set:html={description} />}
+  {price && <p class="mt-5"><strong class="text-size-24">{price}</strong>{priceSuffix && <span class="ml-2 font-light">{priceSuffix}</span>}</p>}
+  <ul class="my-6 space-y-3"><slot name="features" /></ul>
+  <a class="mt-auto inline-flex justify-center rounded-full border border-border-normal px-6 py-3 font-semibold" href={ctaUrl}>{ctaLabel}</a>
+</article>

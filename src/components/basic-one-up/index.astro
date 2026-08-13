@@ -1,0 +1,42 @@
+---
+import { Basic1Up } from "@/components/Basic1Up/Basic1Up";
+import { resolveDrupalImage, type CanvasImage } from "@data/drupal/media";
+
+export interface Props {
+  alignment: "left" | "right";
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  blockquote?: string;
+  image: CanvasImage;
+  darkImage?: CanvasImage;
+  primaryCtaLabel?: string;
+  primaryCtaUrl?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaUrl?: string;
+}
+
+const {
+  image,
+  darkImage,
+  primaryCtaLabel,
+  primaryCtaUrl,
+  secondaryCtaLabel,
+  secondaryCtaUrl,
+  ...props
+} = Astro.props;
+const resolvedImage = resolveDrupalImage(image);
+const resolvedDarkImage = darkImage ? resolveDrupalImage(darkImage) : undefined;
+---
+
+<Basic1Up
+  {...props}
+  image={{ ...resolvedImage, srcDark: resolvedDarkImage?.src }}
+  primaryCTA={primaryCtaLabel && primaryCtaUrl
+    ? { children: primaryCtaLabel, href: primaryCtaUrl }
+    : undefined}
+  secondaryCTA={secondaryCtaLabel && secondaryCtaUrl
+    ? { children: secondaryCtaLabel, href: secondaryCtaUrl }
+    : undefined}
+  client:load
+/>

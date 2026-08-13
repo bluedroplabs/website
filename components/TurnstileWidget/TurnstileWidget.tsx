@@ -11,7 +11,7 @@ export interface TurnstileWidgetProps {
   size?: "normal" | "compact" | "flexible";
 }
 
-const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 
 export const TurnstileWidget = forwardRef<
   TurnstileInstance | undefined,

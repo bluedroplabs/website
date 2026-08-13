@@ -1,0 +1,38 @@
+---
+import { ContactForm } from "@/components/ContactForm/ContactForm";
+
+export interface Props {
+  contactTitle: string;
+  contactDescription?: string;
+  contactEmail?: string;
+  contactEmailHref?: string;
+  formAction: string;
+  submitButtonText: string;
+}
+
+const fields = [
+  { name: "fullName", label: "Full Name", type: "text" as const, required: true },
+  {
+    name: "email",
+    label: "Email address",
+    type: "email" as const,
+    placeholder: "example@email.com",
+    required: true,
+  },
+  {
+    name: "company",
+    label: "Company",
+    type: "text" as const,
+    labelSuffix: "(optional)",
+  },
+  {
+    name: "message",
+    label: "How can we help?",
+    type: "textarea" as const,
+    placeholder: "Write your message here",
+    required: true,
+  },
+];
+---
+
+<ContactForm {...Astro.props} fields={fields} client:load />

@@ -1,0 +1,23 @@
+---
+export interface Props {
+  variant: "grid" | "row";
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+}
+const { variant, eyebrow, title, description, ctaLabel, ctaUrl } = Astro.props;
+---
+
+<section class="border-t border-border-normal">
+  <header class="mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-12 md:px-8 lg:px-16 lg:py-20">
+    {eyebrow && <p class="font-mono text-size-14 uppercase text-brand-aqua">{eyebrow}</p>}
+    <h2 class="mt-4 max-w-5xl text-size-32 font-medium leading-tight lg:text-size-48" set:html={title} />
+    {description && <div class="mt-5 max-w-3xl text-size-18 font-light" set:html={description} />}
+    {ctaLabel && ctaUrl && <a class="mt-8 inline-flex rounded-full border border-border-normal px-6 py-3 font-semibold" href={ctaUrl}>{ctaLabel}</a>}
+  </header>
+  <div class:list={["mx-auto grid max-w-[var(--breakpoint-2xl)] border-x border-border-normal", variant === "grid" ? "md:grid-cols-2" : "lg:grid-cols-2"]}>
+    <slot name="items" />
+  </div>
+</section>

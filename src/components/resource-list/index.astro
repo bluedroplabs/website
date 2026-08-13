@@ -1,0 +1,75 @@
+---
+import { CardGrid } from "@/components/CardGrid/CardGrid";
+import { getCanvasListings } from "@data/drupal/listings";
+
+export interface Props {
+  listingType: "resource" | "service";
+  limit?: number;
+  showFilters?: boolean;
+}
+
+const { listingType, limit = 10, showFilters = true } = Astro.props;
+const items = await getCanvasListings(Astro, listingType, { limit: 50 });
+const filters = showFilters
+  ? [
+      {
+        label: "Resource Type",
+        name: "type",
+        selections: [
+          {
+            label: "Resource Type",
+            options: [
+              { label: "Blog", value: "blog" },
+              { label: "Whitepaper", value: "whitepaper" },
+              { label: "Article", value: "article" },
+              { label: "Report", value: "report" },
+              { label: "Case Study", value: "case-study" },
+            ],
+          },
+        ],
+      },
+      {
+        label: "Topic",
+        name: "topic",
+        selections: [
+          {
+            label: "Topic",
+            options: [
+              { label: "UI/UX", value: "ui-ux" },
+              { label: "Drupal", value: "drupal" },
+              { label: "WordPress", value: "wordpress" },
+              { label: "CMS", value: "cms" },
+            ],
+          },
+        ],
+      },
+    ]
+  : undefined;
+---
+
+{listingType === "resource" ? (
+  <CardGrid
+    client:load
+    filters={filters}
+    items={items}
+    limit={limit}
+    total={items.length}
+  />
+) : (
+  <section class="border-t border-border-normal">
+    <div class="mx-auto grid max-w-[var(--breakpoint-2xl)] border-x border-border-normal md:grid-cols-2">
+      {items.map((item) => (
+        <a href={item.href} class="group grid h-full grid-rows-[auto_1fr] gap-8 border-b border-border-normal px-6 pt-12 lg:px-16">
+          <div>
+            <p class="font-mono text-size-14 uppercase">{item.eyebrow}</p>
+            <h3 class="mt-4 text-size-32 font-medium leading-tight" set:html={item.title} />
+            {item.description && <div class="mt-4 line-clamp-6 text-size-18 font-light leading-relaxed" set:html={item.description} />}
+          </div>
+          <figure class="relative mt-8 aspect-[512/260] self-end">
+            <img src={item.image.src} alt={item.image.alt} width={item.image.width} height={item.image.height} loading="lazy" class="size-full object-contain object-bottom" />
+          </figure>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

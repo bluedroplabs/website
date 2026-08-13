@@ -1,0 +1,21 @@
+name: Metric Item
+machineName: metric-item
+status: true
+required:
+  - value
+  - description
+props:
+  properties:
+    value:
+      title: Value
+      type: string
+      examples:
+        - Included
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Example supporting content.</p>
+slots: []

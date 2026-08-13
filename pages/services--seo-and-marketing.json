@@ -1,0 +1,686 @@
+{
+  "title": "SEO + Marketing",
+  "path": "/services/seo-and-marketing",
+  "description": "Turn your website into a high-performing business asset. Build lasting visibility and brand trust.",
+  "listing": {
+    "enabled": true,
+    "type": "service",
+    "eyebrow": "Service",
+    "summary": "Turn your website into a high-performing growth engine with technical SEO, performance optimization, and data-driven marketing strategies.",
+    "weight": 5,
+    "imageSource": "/assets/seo-and-marketing-light.svg"
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "service",
+        "title": "SEO + Marketing",
+        "description": "Turn your website into a high-performing business asset. Build lasting visibility and brand trust.",
+        "image": {
+          "mediaSource": "/assets/seo-and-marketing-hero-light.png"
+        },
+        "darkImage": {
+          "mediaSource": "/assets/seo-and-marketing-hero-dark.png"
+        },
+        "primaryCtaLabel": "Book a Strategy Call",
+        "primaryCtaUrl": "/contact"
+      }
+    },
+    "002-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "split",
+        "columns": 2,
+        "title": "Smarter Digital Marketing That Puts Your Business Goals First"
+      },
+      "slots": {
+        "items": [
+          "003-icon-card",
+          "004-icon-card",
+          "005-icon-card"
+        ]
+      }
+    },
+    "003-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "ChartIcon",
+        "title": "Sustainable Growth That Compounds",
+        "description": "We build long-term visibility through ethical SEO and high-quality content that continues to drive leads and traffic long after launch."
+      }
+    },
+    "004-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "BoltIcon",
+        "title": "Performance That Converts",
+        "description": "Our work doesn't stop at visibility. We optimize for site speed, accessibility, and conversion flow to turn traffic into measurable business results."
+      }
+    },
+    "005-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "CheckBadgeIcon",
+        "title": "Strategy Tailored to Your Business",
+        "description": "Every website has unique goals and audiences. We build a marketing strategy grounded in data, aligned with your objectives, and flexible as your business evolves."
+      }
+    },
+    "006-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "grid",
+        "columns": 3,
+        "eyebrow": "What Sets Us Apart",
+        "title": "Technical Expertise Meets Marketing Clarity",
+        "description": "Our team blends deep technical SEO knowledge with creative marketing strategy to ensure every optimization serves your business goals."
+      },
+      "slots": {
+        "items": [
+          "007-icon-card",
+          "008-icon-card",
+          "009-icon-card",
+          "010-icon-card"
+        ]
+      }
+    },
+    "007-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "SchemaIcon",
+        "title": "Full-Stack Understanding",
+        "description": "Our developers and marketers collaborate seamlessly so every SEO and content improvement is backed by technical precision."
+      }
+    },
+    "008-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "AnalyticsIcon",
+        "title": "Transparent, Data-Driven Approach",
+        "description": "You see exactly what's being done and why. Regular reports track progress toward KPIs that actually matter to your business."
+      }
+    },
+    "009-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "LanguageIcon",
+        "title": "Platform-Agnostic Optimization",
+        "description": "From WordPress and Drupal to headless CMS or custom sites, we work with your existing setup — no pressure to migrate."
+      }
+    },
+    "010-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "JoinIcon",
+        "title": "Ongoing Partnership, Not Just a Project",
+        "description": "We stay with you after implementation continuously improving performance, content, and ROI as your business grows."
+      }
+    },
+    "011-service-categories": {
+      "type": "js.service-categories",
+      "props": {
+        "eyebrow": "End-to-End Marketing",
+        "title": "Comprehensive Digital Growth Services",
+        "description": "From strategy to technical SEO, we optimize every part of your website to attract more visitors, convert more customers, and build lasting visibility no matter what platform you use."
+      },
+      "slots": {
+        "categories": [
+          "012-service-category",
+          "025-service-category",
+          "038-service-category",
+          "055-service-category"
+        ]
+      }
+    },
+    "012-service-category": {
+      "type": "js.service-category",
+      "props": {
+        "title": "Marketing Strategy and Positioning",
+        "description": "We help you define, refine, and communicate your brand message effectively across all digital touch points."
+      },
+      "slots": {
+        "offerings": [
+          "013-service-offering",
+          "017-service-offering",
+          "021-service-offering"
+        ]
+      }
+    },
+    "013-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "CampaignIcon",
+        "title": "Brand Messaging Workshops"
+      },
+      "slots": {
+        "features": [
+          "014-feature-item",
+          "015-feature-item",
+          "016-feature-item"
+        ]
+      }
+    },
+    "014-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Discover your unique value proposition."
+      }
+    },
+    "015-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Define clear positioning that differentiates you from competitors."
+      }
+    },
+    "016-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Develop messaging that resonates with your target audience."
+      }
+    },
+    "017-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "AccountTreeIcon",
+        "title": "Site Structure and Information Architecture"
+      },
+      "slots": {
+        "features": [
+          "018-feature-item",
+          "019-feature-item",
+          "020-feature-item"
+        ]
+      }
+    },
+    "018-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Optimize navigation for both users and search engines."
+      }
+    },
+    "019-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Design user pathways that guide visitors to conversion."
+      }
+    },
+    "020-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Create logical content hierarchies that boost SEO."
+      }
+    },
+    "021-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "EditNoteIcon",
+        "title": "Website Copywriting"
+      },
+      "slots": {
+        "features": [
+          "022-feature-item",
+          "023-feature-item",
+          "024-feature-item"
+        ]
+      }
+    },
+    "022-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Explain the value proposition efficiently and effectively"
+      }
+    },
+    "023-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Communicate key brand strengths in a way that resonates with your audience."
+      }
+    },
+    "024-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Improve conversion rates with targeted copy."
+      }
+    },
+    "025-service-category": {
+      "type": "js.service-category",
+      "props": {
+        "title": "Content Strategy",
+        "description": "Content is the foundation of effective SEO. We help you create and optimize content that drives visibility, engagement, and conversion."
+      },
+      "slots": {
+        "offerings": [
+          "026-service-offering",
+          "030-service-offering",
+          "034-service-offering"
+        ]
+      }
+    },
+    "026-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "FindInPageIcon",
+        "title": "Content Audit & Gap Analysis"
+      },
+      "slots": {
+        "features": [
+          "027-feature-item",
+          "028-feature-item",
+          "029-feature-item"
+        ]
+      }
+    },
+    "027-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Evaluate existing content effectiveness."
+      }
+    },
+    "028-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Identify topic opportunities based on search data."
+      }
+    },
+    "029-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Map content to user journey stages."
+      }
+    },
+    "030-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "EventNoteIcon",
+        "title": "Editorial Calendar Development"
+      },
+      "slots": {
+        "features": [
+          "031-feature-item",
+          "032-feature-item",
+          "033-feature-item"
+        ]
+      }
+    },
+    "031-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Brainstorm content ideas that can succeed in the AI Overviews landscape."
+      }
+    },
+    "032-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Create sustainable content publishing schedules."
+      }
+    },
+    "033-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Align content with business goals and seasonality."
+      }
+    },
+    "034-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "LibraryBooksIcon",
+        "title": "Cornerstone Content Creation"
+      },
+      "slots": {
+        "features": [
+          "035-feature-item",
+          "036-feature-item",
+          "037-feature-item"
+        ]
+      }
+    },
+    "035-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Develop in-depth content on your core service areas."
+      }
+    },
+    "036-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Create supplementary content for authoritative coverage of relevant topics."
+      }
+    },
+    "037-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Optimize for competitive keywords with search volume."
+      }
+    },
+    "038-service-category": {
+      "type": "js.service-category",
+      "props": {
+        "title": "Technical SEO",
+        "description": "We handle the behind-the-scenes optimization that makes search engines love your site—clean code, fast load times, and flawless indexing."
+      },
+      "slots": {
+        "offerings": [
+          "039-service-offering",
+          "043-service-offering",
+          "047-service-offering",
+          "051-service-offering"
+        ]
+      }
+    },
+    "039-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "RocketIcon",
+        "title": "Resolve Technical Issues"
+      },
+      "slots": {
+        "features": [
+          "040-feature-item",
+          "041-feature-item",
+          "042-feature-item"
+        ]
+      }
+    },
+    "040-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Achieve 95% Core Web Vitals scores on mobile and desktop."
+      }
+    },
+    "041-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Fix canonical URL implementation and optimize URL pattern structures."
+      }
+    },
+    "042-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Surface and address duplicate content."
+      }
+    },
+    "043-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "SyncAltIcon",
+        "title": "Site Migration Support"
+      },
+      "slots": {
+        "features": [
+          "044-feature-item",
+          "045-feature-item",
+          "046-feature-item"
+        ]
+      }
+    },
+    "044-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Ensure all links and redirects are ready so you don't lose authority."
+      }
+    },
+    "045-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Recommendations for content consolidation and pruning."
+      }
+    },
+    "046-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Optimize when merging multiple domains into one website."
+      }
+    },
+    "047-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "CodeBlockIcon",
+        "title": "Metatag Setup and Optimization"
+      },
+      "slots": {
+        "features": [
+          "048-feature-item",
+          "049-feature-item",
+          "050-feature-item"
+        ]
+      }
+    },
+    "048-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Add structured data markup (JSON-LD)"
+      }
+    },
+    "049-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Increase rich snippet and AI-inclusion opportunities."
+      }
+    },
+    "050-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Categorize content for inclusion in AI overviews and LLMs."
+      }
+    },
+    "051-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "VerifiedUserIcon",
+        "title": "GDPR Compliance"
+      },
+      "slots": {
+        "features": [
+          "052-feature-item",
+          "053-feature-item",
+          "054-feature-item"
+        ]
+      }
+    },
+    "052-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Implement cookie consent."
+      }
+    },
+    "053-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Set up privacy-compliant analytics."
+      }
+    },
+    "054-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Integrate with Google Tag Manager."
+      }
+    },
+    "055-service-category": {
+      "type": "js.service-category",
+      "props": {
+        "title": "Ongoing SEO and <br/> Performance",
+        "description": "Sustainable SEO requires consistent attention. Keep your site competitive in today's dynamic search landscape and never worry about your content pipeline."
+      },
+      "slots": {
+        "offerings": [
+          "056-service-offering",
+          "060-service-offering",
+          "064-service-offering"
+        ]
+      }
+    },
+    "056-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "SyncIcon",
+        "title": "Content Marketing and Engineering"
+      },
+      "slots": {
+        "features": [
+          "057-feature-item",
+          "058-feature-item",
+          "059-feature-item"
+        ]
+      }
+    },
+    "057-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Distribute and repackage content for optimal reach."
+      }
+    },
+    "058-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Update content quarterly to ensure freshness."
+      }
+    },
+    "059-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Ideate and produce content regularly to build authority and traffic."
+      }
+    },
+    "060-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "AnalyticsIcon",
+        "title": "Analytics and Reporting"
+      },
+      "slots": {
+        "features": [
+          "061-feature-item",
+          "062-feature-item",
+          "063-feature-item"
+        ]
+      }
+    },
+    "061-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Create custom dashboards for your KPIs."
+      }
+    },
+    "062-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Track conversions, not just rankings."
+      }
+    },
+    "063-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Monitor search competition."
+      }
+    },
+    "064-service-offering": {
+      "type": "js.service-offering",
+      "props": {
+        "icon": "LinkIcon",
+        "title": "Backlink Acquisition"
+      },
+      "slots": {
+        "features": [
+          "065-feature-item",
+          "066-feature-item",
+          "067-feature-item"
+        ]
+      }
+    },
+    "065-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Outreach to websites relevant to your audience."
+      }
+    },
+    "066-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Competitive backlink analysis to identify high-value opportunities."
+      }
+    },
+    "067-feature-item": {
+      "type": "js.feature-item",
+      "props": {
+        "text": "Regular follow-up and tracking."
+      }
+    },
+    "068-cta-band": {
+      "type": "js.cta-band",
+      "props": {
+        "variant": "centered",
+        "text": "Everything you need to grow <strong>visibility</strong>, <strong>performance</strong>, and <strong>conversions</strong> under one roof."
+      }
+    },
+    "069-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "070-accordion-list": {
+      "type": "js.accordion-list",
+      "props": {
+        "title": "Frequently Asked Questions"
+      },
+      "slots": {
+        "items": [
+          "071-accordion-item",
+          "072-accordion-item",
+          "073-accordion-item",
+          "074-accordion-item",
+          "075-accordion-item"
+        ]
+      }
+    },
+    "071-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "How long does it take to see results?",
+        "content": "Most SEO and content engagements show early wins — technical fixes, indexation improvements, and content velocity — within the first 30 to 60 days. Ranking and conversion gains compound over 3–6 months of consistent work.",
+        "openByDefault": false
+      }
+    },
+    "072-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "Can you work alongside our in-house marketing or development team?",
+        "content": "Yes. We integrate directly with your team through Slack, shared docs, and your existing project tools, handling whatever layer of the work you need and staying out of the way for everything else.",
+        "openByDefault": false
+      }
+    },
+    "073-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "How do you measure success?",
+        "content": "We focus on metrics that matter to your business — qualified traffic, conversions, and revenue impact — not vanity rankings. Every engagement starts with agreeing on the KPIs and ends with a dashboard that tracks them.",
+        "openByDefault": false
+      }
+    },
+    "074-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "Do you handle paid campaigns (PPC, social, etc.)",
+        "content": "Our focus is organic growth — SEO, content, and conversion optimization. We partner with trusted paid-media specialists when a client needs PPC or paid social, and we make sure organic and paid strategies reinforce each other.",
+        "openByDefault": false
+      }
+    },
+    "075-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "What industries do you specialize in?",
+        "content": "We work primarily with B2B SaaS, professional services, publishers, and mission-driven organizations — anyone whose growth depends on content, trust, and long-term organic visibility.",
+        "openByDefault": false
+      }
+    },
+    "076-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

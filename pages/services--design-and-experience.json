@@ -1,0 +1,39 @@
+{
+  "title": "Design + Experience",
+  "path": "/services/design-and-experience",
+  "description": "Transform your brand into a high-performing digital experience with accessible, responsive, and conversion-focused design.",
+  "listing": {
+    "enabled": true,
+    "type": "service",
+    "eyebrow": "Service",
+    "summary": "Transform your brand into a high-performing digital experience with accessible, responsive, and conversion-focused design.",
+    "weight": 4,
+    "imageSource": "/assets/design-and-experience.svg"
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "service",
+        "title": "Design + Experience",
+        "description": "Transform your brand into a high-performing digital experience with accessible, responsive, and conversion-focused design.",
+        "image": {
+          "mediaSource": "/assets/design-and-experience.svg"
+        },
+        "primaryCtaLabel": "Book a Consultation",
+        "primaryCtaUrl": "/contact"
+      }
+    },
+    "002-split-text": {
+      "type": "js.split-text",
+      "props": {
+        "title": "Digital experiences designed to perform",
+        "description": "We create polished, accessible interfaces with high-fidelity visuals and consistent brand systems, built around your users and your business goals."
+      }
+    },
+    "003-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

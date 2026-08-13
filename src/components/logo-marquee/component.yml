@@ -1,0 +1,17 @@
+name: Logo Marquee
+machineName: logo-marquee
+status: true
+required:
+  - description
+props:
+  properties:
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Example supporting content.</p>
+slots:
+  logos:
+    title: Logos

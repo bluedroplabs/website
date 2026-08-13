@@ -1,0 +1,43 @@
+name: CTA Band
+machineName: cta-band
+status: true
+required:
+  - variant
+props:
+  properties:
+    variant:
+      title: Layout
+      type: string
+      enum:
+        - stacked
+        - inline
+        - centered
+      meta:enum:
+        stacked: Stacked
+        inline: Inline
+        centered: Centered statement
+      examples:
+        - stacked
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    text:
+      title: Centered text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    ctaLabel:
+      title: CTA label
+      type: string
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+slots: []

@@ -4,10 +4,10 @@ import { useEffect } from "react";
 
 export function Marker() {
   useEffect(() => {
-    const projectId = process.env.NEXT_PUBLIC_MARKER_PROJECT_ID;
+    const projectId = import.meta.env.PUBLIC_MARKER_PROJECT_ID;
 
     if (!projectId) {
-      console.warn("Marker.io: NEXT_PUBLIC_MARKER_PROJECT_ID is not set");
+      console.warn("Marker.io: PUBLIC_MARKER_PROJECT_ID is not set");
       return;
     }
 

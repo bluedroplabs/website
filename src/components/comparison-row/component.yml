@@ -1,0 +1,34 @@
+name: Comparison Row
+machineName: comparison-row
+status: true
+required:
+  - label
+  - firstValue
+  - secondValue
+props:
+  properties:
+    label:
+      title: Label
+      type: string
+      examples:
+        - Example label
+    firstValue:
+      title: First value
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Included
+    secondValue:
+      title: Second value
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Included
+    thirdValue:
+      title: Third value
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+slots: []

@@ -1,0 +1,47 @@
+---
+import CanvasComponentTree from "@drupal-canvas/headless-astro/CanvasComponentTree.astro";
+import {
+  fetchPage,
+  isPageRedirect,
+} from "@drupal-canvas/headless-astro";
+
+import Layout from "@layouts/Layout.astro";
+
+const { slug } = Astro.params;
+const path = "/" + (slug ?? "").split("/").map(encodeURIComponent).join("/");
+// Drupal's front page entity retains `/home` as its editor-facing alias, while
+// the detached site publishes it at `/`. Render the root page in place so the
+// Canvas preview iframe does not follow Drupal's canonical redirect away from
+// the Astro frontend.
+const canvasPath = path === "/home" ? "/" : path;
+const result = await fetchPage(Astro, canvasPath);
+
+if (result && isPageRedirect(result)) {
+  return Astro.redirect(result.redirect.url, result.redirect.statusCode);
+}
+
+const isNotFound = !result;
+const notFoundResult = isNotFound ? await fetchPage(Astro, "/404") : null;
+const page = result ?? (
+  notFoundResult && !isPageRedirect(notFoundResult) ? notFoundResult : null
+);
+
+if (isNotFound) Astro.response.status = 404;
+---
+
+<Layout title={page?.head.title}>
+  {
+    page ? (
+      <CanvasComponentTree tree={page.content} />
+    ) : (
+      <section class="mx-auto max-w-5xl px-6 py-24 text-center">
+        <p class="text-label-base uppercase">404</p>
+        <h1 class="mt-4 text-size-h1 font-semibold">Page not found</h1>
+        <p class="mt-6 text-default-base">
+          No Astro route or published Drupal Canvas page matched this URL.
+        </p>
+        <a class="mt-8 inline-flex underline" href="/">Return home</a>
+      </section>
+    )
+  }
+</Layout>

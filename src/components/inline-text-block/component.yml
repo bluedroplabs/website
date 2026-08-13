@@ -1,0 +1,35 @@
+name: Inline Text Block
+machineName: inline-text-block
+status: true
+required:
+  - title
+props:
+  properties:
+    eyebrow:
+      title: Eyebrow
+      type: string
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    blockquote:
+      title: Highlight
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    primaryCtaLabel:
+      title: CTA label
+      type: string
+    primaryCtaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+slots: []

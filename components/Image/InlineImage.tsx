@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import Image from "next/image";
 import type { IInlineImage } from "./InlineImage.types";
 

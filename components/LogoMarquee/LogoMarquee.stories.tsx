@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { LogoMarquee } from "./LogoMarquee";
 import { LOGO_MARQUEE_EXAMPLE_PROPS } from "./LogoMarquee.examples";
 

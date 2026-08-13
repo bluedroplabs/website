@@ -1,0 +1,139 @@
+{
+  "title": "Privacy Policy - Blue Drop Labs",
+  "path": "/privacy-policy",
+  "description": "How Blue Drop Labs collects, uses, and protects your personal information.",
+  "elements": {
+    "001-gradient-hero": {
+      "type": "js.gradient-hero",
+      "props": {
+        "variant": "primary",
+        "eyebrow": "Legal",
+        "title": "Privacy Policy",
+        "description": "How we collect, use, and protect your personal information."
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "legal"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-rich-text",
+          "005-rich-text",
+          "006-rich-text",
+          "007-rich-text",
+          "008-rich-text",
+          "009-rich-text",
+          "010-rich-text",
+          "011-rich-text",
+          "012-rich-text",
+          "013-rich-text",
+          "014-rich-text",
+          "015-rich-text"
+        ],
+        "aside": [
+          "016-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p><strong>Last Updated:</strong> March 2026</p>\n<p>Dentzau, LLC d/b/a Blue Drop Labs (\"we,\" \"us,\" or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, use our services, or interact with us. Please read this policy carefully.</p>\n"
+      }
+    },
+    "004-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"information-we-collect\">1. Information We Collect</h2>\n<p>We may collect information about you in several ways:</p>\n<ul>\n  <li><strong>Information you provide:</strong> When you fill out our contact form, subscribe to our newsletter, or communicate with us, we collect your name, email address, company name, and any message or other content you submit.</li>\n  <li><strong>Automatically collected information:</strong> When you visit our website, we may automatically collect certain information such as your IP address, browser type, device type, pages visited, and referring URLs. We use Google Analytics and Hotjar to collect and analyze this data.</li>\n  <li><strong>Client project information:</strong> When you engage us for services, we may collect additional information necessary to deliver those services, including project details, credentials, and business information.</li>\n</ul>\n"
+      }
+    },
+    "005-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"how-we-use-information\">2. How We Use Your Information</h2>\n<p>We use the information we collect to:</p>\n<ul>\n  <li>Respond to your inquiries and provide customer support</li>\n  <li>Send you marketing communications, newsletters, and updates (with your consent)</li>\n  <li>Deliver and improve our services, including web development, hosting, and consulting</li>\n  <li>Process transactions and manage your account</li>\n  <li>Analyze website usage to improve our website and user experience</li>\n  <li>Comply with legal obligations and protect our rights</li>\n</ul>\n"
+      }
+    },
+    "006-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"email-marketing-mailchimp\">3. Email Marketing and Mailchimp</h2>\n<p>We use Mailchimp to manage our email marketing and newsletter subscriptions. When you subscribe to our newsletter or otherwise opt in to receive marketing emails, the information you provide (such as your email address and name) is stored and processed by Mailchimp on our behalf.</p>\n<p>Mailchimp is a service provided by Intuit. Their privacy practices are governed by the <a href=\"https://www.intuit.com/privacy/statement/\" target=\"_blank\" rel=\"noopener noreferrer\">Intuit Global Privacy Statement</a>. Mailchimp helps us send emails, track engagement (such as opens and clicks), and manage subscriber preferences.</p>\n<p>You can unsubscribe from our marketing emails at any time by clicking the \"Unsubscribe\" link in any email we send, or by contacting us directly. Even after unsubscribing, we may retain your email address to honor your preference and prevent future marketing communications.</p>\n"
+      }
+    },
+    "007-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"cookies\">4. Cookies and Tracking Technologies</h2>\n<p>We use cookies and similar technologies to enhance your experience on our website. Cookies are small data files stored on your device that help us:</p>\n<ul>\n  <li>Remember your preferences (such as theme settings)</li>\n  <li>Understand how you use our website</li>\n  <li>Improve site performance and functionality</li>\n</ul>\n<p>We use <strong>Google Analytics</strong> to analyze traffic and usage patterns. Google Analytics uses cookies to collect information such as how often users visit our site and what pages they view. You can learn more about Google's practices at <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">Google's Privacy Policy</a> and opt out using the <a href=\"https://tools.google.com/dlpage/gaoptout\" target=\"_blank\" rel=\"noopener noreferrer\">Google Analytics Opt-out Browser Add-on</a>.</p>\n<p>We use <strong>Hotjar</strong> to understand how visitors interact with our website through heatmaps, session recordings, and feedback tools. Hotjar may collect information about your device, browser, and interaction with our pages. You can learn more at <a href=\"https://www.hotjar.com/legal/policies/privacy/\" target=\"_blank\" rel=\"noopener noreferrer\">Hotjar's Privacy Policy</a> and opt out using the <a href=\"https://www.hotjar.com/opt-out\" target=\"_blank\" rel=\"noopener noreferrer\">Hotjar Opt-out</a>.</p>\n<p>You can control cookies through your browser settings. Disabling certain cookies may affect the functionality of our website.</p>\n"
+      }
+    },
+    "008-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"third-party-services\">5. Third-Party Services</h2>\n<p>We may share your information with third-party service providers who assist us in operating our business, including:</p>\n<ul>\n  <li><strong>Mailchimp:</strong> For email marketing and newsletter management</li>\n  <li><strong>Google Analytics:</strong> To analyze website traffic and usage patterns</li>\n  <li><strong>Hotjar:</strong> To understand how visitors interact with our website through heatmaps and session recordings</li>\n  <li><strong>Hosting and infrastructure providers:</strong> To host our website and client projects</li>\n</ul>\n<p>These providers are contractually obligated to protect your information and use it only for the purposes we specify. We do not sell your personal information to third parties.</p>\n"
+      }
+    },
+    "009-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"data-retention\">6. Data Retention</h2>\n<p>We retain your information for as long as necessary to fulfill the purposes described in this policy, unless a longer retention period is required or permitted by law. For example:</p>\n<ul>\n  <li>Contact form submissions and correspondence may be retained for business and legal purposes</li>\n  <li>Newsletter subscriber data is retained until you unsubscribe or request deletion</li>\n  <li>Client project information is retained for the duration of our engagement and as required for legal, tax, or contractual purposes</li>\n</ul>\n"
+      }
+    },
+    "010-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"your-rights\">7. Your Rights and Choices</h2>\n<p>Depending on your location, you may have certain rights regarding your personal information:</p>\n<ul>\n  <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>\n  <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information</li>\n  <li><strong>Deletion:</strong> Request that we delete your personal information, subject to certain exceptions</li>\n  <li><strong>Opt-out of marketing:</strong> Unsubscribe from our marketing emails at any time</li>\n  <li><strong>Data portability:</strong> Request your data in a portable format where applicable</li>\n</ul>\n<p>To exercise these rights, please contact us at <a href=\"mailto:hello@bluedroplabs.com\">hello@bluedroplabs.com</a>. We will respond to your request within a reasonable timeframe.</p>\n"
+      }
+    },
+    "011-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"data-security\">8. Data Security</h2>\n<p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>\n"
+      }
+    },
+    "012-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"childrens-privacy\">9. Children's Privacy</h2>\n<p>Our website and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us and we will take steps to delete such information.</p>\n"
+      }
+    },
+    "013-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"international-transfers\">10. International Data Transfers</h2>\n<p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws. By using our services, you consent to such transfers. We take steps to ensure that your information receives an adequate level of protection in the jurisdictions in which we process it.</p>\n"
+      }
+    },
+    "014-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"changes-to-policy\">11. Changes to This Privacy Policy</h2>\n<p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the updated policy on this page and updating the \"Last Updated\" date. We encourage you to review this policy periodically. Your continued use of our website or services after changes are posted constitutes your acceptance of the updated policy.</p>\n"
+      }
+    },
+    "015-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"contact-us\">12. Contact Us</h2>\n<p>If you have questions about this Privacy Policy or our privacy practices, please contact us at:</p>\n<p><strong>Blue Drop Labs</strong><br/>\nEmail: <a href=\"mailto:hello@bluedroplabs.com\">hello@bluedroplabs.com</a></p>\n<p>We will respond to your inquiry as soon as reasonably practicable.</p>\n"
+      }
+    },
+    "016-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Contact Us",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "017-detail-group"
+        ]
+      }
+    },
+    "017-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Sections",
+        "items": "<a href=\"#information-we-collect\">Information We Collect</a>\n<a href=\"#how-we-use-information\">How We Use Information</a>\n<a href=\"#email-marketing-mailchimp\">Email Marketing (Mailchimp)</a>\n<a href=\"#cookies\">Cookies</a>\n<a href=\"#third-party-services\">Third-Party Services</a>\n<a href=\"#data-retention\">Data Retention</a>\n<a href=\"#your-rights\">Your Rights</a>\n<a href=\"#data-security\">Data Security</a>\n<a href=\"#childrens-privacy\">Children's Privacy</a>\n<a href=\"#international-transfers\">International Transfers</a>\n<a href=\"#changes-to-policy\">Changes to Policy</a>\n<a href=\"#contact-us\">Contact Us</a>"
+      }
+    }
+  }
+}

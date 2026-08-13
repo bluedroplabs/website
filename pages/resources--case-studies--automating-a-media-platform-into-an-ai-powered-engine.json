@@ -1,0 +1,185 @@
+{
+  "title": "Automating a Media Platform into an AI-Powered Engine",
+  "path": "/resources/case-studies/automating-a-media-platform-into-an-ai-powered-engine",
+  "description": "Blue Drop Labs helped Stacker evolve its platform with automated workflows, advanced analytics, and a modern customer portal that transformed how brands track and optimize their content distribution.",
+  "listing": {
+    "enabled": true,
+    "type": "resource",
+    "resourceType": "case-study",
+    "eyebrow": "Case Study",
+    "summary": "Blue Drop Labs helped Stacker evolve its platform with automated workflows, advanced analytics, and a modern customer portal that transformed how brands track and optimize their content distribution.",
+    "date": "2025-09-26",
+    "weight": 4,
+    "imageSource": "/assets/platform-reliability.webp",
+    "topicNames": [
+      "UI/UX",
+      "Drupal",
+      "CMS"
+    ]
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "article",
+        "eyebrow": "Case Study",
+        "title": "Automating a Media Platform into an AI-Powered Engine",
+        "author": "Matt Robison",
+        "date": "September 26, 2025",
+        "image": {
+          "mediaSource": "/assets/platform-reliability.webp"
+        }
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "article"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-metrics-grid",
+          "009-rich-text",
+          "010-rich-text",
+          "011-rich-text",
+          "012-rich-text",
+          "013-rich-text",
+          "014-rich-text",
+          "015-rich-text"
+        ],
+        "aside": [
+          "016-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p>Stacker is a content distribution platform connecting hundreds of brands with publishers to distribute stories worldwide. Their system used to be powered by spreadsheets, manual copying and pasting, and ad-hoc analytics reports. With so many manual processes, growth potential was limited.</p>\n<p>Blue Drop Labs helped Stacker evolve its platform with automated workflows, advanced analytics, and a modern customer portal that transformed how brands track and optimize their content distribution.</p>\n"
+      }
+    },
+    "004-metrics-grid": {
+      "type": "js.metrics-grid",
+      "props": {
+        "title": "Highlights"
+      },
+      "slots": {
+        "metrics": [
+          "005-metric-item",
+          "006-metric-item",
+          "007-metric-item",
+          "008-metric-item"
+        ]
+      }
+    },
+    "005-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Saved staff hours",
+        "description": "Automated story submission and tracking processes eliminated over 10,000 emails over the course of 6 months."
+      }
+    },
+    "006-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Faster story pipeline",
+        "description": "Time from story submission to publication dropped from 3 weeks to approximately 1 week."
+      }
+    },
+    "007-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Complete platform rebuild in 2 months",
+        "description": "Using modern development practices, Blue Drop Labs designed and launched a full customer portal in an accelerated timeline, under budget."
+      }
+    },
+    "008-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "5-year partnership",
+        "description": "Blue Drop Labs has proven reliable through crisis response, strategic recommendations, and the ability to wear many hats depending on what Stacker needs."
+      }
+    },
+    "009-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>The challenge: Scaling beyond spreadsheets and email</h2>\n<p>Stacker began with a very specific use case: distributing slideshows to a handful of partners. The systems were custom-built for that narrow purpose. As the industry evolved and Stacker grew, those systems became bottlenecks. The process looked like this:</p>\n<ul>\n  <li>Brands submitted content by sending links to their articles</li>\n  <li>Stacker staff manually copied and pasted content into their CMS</li>\n  <li>When stories were published, staff sent individual emails to notify brands</li>\n  <li>Results were tracked in Google spreadsheets that were shared back and forth</li>\n</ul>\n<p>There was no centralized analytics platform and no way for brands to track their stories through the production process.</p>\n<p>Beyond operational inefficiencies, Stacker faced a strategic challenge. As a bootstrapped startup without venture capital backing, they needed to invest smartly. They required a partner who understood how to deliver enterprise-grade solutions on a practical budget.</p>\n<p>We helped Stacker develop 3 iterations of the platform to solve these inefficiencies.</p>\n"
+      }
+    },
+    "010-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Version 1: Replacing the spreadsheet</h2>\n<p>The first major evolution of the platform focused on giving brands visibility into their results. Previously, after distributing a story, Stacker would update performance data in a spreadsheet and send it back to the brand.</p>\n<p>We built a customer portal where brands could log in and view their story performance directly. This initial version established the foundation for what would become a comprehensive analytics platform, eliminating the spreadsheet shuffle and giving brands real-time access to their distribution results.</p>\n"
+      }
+    },
+    "011-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Version 2: The tracker</h2>\n<p>The second iteration tackled the submission and production workflow. We automated the entire story submission and tracking process:</p>\n<ul>\n  <li>Brands could submit stories directly through the portal</li>\n  <li>The system automatically tracked stories through each production stage</li>\n  <li>Automated notifications replaced thousands of manual emails</li>\n  <li>Brands could see exactly where their content was in the editorial process</li>\n</ul>\n<p>The impact was immediate and measurable. In just six months, Stacker eliminated approximately 10,000 manual emails. Story production time dropped from 3 weeks to about 1 week as the automation removed bottlenecks and manual handoffs.</p>\n<p>Version 2 automated existing processes and made them efficient, eliminating manual work without fundamentally changing the business model.</p>\n"
+      }
+    },
+    "012-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Version 3: Insights, intelligence, and AI</h2>\n<p>Rather than merely automating existing processes, V3 introduced capabilities that were previously impossible.</p>\n<ul>\n  <li><strong>Comprehensive Analytics Dashboard</strong> - Brands can track pickup numbers, page views, and detailed performance metrics across Stacker's partner network</li>\n  <li><strong>Quality Metrics</strong> - Not just how many pickups, but which ones. Household names versus smaller outlets, demographic breakdowns, and geographic distribution</li>\n  <li><strong>Comparative Benchmarking</strong> - Brands can see how their content performs compared to others in their category</li>\n  <li><strong>AI-Powered Recommendations</strong> - The system analyzes past performance and suggests story types and topics that are likely to perform well</li>\n</ul>\n"
+      }
+    },
+    "013-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Rapid development with a modern technology stack</h2>\n<p>Blue Drop Labs accomplished the V3 rebuild in approximately two months from design to launch.</p>\n<p>We built a design system that will be used across all of Stacker's web applications going forward, establishing consistency and accelerating future development. The decoupled architecture pulls data from multiple systems: ClickUp for task management, Stacker's data warehouse for analytics, and Drupal for content. More data sources can be integrated in the future. Front-end developers built components in Storybook while the back-end team built APIs in anticipation of what data those components would need.</p>\n"
+      }
+    },
+    "014-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>5 years of innovation and stability</h2>\n<p>The new portal and automation capabilities are only possible because of the stable foundation established earlier. The custom hosting platform we built eliminated daily outages and performance problems, giving Stacker the confidence to innovate.</p>\n<p>The evolution from V1 to V3 demonstrates how thoughtful, incremental improvements compound over time. Each version built on the last, automating workflows, reducing costs, and eventually introducing capabilities that create new value rather than just efficiency. The proof has accumulated over the five years of this strategic partnership.</p>\n"
+      }
+    },
+    "015-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>A repeatable process</h2>\n<p>For bootstrapped startups and growing companies facing similar challenges—manual processes that don't scale, the need for enterprise features without enterprise budgets, the desire for a partner rather than just a vendor—Stacker's journey offers a roadmap.</p>\n<p>Start with the biggest pain points. Automate what exists before building what's new. Build on stable foundations.</p>\n<p>Contact us to see how we can help you.</p>\n"
+      }
+    },
+    "016-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Schedule a Demo",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "017-detail-group",
+          "018-detail-group"
+        ]
+      }
+    },
+    "017-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Services",
+        "items": "UI/UX Design\nDrupal\nA/B Testing"
+      }
+    },
+    "018-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Industry",
+        "items": "Publishing"
+      }
+    },
+    "019-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "020-related-resources": {
+      "type": "js.related-resources",
+      "props": {
+        "title": "Related Articles",
+        "limit": 3
+      }
+    }
+  }
+}

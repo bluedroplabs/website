@@ -1,0 +1,182 @@
+{
+  "title": "API + Custom Development",
+  "path": "/services/api-custom-development",
+  "description": "Build scalable web applications and APIs that power your business growth.",
+  "listing": {
+    "enabled": true,
+    "type": "service",
+    "eyebrow": "Service",
+    "summary": "We build scalable APIs and custom web applications that streamline workflows, enhance functionality, and drive business growth.",
+    "weight": 3,
+    "imageSource": "/assets/api-and-custom-development.svg"
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "service",
+        "title": "API + Custom Development",
+        "description": "Build scalable web applications and APIs that power your business growth.",
+        "image": {
+          "mediaSource": "/assets/api-customer-development-hero-asset-light.png"
+        },
+        "darkImage": {
+          "mediaSource": "/assets/api-customer-development-hero-asset-dark.png"
+        },
+        "primaryCtaLabel": "Book a Consultation",
+        "primaryCtaUrl": "/contact"
+      }
+    },
+    "002-split-text": {
+      "type": "js.split-text",
+      "props": {
+        "title": "Enterprise-Grade Solutions at Startup Speed",
+        "description": "Roll out custom web applications, APIs, and integrations that solve your unique business challenges. Whether you need a custom dashboard, internal tools, a prototype, or a full-scale application, we bring the expertise to make it happen—fast and efficiently."
+      }
+    },
+    "003-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "grid",
+        "columns": 3,
+        "eyebrow": "Custom Development, Done Right",
+        "title": "Building Systems That Scale and Connect",
+        "description": "We partner with you to create custom solutions that fit your workflows, grow with your business, and deliver lasting performance."
+      },
+      "slots": {
+        "items": [
+          "004-icon-card",
+          "005-icon-card",
+          "006-icon-card",
+          "007-icon-card"
+        ]
+      }
+    },
+    "004-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "FlowChartIcon",
+        "title": "Targeted, Complex Business Logic",
+        "description": "You need custom workflows, specialized data processing, or unique business rules that require a tailored solution."
+      }
+    },
+    "005-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "LinkIcon",
+        "title": "API Development & Integration",
+        "description": "You need to connect multiple systems, build APIs for mobile apps, or integrate with third-party services like CRMs, payment processors, or marketing automation platforms."
+      }
+    },
+    "006-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "DevUpdateIcon",
+        "title": "Legacy System Modernization",
+        "description": "You have outdated systems that need to be rebuilt or integrated with modern technologies while maintaining existing functionality."
+      }
+    },
+    "007-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "inline",
+        "icon": "ChartIcon",
+        "title": "Scalable Architecture",
+        "description": "You have outdated systems that need to be rebuilt or integrated with modern technologies while maintaining existing functionality."
+      }
+    },
+    "008-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "009-basic-one-up": {
+      "type": "js.basic-one-up",
+      "props": {
+        "alignment": "left",
+        "eyebrow": "Cost-Effective, Full-Stack Expertise",
+        "title": "Everything You Need in One Expert Team",
+        "description": "From database architecture to user interface design, we handle every aspect of your project. No need to coordinate between multiple vendors or worry about integration issues. Our team has deep knowledge across the entire technology stack, meaning we can architect robust backends that scale, design intuitive frontends that convert, and ensure seamless integration between all components.<br /><br />Our globally distributed team uses modern development practices to deliver high-quality solutions at a fraction of the cost of traditional agencies. No bloated overhead or unnecessary bureaucracy.",
+        "image": {
+          "mediaSource": "/assets/production-light.png"
+        },
+        "darkImage": {
+          "mediaSource": "/assets/production-dark.png"
+        }
+      }
+    },
+    "010-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "011-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "list-grid",
+        "columns": 3,
+        "title": "We Take Responsibility For The Complete Solution",
+        "description": "We're not just building your application. We're investing in your success. Most of our clients work with us for years because they trust our technical decisions and rely on our continued support as their business grows and evolves."
+      },
+      "slots": {
+        "items": [
+          "012-icon-card",
+          "013-icon-card",
+          "014-icon-card",
+          "015-icon-card",
+          "016-icon-card"
+        ]
+      }
+    },
+    "012-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "DomainIcon",
+        "title": "Architecture",
+        "description": "We design systems that work together seamlessly, not just individual pieces."
+      }
+    },
+    "013-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "CodeBlockIcon",
+        "title": "Code Quality",
+        "description": "Every component is built to our standards and tested as part of the whole system."
+      }
+    },
+    "014-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "SpeedIcon",
+        "title": "Performance",
+        "description": "We tune the entire stack—code, database, and server configuration—for maximum speed."
+      }
+    },
+    "015-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "ShieldLockIcon",
+        "title": "Security",
+        "description": "Comprehensive protection across all layers, from application code to server hardening."
+      }
+    },
+    "016-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "HostIcon",
+        "title": "Hosting & Deployment",
+        "description": "We provide and manage high-performance hosting optimized specifically for your application and establish an optimal deployment pipeline."
+      }
+    },
+    "017-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

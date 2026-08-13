@@ -2,7 +2,7 @@
 
 import { Container } from "@/components/Container/Container";
 import { DetailsAside } from "@/components/DetailsAside/DetailsAside";
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import type { FC } from "react";
 import { InlineImage } from "../Image/InlineImage";
 import { Metrics } from "../Metrics/Metrics";

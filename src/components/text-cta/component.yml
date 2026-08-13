@@ -1,0 +1,34 @@
+name: Text CTA
+machineName: text-cta
+status: true
+required:
+  - variant
+  - text
+props:
+  properties:
+    variant:
+      title: Typography
+      type: string
+      enum:
+        - body
+        - heading
+      meta:enum:
+        body: Body
+        heading: Heading
+      examples:
+        - body
+    text:
+      title: Text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example highlighted statement.
+    ctaLabel:
+      title: CTA label
+      type: string
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+slots: []

@@ -72,7 +72,7 @@ export const Footer = ({
   const emailInputRef = useRef<HTMLInputElement>(null);
   const turnstileRef = useRef<TurnstileInstance | null>(null);
 
-  const turnstileEnabled = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const turnstileEnabled = !!import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   const canSubmit = !turnstileEnabled || turnstileToken;
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {

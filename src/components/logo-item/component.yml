@@ -1,0 +1,23 @@
+name: Logo Item
+machineName: logo-item
+status: true
+required:
+  - name
+  - icon
+props:
+  properties:
+    name:
+      title: Accessible name
+      type: string
+      examples:
+        - Example section title
+    icon:
+      title: Logo icon
+      type: string
+      examples:
+        - StackerIcon
+    url:
+      title: URL
+      type: string
+      format: uri-reference
+slots: []

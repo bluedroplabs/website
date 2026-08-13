@@ -1,0 +1,6 @@
+---
+export interface Props { label: string; firstValue: string; secondValue: string; thirdValue?: string; }
+const { label, firstValue, secondValue, thirdValue } = Astro.props;
+---
+
+<tr><th scope="row" class="p-5 font-semibold">{label}</th><td class="p-5" set:html={firstValue} /><td class="p-5" set:html={secondValue} />{thirdValue && <td class="p-5" set:html={thirdValue} />}</tr>

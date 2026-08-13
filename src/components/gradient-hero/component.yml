@@ -1,0 +1,39 @@
+name: Gradient Hero
+machineName: gradient-hero
+status: true
+required:
+  - variant
+  - title
+props:
+  properties:
+    variant:
+      title: Style
+      type: string
+      enum:
+        - primary
+        - secondary
+      meta:enum:
+        primary: Primary
+        secondary: Secondary
+      examples:
+        - primary
+    eyebrow:
+      title: Eyebrow
+      type: string
+      examples:
+        - Resource Hub
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Ready to start your next project?
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Tell us about your goals.</p>
+slots: []

@@ -1,0 +1,27 @@
+{
+  "title": "Sending an Article's Publish Date to Google Analytics",
+  "path": "/resources",
+  "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "elements": {
+    "001-gradient-hero": {
+      "type": "js.gradient-hero",
+      "props": {
+        "variant": "primary",
+        "title": "Resource Hub",
+        "description": "Learn expert insights, guides, and reports to elevate your digital strategy."
+      }
+    },
+    "002-resource-list": {
+      "type": "js.resource-list",
+      "props": {
+        "listingType": "resource",
+        "limit": 10,
+        "showFilters": true
+      }
+    },
+    "003-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

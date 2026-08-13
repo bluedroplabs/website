@@ -1,0 +1,17 @@
+---
+import { FeaturedTextCta } from "@/components/FeaturedTextCta/FeaturedTextCta";
+
+export interface Props {
+  variant: "body" | "heading";
+  text: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+}
+
+const { ctaLabel, ctaUrl, ...props } = Astro.props;
+---
+
+<FeaturedTextCta
+  {...props}
+  cta={ctaLabel && ctaUrl ? { children: ctaLabel, href: ctaUrl } : undefined}
+/>

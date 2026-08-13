@@ -1,0 +1,8 @@
+---
+export interface Props { title: string; }
+---
+
+<section>
+  <h2 class="font-mono text-size-14 uppercase text-brand-aqua">{Astro.props.title}</h2>
+  <div class="mt-5 grid border-y border-border-normal sm:grid-cols-2"><slot name="metrics" /></div>
+</section>

@@ -1,0 +1,141 @@
+{
+  "title": "Complete Design, Development, & Support",
+  "path": "/services",
+  "description": "From legacy maintenance to cutting-edge development, we're your full-stack digital partner.",
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "service",
+        "title": "Complete Design, Development, & Support",
+        "description": "From legacy maintenance to cutting-edge development, we're your full-stack digital partner.",
+        "image": {
+          "mediaSource": "/assets/services-hero-asset.webp"
+        },
+        "primaryCtaLabel": "Schedule a demo",
+        "primaryCtaUrl": "/contact",
+        "secondaryCtaLabel": "Why Blue Drop?",
+        "secondaryCtaUrl": "/about-us"
+      }
+    },
+    "002-accordion-list": {
+      "type": "js.accordion-list",
+      "props": {
+        "title": "We Fix What's Broken.<br/><em>We Build What Works.</em>"
+      },
+      "slots": {
+        "items": [
+          "003-accordion-item",
+          "004-accordion-item",
+          "005-accordion-item"
+        ]
+      }
+    },
+    "003-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "We're available when you need us",
+        "content": "<ul class=\"pt-3 space-y-4\"><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Direct Slack access to our technical team</li><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Quick response times, not days or weeks</li><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">No barriers between you and the people working on your solutions</li></ul>",
+        "openByDefault": false
+      }
+    },
+    "004-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "We Don't Waste Your Money",
+        "content": "<ul class=\"pt-3 space-y-4\"><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Each team member has 10+ years of experience</li><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Transparent pricing with no hidden fees</li><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Month-to-month contracts, not multi-year lock-ins</li></ul>",
+        "openByDefault": false
+      }
+    },
+    "005-accordion-item": {
+      "type": "js.accordion-item",
+      "props": {
+        "title": "We actually solve problems",
+        "content": "<ul class=\"pt-3 space-y-4\"><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Give us your hardest, most complicated issues</li><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">We focus on getting things done, not creating dependencies</li><li class=\"flex pl-6.25 relative before:absolute before:size-2.25 before:top-2 before:bg-brand-aqua before:left-0\">Most clients retain us for years because we become true partners</li></ul>",
+        "openByDefault": false
+      }
+    },
+    "006-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "007-icon-collection": {
+      "type": "js.icon-collection",
+      "props": {
+        "variant": "list-grid",
+        "columns": 3,
+        "title": "The Problems We Solve"
+      },
+      "slots": {
+        "items": [
+          "008-icon-card",
+          "009-icon-card",
+          "010-icon-card",
+          "011-icon-card",
+          "012-icon-card"
+        ]
+      }
+    },
+    "008-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "StressIcon",
+        "title": "Your current team is overwhelmed or lacks expertise",
+        "description": "We integrate seamlessly as staff augmentation or take full ownership of projects, bringing a decade of platform expertise to every engagement."
+      }
+    },
+    "009-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "ExpenseIcon",
+        "title": "Legacy agencies charge premium prices for basic work ",
+        "description": "We deliver the same quality at a fraction of the cost by staying lean and using modern workflows."
+      }
+    },
+    "010-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "BrainIcon",
+        "title": "You need real technical expertise, not generic web development",
+        "description": "We're specialists who understand the deep technical requirements of Drupal, WordPress, and modern web applications."
+      }
+    },
+    "011-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "DomainDisabledIcon",
+        "title": "You're stuck with expensive, underperforming hosting",
+        "description": "Our platform delivers better performance at 30-50% less cost than Pantheon or Acquia, without traffic penalties or bureaucratic support."
+      }
+    },
+    "012-icon-card": {
+      "type": "js.icon-card",
+      "props": {
+        "variant": "default",
+        "icon": "EmergencyIcon",
+        "title": "When you need help with the final 10%",
+        "description": "Your project is almost done, but it's still plagued by bugs and performance issues, and some features don’t work exactly the way you want them to."
+      }
+    },
+    "013-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "014-resource-list": {
+      "type": "js.resource-list",
+      "props": {
+        "listingType": "service",
+        "limit": 12,
+        "showFilters": false
+      }
+    },
+    "015-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

@@ -1,0 +1,5 @@
+---
+export interface Props { text: string; }
+---
+
+<div class="flex gap-4 py-5 text-size-18 leading-relaxed before:mt-2 before:size-2 before:min-w-2 before:rounded-full before:bg-brand-aqua" set:html={Astro.props.text} />

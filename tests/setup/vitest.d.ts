@@ -4,9 +4,7 @@ import type { AxeMatchers } from "vitest-axe/matchers";
 
 declare module "vitest" {
   interface Assertion<R = unknown>
-    extends TestingLibraryMatchers<R, void>,
-      AxeMatchers {}
+    extends TestingLibraryMatchers<R, void>, AxeMatchers {}
   interface AsymmetricMatchersContaining
-    extends TestingLibraryMatchers,
-      AxeMatchers {}
+    extends TestingLibraryMatchers, AxeMatchers {}
 }

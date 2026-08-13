@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { SolutionsPackage } from "./SolutionsPackage";
 import { SOLUTIONS_PACKAGE_EXAMPLE_PROPS } from "./SolutionsPackage.examples";
 

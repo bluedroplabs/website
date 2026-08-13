@@ -1,0 +1,19 @@
+---
+import { FeaturedCtaBand } from "@/components/FeaturedCtaBand/FeaturedCtaBand";
+
+export interface Props {
+  variant: "stacked" | "inline" | "centered";
+  title?: string;
+  description?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+}
+
+const { ctaLabel, ctaUrl, ...props } = Astro.props;
+---
+
+<FeaturedCtaBand
+  {...props}
+  cta={ctaLabel && ctaUrl ? { children: ctaLabel, href: ctaUrl } : undefined}
+/>

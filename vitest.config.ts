@@ -47,6 +47,9 @@ export default defineConfig({
       "@/app": path.resolve(__dirname, "app"),
       "@/hooks": path.resolve(__dirname, "hooks"),
       "@/public": path.resolve(__dirname, "public"),
+      "next/image": path.resolve(__dirname, "src/compat/NextImage.tsx"),
+      "next/link": path.resolve(__dirname, "src/compat/NextLink.tsx"),
+      "next-themes": path.resolve(__dirname, "src/compat/NextThemes.tsx"),
     },
   },
 });

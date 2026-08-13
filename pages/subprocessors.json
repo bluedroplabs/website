@@ -1,0 +1,69 @@
+{
+  "title": "Subprocessors - Blue Drop Labs",
+  "path": "/subprocessors",
+  "description": "A list of third-party subprocessors we use to deliver our services.",
+  "elements": {
+    "001-gradient-hero": {
+      "type": "js.gradient-hero",
+      "props": {
+        "variant": "primary",
+        "eyebrow": "Legal",
+        "title": "Subprocessors",
+        "description": "Third-party services that process data on our behalf."
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "legal"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-rich-text",
+          "005-rich-text"
+        ],
+        "aside": [
+          "006-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p><strong>Last Updated:</strong> March 2026</p>\n<p>When you use our website or services, we engage certain third-party subprocessors to help us operate our business. This page lists the subprocessors we use, the purpose of each, and where you can learn more about their data practices.</p>\n<p>We select subprocessors that meet our standards for security and privacy. We enter into data processing agreements where required and require subprocessors to protect your information in accordance with applicable law.</p>\n<p>We may update this list from time to time. If we add new subprocessors that materially affect how we process your data, we will update this page and, where appropriate, notify you through our Privacy Policy or other means.</p>\n"
+      }
+    },
+    "004-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"subprocessor-list\">Subprocessor List</h2>\n<table>\n  <thead>\n    <tr>\n      <th>Subprocessor</th>\n      <th>Purpose</th>\n      <th>Location</th>\n      <th>Privacy / Security</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Cloudflare</strong></td>\n      <td>Content delivery network (CDN), DDoS protection, and web application security</td>\n      <td>Global (United States)</td>\n      <td><a href=\"https://www.cloudflare.com/privacypolicy/\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy</a></td>\n    </tr>\n    <tr>\n      <td><strong>DigitalOcean</strong></td>\n      <td>Cloud hosting infrastructure for our website and client projects; serverless functions</td>\n      <td>United States (multiple regions)</td>\n      <td><a href=\"https://www.digitalocean.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy</a></td>\n    </tr>\n    <tr>\n      <td><strong>Google Analytics</strong></td>\n      <td>Website traffic analysis and usage analytics</td>\n      <td>Global (United States)</td>\n      <td><a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy</a></td>\n    </tr>\n    <tr>\n      <td><strong>Hotjar</strong></td>\n      <td>Website behavior analytics, heatmaps, and session recordings</td>\n      <td>European Union / Malta</td>\n      <td><a href=\"https://www.hotjar.com/legal/policies/privacy/\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy</a></td>\n    </tr>\n    <tr>\n      <td><strong>Mailchimp (Intuit)</strong></td>\n      <td>Email marketing and newsletter subscription management</td>\n      <td>United States</td>\n      <td><a href=\"https://www.intuit.com/privacy/statement/\" target=\"_blank\" rel=\"noopener noreferrer\">Intuit Global Privacy Statement</a></td>\n    </tr>\n    <tr>\n      <td><strong>Stripe</strong></td>\n      <td>Payment processing for invoices and transactions</td>\n      <td>United States / Global</td>\n      <td><a href=\"https://stripe.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy</a></td>\n    </tr>\n    <tr>\n      <td><strong>Wave</strong></td>\n      <td>Invoicing and payment management</td>\n      <td>Canada</td>\n      <td><a href=\"https://www.waveapps.com/privacy\" target=\"_blank\" rel=\"noopener noreferrer\">Privacy Policy</a></td>\n    </tr>\n  </tbody>\n</table>\n"
+      }
+    },
+    "005-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2 id=\"contact\">Questions</h2>\n<p>If you have questions about our subprocessors or how we handle your data, please contact us at <a href=\"mailto:hello@bluedroplabs.com\">hello@bluedroplabs.com</a>.</p>\n"
+      }
+    },
+    "006-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Contact Us",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "007-detail-group"
+        ]
+      }
+    },
+    "007-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Sections",
+        "items": "<a href=\"#subprocessor-list\">Subprocessor List</a>\n<a href=\"#contact\">Questions</a>"
+      }
+    }
+  }
+}

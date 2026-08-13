@@ -1,0 +1,23 @@
+---
+export interface Props {
+  eyebrow?: string; title: string; description?: string; caption?: string;
+  firstColumnLabel: string; secondColumnLabel: string; thirdColumnLabel?: string;
+  highlightedColumn?: "none" | "first" | "second" | "third";
+}
+const { eyebrow, title, description, caption, firstColumnLabel, secondColumnLabel, thirdColumnLabel, highlightedColumn = "none" } = Astro.props;
+---
+
+<section class="border-t border-border-normal">
+  <header class="mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-12 md:px-8 lg:px-16 lg:py-20">
+    {eyebrow && <p class="font-mono text-size-14 uppercase text-brand-aqua">{eyebrow}</p>}
+    <h2 class="mt-4 text-size-32 font-medium lg:text-size-48" set:html={title} />
+    {description && <div class="mt-5 max-w-3xl font-light" set:html={description} />}
+  </header>
+  <div class="mx-auto max-w-[var(--breakpoint-2xl)] overflow-x-auto px-5 pb-12 md:px-8 lg:px-16 lg:pb-20">
+    <table class="w-full min-w-[720px] border-collapse text-left" data-highlight={highlightedColumn}>
+      {caption && <caption class="sr-only">{caption}</caption>}
+      <thead><tr class="border-y border-border-normal"><th class="p-5">Feature</th><th class="p-5">{firstColumnLabel}</th><th class="p-5">{secondColumnLabel}</th>{thirdColumnLabel && <th class="p-5">{thirdColumnLabel}</th>}</tr></thead>
+      <tbody class="divide-y divide-border-normal"><slot name="rows" /></tbody>
+    </table>
+  </div>
+</section>

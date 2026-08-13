@@ -1,0 +1,181 @@
+{
+  "title": "Turning Traffic Spikes Into Revenue — Not Risk",
+  "path": "/resources/case-studies/turning-traffic-spikes-into-revenue",
+  "description": "Blue Drop Labs provided managed Drupal hosting with flat-rate pricing, unlimited bandwidth, and direct access to senior engineers for POWDR's high-traffic portfolio—turning traffic spikes into revenue, not risk.",
+  "listing": {
+    "enabled": true,
+    "type": "resource",
+    "resourceType": "case-study",
+    "eyebrow": "Case Study",
+    "summary": "Managed Drupal hosting with flat-rate pricing and direct access to senior engineers—turning traffic spikes into revenue, not risk.",
+    "date": "2026-03-15",
+    "weight": 2,
+    "imageSource": "/assets/powdr-hosting-revolution.webp",
+    "topicNames": [
+      "WordPress",
+      "CMS"
+    ]
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "article",
+        "eyebrow": "Case Study",
+        "title": "Turning Traffic Spikes Into Revenue — Not Risk",
+        "author": "Matt Robison",
+        "date": "March 15, 2026",
+        "image": {
+          "mediaSource": "/assets/powdr-hosting-revolution.webp"
+        }
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "article"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-inline-image",
+          "005-metrics-grid",
+          "010-rich-text",
+          "011-inline-image",
+          "012-rich-text",
+          "013-rich-text",
+          "014-rich-text"
+        ],
+        "aside": [
+          "015-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p>POWDR operates 15+ high-traffic marketing websites for their outdoor recreation portfolio, serving millions of visitors annually with massive seasonal traffic spikes. Guests purchase lift tickets, book lodging, and buy season passes, making website performance directly tied to revenue.</p>\n<p>They were facing escalating hosting costs, and despite the \"enterprise\" price tag, they experienced frequent timeout issues during traffic spikes, slow support through bureaucratic ticket systems, and technical problems that directly impacted revenue. The platform was expensive, unreliable, and unable to handle their actual needs.</p>\n<p>Blue Drop Labs provided managed Drupal hosting with flat-rate pricing, unlimited bandwidth, and direct access to senior engineers for premium support. We became an extension of POWDR's team rather than just another vendor, resulting in lower costs and increased stability.</p>\n"
+      }
+    },
+    "004-inline-image": {
+      "type": "js.inline-image",
+      "props": {
+        "image": {
+          "mediaSource": "/assets/powdr-platform-today.webp"
+        }
+      }
+    },
+    "005-metrics-grid": {
+      "type": "js.metrics-grid",
+      "props": {
+        "title": "HIGHLIGHTS"
+      },
+      "slots": {
+        "metrics": [
+          "006-metric-item",
+          "007-metric-item",
+          "008-metric-item",
+          "009-metric-item"
+        ]
+      }
+    },
+    "006-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Unlimited Scale Without Penalties",
+        "description": "Handles 2M sessions monthly and 7,000 concurrent connected devices with no overage fees at 1500% RAW/CPU/RAM limits."
+      }
+    },
+    "007-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "87% Faster Build Times",
+        "description": "Blue Drop reduced build cycles by 40 seconds, accelerating the team's cycle to deliver on developer initiatives."
+      }
+    },
+    "008-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "80% Cost Reduction",
+        "description": "Achieved 100-day ROI and dramatically improved performance and reliability."
+      }
+    },
+    "009-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "White-Glove Migration",
+        "description": "Migrated from previous providers with zero downtime, providing the team a stress-free transition from manual work and unpredictable outcomes."
+      }
+    },
+    "010-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Revenue protection</h2>\n<p>When POWDR's sites experience timeouts or slow loading during peak booking periods, they lose sales. The new hosting infrastructure ensures that high-traffic moments translate to revenue rather than frustrated customers and abandoned carts. Annual Drupal version upgrades happen strategically during the summer months to reduce risk during the peak season.</p>\n"
+      }
+    },
+    "011-inline-image": {
+      "type": "js.inline-image",
+      "props": {
+        "image": {
+          "mediaSource": "/assets/build-speed-acceleration.webp"
+        }
+      }
+    },
+    "012-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Faster response to business needs</h2>\n<p>Development teams no longer dread deployments. With build times reduced from 5 minutes to 40 seconds and zero timeout failures, they can push updates, fixes, and new features confidently. This means faster response to business needs and reduced developer stress during critical launch windows.</p>\n"
+      }
+    },
+    "013-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>A true, proactive partnership</h2>\n<p>Blue Drop doesn't wait for requests. Regular platform improvements include Drupal admin UI updates, security patches, and infrastructure optimizations. We also proactively identified several platform health and maintenance projects that will help ensure POWDR's long-term sustainability.</p>\n<p>We also aim to pass on technical knowledge, giving POWDR and its development teams more agency. Our educational approach ensures non-technical stakeholders can make informed decisions without feeling intimidated by technical complexity.</p>\n"
+      }
+    },
+    "014-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Tired of enterprise pricing without enterprise service?</h2>\n<p>Blue Drop Labs delivers high-performance Drupal hosting with the responsiveness and customization you won't get from large providers. Learn how we can reduce your hosting costs while improving reliability, performance, and support.</p>\n<p>Ready to turn traffic spikes into revenue? Contact us to discuss how we can transform your hosting challenges into competitive advantages.</p>\n"
+      }
+    },
+    "015-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Schedule a Demo",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "016-detail-group",
+          "017-detail-group"
+        ]
+      }
+    },
+    "016-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Services",
+        "items": "UI/UX Design\nDrupal\nA/B Testing"
+      }
+    },
+    "017-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Industry",
+        "items": "Publishing"
+      }
+    },
+    "018-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "019-related-resources": {
+      "type": "js.related-resources",
+      "props": {
+        "title": "Related Articles",
+        "limit": 3
+      }
+    }
+  }
+}

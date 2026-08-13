@@ -1,0 +1,13 @@
+---
+import IconRenderer from "@components/legacy/IconRenderer";
+export interface Props { icon: string; title: string; }
+const { icon, title } = Astro.props;
+---
+
+<article>
+  <IconRenderer name={icon} className="size-10 text-icon-default" />
+  <h4 class="mt-5 text-size-20 font-semibold" set:html={title} />
+  <ul class="mt-4 space-y-2 text-size-14 font-light leading-relaxed">
+    <slot name="features" />
+  </ul>
+</article>

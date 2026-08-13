@@ -1,0 +1,38 @@
+name: CTA Block
+machineName: cta-block
+status: true
+required:
+  - title
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    ctaLabel:
+      title: CTA label
+      type: string
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+    ctaTarget:
+      title: CTA target
+      type: string
+      enum:
+        - _self
+        - _blank
+      meta:enum:
+        _self: Same window
+        _blank: New window
+      examples:
+        - _self
+slots: []

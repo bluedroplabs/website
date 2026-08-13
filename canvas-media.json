@@ -1,0 +1,232 @@
+[
+  {
+    "source": "/assets/10ms-global-delivery.webp",
+    "alt": "How We Achieved 10ms Response Times Globally",
+    "prepared": "/assets/10ms-global-delivery.webp"
+  },
+  {
+    "source": "/assets/70-reduction.webp",
+    "alt": "Cost comparison – Legacy Vendor Cost vs Unified Platform Cost, 70% reduction",
+    "prepared": "/assets/70-reduction.webp"
+  },
+  {
+    "source": "/assets/api-and-custom-development.svg",
+    "alt": "API + Custom Development",
+    "prepared": "/assets/canvas/api-and-custom-development.webp"
+  },
+  {
+    "source": "/assets/api-customer-development-hero-asset-dark.png",
+    "alt": "API + Custom Development",
+    "prepared": "/assets/api-customer-development-hero-asset-dark.png"
+  },
+  {
+    "source": "/assets/api-customer-development-hero-asset-light.png",
+    "alt": "API + Custom Development",
+    "prepared": "/assets/api-customer-development-hero-asset-light.png"
+  },
+  {
+    "source": "/assets/build-speed-acceleration.webp",
+    "alt": "Build time comparison – Old way 30 seconds vs Blue Drop 3 seconds",
+    "prepared": "/assets/build-speed-acceleration.webp"
+  },
+  {
+    "source": "/assets/decoupled-static-system.webp",
+    "alt": "Architecture diagram – Content Library, DXS, Content Hub, Page Renderer, SEO",
+    "prepared": "/assets/decoupled-static-system.webp"
+  },
+  {
+    "source": "/assets/design-and-experience.svg",
+    "alt": "Design + Experience",
+    "prepared": "/assets/canvas/design-and-experience.webp"
+  },
+  {
+    "source": "/assets/drupal-7-support-hero-asset-dark.png",
+    "alt": "Drupal 7 Extended Support",
+    "prepared": "/assets/drupal-7-support-hero-asset-dark.png"
+  },
+  {
+    "source": "/assets/drupal-7-support-hero-asset-light.png",
+    "alt": "Drupal 7 Extended Support",
+    "prepared": "/assets/drupal-7-support-hero-asset-light.png"
+  },
+  {
+    "source": "/assets/drupal-7-support.svg",
+    "alt": "Drupal 7 support",
+    "prepared": "/assets/canvas/drupal-7-support.webp"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-development-hero-dark.png",
+    "alt": "Drupal & WordPress Development",
+    "prepared": "/assets/drupal-and-wordpress-development-hero-dark.png"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-development-hero-light.png",
+    "alt": "Drupal & WordPress Development",
+    "prepared": "/assets/drupal-and-wordpress-development-hero-light.png"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-development.svg",
+    "alt": "Drupal + WordPress Managed Hosting",
+    "prepared": "/assets/canvas/drupal-and-wordpress-development.webp"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-support-dark.svg",
+    "alt": "Drupal + WordPress Support",
+    "prepared": "/assets/canvas/drupal-and-wordpress-support-dark.webp"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-support-hero-dark.png",
+    "alt": "Drupal & WordPress Support",
+    "prepared": "/assets/drupal-and-wordpress-support-hero-dark.png"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-support-hero-light.png",
+    "alt": "Drupal & WordPress Support",
+    "prepared": "/assets/drupal-and-wordpress-support-hero-light.png"
+  },
+  {
+    "source": "/assets/drupal-and-wordpress-support-light.svg",
+    "alt": "Drupal + WordPress Support",
+    "prepared": "/assets/canvas/drupal-and-wordpress-support-light.webp"
+  },
+  {
+    "source": "/assets/engineered-foundation.webp",
+    "alt": "Platform reliability – from collapse to control",
+    "prepared": "/assets/engineered-foundation.webp"
+  },
+  {
+    "source": "/assets/infrastructure-rebuild.webp",
+    "alt": "Building Enterprise-Grade Infrastructure on a Bootstrap Budget",
+    "prepared": "/assets/infrastructure-rebuild.webp"
+  },
+  {
+    "source": "/assets/logo-dark.svg",
+    "alt": "Company Dark Logo",
+    "prepared": "/assets/canvas/logo-dark.webp"
+  },
+  {
+    "source": "/assets/logo.svg",
+    "alt": "Company Logo",
+    "prepared": "/assets/canvas/logo.webp"
+  },
+  {
+    "source": "/assets/partnerships-over-transactions.webp",
+    "alt": "Placeholder image",
+    "prepared": "/assets/partnerships-over-transactions.webp"
+  },
+  {
+    "source": "/assets/platform-dark.svg",
+    "alt": "Blue Drop Labs platform abstract image",
+    "prepared": "/assets/canvas/platform-dark.webp"
+  },
+  {
+    "source": "/assets/platform-hero-asset.svg",
+    "alt": "The Platform",
+    "prepared": "/assets/canvas/platform-hero-asset.webp"
+  },
+  {
+    "source": "/assets/platform-light.svg",
+    "alt": "Blue Drop Labs platform abstract image",
+    "prepared": "/assets/canvas/platform-light.webp"
+  },
+  {
+    "source": "/assets/platform-reliability.webp",
+    "alt": "Stacker media platform – from spreadsheets to an AI-powered engine",
+    "prepared": "/assets/platform-reliability.webp"
+  },
+  {
+    "source": "/assets/powdr-hosting-revolution.webp",
+    "alt": "Turning Traffic Spikes Into Revenue – Not Risk",
+    "prepared": "/assets/powdr-hosting-revolution.webp"
+  },
+  {
+    "source": "/assets/powdr-platform-today.webp",
+    "alt": "POWDR high-traffic hosting infrastructure",
+    "prepared": "/assets/powdr-platform-today.webp"
+  },
+  {
+    "source": "/assets/premium-service.webp",
+    "alt": "Placeholder image",
+    "prepared": "/assets/premium-service.webp"
+  },
+  {
+    "source": "/assets/production-dark.png",
+    "alt": "A cross-section stack visual showing backend, frontend, and database layers connected",
+    "prepared": "/assets/production-dark.png"
+  },
+  {
+    "source": "/assets/production-light.png",
+    "alt": "A cross-section stack visual showing backend, frontend, and database layers connected",
+    "prepared": "/assets/production-light.png"
+  },
+  {
+    "source": "/assets/seo-and-marketing-dark.svg",
+    "alt": "SEO + Marketing",
+    "prepared": "/assets/canvas/seo-and-marketing-dark.webp"
+  },
+  {
+    "source": "/assets/seo-and-marketing-hero-dark.png",
+    "alt": "SEO + Marketing",
+    "prepared": "/assets/seo-and-marketing-hero-dark.png"
+  },
+  {
+    "source": "/assets/seo-and-marketing-hero-light.png",
+    "alt": "SEO + Marketing",
+    "prepared": "/assets/seo-and-marketing-hero-light.png"
+  },
+  {
+    "source": "/assets/seo-and-marketing-light.svg",
+    "alt": "SEO + Marketing",
+    "prepared": "/assets/canvas/seo-and-marketing-light.webp"
+  },
+  {
+    "source": "/assets/services-hero-asset.webp",
+    "alt": "Full Stack Development Hero Image",
+    "prepared": "/assets/services-hero-asset.webp"
+  },
+  {
+    "source": "/assets/technical-stack.webp",
+    "alt": "Placeholder image",
+    "prepared": "/assets/technical-stack.webp"
+  },
+  {
+    "source": "/assets/trusted-platform.svg",
+    "alt": "Platform Architecture Diagram",
+    "prepared": "/assets/canvas/trusted-platform.webp"
+  },
+  {
+    "source": "/assets/unified-dor-platform.webp",
+    "alt": "Helping a Lifestyle Company Cut Software Costs by 70%",
+    "prepared": "/assets/unified-dor-platform.webp"
+  },
+  {
+    "source": "https://picsum.photos/512/260?random=1",
+    "alt": "Module Development",
+    "prepared": "/assets/canvas/external-d2d927408a57.webp"
+  },
+  {
+    "source": "https://picsum.photos/512/260?random=10",
+    "alt": "Design + Experience",
+    "prepared": "/assets/canvas/external-71f3ab664768.webp"
+  },
+  {
+    "source": "https://picsum.photos/512/260?random=11",
+    "alt": "Custom Module/Plugin Development",
+    "prepared": "/assets/canvas/external-72e5dbdf00e0.webp"
+  },
+  {
+    "source": "https://picsum.photos/512/260?random=12",
+    "alt": "SEO & Marketing Optimization",
+    "prepared": "/assets/canvas/external-554a4e24fadd.webp"
+  },
+  {
+    "source": "https://picsum.photos/512/260?random=2",
+    "alt": "Theme Design",
+    "prepared": "/assets/canvas/external-453c63b5d6b3.webp"
+  },
+  {
+    "source": "https://picsum.photos/512/260?random=3",
+    "alt": "SEO and Content Marketing",
+    "prepared": "/assets/canvas/external-e29e80b6662b.webp"
+  }
+]

@@ -15,9 +15,7 @@ export interface IRichTextData extends IRichText {
 }
 
 export type TWYSIWYGComponentData =
-  | IInlineImageData
-  | IMetricsData
-  | IRichTextData;
+  IInlineImageData | IMetricsData | IRichTextData;
 
 export type TWYSIWYGComponent = TWYSIWYGComponentData["type"];
 

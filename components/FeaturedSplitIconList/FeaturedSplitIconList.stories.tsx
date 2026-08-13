@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedSplitIconList } from "./FeaturedSplitIconList";
 import { FEATURED_SPLIT_ICON_LIST_EXAMPLE_PROPS } from "./FeaturedSplitIconList.examples";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import { Metric } from "../Metric/Metric";
 import type { IMetrics } from "./Metrics.types";
 

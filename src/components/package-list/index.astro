@@ -1,0 +1,20 @@
+---
+export interface Props { eyebrow?: string; title: string; description?: string; footerTitle?: string; }
+const { eyebrow, title, description, footerTitle } = Astro.props;
+const hasFooter = Astro.slots.has("footerItems") || footerTitle;
+---
+
+<section class="border-t border-border-normal">
+  <header class="mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-12 md:px-8 lg:px-16 lg:py-20">
+    {eyebrow && <p class="font-mono text-size-14 uppercase text-brand-aqua">{eyebrow}</p>}
+    <h2 class="mt-4 text-size-32 font-medium leading-tight lg:text-size-48" set:html={title} />
+    {description && <div class="mt-5 max-w-3xl text-size-18 font-light" set:html={description} />}
+  </header>
+  <div class="mx-auto grid max-w-[var(--breakpoint-2xl)] border-x border-border-normal md:grid-cols-2 lg:grid-cols-3">
+    <slot name="packages" />
+  </div>
+  {hasFooter && <footer class="mx-auto max-w-[var(--breakpoint-2xl)] border-x border-t border-border-normal px-6 py-10 lg:px-16">
+    {footerTitle && <h3 class="text-size-24 font-semibold">{footerTitle}</h3>}
+    <ul class="mt-5 grid gap-3 md:grid-cols-2"><slot name="footerItems" /></ul>
+  </footer>}
+</section>

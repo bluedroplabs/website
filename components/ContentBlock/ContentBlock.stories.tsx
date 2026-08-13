@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ContentBlock } from "./ContentBlock";
 import { TEXT_BLOCK_EXAMPLE_PROPS } from "./ContentBlock.examples";
 

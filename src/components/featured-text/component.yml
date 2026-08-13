@@ -1,0 +1,54 @@
+name: Featured Text
+machineName: featured-text
+status: true
+required:
+  - variant
+  - background
+  - title
+props:
+  properties:
+    variant:
+      title: Size
+      type: string
+      enum:
+        - default
+        - small
+      meta:enum:
+        default: Default
+        small: Small
+      examples:
+        - default
+    background:
+      title: Background
+      type: string
+      enum:
+        - none
+        - sky
+      meta:enum:
+        none: None
+        sky: Sky
+      examples:
+        - none
+    eyebrow:
+      title: Eyebrow
+      type: string
+      examples:
+        - Proven results
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Blue Drop Labs helped us <strong>boost performance.</strong>
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    author:
+      title: Attribution
+      type: string
+      examples:
+        - Casey Scherer — POWDR Corp.
+slots: []

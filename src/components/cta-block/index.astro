@@ -1,0 +1,20 @@
+---
+import { CtaBlock } from "@/components/CtaBlock/CtaBlock";
+
+export interface Props {
+  title: string;
+  description?: string;
+  ctaLabel?: string;
+  ctaUrl?: string;
+  ctaTarget?: "_self" | "_blank";
+}
+
+const { ctaLabel, ctaUrl, ctaTarget = "_self", ...props } = Astro.props;
+---
+
+<CtaBlock
+  {...props}
+  cta={ctaLabel && ctaUrl
+    ? { children: ctaLabel, href: ctaUrl, target: ctaTarget }
+    : undefined}
+/>

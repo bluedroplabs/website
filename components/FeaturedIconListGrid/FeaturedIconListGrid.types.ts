@@ -8,7 +8,8 @@ export type TFeaturedIconListGridItem = Pick<
 >;
 
 export interface IFeaturedIconListGrid
-  extends HTMLAttributes<HTMLElement>,
+  extends
+    HTMLAttributes<HTMLElement>,
     Pick<IContentBlock, "description" | "eyebrow" | "title" | "variant"> {
   /**
    * Number of columns on the lg breakpoint. Defaults to 3.

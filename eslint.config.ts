@@ -5,6 +5,22 @@ import * as globals from "globals";
 import tseslint from "typescript-eslint";
 
 export default defineConfig([
+  {
+    ignores: [
+      ".agents/**",
+      ".astro/**",
+      ".canvas/**",
+      "agent/**",
+      "data/skills/**",
+      "node_modules/**",
+      "dist/**",
+      ".next/**",
+      "build/**",
+      "storybook-static/**",
+      ".vscode/**",
+      "**/*.d.ts",
+    ],
+  },
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
@@ -51,5 +67,9 @@ export default defineConfig([
         },
       ],
     },
+  },
+  {
+    files: ["scripts/**/*.{js,mjs,cjs,ts,mts,cts}"],
+    rules: { "no-console": "off" },
   },
 ]);

@@ -1,0 +1,58 @@
+name: Comparison Table
+machineName: comparison-table
+status: true
+required:
+  - title
+  - firstColumnLabel
+  - secondColumnLabel
+props:
+  properties:
+    eyebrow:
+      title: Eyebrow
+      type: string
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    caption:
+      title: Table caption
+      type: string
+    firstColumnLabel:
+      title: First column
+      type: string
+      examples:
+        - Example label
+    secondColumnLabel:
+      title: Second column
+      type: string
+      examples:
+        - Example label
+    thirdColumnLabel:
+      title: Third column
+      type: string
+    highlightedColumn:
+      title: Highlighted column
+      type: string
+      enum:
+        - none
+        - first
+        - second
+        - third
+      meta:enum:
+        none: None
+        first: First
+        second: Second
+        third: Third
+      examples:
+        - second
+slots:
+  rows:
+    title: Comparison rows

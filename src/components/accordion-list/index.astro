@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section class="border-t border-border-normal">
+  <div class="mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-14 md:px-16 md:py-16 lg:flex lg:px-20 lg:py-20">
+    <header class="lg:basis-1/2">
+      <h2 class="text-size-32 font-medium leading-tight lg:text-size-48" set:html={title} />
+      {description && <div class="mt-5 font-light leading-relaxed" set:html={description} />}
+    </header>
+    <div class="mt-10 divide-y divide-border-normal border-y border-border-normal lg:mt-0 lg:basis-1/2">
+      <slot name="items" />
+    </div>
+  </div>
+</section>

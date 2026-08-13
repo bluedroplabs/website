@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { DetailsAside } from "./DetailsAside";
 import { DETAILS_ASIDE_EXAMPLE_PROPS } from "./DetailsAside.examples";
 

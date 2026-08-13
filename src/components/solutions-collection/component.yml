@@ -1,0 +1,44 @@
+name: Solutions Collection
+machineName: solutions-collection
+status: true
+required:
+  - variant
+  - title
+props:
+  properties:
+    variant:
+      title: Layout
+      type: string
+      enum:
+        - grid
+        - row
+      meta:enum:
+        grid: Grid
+        row: Row
+      examples:
+        - grid
+    eyebrow:
+      title: Eyebrow
+      type: string
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    ctaLabel:
+      title: CTA label
+      type: string
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+slots:
+  items:
+    title: Solution cards

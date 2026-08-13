@@ -1,0 +1,1827 @@
+{
+  "version": 1,
+  "components": [
+    {
+      "machineName": "accordion-item",
+      "name": "Accordion Item",
+      "status": true,
+      "required": [
+        "title",
+        "content"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "content": {
+          "title": "Content",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Example supporting content.</p>"
+          ]
+        },
+        "openByDefault": {
+          "title": "Open by default",
+          "type": "boolean",
+          "examples": [
+            false
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "accordion-item"
+    },
+    {
+      "machineName": "accordion-list",
+      "name": "Accordion List",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": {
+        "items": {
+          "title": "Accordion items"
+        }
+      },
+      "relativeDirectory": "accordion-list"
+    },
+    {
+      "machineName": "basic-one-up",
+      "name": "Basic One Up",
+      "status": true,
+      "required": [
+        "alignment",
+        "title",
+        "image"
+      ],
+      "props": {
+        "alignment": {
+          "title": "Image alignment",
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ],
+          "meta:enum": {
+            "left": "Left",
+            "right": "Right"
+          },
+          "examples": [
+            "left"
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string",
+          "examples": [
+            "Our platform"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Enterprise Performance Without Enterprise Pricing"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>High-performance hosting that scales with your success.</p>"
+          ]
+        },
+        "blockquote": {
+          "title": "Highlight",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Most clients save 30–50%.</p>"
+          ]
+        },
+        "image": {
+          "title": "Image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image",
+          "examples": [
+            {
+              "src": "https://www.bluedroplabs.com/assets/logo-full-dark.webp",
+              "alt": "Blue Drop Labs",
+              "width": 1200,
+              "height": 630
+            }
+          ]
+        },
+        "darkImage": {
+          "title": "Dark mode image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image"
+        },
+        "primaryCtaLabel": {
+          "title": "Primary CTA label",
+          "type": "string",
+          "examples": [
+            "Schedule a demo"
+          ]
+        },
+        "primaryCtaUrl": {
+          "title": "Primary CTA URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/contact"
+          ]
+        },
+        "secondaryCtaLabel": {
+          "title": "Secondary CTA label",
+          "type": "string",
+          "examples": [
+            "Learn more"
+          ]
+        },
+        "secondaryCtaUrl": {
+          "title": "Secondary CTA URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/platform"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "basic-one-up"
+    },
+    {
+      "machineName": "comparison-row",
+      "name": "Comparison Row",
+      "status": true,
+      "required": [
+        "label",
+        "firstValue",
+        "secondValue"
+      ],
+      "props": {
+        "label": {
+          "title": "Label",
+          "type": "string",
+          "examples": [
+            "Example label"
+          ]
+        },
+        "firstValue": {
+          "title": "First value",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Included"
+          ]
+        },
+        "secondValue": {
+          "title": "Second value",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Included"
+          ]
+        },
+        "thirdValue": {
+          "title": "Third value",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "comparison-row"
+    },
+    {
+      "machineName": "comparison-table",
+      "name": "Comparison Table",
+      "status": true,
+      "required": [
+        "title",
+        "firstColumnLabel",
+        "secondColumnLabel"
+      ],
+      "props": {
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "caption": {
+          "title": "Table caption",
+          "type": "string"
+        },
+        "firstColumnLabel": {
+          "title": "First column",
+          "type": "string",
+          "examples": [
+            "Example label"
+          ]
+        },
+        "secondColumnLabel": {
+          "title": "Second column",
+          "type": "string",
+          "examples": [
+            "Example label"
+          ]
+        },
+        "thirdColumnLabel": {
+          "title": "Third column",
+          "type": "string"
+        },
+        "highlightedColumn": {
+          "title": "Highlighted column",
+          "type": "string",
+          "enum": [
+            "none",
+            "first",
+            "second",
+            "third"
+          ],
+          "meta:enum": {
+            "none": "None",
+            "first": "First",
+            "second": "Second",
+            "third": "Third"
+          },
+          "examples": [
+            "second"
+          ]
+        }
+      },
+      "slots": {
+        "rows": {
+          "title": "Comparison rows"
+        }
+      },
+      "relativeDirectory": "comparison-table"
+    },
+    {
+      "machineName": "contact-form",
+      "name": "Contact Form",
+      "status": true,
+      "required": [
+        "contactTitle",
+        "formAction",
+        "submitButtonText"
+      ],
+      "props": {
+        "contactTitle": {
+          "title": "Contact title",
+          "type": "string",
+          "examples": [
+            "Let's talk"
+          ]
+        },
+        "contactDescription": {
+          "title": "Contact description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "contactEmail": {
+          "title": "Contact email",
+          "type": "string",
+          "format": "email",
+          "examples": [
+            "hello@bluedroplabs.com"
+          ]
+        },
+        "contactEmailHref": {
+          "title": "Contact email URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "mailto:hello@bluedroplabs.com"
+          ]
+        },
+        "formAction": {
+          "title": "Form action",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/api/v1/contact"
+          ]
+        },
+        "submitButtonText": {
+          "title": "Submit button label",
+          "type": "string",
+          "examples": [
+            "SEND MESSAGE"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "contact-form"
+    },
+    {
+      "machineName": "cta-band",
+      "name": "CTA Band",
+      "status": true,
+      "required": [
+        "variant"
+      ],
+      "props": {
+        "variant": {
+          "title": "Layout",
+          "type": "string",
+          "enum": [
+            "stacked",
+            "inline",
+            "centered"
+          ],
+          "meta:enum": {
+            "stacked": "Stacked",
+            "inline": "Inline",
+            "centered": "Centered statement"
+          },
+          "examples": [
+            "stacked"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "text": {
+          "title": "Centered text",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string"
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "cta-band"
+    },
+    {
+      "machineName": "cta-block",
+      "name": "CTA Block",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string"
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "ctaTarget": {
+          "title": "CTA target",
+          "type": "string",
+          "enum": [
+            "_self",
+            "_blank"
+          ],
+          "meta:enum": {
+            "_self": "Same window",
+            "_blank": "New window"
+          },
+          "examples": [
+            "_self"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "cta-block"
+    },
+    {
+      "machineName": "detail-group",
+      "name": "Detail Group",
+      "status": true,
+      "required": [
+        "label",
+        "items"
+      ],
+      "props": {
+        "label": {
+          "title": "Label",
+          "type": "string",
+          "examples": [
+            "Example label"
+          ]
+        },
+        "items": {
+          "title": "Items",
+          "type": "string",
+          "examples": [
+            "Drupal\nUI/UX Design\nA/B Testing"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "detail-group"
+    },
+    {
+      "machineName": "detail-page-hero",
+      "name": "Detail Page Hero",
+      "status": true,
+      "required": [
+        "variant",
+        "title",
+        "image"
+      ],
+      "props": {
+        "variant": {
+          "title": "Content type",
+          "type": "string",
+          "enum": [
+            "service",
+            "article",
+            "platform"
+          ],
+          "meta:enum": {
+            "service": "Service",
+            "article": "Article",
+            "platform": "Platform"
+          },
+          "examples": [
+            "service"
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string",
+          "examples": [
+            "Case Study"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "API + Custom Development"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Scalable systems built around your business.</p>"
+          ]
+        },
+        "author": {
+          "title": "Author",
+          "type": "string",
+          "examples": [
+            "Blue Drop Labs"
+          ]
+        },
+        "date": {
+          "title": "Date",
+          "type": "string",
+          "examples": [
+            "January 4",
+            2026
+          ]
+        },
+        "image": {
+          "title": "Image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image",
+          "examples": [
+            {
+              "src": "https://www.bluedroplabs.com/assets/logo-full-dark.webp",
+              "alt": "Blue Drop Labs",
+              "width": 1200,
+              "height": 630
+            }
+          ]
+        },
+        "darkImage": {
+          "title": "Dark mode image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image"
+        },
+        "primaryCtaLabel": {
+          "title": "Primary CTA label",
+          "type": "string",
+          "examples": [
+            "Schedule a demo"
+          ]
+        },
+        "primaryCtaUrl": {
+          "title": "Primary CTA URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/contact"
+          ]
+        },
+        "secondaryCtaLabel": {
+          "title": "Secondary CTA label",
+          "type": "string",
+          "examples": [
+            "Learn more"
+          ]
+        },
+        "secondaryCtaUrl": {
+          "title": "Secondary CTA URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/about-us"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "detail-page-hero"
+    },
+    {
+      "machineName": "details-aside",
+      "name": "Details Aside",
+      "status": true,
+      "required": [],
+      "props": {
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string"
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": {
+        "groups": {
+          "title": "Detail groups"
+        }
+      },
+      "relativeDirectory": "details-aside"
+    },
+    {
+      "machineName": "feature-item",
+      "name": "Feature Item",
+      "status": true,
+      "required": [
+        "text"
+      ],
+      "props": {
+        "text": {
+          "title": "Text",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example highlighted statement."
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "feature-item"
+    },
+    {
+      "machineName": "featured-text",
+      "name": "Featured Text",
+      "status": true,
+      "required": [
+        "variant",
+        "background",
+        "title"
+      ],
+      "props": {
+        "variant": {
+          "title": "Size",
+          "type": "string",
+          "enum": [
+            "default",
+            "small"
+          ],
+          "meta:enum": {
+            "default": "Default",
+            "small": "Small"
+          },
+          "examples": [
+            "default"
+          ]
+        },
+        "background": {
+          "title": "Background",
+          "type": "string",
+          "enum": [
+            "none",
+            "sky"
+          ],
+          "meta:enum": {
+            "none": "None",
+            "sky": "Sky"
+          },
+          "examples": [
+            "none"
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string",
+          "examples": [
+            "Proven results"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Blue Drop Labs helped us <strong>boost performance.</strong>"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "author": {
+          "title": "Attribution",
+          "type": "string",
+          "examples": [
+            "Casey Scherer — POWDR Corp."
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "featured-text"
+    },
+    {
+      "machineName": "gradient-hero",
+      "name": "Gradient Hero",
+      "status": true,
+      "required": [
+        "variant",
+        "title"
+      ],
+      "props": {
+        "variant": {
+          "title": "Style",
+          "type": "string",
+          "enum": [
+            "primary",
+            "secondary"
+          ],
+          "meta:enum": {
+            "primary": "Primary",
+            "secondary": "Secondary"
+          },
+          "examples": [
+            "primary"
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string",
+          "examples": [
+            "Resource Hub"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Ready to start your next project?"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Tell us about your goals.</p>"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "gradient-hero"
+    },
+    {
+      "machineName": "grid-separator",
+      "name": "Grid Separator",
+      "status": true,
+      "required": [],
+      "props": {},
+      "slots": [],
+      "relativeDirectory": "grid-separator"
+    },
+    {
+      "machineName": "homepage-hero",
+      "name": "Homepage Hero",
+      "status": true,
+      "required": [
+        "title",
+        "ctaLabel",
+        "ctaUrl"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Your Website Deserves Better"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>High-performance hosting",
+            "expert development",
+            "and ongoing support.</p>"
+          ]
+        },
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string",
+          "examples": [
+            "Start Your Project"
+          ]
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/contact"
+          ]
+        },
+        "ctaTarget": {
+          "title": "CTA target",
+          "type": "string",
+          "enum": [
+            "_self",
+            "_blank"
+          ],
+          "meta:enum": {
+            "_self": "Same window",
+            "_blank": "New window"
+          },
+          "examples": [
+            "_self"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "homepage-hero"
+    },
+    {
+      "machineName": "icon-card",
+      "name": "Icon Card",
+      "status": true,
+      "required": [
+        "variant",
+        "icon",
+        "title"
+      ],
+      "props": {
+        "variant": {
+          "title": "Style",
+          "type": "string",
+          "enum": [
+            "default",
+            "inline"
+          ],
+          "meta:enum": {
+            "default": "Stacked",
+            "inline": "Inline"
+          },
+          "examples": [
+            "default"
+          ]
+        },
+        "icon": {
+          "title": "Icon",
+          "type": "string",
+          "examples": [
+            "BoltIcon"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "icon-card"
+    },
+    {
+      "machineName": "icon-collection",
+      "name": "Icon Collection",
+      "status": true,
+      "required": [
+        "variant",
+        "columns",
+        "title"
+      ],
+      "props": {
+        "variant": {
+          "title": "Layout",
+          "type": "string",
+          "enum": [
+            "grid",
+            "list",
+            "list-grid",
+            "split"
+          ],
+          "meta:enum": {
+            "grid": "Grid",
+            "list": "List",
+            "list-grid": "Bordered grid",
+            "split": "Split"
+          },
+          "examples": [
+            "grid"
+          ]
+        },
+        "columns": {
+          "title": "Columns",
+          "type": "integer",
+          "enum": [
+            2,
+            3,
+            4
+          ],
+          "meta:enum": {
+            "2": "Two",
+            "3": "Three",
+            "4": "Four"
+          },
+          "examples": [
+            4
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": {
+        "items": {
+          "title": "Icon cards"
+        }
+      },
+      "relativeDirectory": "icon-collection"
+    },
+    {
+      "machineName": "inline-image",
+      "name": "Inline Image",
+      "status": true,
+      "required": [
+        "image"
+      ],
+      "props": {
+        "image": {
+          "title": "Image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image",
+          "examples": [
+            {
+              "src": "https://www.bluedroplabs.com/assets/logo-full-dark.webp",
+              "alt": "Blue Drop Labs",
+              "width": 1200,
+              "height": 630
+            }
+          ]
+        },
+        "caption": {
+          "title": "Caption",
+          "type": "string"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "inline-image"
+    },
+    {
+      "machineName": "inline-text-block",
+      "name": "Inline Text Block",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "blockquote": {
+          "title": "Highlight",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "primaryCtaLabel": {
+          "title": "CTA label",
+          "type": "string"
+        },
+        "primaryCtaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "inline-text-block"
+    },
+    {
+      "machineName": "logo-item",
+      "name": "Logo Item",
+      "status": true,
+      "required": [
+        "name",
+        "icon"
+      ],
+      "props": {
+        "name": {
+          "title": "Accessible name",
+          "type": "string",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "icon": {
+          "title": "Logo icon",
+          "type": "string",
+          "examples": [
+            "StackerIcon"
+          ]
+        },
+        "url": {
+          "title": "URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "logo-item"
+    },
+    {
+      "machineName": "logo-marquee",
+      "name": "Logo Marquee",
+      "status": true,
+      "required": [
+        "description"
+      ],
+      "props": {
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Example supporting content.</p>"
+          ]
+        }
+      },
+      "slots": {
+        "logos": {
+          "title": "Logos"
+        }
+      },
+      "relativeDirectory": "logo-marquee"
+    },
+    {
+      "machineName": "metric-item",
+      "name": "Metric Item",
+      "status": true,
+      "required": [
+        "value",
+        "description"
+      ],
+      "props": {
+        "value": {
+          "title": "Value",
+          "type": "string",
+          "examples": [
+            "Included"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Example supporting content.</p>"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "metric-item"
+    },
+    {
+      "machineName": "metrics-grid",
+      "name": "Metrics Grid",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "examples": [
+            "Example section title"
+          ]
+        }
+      },
+      "slots": {
+        "metrics": {
+          "title": "Metrics"
+        }
+      },
+      "relativeDirectory": "metrics-grid"
+    },
+    {
+      "machineName": "package-card",
+      "name": "Package Card",
+      "status": true,
+      "required": [
+        "variant",
+        "title",
+        "ctaLabel",
+        "ctaUrl"
+      ],
+      "props": {
+        "variant": {
+          "title": "Style",
+          "type": "string",
+          "enum": [
+            "default",
+            "highlight"
+          ],
+          "meta:enum": {
+            "default": "Default",
+            "highlight": "Highlight"
+          },
+          "examples": [
+            "default"
+          ]
+        },
+        "icon": {
+          "title": "Icon",
+          "type": "string",
+          "examples": [
+            "ProjectDeliveryIcon"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "price": {
+          "title": "Price",
+          "type": "string"
+        },
+        "priceSuffix": {
+          "title": "Price suffix",
+          "type": "string"
+        },
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string",
+          "examples": [
+            "Learn more"
+          ]
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference",
+          "examples": [
+            "/contact"
+          ]
+        }
+      },
+      "slots": {
+        "features": {
+          "title": "Features"
+        }
+      },
+      "relativeDirectory": "package-card"
+    },
+    {
+      "machineName": "package-list",
+      "name": "Package List",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "footerTitle": {
+          "title": "Footer title",
+          "type": "string"
+        }
+      },
+      "slots": {
+        "packages": {
+          "title": "Packages"
+        },
+        "footerItems": {
+          "title": "Footer features"
+        }
+      },
+      "relativeDirectory": "package-list"
+    },
+    {
+      "machineName": "process-list",
+      "name": "Process List",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": {
+        "items": {
+          "title": "Process steps"
+        }
+      },
+      "relativeDirectory": "process-list"
+    },
+    {
+      "machineName": "process-step",
+      "name": "Process Step",
+      "status": true,
+      "required": [
+        "title",
+        "description"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Example supporting content.</p>"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "process-step"
+    },
+    {
+      "machineName": "related-resources",
+      "name": "Related Resources",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "examples": [
+            "Related Articles"
+          ]
+        },
+        "limit": {
+          "title": "Number of resources",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12,
+          "default": 3
+        }
+      },
+      "slots": {},
+      "relativeDirectory": "related-resources"
+    },
+    {
+      "machineName": "resource-list",
+      "name": "Resource List",
+      "status": true,
+      "required": [
+        "listingType"
+      ],
+      "props": {
+        "listingType": {
+          "title": "Listing type",
+          "type": "string",
+          "enum": [
+            "resource",
+            "service"
+          ],
+          "meta:enum": {
+            "resource": "Resources",
+            "service": "Services"
+          },
+          "examples": [
+            "resource"
+          ]
+        },
+        "limit": {
+          "title": "Items per page",
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 10
+        },
+        "showFilters": {
+          "title": "Show filters",
+          "type": "boolean",
+          "default": true
+        }
+      },
+      "slots": {},
+      "relativeDirectory": "resource-list"
+    },
+    {
+      "machineName": "rich-content",
+      "name": "Rich Content",
+      "status": true,
+      "required": [
+        "variant"
+      ],
+      "props": {
+        "variant": {
+          "title": "Layout",
+          "type": "string",
+          "enum": [
+            "article",
+            "legal"
+          ],
+          "meta:enum": {
+            "article": "Article with aside",
+            "legal": "Full width legal"
+          },
+          "examples": [
+            "article"
+          ]
+        }
+      },
+      "slots": {
+        "content": {
+          "title": "Content"
+        },
+        "aside": {
+          "title": "Aside"
+        }
+      },
+      "relativeDirectory": "rich-content"
+    },
+    {
+      "machineName": "rich-text",
+      "name": "Rich Text",
+      "status": true,
+      "required": [
+        "content"
+      ],
+      "props": {
+        "content": {
+          "title": "Content",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Example supporting content.</p>"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "rich-text"
+    },
+    {
+      "machineName": "service-categories",
+      "name": "Service Categories",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": {
+        "categories": {
+          "title": "Categories"
+        }
+      },
+      "relativeDirectory": "service-categories"
+    },
+    {
+      "machineName": "service-category",
+      "name": "Service Category",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": {
+        "offerings": {
+          "title": "Offerings"
+        }
+      },
+      "relativeDirectory": "service-category"
+    },
+    {
+      "machineName": "service-offering",
+      "name": "Service Offering",
+      "status": true,
+      "required": [
+        "icon",
+        "title"
+      ],
+      "props": {
+        "icon": {
+          "title": "Icon",
+          "type": "string",
+          "examples": [
+            "CampaignIcon"
+          ]
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        }
+      },
+      "slots": {
+        "features": {
+          "title": "Features"
+        }
+      },
+      "relativeDirectory": "service-offering"
+    },
+    {
+      "machineName": "solution-card",
+      "name": "Solution Card",
+      "status": true,
+      "required": [
+        "variant",
+        "title",
+        "image"
+      ],
+      "props": {
+        "variant": {
+          "title": "Style",
+          "type": "string",
+          "enum": [
+            "basic",
+            "full"
+          ],
+          "meta:enum": {
+            "basic": "Basic",
+            "full": "Full"
+          },
+          "examples": [
+            "basic"
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "image": {
+          "title": "Image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image",
+          "examples": [
+            {
+              "src": "https://www.bluedroplabs.com/assets/logo-full-dark.webp",
+              "alt": "Blue Drop Labs",
+              "width": 1200,
+              "height": 630
+            }
+          ]
+        },
+        "darkImage": {
+          "title": "Dark mode image",
+          "type": "object",
+          "$ref": "json-schema-definitions://canvas.module/image"
+        },
+        "url": {
+          "title": "URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "solution-card"
+    },
+    {
+      "machineName": "solutions-collection",
+      "name": "Solutions Collection",
+      "status": true,
+      "required": [
+        "variant",
+        "title"
+      ],
+      "props": {
+        "variant": {
+          "title": "Layout",
+          "type": "string",
+          "enum": [
+            "grid",
+            "row"
+          ],
+          "meta:enum": {
+            "grid": "Grid",
+            "row": "Row"
+          },
+          "examples": [
+            "grid"
+          ]
+        },
+        "eyebrow": {
+          "title": "Eyebrow",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        },
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string"
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": {
+        "items": {
+          "title": "Solution cards"
+        }
+      },
+      "relativeDirectory": "solutions-collection"
+    },
+    {
+      "machineName": "split-text",
+      "name": "Split Text",
+      "status": true,
+      "required": [
+        "title",
+        "description"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "<p>Example supporting content.</p>"
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "split-text"
+    },
+    {
+      "machineName": "text-cta",
+      "name": "Text CTA",
+      "status": true,
+      "required": [
+        "variant",
+        "text"
+      ],
+      "props": {
+        "variant": {
+          "title": "Typography",
+          "type": "string",
+          "enum": [
+            "body",
+            "heading"
+          ],
+          "meta:enum": {
+            "body": "Body",
+            "heading": "Heading"
+          },
+          "examples": [
+            "body"
+          ]
+        },
+        "text": {
+          "title": "Text",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example highlighted statement."
+          ]
+        },
+        "ctaLabel": {
+          "title": "CTA label",
+          "type": "string"
+        },
+        "ctaUrl": {
+          "title": "CTA URL",
+          "type": "string",
+          "format": "uri-reference"
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "text-cta"
+    },
+    {
+      "machineName": "text-list-item",
+      "name": "Text List Item",
+      "status": true,
+      "required": [
+        "text"
+      ],
+      "props": {
+        "text": {
+          "title": "Text",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example highlighted statement."
+          ]
+        }
+      },
+      "slots": [],
+      "relativeDirectory": "text-list-item"
+    },
+    {
+      "machineName": "text-list",
+      "name": "Text List",
+      "status": true,
+      "required": [
+        "title"
+      ],
+      "props": {
+        "title": {
+          "title": "Title",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block",
+          "examples": [
+            "Example section title"
+          ]
+        },
+        "description": {
+          "title": "Description",
+          "type": "string",
+          "contentMediaType": "text/html",
+          "x-formatting-context": "block"
+        }
+      },
+      "slots": {
+        "items": {
+          "title": "Text items"
+        }
+      },
+      "relativeDirectory": "text-list"
+    }
+  ],
+  "warnings": []
+}

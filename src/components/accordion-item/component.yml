@@ -1,0 +1,26 @@
+name: Accordion Item
+machineName: accordion-item
+status: true
+required:
+  - title
+  - content
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      examples:
+        - Example section title
+    content:
+      title: Content
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Example supporting content.</p>
+    openByDefault:
+      title: Open by default
+      type: boolean
+      examples:
+        - false
+slots: []

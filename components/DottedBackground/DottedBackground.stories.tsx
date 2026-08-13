@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { DottedBackground } from "./DottedBackground";
 import { DOTTED_BACKGROUND_EXAMPLE_PROPS } from "./DottedBackground.examples";
 

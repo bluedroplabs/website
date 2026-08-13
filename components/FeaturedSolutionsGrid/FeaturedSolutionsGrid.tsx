@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import Link from "next/link";
 import { Container } from "@/components/Container/Container";
 import { ContentBlock } from "../ContentBlock/ContentBlock";

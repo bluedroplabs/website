@@ -7,6 +7,7 @@ import { Toast } from "@/components/Toast/Toast";
 import type { TurnstileInstance } from "@marsidev/react-turnstile";
 import { TurnstileWidget } from "@/components/TurnstileWidget";
 import { cn } from "@/utils/classes";
+import parse from "html-react-parser";
 import { useRef, useState } from "react";
 import type { IContactForm, IContactFormField } from "./ContactForm.types";
 
@@ -83,7 +84,7 @@ export const ContactForm = ({
   const formRef = useRef<HTMLFormElement>(null);
   const turnstileRef = useRef<TurnstileInstance | null>(null);
 
-  const turnstileEnabled = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const turnstileEnabled = !!import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
   const canSubmit = !turnstileEnabled || turnstileToken;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -149,7 +150,9 @@ export const ContactForm = ({
             <div>
               {contactTitle && <h2 className={styles.title}>{contactTitle}</h2>}
               {contactDescription && (
-                <p className={styles.description}>{contactDescription}</p>
+                <div className={styles.description}>
+                  {parse(contactDescription)}
+                </div>
               )}
             </div>
             <div>

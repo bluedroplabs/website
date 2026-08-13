@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { GradientHero } from "./GradientHero";
 import { GRADIENT_HERO_EXAMPLE_PROPS } from "./GradientHero.examples";
 

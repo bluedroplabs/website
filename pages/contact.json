@@ -1,0 +1,31 @@
+{
+  "title": "Contact Us - Blue Drop Labs",
+  "path": "/contact",
+  "description": "Get in touch with our team to discuss your project needs.",
+  "elements": {
+    "001-gradient-hero": {
+      "type": "js.gradient-hero",
+      "props": {
+        "variant": "primary",
+        "eyebrow": "LET'S BUILD SOMETHING GREAT TOGETHER",
+        "title": "Ready to start your next project?",
+        "description": "Tell us about your goals — we can't wait to hear what you're building."
+      }
+    },
+    "002-contact-form": {
+      "type": "js.contact-form",
+      "props": {
+        "contactTitle": "Let's talk",
+        "contactDescription": "We're senior experts who love solving hard problems. Drop us a line and we'll get back to you fast — we're excited to hear from you.",
+        "contactEmail": "hello@bluedroplabs.com",
+        "contactEmailHref": "mailto:hello@bluedroplabs.com",
+        "formAction": "/api/v1/contact",
+        "submitButtonText": "SEND MESSAGE"
+      }
+    },
+    "003-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    }
+  }
+}

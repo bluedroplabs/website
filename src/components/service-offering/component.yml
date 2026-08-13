@@ -1,0 +1,23 @@
+name: Service Offering
+machineName: service-offering
+status: true
+required:
+  - icon
+  - title
+props:
+  properties:
+    icon:
+      title: Icon
+      type: string
+      examples:
+        - CampaignIcon
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+slots:
+  features:
+    title: Features

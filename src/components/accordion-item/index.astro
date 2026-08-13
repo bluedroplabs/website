@@ -1,0 +1,17 @@
+---
+export interface Props {
+  title: string;
+  content: string;
+  openByDefault?: boolean;
+}
+
+const { title, content, openByDefault = false } = Astro.props;
+---
+
+<details class="group py-6" open={openByDefault}>
+  <summary class="flex cursor-pointer list-none items-center justify-between gap-5 text-size-20 font-semibold text-default-heading">
+    <span>{title}</span>
+    <span aria-hidden="true" class="text-size-24 group-open:rotate-45">+</span>
+  </summary>
+  <div class="formatted-text pt-4 font-light leading-relaxed" set:html={content} />
+</details>

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedIconListGrid } from "./FeaturedIconListGrid";
 import { FEATURED_ICON_LIST_GRID_EXAMPLE_PROPS } from "./FeaturedIconListGrid.examples";
 

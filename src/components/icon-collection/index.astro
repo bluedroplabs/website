@@ -1,0 +1,40 @@
+---
+export interface Props {
+  variant: "grid" | "list" | "list-grid" | "split";
+  columns: 2 | 3 | 4;
+  eyebrow?: string;
+  title: string;
+  description?: string;
+}
+
+const { variant, columns, eyebrow, title, description } = Astro.props;
+const gridClass = columns === 2 ? "md:grid-cols-2" : columns === 3 ? "md:grid-cols-3" : "md:grid-cols-2 lg:grid-cols-4";
+const itemClass =
+  variant === "list" || variant === "split"
+    ? "flex flex-col gap-8"
+    : `grid grid-cols-1 ${gridClass}`;
+---
+
+<section
+  class:list={[
+    "border-t border-border-normal",
+    variant === "list-grid" && "border-b",
+  ]}
+  data-variant={variant}
+>
+  <div
+    class:list={[
+      "mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-12 md:px-8 lg:px-10 lg:py-20 xl:px-20",
+      (variant === "list" || variant === "split") && "lg:grid lg:grid-cols-2 lg:gap-16",
+    ]}
+  >
+    <header class="max-w-3xl">
+      {eyebrow && <p class="inline-block bg-brand-sky-blue px-1.5 py-0.5 font-mono text-size-14 uppercase text-deep-green">{eyebrow}</p>}
+      <h2 class="mt-4 text-size-32 font-medium leading-tight tracking-tight lg:text-size-48" set:html={title} />
+      {description && <div class="mt-5 text-size-18 font-light leading-relaxed" set:html={description} />}
+    </header>
+    <div class:list={["mt-10", itemClass, (variant === "list" || variant === "split") && "lg:mt-0"]}>
+      <slot name="items" />
+    </div>
+  </div>
+</section>

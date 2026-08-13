@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedSolutionsGrid } from "./FeaturedSolutionsGrid";
 import { FEATURED_SOLUTIONS_GRID_EXAMPLE_PROPS } from "./FeaturedSolutionsGrid.examples";
 

@@ -4,7 +4,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { useEffect, useState } from "react";
 import { hasCookieConsent } from "@/components/CookieConsentBanner";
 
-const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
 
 export function GoogleTagManagerWithConsent() {
   const [shouldLoad, setShouldLoad] = useState(false);

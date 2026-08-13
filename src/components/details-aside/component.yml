@@ -1,0 +1,16 @@
+name: Details Aside
+machineName: details-aside
+status: true
+required: []
+props:
+  properties:
+    ctaLabel:
+      title: CTA label
+      type: string
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+slots:
+  groups:
+    title: Detail groups

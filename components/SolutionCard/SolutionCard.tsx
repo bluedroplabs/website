@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import { cva } from "class-variance-authority";
 import Image from "next/image";
 import { useAppTheme } from "@/hooks/useAppTheme";

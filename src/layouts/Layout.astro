@@ -1,0 +1,116 @@
+---
+import DraftSession from "@drupal-canvas/headless-astro/DraftSession.astro";
+
+import FooterIsland from "@components/legacy/FooterIsland";
+import IntegrationIsland from "@components/legacy/IntegrationIsland";
+import NavigationIsland from "@components/legacy/NavigationIsland";
+import { getDrupalFooter, getDrupalNavigation } from "@data/drupal/menus";
+import { getDrupalSiteContent } from "@data/drupal/site-content";
+import {
+  loadCtaBlockData,
+  loadFooterData,
+  loadNavigationData,
+} from "../../utils/data";
+import "@styles/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+}
+
+const {
+  title = "Blue Drop Labs - Experts in Digital Strategy",
+  description = "Blue Drop Labs offers enterprise-grade Drupal and WordPress hosting, expert development, and ongoing support—all under one roof at affordable prices.",
+  image = "/assets/logo-full-dark.webp",
+  canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).toString(),
+} = Astro.props;
+
+const navigationFallback = loadNavigationData();
+const ctaFallback = loadCtaBlockData();
+const footerFallback = loadFooterData();
+const siteContent = await getDrupalSiteContent({
+  navigation: navigationFallback ?? {},
+  footer: footerFallback ?? {},
+  ctaBlock: ctaFallback!,
+});
+const [navigation, footer] = await Promise.all([
+  getDrupalNavigation(
+    Astro,
+    navigationFallback
+      ? { ...navigationFallback, ...siteContent.navigation }
+      : null,
+  ),
+  getDrupalFooter(
+    Astro,
+    footerFallback ? { ...footerFallback, ...siteContent.footer } : null,
+  ),
+]);
+const cta = siteContent.ctaBlock;
+const socialImage = new URL(image, Astro.site ?? Astro.url).toString();
+---
+
+<!doctype html>
+<html lang="en" class="antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      sizes="256x256"
+      href="/assets/bdl.ico"
+    />
+    <link rel="preload" as="image" href="/assets/canvas/logo.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <title>{title}</title>
+    <script is:inline>
+      (() => {
+        const theme = localStorage.getItem("theme") || "system";
+        const dark =
+          theme === "dark" ||
+          (theme === "system" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.dataset.theme = dark ? "dark" : "light";
+        document.documentElement.dataset.themePreference = theme;
+        document.documentElement.classList.toggle("dark", dark);
+        document.documentElement.style.colorScheme = dark ? "dark" : "light";
+      })();
+    </script>
+  </head>
+  <body>
+    <DraftSession>
+      <aside
+        class="fixed right-4 bottom-4 z-[100] rounded bg-black px-3 py-2 text-xs text-white"
+        data-draft-session-view="active"
+      >
+        Canvas draft preview is active.
+      </aside>
+      <aside
+        class="fixed right-4 bottom-4 z-[100] rounded bg-black px-3 py-2 text-xs text-white"
+        data-draft-session-view="expired"
+      >
+        Draft session expired.
+        <a class="underline" data-draft-session-renew-link>Renew session</a>
+      </aside>
+    </DraftSession>
+
+    {navigation && <NavigationIsland {...navigation} client:load />}
+    <main id="main-content"><slot /></main>
+    {cta && footer && (
+      <FooterIsland ctaBlockProps={cta} footerProps={footer} client:visible />
+    )}
+    <IntegrationIsland client:idle />
+  </body>
+</html>

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ScrollArea } from "./ScrollArea";
 import { SCROLL_AREA_EXAMPLE_PROPS } from "./ScrollArea.examples";
 

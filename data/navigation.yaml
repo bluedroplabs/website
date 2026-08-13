@@ -6,10 +6,10 @@ cta:
   children: "Get Started"
   href: "/contact"
 logo:
-  src: "/assets/logo.svg"
+  src: "/assets/canvas/logo.webp"
   alt: "Company Logo"
 darkLogo:
-  src: "/assets/logo-dark.svg"
+  src: "/assets/canvas/logo-dark.webp"
   alt: "Company Dark Logo"
 links:
   - href: "/about-us"

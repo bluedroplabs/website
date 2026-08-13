@@ -1,0 +1,48 @@
+name: Homepage Hero
+machineName: homepage-hero
+status: true
+required:
+  - title
+  - ctaLabel
+  - ctaUrl
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Your Website Deserves Better
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>High-performance hosting
+        - expert development
+        - and ongoing support.</p>
+    ctaLabel:
+      title: CTA label
+      type: string
+      examples:
+        - Start Your Project
+    ctaUrl:
+      title: CTA URL
+      type: string
+      format: uri-reference
+      examples:
+        - /contact
+    ctaTarget:
+      title: CTA target
+      type: string
+      enum:
+        - _self
+        - _blank
+      meta:enum:
+        _self: Same window
+        _blank: New window
+      examples:
+        - _self
+slots: []

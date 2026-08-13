@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedAccordionList } from "./FeaturedAccordionList";
 import { FEATURED_ACCORDION_LIST_EXAMPLE_PROPS } from "./FeaturedAccordionList.examples";
 

@@ -2,6 +2,8 @@
 
 import { Container } from "@/components/Container/Container";
 import { cn } from "@/utils/classes";
+import { normalizeRichTextHeading } from "@/utils/richText";
+import parse from "html-react-parser";
 import { Button } from "../Button/Button";
 import type { IHomepageHero } from "./HomepageHero.types";
 import {
@@ -65,8 +67,12 @@ export const HomepageHero = ({
       />
       <Container className={styles.container} {...props}>
         <div className={styles.inner} style={{ containerType: "inline-size" }}>
-          <h1 className={styles.title}>{title}</h1>
-          <p className={styles.description}>{description}</p>
+          <h1 className={styles.title}>
+            {parse(normalizeRichTextHeading(title))}
+          </h1>
+          {description && (
+            <div className={styles.description}>{parse(description)}</div>
+          )}
           <Button {...cta} />
         </div>
       </Container>

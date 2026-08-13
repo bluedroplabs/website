@@ -1,0 +1,15 @@
+name: Metrics Grid
+machineName: metrics-grid
+status: true
+required:
+  - title
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      examples:
+        - Example section title
+slots:
+  metrics:
+    title: Metrics

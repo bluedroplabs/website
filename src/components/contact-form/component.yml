@@ -1,0 +1,43 @@
+name: Contact Form
+machineName: contact-form
+status: true
+required:
+  - contactTitle
+  - formAction
+  - submitButtonText
+props:
+  properties:
+    contactTitle:
+      title: Contact title
+      type: string
+      examples:
+        - Let's talk
+    contactDescription:
+      title: Contact description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    contactEmail:
+      title: Contact email
+      type: string
+      format: email
+      examples:
+        - hello@bluedroplabs.com
+    contactEmailHref:
+      title: Contact email URL
+      type: string
+      format: uri-reference
+      examples:
+        - mailto:hello@bluedroplabs.com
+    formAction:
+      title: Form action
+      type: string
+      format: uri-reference
+      examples:
+        - /api/v1/contact
+    submitButtonText:
+      title: Submit button label
+      type: string
+      examples:
+        - SEND MESSAGE
+slots: []

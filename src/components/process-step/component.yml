@@ -1,0 +1,21 @@
+name: Process Step
+machineName: process-step
+status: true
+required:
+  - title
+  - description
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - <p>Example supporting content.</p>
+slots: []

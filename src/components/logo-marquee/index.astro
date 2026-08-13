@@ -1,0 +1,10 @@
+---
+export interface Props { description: string; }
+---
+
+<section class="overflow-hidden py-16 text-center">
+  <p class="mb-8.5 font-mono text-sm uppercase" set:html={Astro.props.description} />
+  <div class="logo-track mx-auto flex w-max max-w-full items-center justify-center gap-x-12 px-5 md:px-8">
+    <slot name="logos" />
+  </div>
+</section>

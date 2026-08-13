@@ -1,0 +1,9 @@
+---
+export interface Props { ctaLabel?: string; ctaUrl?: string; }
+const { ctaLabel, ctaUrl } = Astro.props;
+---
+
+<aside class="sticky top-20 border-y border-border-normal py-5">
+  <div class="divide-y divide-border-normal"><slot name="groups" /></div>
+  {ctaLabel && ctaUrl && <a class="mt-6 inline-flex w-full justify-center rounded-full border border-border-normal px-5 py-3 font-semibold" href={ctaUrl}>{ctaLabel}</a>}
+</aside>

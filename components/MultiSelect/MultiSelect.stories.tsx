@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { MultiSelect } from "./MultiSelect";
 import { MULTI_SELECT_EXAMPLE_PROPS } from "./MultiSelect.examples";
 

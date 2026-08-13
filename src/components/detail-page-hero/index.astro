@@ -1,0 +1,58 @@
+---
+import { DetailPageHero } from "@/components/DetailPageHero/DetailPageHero";
+import { resolveDrupalImage, type CanvasImage } from "@data/drupal/media";
+
+export interface Props {
+  variant: "service" | "article" | "platform";
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  author?: string;
+  date?: string;
+  image: CanvasImage;
+  darkImage?: CanvasImage;
+  primaryCtaLabel?: string;
+  primaryCtaUrl?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaUrl?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  author,
+  date,
+  image,
+  darkImage,
+  primaryCtaLabel,
+  primaryCtaUrl,
+  secondaryCtaLabel,
+  secondaryCtaUrl,
+} = Astro.props;
+
+const resolvedImage = {
+  ...resolveDrupalImage(image),
+  srcDark: darkImage ? resolveDrupalImage(darkImage).src : undefined,
+};
+const primaryCTA =
+  primaryCtaLabel && primaryCtaUrl
+    ? { children: primaryCtaLabel, href: primaryCtaUrl }
+    : undefined;
+const secondaryCTA =
+  secondaryCtaLabel && secondaryCtaUrl
+    ? { children: secondaryCtaLabel, href: secondaryCtaUrl }
+    : undefined;
+---
+
+<DetailPageHero
+  eyebrow={eyebrow}
+  title={title}
+  description={description}
+  author={author}
+  date={date}
+  image={resolvedImage}
+  primaryCTA={primaryCTA}
+  secondaryCTA={secondaryCTA}
+  client:load
+/>

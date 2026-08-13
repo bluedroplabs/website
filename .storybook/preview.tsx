@@ -1,10 +1,21 @@
 import { withThemeByDataAttribute } from "@storybook/addon-themes";
-import type { Preview } from "@storybook/nextjs-vite";
+import type { Preview } from "@storybook/react-vite";
 import { ThemeProvider, useTheme } from "next-themes";
-import { useEffect } from "react";
+import { useEffect, type ReactNode } from "react";
 import "../app/globals.css";
-import { cn, geist, geistMono } from "../utils";
 import "./storybook.css";
+
+function StoryThemeBridge({
+  children,
+  theme,
+}: {
+  children: ReactNode;
+  theme: string;
+}) {
+  const { setTheme } = useTheme();
+  useEffect(() => setTheme(theme), [setTheme, theme]);
+  return children;
+}
 
 const preview: Preview = {
   parameters: {
@@ -53,22 +64,16 @@ const preview: Preview = {
   decorators: [
     // Combined Theme, Font, and Docs Background decorator
     (Story, context) => {
-      const { setTheme } = useTheme();
-
-      useEffect(() => {
-        setTheme(context.globals.theme);
-      }, [context.globals.theme, setTheme]);
-
       const content = (
-        <div className={cn(geist.variable, geistMono.variable)}>
-          <ThemeProvider
-            attribute="data-theme"
-            defaultTheme="system"
-            enableSystem
-          >
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem
+        >
+          <StoryThemeBridge theme={String(context.globals.theme ?? "light")}>
             <Story />
-          </ThemeProvider>
-        </div>
+          </StoryThemeBridge>
+        </ThemeProvider>
       );
 
       // Apply background for docs pages

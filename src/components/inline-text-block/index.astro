@@ -1,0 +1,21 @@
+---
+import { InlineTextBlock } from "@/components/InlineTextBlock/InlineTextBlock";
+
+export interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  blockquote?: string;
+  primaryCtaLabel?: string;
+  primaryCtaUrl?: string;
+}
+
+const { primaryCtaLabel, primaryCtaUrl, ...props } = Astro.props;
+---
+
+<InlineTextBlock
+  {...props}
+  primaryCTA={primaryCtaLabel && primaryCtaUrl
+    ? { children: primaryCtaLabel, href: primaryCtaUrl }
+    : undefined}
+/>

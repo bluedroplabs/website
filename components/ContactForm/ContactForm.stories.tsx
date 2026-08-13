@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ContactForm } from "./ContactForm";
 import { CONTACT_FORM_EXAMPLE_PROPS } from "./ContactForm.examples";
 

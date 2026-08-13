@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { Container } from "@/components/Container/Container";
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import { ResourceCard } from "../ResourceCard/ResourceCard";
 import type { IRelatedArticles } from "./RelatedArticles.types";
 

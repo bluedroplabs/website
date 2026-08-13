@@ -1,47 +1,29 @@
 {
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
       "@/utils/*": ["./utils/*"],
       "@/types/*": ["./types/*"],
-      "@/app/*": ["./app/*"],
       "@/hooks/*": ["./hooks/*"],
-      "@/public/*": ["./public/*"]
+      "@/public/*": ["./public/*"],
+      "@components/*": ["./src/components/*"],
+      "@layouts/*": ["./src/layouts/*"],
+      "@styles/*": ["./src/styles/*"],
+      "@data/*": ["./src/data/*"],
+      "@utils/*": ["./src/utils/*"],
+      "next/image": ["./src/compat/NextImage.tsx"],
+      "next/link": ["./src/compat/NextLink.tsx"],
+      "next-themes": ["./src/compat/NextThemes.tsx"],
+      "@next/third-parties/google": ["./src/compat/GoogleTags.tsx"]
     },
     "typeRoots": ["./node_modules/@types", "./types"],
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "components/**/*",
-    "hooks/**/*",
-    "next-env.d.ts",
-    "types/**/*",
-    "utils/**/*",
-    "dist/types/**/*.ts"
-  ],
-  "exclude": ["node_modules", ".next", "out"]
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["node_modules", "out", "dist", "storybook-static"]
 }

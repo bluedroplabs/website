@@ -3,7 +3,7 @@
 import { Container } from "@/components/Container/Container";
 import { ContentBlock } from "@/components/ContentBlock/ContentBlock";
 import { IconCard } from "@/components/IconCard/IconCard";
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import type { IFeaturedIconListGrid } from "./FeaturedIconListGrid.types";
 
 const MOBILE_COLS = 2;

@@ -1,0 +1,5 @@
+---
+export interface Props { content: string; }
+---
+
+<div class="rich-text" set:html={Astro.props.content} />

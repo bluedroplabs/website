@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/utils";
+import { cn } from "@/utils/classes";
 import { ContentBlock } from "../ContentBlock/ContentBlock";
 import type { IInlineTextBlock } from "./InlineTextBlock.types";
 

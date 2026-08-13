@@ -4,11 +4,11 @@
 
 # Main branding and description
 logo:
-  src: "/assets/logo.svg"
+  src: "/assets/canvas/logo.webp"
   alt: "Company Logo"
 
 darkLogo:
-  src: "/assets/logo-dark.svg"
+  src: "/assets/canvas/logo-dark.webp"
   alt: "Company Dark Logo"
 
 description: "High-performance hosting, expert development, and ongoing support."

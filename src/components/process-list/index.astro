@@ -1,0 +1,26 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section class="process-list border-t border-border-normal">
+  <div class="mx-auto max-w-[var(--breakpoint-2xl)] px-5 py-12 md:px-8 lg:px-16 lg:py-20">
+    <header class="max-w-3xl">
+      <h2 class="text-size-32 font-medium leading-tight lg:text-size-48" set:html={title} />
+      {description && <div class="mt-5 text-size-18 font-light" set:html={description} />}
+    </header>
+    <div class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <slot name="items" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-list { counter-reset: process-step; }
+  .process-list :global(.process-step) { counter-increment: process-step; }
+  .process-list :global(.process-index)::before { content: counter(process-step, decimal-leading-zero); }
+</style>

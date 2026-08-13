@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { FeaturedServiceCategories } from "./FeaturedServiceCategories";
 import { FEATURED_SERVICE_CATEGORIES_EXAMPLE_PROPS } from "./FeaturedServiceCategories.examples";
 

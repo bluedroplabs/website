@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { ComparisonTable } from "./ComparisonTable";
 import { COMPARISON_TABLE_EXAMPLE_PROPS } from "./ComparisonTable.examples";
 

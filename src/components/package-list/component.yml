@@ -1,0 +1,30 @@
+name: Package List
+machineName: package-list
+status: true
+required:
+  - title
+props:
+  properties:
+    eyebrow:
+      title: Eyebrow
+      type: string
+    title:
+      title: Title
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Example section title
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+    footerTitle:
+      title: Footer title
+      type: string
+slots:
+  packages:
+    title: Packages
+  footerItems:
+    title: Footer features

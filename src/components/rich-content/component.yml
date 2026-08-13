@@ -1,0 +1,23 @@
+name: Rich Content
+machineName: rich-content
+status: true
+required:
+  - variant
+props:
+  properties:
+    variant:
+      title: Layout
+      type: string
+      enum:
+        - article
+        - legal
+      meta:enum:
+        article: Article with aside
+        legal: Full width legal
+      examples:
+        - article
+slots:
+  content:
+    title: Content
+  aside:
+    title: Aside

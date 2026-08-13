@@ -1,0 +1,10 @@
+---
+import IconRenderer from "@components/legacy/IconRenderer";
+export interface Props { name: string; icon: string; url?: string; }
+const { name, icon, url } = Astro.props;
+const Tag = url ? "a" : "div";
+---
+
+<Tag href={url} aria-label={url ? name : undefined} class="flex items-center justify-center" title={name}>
+  <IconRenderer name={icon} className="h-12 w-[179px] min-w-fit object-contain text-current opacity-75" />
+</Tag>

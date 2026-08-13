@@ -1,0 +1,17 @@
+---
+import { RelatedArticles } from "@/components/RelatedArticles/RelatedArticles";
+import { getCanvasListings } from "@data/drupal/listings";
+
+export interface Props {
+  title: string;
+  limit?: number;
+}
+
+const { title, limit = 3 } = Astro.props;
+const items = await getCanvasListings(Astro, "resource", {
+  limit,
+  excludePath: Astro.url.pathname,
+});
+---
+
+<RelatedArticles client:load items={items} title={title} />

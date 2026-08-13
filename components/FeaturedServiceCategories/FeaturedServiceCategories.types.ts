@@ -50,8 +50,7 @@ export interface IFeaturedServiceCategoriesGroup {
  * repeats the same header shape above its own row of icon-with-bullet service
  * cards.
  */
-export interface IFeaturedServiceCategories
-  extends HTMLAttributes<HTMLElement> {
+export interface IFeaturedServiceCategories extends HTMLAttributes<HTMLElement> {
   /**
    * Description paragraph in the section header.
    */

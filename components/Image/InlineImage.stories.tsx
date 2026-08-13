@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { InlineImage } from "./InlineImage";
 import { INLINE_IMAGE_EXAMPLE_PROPS } from "./InlineImage.examples";
 

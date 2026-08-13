@@ -1,0 +1,186 @@
+{
+  "title": "How We Achieved 10ms Response Times Globally (And You Can Too)",
+  "path": "/resources/case-studies/how-we-achieved-10ms-response-times-globally",
+  "description": "Blue Drop Labs developed a modern static website architecture that enables sub-10 millisecond response times globally. Powered by Next.js, it decouples the website's presentation from content management.",
+  "listing": {
+    "enabled": true,
+    "type": "resource",
+    "resourceType": "case-study",
+    "eyebrow": "Case Study",
+    "summary": "Blue Drop Labs developed a modern static website architecture that enables sub-10 millisecond response times globally.",
+    "date": "2026-01-04",
+    "weight": 0,
+    "imageSource": "/assets/10ms-global-delivery.webp",
+    "topicNames": [
+      "UI/UX",
+      "CMS"
+    ]
+  },
+  "elements": {
+    "001-detail-page-hero": {
+      "type": "js.detail-page-hero",
+      "props": {
+        "variant": "article",
+        "eyebrow": "Case Study",
+        "title": "How We Achieved 10ms Response Times Globally (And You Can Too)",
+        "author": "Matt Robison",
+        "date": "January 4, 2026",
+        "image": {
+          "mediaSource": "/assets/10ms-global-delivery.webp"
+        }
+      }
+    },
+    "002-rich-content": {
+      "type": "js.rich-content",
+      "props": {
+        "variant": "article"
+      },
+      "slots": {
+        "content": [
+          "003-rich-text",
+          "004-inline-image",
+          "005-metrics-grid",
+          "010-rich-text",
+          "011-rich-text",
+          "012-rich-text",
+          "013-rich-text",
+          "014-rich-text",
+          "015-rich-text"
+        ],
+        "aside": [
+          "016-details-aside"
+        ]
+      }
+    },
+    "003-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<p>Blue Drop Labs developed a modern static website architecture that enables sub-10 millisecond response times globally. Powered by Next.js, it decouples the website's presentation from content management. Any CMS can be used to provide content. This architecture serves as both the foundation for Blue Drop Labs' website and a scalable solution for any client seeking greater security, faster load times, and lower hosting costs.</p>\n"
+      }
+    },
+    "004-inline-image": {
+      "type": "js.inline-image",
+      "props": {
+        "image": {
+          "mediaSource": "/assets/decoupled-static-system.webp"
+        }
+      }
+    },
+    "005-metrics-grid": {
+      "type": "js.metrics-grid",
+      "props": {
+        "title": "KEY HIGHLIGHTS"
+      },
+      "slots": {
+        "metrics": [
+          "006-metric-item",
+          "007-metric-item",
+          "008-metric-item",
+          "009-metric-item"
+        ]
+      }
+    },
+    "006-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Lightning-Fast Performance",
+        "description": "Achieved sub-10 millisecond response times worldwide by serving static HTML, CSS, and JavaScript files through Cloudflare's edge network."
+      }
+    },
+    "007-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Enhanced Security",
+        "description": "By serving only static files, there is no publicly-accessible backend to exploit."
+      }
+    },
+    "008-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Flexible Content Management",
+        "description": "Content can be sourced from YAML files, Drupal, Strapi, WordPress, or other CMS platforms without rebuilding the frontend."
+      }
+    },
+    "009-metric-item": {
+      "type": "js.metric-item",
+      "props": {
+        "value": "Cost Reduction",
+        "description": "By leveraging Cloudflare, we eliminate the need for complex server infrastructure and urgent security updates."
+      }
+    },
+    "010-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Content management and swappable data sources</h2>\n<p>The architecture uses Next.js's native static generation capabilities to create all pages at build time. A page loader is configured to ingest content from a source. The website you are on right now reads from YAML files, but we can swap in other data sources without changing the frontend code. The order of the components in the file determines their order on the page.</p>\n<p>With this configuration, GitHub becomes a basic CMS. YAML files are easy to edit, and all changes are tracked and version-controlled. A change can trigger the build process automatically, deploying to CloudFlare, which provides global CDN distribution and a free tier suitable for most basic marketing websites.</p>\n"
+      }
+    },
+    "011-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Marketing websites that Google and AI love</h2>\n<p>Google increasingly expects marketing websites to serve static assets immediately. The Lighthouse scoring algorithm reflects this expectation—dynamically generated pages are penalized because they introduce unnecessary latency. By serving raw HTML files, this architecture aligns with search engine preferences, provides optimal SEO performance, and delivers content that AI is more likely to reference for citations.</p>\n"
+      }
+    },
+    "012-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Increased performance and security</h2>\n<p>There's no dynamic page rendering, no database queries, and no server-side processing. The page exists as a file and is served immediately, providing consistent performance regardless of cache status.</p>\n<p>Next.js also includes built-in optimizations like lazy loading for images. Using the Next.js Image component ensures images load progressively as users scroll, preventing them from blocking initial page render. These optimizations work automatically without developer intervention.</p>\n<p>Additionally, static HTML files cannot be hacked in the way traditional CMS installations can be compromised. There's no database to inject malicious code into, no admin panel to breach, and no server-side code to exploit.</p>\n<p>If paired with a decoupled CMS, the content management system can be placed behind a firewall or VPN, never exposed to the public internet. Only authorized editors access it, and only during content updates. This dramatically reduces the attack surface compared to traditional CMS architectures.</p>\n<p>For projects using commercial headless CMS platforms, security updates are handled by the vendor as part of their subscription service, removing the urgency and risk associated with manual CMS maintenance.</p>\n"
+      }
+    },
+    "013-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Scalability and multi-tenancy</h2>\n<p>A single Next.js application could power hundreds of websites at a fraction of the cost of similar tools. Content could be separated by domain mapping, taxonomy tags, or through a feature in whatever backend CMS is used. This approach opens opportunities for agencies managing multiple client sites or organizations with multiple web properties.</p>\n"
+      }
+    },
+    "014-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Ideal use cases</h2>\n<p>This architecture is particularly well-suited for:</p>\n<ul>\n  <li><strong>Monitoring Websites:</strong> Sites that are fast mean SEO and conversions go up dramatically.</li>\n  <li><strong>Rapid Deployment Projects:</strong> Teams can react to market quickly and can add DXS applications.</li>\n  <li><strong>High-Traffic Sites:</strong> Provide a lively performance at a scalability, stress proof and hosting costs that can be controlled.</li>\n  <li><strong>Drupal, Without the Hosting Overhead:</strong> Implement an ongoing virtual disaster recovery management for Drupal specific hosting teams.</li>\n</ul>\n"
+      }
+    },
+    "015-rich-text": {
+      "type": "js.rich-text",
+      "props": {
+        "content": "<h2>Finally, decoupled websites that make sense</h2>\n<p>We've created a system that delivers exceptional user experiences while reducing costs and complexity. A modern approach that prioritizes performance, security, and flexibility. With the right technology stack and implementation, you can realize the benefits of a decoupled architecture.</p>\n<p>If you'd like to explore this solution for your business, contact us.</p>\n"
+      }
+    },
+    "016-details-aside": {
+      "type": "js.details-aside",
+      "props": {
+        "ctaLabel": "Schedule a Demo",
+        "ctaUrl": "/contact"
+      },
+      "slots": {
+        "groups": [
+          "017-detail-group",
+          "018-detail-group"
+        ]
+      }
+    },
+    "017-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Services",
+        "items": "UI/UX Design\nDrupal\nA/B Testing"
+      }
+    },
+    "018-detail-group": {
+      "type": "js.detail-group",
+      "props": {
+        "label": "Industry",
+        "items": "Publishing"
+      }
+    },
+    "019-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "020-related-resources": {
+      "type": "js.related-resources",
+      "props": {
+        "title": "Related Articles",
+        "limit": 3
+      }
+    }
+  }
+}

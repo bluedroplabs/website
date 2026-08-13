@@ -1,0 +1,40 @@
+{
+  "title": "Page Not Found - Blue Drop Labs",
+  "path": "/404",
+  "description": "The page you're looking for doesn't exist or has been moved.",
+  "elements": {
+    "001-gradient-hero": {
+      "type": "js.gradient-hero",
+      "props": {
+        "variant": "primary",
+        "eyebrow": "Error 404",
+        "title": "Page not found",
+        "description": "The page you're looking for doesn't exist or has been moved."
+      }
+    },
+    "002-grid-separator": {
+      "type": "js.grid-separator",
+      "props": {}
+    },
+    "003-cta-block": {
+      "type": "js.cta-block",
+      "props": {
+        "title": "Ready to get started?",
+        "description": "Let's get you back on track.",
+        "ctaLabel": "Go to homepage",
+        "ctaUrl": "/",
+        "ctaTarget": "_self"
+      }
+    },
+    "004-cta-block": {
+      "type": "js.cta-block",
+      "props": {
+        "title": "We're here to help",
+        "description": "Need help finding something?",
+        "ctaLabel": "Contact us",
+        "ctaUrl": "/contact",
+        "ctaTarget": "_self"
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Basic1Up } from "./Basic1Up";
 import { BASIC_1_UP_EXAMPLE_PROPS } from "./Basic1Up.examples";
 

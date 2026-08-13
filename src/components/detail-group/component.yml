@@ -1,0 +1,22 @@
+name: Detail Group
+machineName: detail-group
+status: true
+required:
+  - label
+  - items
+props:
+  properties:
+    label:
+      title: Label
+      type: string
+      examples:
+        - Example label
+    items:
+      title: Items
+      type: string
+      examples:
+        - |-
+          Drupal
+          UI/UX Design
+          A/B Testing
+slots: []

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import { Metrics } from "./Metrics";
 import { METRICS_EXAMPLE_PROPS } from "./Metrics.examples";
 
